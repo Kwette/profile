@@ -10,7 +10,18 @@ h1, h2, h3{
   font-family: 'Montserrat', sans-serif;
   color : #585f7d;
   font-weight: 600;
-  margin-bottom : 50px;
+  margin-bottom : 40px;
+}
+
+h4, h4 > a{
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+  font-weight: 400;
+}
+
+h4 > a{
+  margin-bottom: 10px;
 }
 
 h1{
@@ -20,12 +31,12 @@ h1{
 
 h2{
   font-size: 1.5em;
-  line-height: 0.5em
+  line-height: 0.5em;
 }
 
 img{
-  width : 150px;
-  height: 150px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .img-circle{
@@ -34,10 +45,13 @@ img{
 
 p{
   margin-bottom : 50px;
-  margin-top : 50px;
+  margin-top : 30px;
   padding-left : 30px
   margin-right : 30px;
-
+  text-align: justify;
+  font-size: 1.2em;
+  padding: 0.7em;
+  border-radius: 4px;
 }
 
 a{
@@ -57,10 +71,11 @@ a{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   border : 1.5px solid #585f7d;
+  margin: 1em;
 }
 
 i{
-  font-size: 32px;
+  font-size: 2.2em;
   color : #585f7d;
 }
 
@@ -69,7 +84,7 @@ i:hover{
 }
 
 .container{
-  width: 700px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -78,14 +93,20 @@ i:hover{
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  margin-top : 60px;
-  margin-bottom: 60px;
+  margin-top : 3em;
+  margin-bottom: 3em;
   border: 1px solid lightgrey;
   padding-bottom : 55px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .list-inline > li {
@@ -95,31 +116,572 @@ i:hover{
 li{
   padding-right : 15px;
   padding-left : 15px;
+  background-color: white;
 }
 
 .list-inline{
   padding-left: 0px;
 }
 
-/*Media querries*/
+.resume{
+  position: absolute;
+  overflow: hidden;
+}
 
-@media (max-width: 960px) {
-  /* For a screen < 960px, this CSS will be read */
+.resume h2{
+  background-color: #585f7d;
+  color: white;
+  border-radius: 2px;
+  font-weight: lighter;
+  font-size: 1.7vw;
+  padding: 0.7em;
+  margin-bottom: 1.3em;
+  margin-top: 2em;
+}
+
+.resume-header{
+  background-color: #585f7d;
+  padding: 2em;
+  border-radius: 2px;
+  width: 935px;
+  display: flex;
+  justify-content: flex-end;
+  height: 20vh;
+}
+
+.margin-right{
+  margin-right: 15%;
+}
+
+.resume-header h1, .resume-header h3, .resume-header hr{
+  color: #E1DAD1;
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.resume-header h1{
+  font-size: 3.2em;
+  margin-bottom: 0;
+}
+
+.resume-header h3{
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+.resume-header hr{
+    width: 5vw;
+  }
+
+.resume-body{
+  margin-top: 5em;
+  margin-left: 24em;
+  width: 580px;
+  overflow: hidden;
+}
+
+.resume-body p{
+  margin: 0;
+  padding: 0.1em;
+}
+
+span.bold{
+  font-weight: 600;
+  margin-right: 1em;
+}
+
+span.grey{
+  color: grey;
+  font-weight: 300;
+  margin-left: 0.5em;
+}
+
+.flex-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.5em;
+}
+
+.skills{
+  background-color: #E1DAD1;
+  width: 320px;
+  position: relative;
+  border-radius: 2px;
+  margin-top: 2em;
+  margin-left: 2em;
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+}
+
+.skills img{
+  margin: inherit;
+  margin-top: 3em;
+  width: 15vw;
+  height: 15vw;
+}
+
+.skills h2{
+  margin-bottom: 0.5em;
+  margin-top: 2.5em;
+  margin-left: 0.7em;
+}
+
+.d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p{
+  background-color: inherit;
+  color: #585f7d;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+ .resume-body p{
+  font-size: 1.1em;
+ }
+
+.myskills p{
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.d-flex > a{
+  padding: 0.7em;
+}
+
+.hr{
+  width: 17vw;
+  margin-left: 0.9em;
+  background-color: #585f7d;
+  margin-bottom: 1.5em;
+  height: 0.13em;
+}
+
+.d-flex > i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #585f7d;
+  color: white;
+  padding: 0.5em;
+  margin-left: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: 1.7vw;
+}
+
+.interets i{
+  font-size: 1.7em;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.interets{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.how-much-skilled{
+  background-color: white;
+  width: 6.5em;
+  height: 1em;
+  margin-left: 0.7em;
+}
+
+.score{
+  background-color: #585f7d;
+  height: 1em;
+}
+
+.row p, .langage p{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.langage p{
+  margin-top: 0;
+  padding-top: 0.2em;
+  font-weight: 400;
+  font-size: 1.3vw;
+
+}
+
+h1.apps-header{
+  margin-bottom: 2em;
+  background-color: #585f7d;
+  color: #E1DAD1;
+  height: 15vh;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.application p{
+  margin-bottom : 1em;
+  margin-top: 1em;
+}
+
+.app-links h4{
+  border: 1.8px solid #585f7d;
+  padding: 0.5em;
+  border-radius: 4px;
+  width: 15vw;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.app-links span{
+  color: #585f7d;
+  font-weight: 600;
+  margin-right: 0.2em;
+}
+
+.app-links a{
+  border-radius: 4px;
+  margin-right: 2em;
+}
+
+.app-links a:hover{
+  background-color: #585f7d;
+  opacity: 0.95;
+}
+
+.app-links a:hover span, .app-links a:hover i, .app-links a:hover h4{
+  color: white;
+  background-color: #585f7d;
+
+}
+
+.app-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+hr {
+  width: 50vw;
+  color: #585f7d;
+  font-weight: : border;
+}
+
+.one-project{
+   margin-top: 4em;
+}
+/*-------------------- Media querries -------------------*/
+
+@media (max-width: 1074px) {
+  /* For a screen < 974px, this CSS will be read */
   .container {
-    width: 700px;
+    width: 800px;
+  }
+
+  .resume-header{
+    width: 735px;
+  }
+
+  .margin-right{
+    margin-right: 4em;
+  }
+
+  .resume-body{
+    margin-left: 19em;
+    width: 470px;
+    margin-top: 4em;
+  }
+
+  .resume-body h2{
+    font-size: 1.2em;
+  }
+
+  .d-flex{
+    display: inherit;
+  }
+   .resume-body p{
+    font-size: 1.1em;
+  }
+
+  .myskills{
+    display: flex;
+  }
+
+  .skills{
+    width: 250px;
+    margin-top: 3em;
+  }
+
+  .skills img {
+    margin-top: 3em;
+    width: 180px;
+    height: 180px;
+  }
+
+  .mobile a{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile p{
+    text-align: center;
+    font-size: 1.5;
+  }
+
+  .mobile i{
+    margin: auto;
+    font-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .mobile > i:first-child{
+    margin-top: 1.5em;
+  }
+
+  .langage p {
+    font-size: 1em;
+  }
+
+  .interets i {
+    font-size: 1.5em;
+    padding: 0.7em;
+    margin: 0.3em;
+    width: 1em;
+    height: 1em;
+  }
+
+}
+/* ---------- For a screen < 720px, this CSS will be read ---------- */
+@media (max-width: 850px) {
+  .container {
+    width: 600px;
+  }
+
+  .skills{
+    background-color: #E1DAD1;
+    width: 30vw;
+    margin-top: 10em;
+    margin-left: 1em;
+  }
+
+  .resume-header{
+    padding: 2em;
+    width: 88.7%;
+    justify-content: center;
+    height: 25vh;
+  }
+
+  .margin-right{
+    margin-right: 0;
+  }
+
+  .resume-header h1{
+    font-size: 6vw;
+  }
+
+  .resume-header h3{
+    font-size: 3vw;
+  }
+
+  .resume-header hr{
+    width: 10vw;
+  }
+
+  .resume h2{
+    font-size: 2.4vw;
+    padding: 0.9em;
+  }
+
+  .resume-body{
+    margin-top: 11vw;
+    margin-left: 34vw;
+    width: 60%;
+  }
+
+  .d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p {
+    font-size: 0.8em;
+  }
+
+  .resume-body p{
+    font-size: 0.95em;
+  }
+
+  .mobile a{
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile p{
+    text-align: center;
+  }
+
+  .mobile i{
+    margin: auto;
+    font-size: 4vw;
+    width: 4vw;
+  }
+
+  .row p{
+    margin: auto;
+    width: 60%;
+  }
+
+  .how-much-skilled {
+    width: 60%;
+    height: 1em;
+    margin: auto;
+  }
+
+  .score{
+    height: 1em;
+  }
+
+  .interets i{
+    font-size: 4vw;
+    padding: 3vw;
+    margin-bottom: 0.5em;
+  }
+
+  .langage{
+    font-size: 1.1em;
+  }
+
+  .interets {
+    flex-wrap: wrap;
+  }
+
+    .d-flex{
+    display: inherit;
   }
 }
-@media (max-width: 720px) {
-  /* For a screen < 720px, this CSS will be read */
-  .container {
-    width: 500px;
-  }
-}
+
+
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .container {
-    width: 300px;
+    width: 98%;
   }
+
+  .app-links h4{
+    border: 1.8px solid #585f7d;
+    padding: 0.5em;
+    border-radius: 4px;
+    width: 25vw;
+  }
+
+  .skills{
+    background-color: #E1DAD1;
+    width: 30vw;
+    margin-top: 10em;
+    margin-left: 0.7em;
+  }
+
+  .skills img {
+    margin: inherit;
+    margin-top: 1em;
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .resume-header{
+    padding: 2em;
+    width: 85%;
+    justify-content: center;
+    height: 25vh;
+  }
+
+  .margin-right{
+    margin-right: 0;
+  }
+
+  .resume-header h1{
+    font-size: 6vw;
+  }
+
+  .resume-header h3{
+    font-size: 3vw;
+  }
+
+  .resume-header hr{
+    width: 10vw;
+  }
+
+  .resume h2{
+    font-size: 2.4vw;
+    padding: 0.9em;
+  }
+
+  .resume-body{
+    margin-top: 10vw;
+    margin-left: 34vw;
+    width: 60%;
+  }
+
+  .d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p {
+    font-size: 0.7em;
+  }
+
+  .resume-body p{
+    font-size: 0.9em;
+  }
+
+  .mobile a{
+    font-size: 0.6em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile p{
+    text-align: center;
+  }
+
+  .mobile i{
+    margin: auto;
+    font-size: 5vw;
+    width: 5vw;
+  }
+
+  .d-flex{
+    display: inherit;
+  }
+
+  .row p{
+    margin: auto;
+    width: 60%;
+  }
+
+  .how-much-skilled {
+    width: 60%;
+    height: 1em;
+    margin: auto;
+  }
+
+  .score{
+    height: 1em;
+  }
+
+  .interets i{
+    font-size: 4vw;
+    padding: 3vw;
+    margin-bottom: 0.5em;
+  }
+
+.langage{
+  font-size: 1.2em;
+}
+
+  .interets {
+    flex-wrap: wrap;
+  }
+
 }
 
 
