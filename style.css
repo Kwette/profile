@@ -133,7 +133,7 @@ li{
   color: white;
   border-radius: 2px;
   font-weight: lighter;
-  font-size: 1.7vw;
+  font-size: 1.5em;
   padding: 0.7em;
   margin-bottom: 1.3em;
   margin-top: 2em;
@@ -175,7 +175,7 @@ li{
   }
 
 .resume-body{
-  margin-top: 5em;
+  margin-top: 2em;
   margin-left: 24em;
   width: 580px;
   overflow: hidden;
@@ -268,7 +268,7 @@ span.grey{
   padding: 0.5em;
   margin-left: 0.7em;
   margin-bottom: 0.5em;
-  font-size: 1.7vw;
+  font-size: 1.5em;
 }
 
 .interets i{
@@ -461,48 +461,51 @@ hr {
 /* ---------- For a screen < 720px, this CSS will be read ---------- */
 @media (max-width: 850px) {
   .container {
-    width: 600px;
+    width: 650px;
   }
 
   .skills{
-    background-color: #E1DAD1;
-    width: 30vw;
-    margin-top: 10em;
+    width: 185px;
+    margin-top: 6em;
     margin-left: 1em;
+    padding: 0.5em;
+  }
+
+  .skills img {
+    margin-top: 2em;
+    width: 150px;
+    height: 150px;
   }
 
   .resume-header{
-    padding: 2em;
-    width: 88.7%;
-    justify-content: center;
-    height: 25vh;
+    width: 585px;
+    justify-content: flex-end;
+    height: 20vw;
   }
 
   .margin-right{
-    margin-right: 0;
+    margin-right: 3em;
   }
 
   .resume-header h1{
-    font-size: 6vw;
+    font-size: 2.5em;
   }
 
   .resume-header h3{
-    font-size: 3vw;
-  }
-
-  .resume-header hr{
-    width: 10vw;
+    font-size: 1.5em;
   }
 
   .resume h2{
-    font-size: 2.4vw;
-    padding: 0.9em;
+    font-size: 1em;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 3em;
   }
 
   .resume-body{
-    margin-top: 11vw;
-    margin-left: 34vw;
-    width: 60%;
+    margin-top: 3em;
+    margin-left: 14.5em;
+    width: 400px;
   }
 
   .d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p {
@@ -510,13 +513,11 @@ hr {
   }
 
   .resume-body p{
-    font-size: 0.95em;
+    font-size: 1em;
   }
 
   .mobile a{
-    font-size: 0.7em;
-    display: flex;
-    justify-content: center;
+    font-weight: 500;
   }
 
   .mobile p{
@@ -525,104 +526,94 @@ hr {
 
   .mobile i{
     margin: auto;
-    font-size: 4vw;
-    width: 4vw;
+    font-size: 2.8vw;
+    width: 2.8vw;
+    height: 2.8vw;
   }
 
   .row p{
     margin: auto;
-    width: 60%;
+    width: 55%;
   }
 
   .how-much-skilled {
-    width: 60%;
+    width: 55%;
     height: 1em;
     margin: auto;
   }
 
-  .score{
-    height: 1em;
-  }
 
   .interets i{
-    font-size: 4vw;
-    padding: 3vw;
+    font-size: 1.3em;
+    padding: 0.5em;
     margin-bottom: 0.5em;
   }
 
   .langage{
-    font-size: 1.1em;
-  }
-
-  .interets {
-    flex-wrap: wrap;
+    font-size: 1.3em;
   }
 
     .d-flex{
     display: inherit;
   }
+
+   .app-links h4 {
+    padding: 2em;
+  }
+
+    .app-links i{
+    margin-left: 0.3em;
+  }
 }
 
 
-@media (max-width: 540px) {
-  /* For a screen < 540px, this CSS will be read */
+@media (max-width: 660px) {
+  /* ------- XS SCREENS ---- For a screen < 540px ------ */
   .container {
-    width: 98%;
-  }
-
-  .app-links h4{
-    border: 1.8px solid #585f7d;
-    padding: 0.5em;
-    border-radius: 4px;
-    width: 25vw;
+    width: 480px;
   }
 
   .skills{
-    background-color: #E1DAD1;
-    width: 30vw;
-    margin-top: 10em;
-    margin-left: 0.7em;
+    margin-top: 5.5em;
+    margin-left: 0.5em;
+    width: 150px;
   }
 
   .skills img {
     margin: inherit;
     margin-top: 1em;
-    width: 25vw;
-    height: 25vw;
+    width: 120px;
+    height: 120px;
   }
 
   .resume-header{
     padding: 2em;
-    width: 85%;
-    justify-content: center;
-    height: 25vh;
+    width: 415px;
+    height: 15vh;
   }
 
   .margin-right{
-    margin-right: 0;
+    margin-right: 1em;
   }
 
   .resume-header h1{
-    font-size: 6vw;
+    font-size: 2.1em;
   }
 
   .resume-header h3{
-    font-size: 3vw;
-  }
-
-  .resume-header hr{
-    width: 10vw;
+    font-size: 1.1em;
   }
 
   .resume h2{
-    font-size: 2.4vw;
+    font-size: 1em;
     padding: 0.9em;
+    line-height: 1.5em;
   }
 
   .resume-body{
-    margin-top: 10vw;
-    margin-left: 34vw;
-    width: 60%;
+    margin-top: 3em;
+    margin-left: 185px;
+    width: 280px;
   }
 
   .d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p {
@@ -630,7 +621,7 @@ hr {
   }
 
   .resume-body p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .mobile a{
@@ -645,37 +636,24 @@ hr {
 
   .mobile i{
     margin: auto;
-    font-size: 5vw;
-    width: 5vw;
+    font-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
   }
 
   .d-flex{
     display: inherit;
   }
 
-  .row p{
-    margin: auto;
-    width: 60%;
-  }
-
-  .how-much-skilled {
-    width: 60%;
-    height: 1em;
-    margin: auto;
-  }
-
-  .score{
-    height: 1em;
-  }
-
   .interets i{
-    font-size: 4vw;
-    padding: 3vw;
+    font-size: 1.5em;
+    padding: 0.8em;
     margin-bottom: 0.5em;
   }
 
-.langage{
-  font-size: 1.2em;
+.langage p{
+  font-size: 0.6em;
+  font-weight: 500;
 }
 
   .interets {
