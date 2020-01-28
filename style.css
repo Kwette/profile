@@ -229,8 +229,8 @@ span.grey{
 .skills img{
   margin: inherit;
   margin-top: 3em;
-  width: 15vw;
-  height: 15vw;
+  width: 230px;
+  height: 230px;
 }
 
 .skills h2{
@@ -673,8 +673,23 @@ hr {
 
 }
 
+@media (max-width: 500px) {
+  /* ------- XXS SCREENS ---- For a screen < 540px ------ */
 
+  .container {
+    width: 480px;
+  }
+  .resume-header{
+    width: 415px;
+    height: 110px;
+  }
+  .resume-body{
+    margin-top: 1em;
+    margin-left: 185px;
+    width: 280px;
+  }
 
+}
 
 
 
