@@ -780,7 +780,7 @@ hr {
   }
   .resume-header{
     width: 235px;
-    height: 110px;
+    height: 130px;
   }
   .resume-body{
     margin: auto;
@@ -790,7 +790,7 @@ hr {
   .skills{
     width: 80%;
     margin: auto;
-    margin-top: 140px;
+    margin-top: 155px;
     margin-bottom: 1950px;
     padding-bottom: 30px;
   }
@@ -830,7 +830,5 @@ hr {
   .how-much-skilled, .row p {
     width: 90%;
   }
-
-
 
 }
