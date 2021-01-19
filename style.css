@@ -270,6 +270,7 @@ span.grey{
   background-color: #585f7d;
   margin-bottom: 1.5em;
   height: 0.13em;
+  max-width: 200px;
 }
 
 .d-flex > i{
@@ -386,7 +387,7 @@ h1.apps-header{
 hr {
   width: 50vw;
   color: #585f7d;
-  font-weight: : border;
+  max-width: 500px;
 }
 
 .one-project{
@@ -487,6 +488,7 @@ hr {
     margin-top: 6em;
     margin-left: 1em;
     padding: 0.5em;
+    margin-bottom: 15em;
   }
 
   .skills img {
@@ -595,6 +597,7 @@ hr {
     margin-top: 5.5em;
     margin-left: 0.5em;
     width: 150px;
+    margin-bottom: 20em;
   }
 
   .skills img {
@@ -692,6 +695,14 @@ hr {
   }
     .margin-right{
     margin-right: 0em;
+    width: 100%;
+  }
+  .resume{
+    background: white;
+    padding-bottom: 3em;
+    border-radius: 4px;
+    border: solid 1px lightgrey;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
   }
   .resume-body{
     margin-top: 0em;
@@ -739,8 +750,9 @@ hr {
     width: 380px;
   }
   .skills{
+    margin-top: 10em;
     margin-left: 0;
-    margin-bottom: 0;
+    margin-bottom: 20em;
   }
   .resume-header{
     width: 315px;
@@ -798,7 +810,7 @@ hr {
     width: 80%;
     margin: auto;
     margin-top: 155px;
-    margin-bottom: 1950px;
+    margin-bottom: 2325px;
     padding-bottom: 30px;
   }
   .contact {
