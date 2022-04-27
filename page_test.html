@@ -27,7 +27,26 @@
     <div class="drime-player" alt="bouton player" src="https://drime-player.s3.eu-west-3.amazonaws.com/lib_test/la-sivoliere-v2.drime" style="background: #C25C27; padding: 1em; border-radius: 50%; color: #F2F2F2; font-size: 24px; font-family: 'Roboto'; width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; margin-top: calc(50vh - 50px); margin-left: calc(50vw - 50px); cursor: pointer;">Play</div>
 
     <div alt="rond test z-index" style="width: 200px; height: 200px; border-radius: 50%; margin-top: 4em; background: red; position: fixed; top: 0; z-index: 100000"></div>
+    
+     <div id="loading-container" style= "position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(48, 41, 41, 0.4);
+    top: 0;
+    left: 0;
+    z-index: 10000000 !important;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;">
+      <h1 class="xclose" id="BtnCl" onclick="closeLoading()" style=""><img src="https://drime-player.s3.eu-west-3.amazonaws.com/images/close.svg" alt="close player" style="margin-left: 30px"></h1>
+      <div id="loading-anim" style="position: fixed; margin-left: calc(50vw - 150px); top: 0; margin-top: calc(50vh - 152px); display">
+      <lottie-player src="https://drime-player.s3.eu-west-3.amazonaws.com/lotties/loading.json" background="transparent" speed="1"  style="width: 300px; height: 100px;"></lottie-player>
+    </div>
+    </div>
   </body>
-
+  <script>
+    let lottieLoading = document.querySelector('#loading-anim');
+    let animLoading = bodymovin.loadAnimation({ container: lottieLoading, renderer: 'svg', loop: true, autoplay: true, path: 'https://drime-player.s3.eu-west-3.amazonaws.com/lotties/loading.json' });
+  </script>
 </html>
 
