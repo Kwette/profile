@@ -1,3 +1,5 @@
+
+
 body, p, li{
   font-family: 'Open Sans', sans-serif;
   font-size : 16px;
@@ -43,6 +45,61 @@ img{
   border-radius : 50%;
 }
 
+.button {
+  background-color: white;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  z-index: 1;
+}
+
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  right: 0px;
+  top: 0px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: white;
+  color: #585f7d;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+  margin-top: 80px;
+  margin-left: -91px;
+  opacity: 0;
+  transition: opacity 0.1s;
+  font-weight: bold;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+i.fa-solid {
+  color: #585f7d;
+  font-size: 25px;
+}
+
+i.fa-solid:hover{ color: #585f7d;}
+
+.button:hover{border: 1px solid #585f7d; cursor: pointer;}
+
 p{
   margin-bottom : 50px;
   margin-top : 30px;
@@ -72,6 +129,7 @@ a{
   font-weight: 600;
   border : 1.5px solid #585f7d;
   margin: 1em;
+  width: 40%;
 }
 
 .lang-link{
@@ -107,7 +165,7 @@ i:hover{
   margin-top : 3em;
   margin-bottom: 3em;
   border: 1px solid lightgrey;
-  padding-bottom : 55px;
+  /*padding-bottom : 55px;*/
 }
 
 .text-center {
@@ -337,13 +395,62 @@ h1.apps-header{
   border-radius: 4px;
 }
 
+.project-name{
+  margin-bottom: 0px;
+  background-color: #585f7d;
+  color: white;
+  height: 50px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name .button {position: relative; border: 1px solid #585f7d;}
+
+.project-name .button:hover { scale: 1.1; }
+
+.shadow-box{
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-left-side, .card-right-side {width: -webkit-fill-available;}
+
+.card-left-side h3{margin-bottom: 5px;}
+
+.card-left-side h4{margin-top: 0;}
+
+.card-right-side{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-right-side img{max-width: 50%; max-height: 132px;}
+
 .application p{
   margin-bottom : 1em;
   margin-top: 1em;
 }
-.application p.no-bg{
- background: white;
-  }
+
+.application p.no-bg{ background: white;}
+
+.hidden{
+  display: none;
+  max-height: 0;
+}
+
+.app-detail{transition: 0.10s ease-in-out}
+
 .app-links h4{
   border: 1.8px solid #585f7d;
   padding: 0.5em;
