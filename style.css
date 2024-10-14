@@ -41,6 +41,22 @@ img{
   object-position: top;
 }
 
+
+
+span.badge{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  border: 0.5px solid #585f7d;
+}
+
+span.badge img {height: 100%;}
+
 .img-circle{
   border-radius : 50%;
 }
@@ -134,14 +150,15 @@ a{
 
 .lang-link{
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   color: #585F7D;
   font-weight: 500;
 }
 
-.lang-link:hover{
-  font-weight: 600;
-}
+.lang-link:hover{font-weight: 600;}
+
+.lang-link:hover span.badge{border: 1px solid #585f7d;}
+
 
 i{
   font-size: 2.2em;
