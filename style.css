@@ -1020,7 +1020,7 @@ hr {
 
   .resume-body{
     margin: auto;
-    margin-top: 1455px;
+    margin-top: 1500px;
     width: 80%;
   }
   .skills{
@@ -1028,7 +1028,7 @@ hr {
     margin: auto;
     margin-top: 220px;
     /*margin-bottom: 2325px;*/
-    margin-bottom: 1800px;
+    margin-bottom: 1900px;
     padding-bottom: 30px;
   }
   .contact {
@@ -1068,4 +1068,13 @@ hr {
     width: 90%;
   }
 
+}
+
+@media (max-width: 350px) {
+  .resume-body{
+    margin-top: 1650px;
+  }
+  .skills{
+    margin-bottom: 2000px;
+  }
 }
