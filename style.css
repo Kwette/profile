@@ -126,9 +126,7 @@ p{
   border-radius: 4px;
 }
 
-a{
-  text-decoration: none;
-}
+a{text-decoration: none;}
 
 .btn:hover {
   color : white;
@@ -164,9 +162,7 @@ i{
   color : #585f7d;
 }
 
-i:hover{
-  color : black;
-}
+i:hover{color : black;}
 
 .container{
   width: 1000px;
@@ -204,9 +200,7 @@ li{
   background-color: white;
 }
 
-.list-inline{
-  padding-left: 0px;
-}
+.list-inline{padding-left: 0px;}
 
 .resume{
   position: absolute;
@@ -231,7 +225,6 @@ li{
   width: 935px;
   display: flex;
   justify-content: flex-end;
- /* height: 30vh;*/
   height: 15em;
 }
 
@@ -262,9 +255,7 @@ li{
   font-size: 1.2em;
 }
 
-.resume-header hr{
-    width: 5vw;
-  }
+.resume-header hr{width: 5vw;}
 
 .resume-body{
   margin-top: 1em;
@@ -277,6 +268,7 @@ li{
   margin: 0;
   padding: 0.1em;
 }
+
 body div.purple-bg, body div.no-bg {
   padding: 0.2em 0.5em;
   font-size: 0.85em;
@@ -285,15 +277,18 @@ body div.purple-bg, body div.no-bg {
   flex-direction: column;
   margin-top: 10px;
 }
-body div.purple-bg{background-color: rgba(87, 95, 125, 0.2); margin-top: 20px;}
+
+body div.purple-bg{
+  background-color: rgba(87, 95, 125, 0.2);
+  margin-top: 20px;
+}
 
 .resume-body p.xp-info, body .resume-body div.purple-bg span.bold.stack p,  .resume-body div.no-bg span.bold.stack p{
   font-size: 14px;
   line-height: 15px;
   background: none;
   margin-top: 0;
-  /*margin-bottom: 0;
-*/}
+}
 
 span.bold{
   font-weight: 600;
@@ -340,7 +335,7 @@ span.grey{
   margin-left: 0.7em;
 }
 
-.d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p{
+.d-flex > a, .d-flex > p, .skills p, .resume-body p{
   background-color: inherit;
   color: #585f7d;
   font-family: 'Montserrat', sans-serif;
@@ -350,7 +345,7 @@ span.grey{
   text-align: left;
 }
 
-.skills p, .skills a, .myskills p{
+.skills p, .skills a{
   margin-top: 0;
   margin-bottom: 0;
   white-space: break-spaces;
@@ -367,18 +362,14 @@ span.grey{
 
 .skills  .d-flex i {margin-bottom: 0;}
 
- .resume-body p{
-  font-size: 1em;
- }
+.resume-body p{font-size: 1em;}
 
 .myskills p{
   font-weight: 600;
   font-size: 0.9em;
 }
 
-.d-flex > a{
-  padding: 0.7em;
-}
+.d-flex > a{padding: 0.7em;}
 
 .hr{
   width: 17vw;
@@ -414,18 +405,6 @@ span.grey{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.how-much-skilled{
-  background-color: white;
-  width: 6.5em;
-  height: 1em;
-  margin-left: 0.7em;
-}
-
-.score{
-  background-color: #585f7d;
-  height: 1em;
 }
 
 .row p, .langage p, .langage p span.bold{
@@ -562,40 +541,21 @@ hr {
 
 @media (max-width: 1074px) {
   /* For a screen < 974px, this CSS will be read */
-  .container {
-    /*width: 800px;*/
-    width: 900px;
-  }
+  .container{width: 900px;}
 
-  .resume-header{
-    width: 834px;
-  }
-
-  /*.margin-right{
-    margin-right: 4em;
-  }*/
+  .resume-header{width: 834px;}
 
   .resume-body{
     margin-left: 19em;
-    /*width: 470px;*/
     width: 570px;
     margin-top: 1em;
   }
 
-  .resume-body h2{
-    font-size: 1.2em;
-  }
+  .resume-body h2{font-size: 1.2em;}
 
-  /*.d-flex{
-    display: inherit;
-  }*/
-   .resume-body p{
-    font-size: 1.1em;
-  }
+  .resume-body p{font-size: 1.1em;}
 
-  .myskills{
-    display: flex;
-  }
+  .myskills{display: flex;}
 
   .skills{
     width: 270px;
@@ -627,10 +587,6 @@ hr {
     height: 1.2em;
   }
 
- /* .mobile > i:first-child{
-    margin-top: 1.2em;
-  }
-*/
   .contact{
     display: flex;
     flex-direction: column;
@@ -638,9 +594,7 @@ hr {
     padding: 0 0.7em;
   }
 
-  .langage p, .contact p, .contact a{
-    font-size: 14px;
-  }
+  .langage p, .contact p, .contact a{font-size: 14px;}
 
   .interets i {
     font-size: 0.9em;
@@ -653,17 +607,15 @@ hr {
 }
 /* ---------- For a screen < 720px, this CSS will be read ---------- */
 @media (max-width: 850px) {
-  .container {
-    width: 650px;
-  }
+
+  .container {width: 650px;}
 
   .skills{
     width: 200px;
     margin-top: 1.5em;
     margin-left: 0.7em;
     padding: 0.5em;
-/*    margin-bottom: 15em;
-*/  }
+  }
 
   .skills img {
     margin-top: 2em;
@@ -679,17 +631,11 @@ hr {
     height: 15vw;
   }
 
-  .margin-right{
-    margin-right: 4.5em;
-  }
+  .margin-right{margin-right: 4.5em;}
 
-  .resume-header h1{
-    font-size: 2em;
-  }
+  .resume-header h1{font-size: 2em;}
 
-  .resume-header h3{
-    font-size: 1em;
-  }
+  .resume-header h3{font-size: 1em;}
 
   .resume h2{
     font-size: 1em;
@@ -704,42 +650,19 @@ hr {
     width: 403px;
   }
 
-  .d-flex > a, .d-flex > p, .myskills p, .skills p, .resume-body p {
-    font-size: 12px;
-  }
-
-/*  .skills .contact p{font-size: 12px}
-*/
-  .resume-body p{
-    font-size: 12px;
-  }
+  .d-flex > a, .d-flex > p, .skills p, .resume-body p{font-size: 12px;}
 
   .resume-body span.bold, .resume-body p:first-child{font-size: 14px;}
 
-  .mobile a{
-    font-weight: 500;
-  }
+  .mobile a{font-weight: 500;}
 
-  .mobile p{
-    text-align: center;
-  }
+  .mobile p{text-align: center;}
 
   .mobile i{
     margin: auto;
     font-size: 0.8em;
     width: 1em;
     height: 1em;
-  }
-
-  /*.row p{
-    margin: auto;
-    width: 55%;
-  }*/
-
-  .how-much-skilled {
-    width: 55%;
-    height: 1em;
-    margin: auto;
   }
 
   .interets {margin-bottom: 3em;}
@@ -750,31 +673,21 @@ hr {
     margin-bottom: 0.5em;
   }
 
-  .langage{
-    font-size: 1.3em;
-  }
+  .langage{font-size: 1.3em;}
 
   .contact {padding: 0;}
 
-    .d-flex{
-    display: inherit;
-  }
+  .d-flex{display: inherit;}
 
-   .app-links h4 {
-    padding: 2em;
-  }
+  .app-links h4 {padding: 2em;}
 
-    .app-links i{
-    margin-left: 0.3em;
-  }
+  .app-links i{margin-left: 0.3em;}
 }
 
 
 @media (max-width: 660px) {
   /* ------- XS SCREENS ---- For a screen < 540px ------ */
-  .container {
-    width: 480px;
-  }
+  .container {width: 480px;}
 
   .skills{
     margin-top: 1.5em;
@@ -798,13 +711,9 @@ hr {
     height: 12vh;
   }
 
-  .margin-right{
-    margin-right: 2em;
-  }
+  .margin-right{margin-right: 2em;}
 
-  .resume-header h1{
-    font-size: 1.5em;
-  }
+  .resume-header h1{font-size: 1.5em;}
 
   .resume-header h3{
     font-size: 0.8em;
@@ -823,21 +732,15 @@ hr {
     line-height: 1.5em;
   }
 
-
   .resume-body{
     margin-top: 0em;
     margin-left: 190px;
     width: 280px;
   }
 
-  .d-flex > a, .d-flex > p, .myskills p, .skills p,  {
-    font-size: 12px;
-  }
-  .resume-body p.xp-info, .contact p, .contact a{font-size: 11px;}
+  .d-flex > a, .d-flex > p, .myskills p, .skills p,  {font-size: 12px;}
 
-  /*.resume-body p{
-    font-size: 1em;
-  }*/
+  .resume-body p.xp-info, .contact p, .contact a{font-size: 11px;}
 
   .mobile a{
     font-size: 0.6em;
@@ -845,9 +748,7 @@ hr {
     justify-content: center;
   }
 
-  .mobile p{
-    text-align: center;
-  }
+  .mobile p{text-align: center;}
 
   .mobile i {
     font-size: 0.7em;
@@ -860,16 +761,7 @@ hr {
 
   .resume-body div.no-bg span.bold.stack p, body .resume-body div.purple-bg span.bold.stack p{font-size: 12px;}
 
- /* .mobile i{
-    margin: auto;
-    font-size: 1.3em;
-    width: 1.5em;
-    height: 1.5em;
-  }*/
-
-  .d-flex{
-    display: inherit;
-  }
+  .d-flex{display: inherit;}
 
   .interets i{
     font-size: 1em;
@@ -877,136 +769,23 @@ hr {
     margin-bottom: 0.5em;
   }
 
-.langage p{
-  font-size: 12px;
-  font-weight: 500;
-}
-
-  .interets {
-    flex-wrap: wrap;
+  .langage p{
+    font-size: 12px;
+    font-weight: 500;
   }
+
+  .interets {flex-wrap: wrap;}
 
 }
-
-/*@media (max-width: 500px) {
-  /* ------- XXS SCREENS ---- For a screen < 500px ------ */
-/*
-  .container {
-    width: 430px;
-  }
-  .resume-header{
-    width: 365px;
-    height: 110px;
-  }
-    .margin-right{
-    margin-right: 0em;
-    width: 100%;
-  }
-  .resume{
-    background: white;
-    padding-bottom: 3em;
-    border-radius: 4px;
-    border: solid 1px lightgrey;
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  }
-  .resume-body{
-    margin-top: 0em;
-    margin-left: 170px;
-    width: 240px;
-  }
-  .resume-body p {
-    font-size: 0.9em;
-  }
-  .skills{
-    width: 130px;
-  }
-  .skills h2{
-    margin-left: auto;
-  }
-  .hr{
-    margin-left: 0;
-  }
-  .app-links a {
-     margin-right: 0;
-     margin-bottom: 1em;
-  }
-  .app-links {
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  .app-links h4 {
-    padding: 1em;
-  }
-  .app-links h4 {
-     width: inherit;
-  }
-  h2.text-center {
-    line-height: 22px;
-  }
-  .application p{
-    font-size: 0.9em;
-  }
-
-}*/
-
-/*@media (max-width: 500px) {*/
-  /* ------- XXS SCREENS ---- For a screen < 450px ------ */
- /* .container {
-    width: 95vw;
-  }
-  .skills{
-    margin-top: 10em;
-    margin-left: 0;
-    margin-bottom: 20em;
-  }
-  .resume-header{
-    width: 315px;
-    height: 110px;
-  }
-  .resume-body{
-    margin-left: 154px;
-    width: 215px;
-    margin-top: 0em;
-  }
-  .resume-body p {
-    font-size: 0.85em;
-  }
-  .resume h2 {
-    font-size: 0.9em;
-  }
-  .langage p {
-    font-size: 0.5em;
-    font-weight: 600;
-  }
-  .mobile p {
-    font-size: 0.6em;
-  }
-  .mobile a {
-    font-size: 0.55em;
-  }
-  .resume h2 {
-    margin-top: 2em;
-  }
-  .resume-header h1 {
-    font-size: 1.8em;
-  }
-  .resume-header h3 {
-    font-size: 0.9em;
-  }
-
-}*/
 
 
 @media (max-width: 450px) {
   /* ------- XXS SCREENS ---- For a screen < 450px ------ */
-  .container {
-    width: 95vw;
-  }
+  .container {width: 95vw;}
 
   .resume{width: 95vw;}
 
   .resume-header{
-   /* width: 235px;*/
     height: 130px;
     justify-content: center;
     width: auto;
@@ -1023,35 +802,39 @@ hr {
     margin-top: 1500px;
     width: 80%;
   }
+
   .skills{
     width: 80%;
     margin: auto;
     margin-top: 220px;
-    /*margin-bottom: 2325px;*/
     margin-bottom: 1900px;
     padding-bottom: 30px;
   }
+
   .contact {
     justify-content: flex-start;
     display: flex;
     flex-wrap: wrap;
     margin-left: 1em;
   }
+
   .mobile > i {
     margin-top: 0em !important;
     margin-right: 10px;
   }
+
   .d-flex {
     display: flex;
     margin-top: 10px;
   }
+
   .mobile p, .mobile a {
     font-size: 10px;
     font-weight: 500;
   }
-  .skills h2 {
-    margin-top: 1.1em;
-  }
+
+  .skills h2 {margin-top: 1.1em;}
+
   .langage p{
     font-size: 0.7em;
     font-weight: 400;
@@ -1064,17 +847,12 @@ hr {
     width: 0.7em;
     height: 0.7em;
   }
-  .how-much-skilled, .row p {
-    width: 90%;
-  }
 
 }
 
 @media (max-width: 350px) {
-  .resume-body{
-    margin-top: 1650px;
-  }
-  .skills{
-    margin-bottom: 2000px;
-  }
+
+  .resume-body{margin-top: 1650px;}
+
+  .skills{margin-bottom: 2000px;}
 }
