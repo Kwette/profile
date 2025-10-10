@@ -41,7 +41,6 @@ img{
   object-position: top;
 }
 
-
 span.badge{
   width: 25px;
   height: 25px;
@@ -202,11 +201,12 @@ li{
 
 .list-inline{padding-left: 0px;}
 
+/*--------- RESUME ---------*/
 .resume{
   position: absolute;
   overflow: hidden;
 }
-
+/*--------- RESUME HEADER ---------*/
 .resume h2{
   background-color: #585f7d;
   color: white;
@@ -257,6 +257,8 @@ li{
 
 .resume-header hr{width: 5vw;}
 
+/*--------- RESUME BODY ---------*/
+
 .resume-body{
   margin-top: 1em;
   margin-left: 24em;
@@ -269,7 +271,7 @@ li{
   padding: 0.1em;
 }
 
-body div.purple-bg, body div.no-bg {
+body div.purple-bg, body div.no-bg{
   padding: 0.2em 0.5em;
   font-size: 0.85em;
   color: #585f7d;
@@ -282,6 +284,7 @@ body div.purple-bg{
   background-color: rgba(87, 95, 125, 0.2);
   margin-top: 20px;
 }
+
 
 .resume-body p.xp-info, body .resume-body div.purple-bg span.bold.stack p,  .resume-body div.no-bg span.bold.stack p{
   font-size: 14px;
@@ -311,6 +314,7 @@ span.grey{
   padding-left: 0.5em;
 }
 
+/*--------- LEFT PART SKILLS ---------*/
 .skills{
   background-color: #E1DAD1;
   width: 322px;
@@ -352,9 +356,7 @@ span.grey{
   font-size: 14px;
 }
 
-.skills h2{
-  font-size: 22px;
-}
+.skills h2{font-size: 22px;}
 
 .skills .contact p, .skills .contact a{padding: 0.5em;}
 
@@ -363,11 +365,6 @@ span.grey{
 .skills  .d-flex i {margin-bottom: 0;}
 
 .resume-body p{font-size: 1em;}
-
-.myskills p{
-  font-weight: 600;
-  font-size: 0.9em;
-}
 
 .d-flex > a{padding: 0.7em;}
 
@@ -420,10 +417,13 @@ span.grey{
   font-weight: 400;
 }
 
+/*--------- APPS ---------*/
+/*--------- CARDS ---------*/
 h1.apps-header{
   margin-bottom: 2em;
   background-color: #585f7d;
-  color: #E1DAD1;
+  /*color: #E1DAD1;*/
+  color: white;
   height: 15vh;
   margin-top: 0;
   display: flex;
@@ -464,7 +464,7 @@ h1.apps-header{
 
 .card-left-side h3{margin-bottom: 5px;}
 
-.card-left-side h4{margin-top: 0;}
+.card-left-side h4{margin-top: 0; margin-bottom: 0;}
 
 .card-right-side{
   display: flex;
@@ -472,14 +472,18 @@ h1.apps-header{
   justify-content: center;
 }
 
-.card-right-side img{max-width: 50%; max-height: 132px;}
+.card-right-side img{max-width: 50%; max-height: 48px;}
 
+/*--------- APPS HIDDEN PART ---------*/
 .application p{
   margin-bottom : 1em;
   margin-top: 1em;
 }
 
-.application p.no-bg{ background: white;}
+.application p.no-bg{
+  background: white;
+  padding-top: 15px;
+}
 
 .hidden{
   display: none;
@@ -488,15 +492,34 @@ h1.apps-header{
 
 .app-detail{transition: 0.10s ease-in-out}
 
+.app-details p{
+  color: #585f7d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: rgba(225, 218, 209, 0.3);
+  text-align: left;
+}
+
+.app-details span.bold{
+  color: #585f7d;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.app-details .purple-bg span.bold{
+  font-size: 16px;
+  padding: 10px 0;
+}
+
 .app-links h4{
   border: 1.8px solid #585f7d;
   padding: 0.5em;
   border-radius: 4px;
-  width: 15vw;
+  width: 20vw;
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .app-links span{
@@ -505,9 +528,11 @@ h1.apps-header{
   margin-right: 0.2em;
 }
 
+.app-links i{margin-right: 10px;}
+
 .app-links a{
   border-radius: 4px;
-  margin-right: 2em;
+/*  margin-right: 2em;*/
 }
 
 .app-links a:hover{
@@ -523,9 +548,10 @@ h1.apps-header{
 
 .app-links{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 3em;
+  margin-top: 1em;
 }
 
 hr {
@@ -534,9 +560,8 @@ hr {
   max-width: 500px;
 }
 
-.one-project{
-   margin-top: 4em;
-}
+.one-project{margin-top: 4em;}
+
 /*-------------------- Media querries -------------------*/
 
 @media (max-width: 1074px) {
@@ -604,6 +629,10 @@ hr {
     height: 1em;
   }
 
+  .app-links h4{width: 25vw}
+
+  .one-project .card-left-side h4{font-size: 15px;}
+
 }
 /* ---------- For a screen < 720px, this CSS will be read ---------- */
 @media (max-width: 850px) {
@@ -637,28 +666,28 @@ hr {
 
   .resume-header h3{font-size: 1em;}
 
-  .resume h2{
+  .resume h2 {
     font-size: 1em;
     padding: 1em;
     margin-bottom: 2em;
     margin-top: 3em;
   }
 
-  .resume-body{
+  .resume-body {
     margin-top: 0em;
     margin-left: 14.8em;
     width: 403px;
   }
 
-  .d-flex > a, .d-flex > p, .skills p, .resume-body p{font-size: 12px;}
+  .d-flex > a, .d-flex > p, .skills p, .resume-body p {font-size: 12px;}
 
   .resume-body span.bold, .resume-body p:first-child{font-size: 14px;}
 
-  .mobile a{font-weight: 500;}
+  .mobile a {font-weight: 500;}
 
-  .mobile p{text-align: center;}
+  .mobile p {text-align: center;}
 
-  .mobile i{
+  .mobile i {
     margin: auto;
     font-size: 0.8em;
     width: 1em;
@@ -667,23 +696,31 @@ hr {
 
   .interets {margin-bottom: 3em;}
 
-  .interets i{
+  .interets i {
     font-size: 0.9em;
     padding: 0.5em;
     margin-bottom: 0.5em;
   }
 
-  .langage{font-size: 1.3em;}
+  .langage {font-size: 1.3em;}
 
   .contact {padding: 0;}
 
-  .d-flex{display: inherit;}
+  .d-flex {display: inherit;}
 
-  .app-links h4 {padding: 2em;}
+  h2.project-name {font-size: 16px;}
 
-  .app-links i{margin-left: 0.3em;}
+  .one-project .card-left-side h4 {font-size: 10px;}
+
+  .app-links h4 {padding: 0.5em; width: 30vw;}
+
+  .app-links i {margin-left: 0.3em;}
 }
 
+
+@media (max-width: 770px) {
+  .app-links h4 {width: 35vw;}
+}
 
 @media (max-width: 660px) {
   /* ------- XS SCREENS ---- For a screen < 540px ------ */
@@ -776,11 +813,33 @@ hr {
 
   .interets {flex-wrap: wrap;}
 
+  .app-links h4 {
+    padding: 0.2em;
+    width: 30vw;
+    font-size: 12px;
+  }
+
+  h2.project-name {font-size: 12px;}
+
 }
 
 
+@media (max-width: 500px){
+  .app-links h4 {
+    width: 35vw;
+  }
+
+}
+
 @media (max-width: 450px) {
   /* ------- XXS SCREENS ---- For a screen < 450px ------ */
+
+  div.button {
+    padding: 10px;
+    width: 9px;
+    height: 9px;
+  }
+
   .container {width: 95vw;}
 
   .resume{width: 95vw;}
@@ -847,6 +906,14 @@ hr {
     width: 0.7em;
     height: 0.7em;
   }
+
+  .app-links h4 {
+    width: 35vw;
+    font-size: 10px;
+  }
+
+  h2.project-name {font-size: 10px; line-height: 12px;}
+
 
 }
 

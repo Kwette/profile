@@ -224,577 +224,571 @@
       <!--------------------------- APPLICATIONS ------------------------->
       <div class="card application" id="apps">
         <h1 class="text-center apps-header" style="color: white;">Mes Projets</h1>
-         <!------------------- DRIME  ----------------->
+        <!------------------- PROJECT DRIME  ----------------->
         <div class="one-project">
-          <h2 class="project-name">Drime
+          <!------------------- PROJECT HEADER  ----------------->
+          <h2 class="project-name">Lead Fullstack Developer | Drime
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
-
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Lead Ruby on Rails /JS Developer</h3>
-              <h4>Février 2021 à Avril 2024 - CDI - Full remote</h4>
-              <a href="https://www.drime.co" target="blank" class=""><h4>www.drime.co</h4></a>
+              <h4>Temps plein en télétravail – Février 2021 à Avril 2024</h4>
+              <h4>Contrat à durée indéterminée</h4>
             </div>
             <div class="card-right-side">
               <img src="images/drime-new.png">
             </div>
           </div>
-
+          <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden">
             <p class="no-bg">
-              DRIME est un lecteur vidéo responsive, multilingue, interactif et encapsulable sans cookies, composé de deux applications principales : le lecteur Drime, associé au format vidéo DRIME, et l'éditeur de vidéos Drime.</br></br>
-              Le format .drime est un format JSON qui permet de lire les vidéos dans toutes les langues souhaitées par le client, avec sous-titres, voix-off et habillages dynamiques adaptés à chaque langue. Ce format utilise un seul fichier vidéo, réduisant ainsi les coûts de stockage et l'empreinte écologique. Peu importe le nombre de langues, une seule vidéo est hébergée, avec un fichier Drime unique par projet.
-              </br></br></br>
-              <!------------------- DRIME PLAYER  ----------------->
-              1/ Le player Drime et le format de fichier .drime :
+              <span class="bold">Présentation du produit</span></br></br>
+              DRIME est un lecteur vidéo réactif, multilingue, interactif et encapsulable, sans cookies, avec un éditeur vidéo intégré. Il repose sur un format personnalisé basé sur JSON (.drime) qui permet la lecture en plusieurs langues (sous-titres, voix off, designs dynamiques) à partir d’un seul fichier vidéo. Cela réduit le temps de production, les coûts de stockage et l’empreinte écologique liée à l’hébergement des fichiers (une vidéo hébergée par projet, un fichier DRIME par projet).
               </br></br>
-              - Pour les professionnels/clients : </br><br>
-              Mise en ligne de tutoriels vidéo optimisés pour toutes les résolutions d’écran, permettant une diffusion en plusieurs langues grâce à la voix-off, aux sous-titres et aux habillages dynamiques, avec commandes vocales. Les tutoriels/notices peuvent être découpés en étapes pour une lecture pas à pas.
-
-              </br></br>En plus de la bibliothèque de vidéos accessible sur le site DRIME, le client peut encapsuler ses vidéos ou sa bibliothèque complète sur son site web via des iframes, référencées par Google.
-
-              </br></br>Le tableau de bord offre des « indicateurs intelligents », la gestion des droits utilisateurs, des iframes et QR codes personnalisés, ainsi que des habillages dynamiques pour les vidéos.</br></br></br>
-
-              - Pour les utilisateurs :<br><br>
-              Une plateforme de lecture vidéo adaptée à leur résolution d’écran, avec options de lecture en mode « pas à pas » ou continue, commandes vocales, réglage du son, taille et présence des sous-titres, et choix de langue. Par défaut, les vidéos sont diffusées dans la langue du navigateur, ou en anglais à défaut.</br></br>
+              <!------------------- DRIME PLAYER  ----------------->
+              1/ Lecteur DRIME & format de fichier .drime</br></br>
+              Pour les professionnels/clients</br><br>
+              - Les tutoriels vidéo sont filmés par l’équipe DRIME et optimisés pour toutes les résolutions d’écran.<br>
+              - Les fonctionnalités incluent la diffusion multilingue via des voix off, des sous-titres et des designs dynamiques dans toutes les langues sélectionnées, ainsi que des commandes vocales. Les tutoriels/manuels peuvent être découpés en séquences étape par étape.<br>
+              - Au-delà de la vidéothèque de la plateforme DRIME, les clients peuvent intégrer des vidéos individuelles ou des bibliothèques entières sur leurs propres sites via des iframes (indexées par Google).<br>
+              - La plateforme comprend un tableau de bord avec des “indicateurs intelligents”, une gestion des droits utilisateurs, des iframes personnalisées et des codes QR. Des designs vidéo dynamiques étaient également planifiés dans la feuille de route.</br><br>
+              Pour les utilisateurs finaux</br><br>
+              - Une expérience de lecture vidéo qui s’adapte à la résolution de l’écran, avec lecture continue ou étape par étape, commandes vocales, réglages du son/des sous-titres et sélection de la langue.<br>
+              - Par défaut, la vidéo s’affiche dans la langue du navigateur de l’utilisateur lorsqu’elle est disponible, sinon en anglais.<br>
             </p>
-            <!------------------- PROJECTS ----------------->
-            <p><span class="bold" style="color: #585f7d">  Projets menés :</span></br></br>
-              - Développement de chaque nouvelle fonctionnalité : FrontEnd + BackEnd,</br>
-              - Refonte du lecteur : ajout du réglage persistant du son et des sous-titres, animations CSS et Lotties sur les boutons, création du compteur d’étape, amélioration des commandes vocales,</br>
-              - Refonte de la page d’accueil avec animations Lotties et création du menu,</br>
-              - Patch du système de création de vidéos, avec installation d’un job pour la gestion de vidéos multilingues, suivi d’une refonte complète pour une scalabilité accrue,</br>
-              - Création d'un nouveau type de bibliothèque + refonte de l’ancien modèle pour une adaptation aux designs personnalisés,</br>
-              - Création des « indicateurs intelligents » : tableau de bord, classement, graphiques, moyennes et pourcentages,</br>
-              - Refonte du système de gestion des droits et favoris, avec moteur de recherche par email,</br>
-              - Création de générateurs d’iframe et de QR codes personnalisés : logo, bannière, menu, filtres, langue forcée, indicateur intelligent copie du code,</br>
-              - Création du générateur de QR code personnalisées : couleur, couleur de fond, taille, format, indicateur intelligent en fournissant la ligne de code necessaire à l'integration par le client,</br>
-              - Refonte des pages d'erreurs, pages statiques (tarifs, mentions légales, politique de confidentialité), pages d’inscription et de connexion,</br>
-              - Refonte des pages d’inscription et de connexion,</br>
-              - Mise en place d'un habillage dynamique multilingue des vidéos,</br>
-              - Tableau de bord super admin permettant de gérer les types d'habillages et de modifier directement le code des fichiers JSON des animations,</br>
-              - Création d'une deuxième landing page.</br>
-              <!------------------- TECHNO  ----------------->
-              <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-                Figma, Ruby on Rails, Vanilla JS, ES6, jQuery, JSON, HTML, CSS, SCSS, PostgreSQL, SQL, Heroku, AWS, Git.
-              </p></br>
-              <!------------------- DRIME EDITOR  ----------------->
-              <p class="no-bg">
-                2/ L'éditeur de vidéos au format Drime :
-                </br></br>
-                L’éditeur de vidéos Drime permet aux clients de créer des diaporamas multilingues, responsives, interactifs et encapsulables en sélectionnant des effets de transition. En connaissant les médias à utiliser et les textes à associer, la création et la mise en ligne de vidéos en plusieurs langues est rapide et efficace.
-                <br><br>
-                Les clients peuvent intégrer la vidéo sur leur site via iframe, une ligne de code, ou l'afficher en vitrine sur le site Drime.
-                <br><br>
-              </p>
-              <!------------------- PROJECTS ----------------->
-              <p><span class="bold" style="color: #585f7d">  Projets menés :</span></br></br>
-                - Paramétrage et déploiement du projet sur Heroku et GitHub,</br>
-                - Création d’une troisième landing page avec des animations avancées (parallaxe, effets d’apparition),</br>
-                - Mise en place de l’éditeur de vidéos Drime : FrontEnd + BackEnd,</br>
-                - Création des pages statiques de l’application,</br>
-                - Développement de l’espace Super Admin pour la gestion des clients et de leurs projets,</br>
-                - Création de l’espace client avec options pour lister, créer, modifier, dupliquer, publier et supprimer des projets,</br>
-                - Automatisation du stockage en lecture/écriture des fichiers Drime sur AWS,</br>
-                - Gestion des projets utilisateurs et des statuts (temporaire, brouillon, publié) des vidéos,</br>
-                - Paramétrage du projet : choix du montage, des habillages et du focus choisi pour le mode responsive,</br>
-                - Prévisualisation en temps réel des effets et paramétrages multilingues,</br>
-                - Génération et personnalisation de la voix-off via l’API Azure Text to Speech,</br>
-                - Possibilité de modifier un mot ou une expression pour en changer la prononciation sur la voix-off,</br>
-                - Création  et paramétrage de l'ajout de nouvelles langues,</br>
-                - Paramétrage des traductions avec Azure Translate et personnalisation manuelle,</br>
-                - Prévisualisation et sauvegarde du projet avant publication en ligne,</br>
-                - Transfert du projet sur GitLab, Docker, et AWS en collaboration avec un architecte indépendant.</br>
-               <!------------------- TECHNO  ----------------->
-               <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-                Figma, Ruby on Rails, Vanilla JS, ES6, jQuery, JSON, HTML, CSS, SCSS, PostgreSQL, SQL, Heroku, AWS, Azure APIs, Git, GitHub, GitLab, Docker.
-               </p></br>
+            <!------------------- KEY ACHIEVEMENTS  ----------------->
+            <p><span class="bold">Réalisations clés — Lecteur</span></br></br>
+              - Développement de nouvelles fonctionnalités de bout en bout (front end et back end).</br>
+              - Refonte du lecteur : conservation des paramètres son/sous-titres ; animations CSS et Lottie pour les boutons ; compteurs d’étapes pour les vidéos pas à pas ; amélioration des commandes vocales.</br>
+              - Refonte de la page d’accueil avec animations Lottie et création du menu.</br>
+              - Correction des plantages lors de la création de vidéos (>5 vidéos) en implémentant un traitement en tâche de fond pour la génération multilingue ; refonte ultérieure du pipeline pour une meilleure scalabilité.</br>
+              - Création d’un nouveau type de bibliothèque, refonte de l’ancienne bibliothèque et refactorisation du modèle de données pour prendre en charge les designs personnalisés des clients à grande échelle.</br>
+              - Création des Indicateurs Intelligents (tableau de bord des bibliothèques, classements, graphiques, moyennes, pourcentages).</br>
+              - Refonte complète de la gestion des droits utilisateurs et des favoris avec un mini moteur de recherche (recherche par e-mail).</br>
+              - Création d’un générateur d’iframe personnalisé (logo, bannière, menu, filtres, langue forcée, copie du code de l’Indicateur Intelligent).</br>
+              - Création d’un générateur de QR code (couleur, couleur de fond, taille, format, Indicateur Intelligent, téléchargement).</br>
+              - Refonte des pages d’erreur et création de pages statiques (tarifs, mentions légales, politique de confidentialité).</br>
+              - Refonte des pages d’inscription et de connexion.</br>
+              - Mise en place de designs vidéo dynamiques multilingues.</br>
+              - Création d’un tableau de bord Super Admin pour créer/modifier les types de designs, incluant la création, la lecture et l’édition directe de fichiers d’animation JSON.</br>
+              - Création d’une seconde page landing page.</br>
+            </p>
+            <!------------------- STACK ----------------->
+            <div class="purple-bg"><span class="bold">Figma, Ruby on Rails, Vanilla JS, ES6, jQuery, JSON, HTML, CSS, SCSS, PostgreSQL, SQL, Heroku, AWS, Git</span>
             </div>
+            <!------------------- DRIME EDITOR  ----------------->
+          <p class="no-bg">
+            2/ Éditeur vidéo DRIME</br></br>
+            Ce que c’est</br></br>
+            Un éditeur autonome (distinct du lecteur) permettant de créer des diaporamas à partir de courtes vidéos/photos avec des transitions personnalisables. Comme le lecteur, il est multilingue, adaptatif, interactif, intégrable et léger.</br></br>
+            Vitesse de production</br></br>
+            Avec les médias et textes pré-sélectionnés, les clients peuvent créer et publier une vidéo en environ 5 minutes. L’ajout d’une autre langue (voix off, sous-titres, etc.) prend environ 2 minutes. Des logos et bandes sonores peuvent être ajoutés. En résumé, avec une préparation minimale, une vidéo multilingue peut être produite en environ 10 minutes et publiée immédiatement. Exportation via iframe, une seule ligne de code d’intégration, ou en vitrine sur la plateforme DRIME.<br>
+            </p>
+            <!------------------- RÉALISATIONS CLÉS  ----------------->
+            <p><span class="bold">Réalisations clés — Éditeur</span></br></br>
+            - Mise en place du projet sur Heroku et installation sur GitHub.</br>
+            - Création d’une troisième page d’accueil avec animations (déroulement de la chronologie vidéo au défilement, effet de parallaxe et autres effets).</br>
+            - Développement de l’éditeur vidéo DRIME à partir de zéro (front end et back end).</br>
+            - Mise en place des pages statiques standard de l’application.</br>
+            - Création d’un espace Super Admin pour gérer les clients et leurs projets.</br>
+            - Création d’un espace client où les utilisateurs peuvent lister, créer, modifier, dupliquer, publier et supprimer des projets.</br>
+            - Automatisation de la lecture/écriture des fichiers DRIME requis sur AWS pour le stockage.</br>
+            - Activation de la création de projets utilisateurs, de la création de fichiers DRIME et de la gestion du statut des vidéos (temporaire, brouillon, publié).</br>
+            - Ajout d’options de projet (choix d’édition, designs, mise au point en mode responsive).</br>
+            - Activation des aperçus en temps réel de tous les effets lors de leur sélection.</br>
+            - Intégration d’Azure Text-to-Speech (voix off) avec filtres de genre/région ; les utilisateurs peuvent écouter un échantillon de chaque voix sélectionnée sur un exemple DRIME personnalisé traduit dans toutes les langues ; prise en charge des prononciations personnalisées ainsi que de la suppression/modification.</br>
+            - Intégration d’Azure Translator pour les traductions de projet, avec possibilité de correction manuelle par le client.</br>
+            - Activation de la prévisualisation des projets avant publication et sauvegarde en brouillon.</br>
+            - Migration du projet vers GitLab, Docker et AWS, en collaboration avec un architecte indépendant qui a mis en place le nouvel environnement.</br>
+          </p>
+          <!------------------- STACK  ----------------->
+          <div class="purple-bg"><span class="bold">Figma, Ruby on Rails, Vanilla JS, ES6, jQuery, JSON, HTML, CSS, SCSS, PostgreSQL, SQL, Heroku, AWS, Azure APIs, Git, GitHub, GitLab, Docker.</span>
+          </div>
+          <!------------------- RESULTS  ----------------->
+          <p><span class="bold">Résultats :</span>Livraison d’une plateforme de niveau production permettant aux utilisateurs de créer et de publier des vidéos multilingues en quelques minutes à partir d’un seul fichier source, tout en améliorant la stabilité et la scalabilité (pipeline reconstruit avec des tâches en arrière-plan ; refactorisations du modèle ; nouveaux tableaux de bord et générateurs).</p>
         </div>
-        <!------------------- PICKADEN  ----------------->
+        <!------------------- PROJECT PICKADEN  ----------------->
         <div class="one-project">
-          <h2 class="project-name">Pickaden
+          <!------------------- PROJECT HEADER  ----------------->
+          <h2 class="project-name">Lead Fullstack Developer | Pickaden
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Lead Junior Ruby on Rails / JS Developer</h3>
-              <h4>Mars 2020 à Février 2021 - Freelance - Full remote</h4>
-              <a href="https://www.pickaden.com" target="blank" class=""><h4>www.pickaden.com</h4></a>
+              <h4>Temps plein en télétravail – Mars 2020 à Février 2021</h4>
+              <h4>Freelance</h4>
             </div>
             <div class="card-right-side">
               <img src="images/PickadenHD.png">
             </div>
           </div>
-
+          <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden">
             <p class="no-bg">
-              Pickaden est une jeune start-up parisienne qui propose un logiciel SaaS permettant :</br></br>
-              - Pour les professionnels : </br></br>Optimisation et gestion de leurs plannings de garde, réception, acceptation ou refus des demandes de garde en ligne faites par les parents en fonction des places disponibles en temps réel, mise en ligne de leur profil, etc.</br></br>
-              - Pour les parents : </br></br>Un moteur de recherche des places disponibles en temps réel dans les établissements du réseau autour de l’adresse recherchée, possibilité de faire des demandes en ligne aux établissements sélectionnés, création de profil avec tableau de bord, etc.</br></br>
+              <span class="bold">Présentation du produit</span></br></br>
+              Pickaden est une startup parisienne proposant une plateforme SaaS pour la gestion et la réservation en temps réel de services de garde d’enfants.</br></br>
+              Pour les professionnels</br>
+              - Gérer et optimiser les plannings de garde</br>
+              - Recevoir, accepter ou refuser les demandes de garde des parents en fonction des disponibilités en temps réel</br>
+              - Publier et maintenir un profil en ligne</br></br>
+              Pour les parents</br>
+              - Moteur de recherche pour trouver des établissements de garde disponibles près d’une adresse donnée</br>
+              - Soumettre des demandes de garde en ligne</br>
+              - Créer et gérer un tableau de bord et un profil personnel</br>
+              <!------------------- RÉALISATIONS CLÉS  ----------------->
+              <p><span class="bold">Réalisations clés</span></br></br>
+              - Développement de toutes les nouvelles fonctionnalités de bout en bout (front end et back end).</br>
+              - Débogage et stabilisation du MVP initial.</br>
+              - Amélioration significative de la réactivité sur une grande partie du site.</br>
+              - Refonte de la barre de recherche principale pour une meilleure UX/UI : ajout de filtres, amélioration du design et activation de la recherche automatique lors de la validation d’un filtre.</br>
+              - Installation de plusieurs plugins JavaScript : carrousel de logos sur la page d’accueil et recherche par mots-clés sur la page d’aide (y compris la création complète de cette page).</br>
+              - Création de l’ensemble de l’espace parent, y compris les parcours de soumission de demandes.</br>
+              - Mise en place de l’espace de gestion pour les établissements.</br>
+              - Implémentation de la fonctionnalité d’envoi d’e-mails.</br>
+              - Amélioration de l’interface administrateur avec de nombreuses nouvelles fonctionnalités.</br>
+              - Rédaction de tests système avec Capybara.</br>
+              - Optimisation des temps de chargement, notamment pour les images.</br>
+              - Préparation de la migration technique de Woonies vers Pickaden.</br>
+              - Rédaction de requêtes SQL sur la plateforme d’analyse des KPI.</br>
             </p>
-            <!------------------- PROJECTS ----------------->
-            <p><span class="bold" style="color: #585f7d">  Projets menés :</span></br></br>
-             - Sur chaque nouvelle fonctionnalité développé : Front-End + BackEnd,</br>
-             - Débogage du MVP de base,</br>
-             - Amélioration de la responsivité sur une grande partie du site,</br>
-             - Refonte totale d'une partie fondamentale : fonctionnement et design de la barre de recherche pour une meilleure expérience utilisateur, avec ajout de filtres et recherche automatique à la validation d’un filtre,</br>
-             - Installation de plugins JavaScript : carrousel de logos sur la page d’accueil et recherche par mots-clés sur la page d’aide (incluant la création de la page),</br>
-             - Développement de l’espace parent et gestion des envois de demandes par les parents,</br>
-             - Mise en place de l’espace gestionnaire,</br>
-             - Gestion de l'envoi d'e-mails,</br>
-             - Amélioration de l’interface d'administration de base, ajout de nouvelles fonctionnalités,</br>
-             - Tests système avec Capybara,</br>
-             - Amélioration des temps de chargement, notamment en optimisant les images,</br>
-             - Préparation pour le passage de Woonies à Pickaden,</br>
-             - Requêtes SQL sur la plateforme KPI.</br></br></p>
-             <!------------------- TECHNO  ----------------->
-             <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             Photoshop, Illustrator, Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub, AWS, Sendinblue, WordPress.
-            </p></br>
+           <!------------------- STACK  ----------------->
+           <div class="purple-bg"><span class="bold">Photoshop, Illustrator, Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub, AWS, Sendinblue, WordPress.</span>
           </div>
-
+          <!------------------- RESULTS  ----------------->
+          <p><span class="bold">Résultats</span>Livraison d’un MVP SaaS fonctionnel, stable et convivial, améliorant les performances et l’expérience utilisateur tout en implémentant l’ensemble des fonctionnalités principales à partir de zéro.
+          </p>
+          </div>
         </div>
-        <!------------------- REACT FLATS  ----------------->
+        <!------------------- UN PROJET  ----------------->
         <div class="one-project">
-          <h2 class="project-name">React-flats
-            <span>
-              <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
-            </span>
+          <h2 class="project-name">Application React.js | React-Flats
+          <span>
+            <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus"></i></div>
+          </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Application React.js</h3>
-              <h4>Projet personnel - exercice (Janvier 2020)</h4>
-              <a href="https://kwette.github.io/react-flats/" target="blank"><h4>https://kwette.github.io/react-flats/</h4></a>
+              <h4>Projet personnel – exercice (Janvier 2020)</h4>
+              <a href="kwette.github.io/react-flats/" target="blank"><h4>kwette.github.io/react-flats/</h4></a>
             </div>
-            <div class="card-right-side">
+             <div class="card-right-side">
               <img src="images/logo-react.png">
             </div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Petite application en React.js.
-              </br></br>
-              Affiche une liste d'appartements avec une carte Google Maps. Lorsqu'un utilisateur clique sur un appartement, un marqueur rouge apparaît sur la carte.
+            <p class="no-bg">
+              Une petite application développée avec React.js.</br>
+              Affiche une liste d’appartements accompagnée d’une carte Google Map. Lorsqu’un utilisateur clique sur un appartement, un marqueur rouge apparaît sur la carte.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             React.js, HTML/CSS, Git, GitHub.
-            </p></br>
+            <div class="purple-bg"><span class="bold">React.js, HTML/CSS, Git, GitHub.</span>
+            </div>
 
             <div class="app-links">
-              <a href="https://github.com/Kwette/react-flats" target="blank">
-              <h4>
-                <span>Github Codebase</span>
-                <i class="fab fa-github-square"></i>
-              </h4>
+                <a href="https://github.com/Kwette/react-flats" target="blank">
+                <h4>
+                  <i class="fab fa-github-square"></i>
+                  <span>Github</span>
+                </h4>
+                </a>
+
+                <a href=" https://www.behance.net/gallery/90610133/Affiche-appartements-sur-Go-ogleMap-_-Appli-Reactjs?tracking_source=" target="blank">
+                <h4>
+                  <i class="fab fa-behance-square"></i>
+                  <span>Screenshots</span>
+                </h4>
               </a>
-
-              <a href=" https://www.behance.net/gallery/90610133/Affiche-appartements-sur-Go-ogleMap-_-Appli-Reactjs?tracking_source=" target="blank">
-              <h4>
-                <span>Captures d’écrans</span>
-                <i class="fab fa-behance-square"></i>
-              </h4>
-            </a>
+            </div>
           </div>
-          </div>
-
         </div>
-       <!------------------- GIPHY API  ----------------->
+        <!------------------ FIN PROJET  ---------------------->
+        <!------------------ DEBUT PROJET  ---------------------->
         <div class="one-project">
-          <h2 class="project-name">Giphy-api_lil' app
+          <h2 class="project-name">Application React.js | Giphy-api_lil' app
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Application React.js</h3>
-              <h4>Projet personnel - exercice (janvier 2020)</h4>
+              <h4>Projet personnel – exercice (Janvier 2020)</h4>
               <a href="https://github.com/Kwette/react-gifs" target="blank"><h4>https://github.com/Kwette/react-gifs</h4></a>
-
             </div>
             <div class="card-right-side">
               <img src="images/logo-react.png">
             </div>
           </div>
-
           <div class="app-details hidden">
-            <p>
-              Petite application en React.js.
-              </br></br>
-              Générateur de GIFs utilisant l'API de Giphy. L'utilisateur tape une requête dans le champ de recherche, et les GIFs correspondants apparaissent dans la liste de droite. Quand l'utilisateur clique sur un GIF, celui-ci apparaît dans l'écran de gauche sous le champ de recherche.
+            <p class="no-bg">
+              Une petite application développée avec React.js.</br>
+              Générateur de GIF utilisant l’API Giphy. L’utilisateur saisit une requête dans le champ de recherche, et les GIFs correspondants de Giphy apparaissent dans la liste à droite. Lorsque l’utilisateur clique sur un GIF, celui-ci s’affiche sur la partie gauche, sous le champ de recherche.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             React.js, HTML/CSS, Git, GitHub.
-            </p></br>
+            <div class="purple-bg"><span class="bold">React.js, HTML/CSS, Git, GitHub.</span>
+            </div>
             <div class="app-links">
               <a href="https://github.com/Kwette/react-gifs" target="blank">
                 <h4>
-                  <span>Github Codebase</span>
                   <i class="fab fa-github-square"></i>
+                  <span>Github</span>
                 </h4>
               </a>
               <a href="https://www.behance.net/gallery/90443427/Giphy-api_lil-app-Gnrateur-de-gifs-(Reactjs-app)?tracking_source=" target="blank">
                 <h4>
-                  <span>Captures d’écrans</span>
                   <i class="fab fa-behance-square"></i>
+                  <span>Screenshots</span>
                 </h4>
               </a>
             </div>
           </div>
         </div>
-<!--         <hr>
- -->        <!------------------- BUY & CO  ----------------->
+        <!------------------ FIN PROJET  ---------------------->
+        <!------------------ DEBUT PROJET  ---------------------->
         <div class="one-project">
-          <h2 class="project-name">Buy & Co !
+          <h2 class="project-name">Application Ruby On Rails | Buy & Co !
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Ruby On Rails application</h3>
-              <h4>Projet personnel - exercice (Décembre 2019)</h4>
+              <h4>Projet personnel – exercice (Décembre 2020)</h4>
               <a href="https://github.com/Kwette/petites-annonces-rails" target="blank"><h4>https://github.com/Kwette/petites-annonces-rails</h4></a>
             </div>
             <div class="card-right-side">
-              <img src="images/logo-react.png">
+              <img src="images/logo-wagon.png">
             </div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Application Rails de publication et de recherche de petites annonces.
-              </br></br>
-              En tant qu'utilisateur, je peux :</br></br>
-              - M'inscrire,</br>
-              - Me connecter,</br>
-              - Aller sur la page d'accueil,</br>
-              - Consulter la liste des annonces publiées,</br>
-              - Accéder à la page d'une annonce pour voir tous les détails.</br></br>
-              En tant qu'administrateur, je peux :</br></br>
-              - M'inscrire,</br>
-              - Me connecter,</br>
-              - Aller sur la page d'accueil,</br>
-              - Consulter la liste des annonces (publiées et non publiées),</br>
-              - Publier une annonce pour la rendre visible à tous les utilisateurs,</br>
-              - Accéder à la page d'une annonce pour voir tous les détails.
+            <p class="no-bg">
+              Une application Rails pour la publication d’annonces.
             </p>
-            <!------------------- TECHNO  ----------------->
-             <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.
-            </p></br>
-
+            <p>
+              En tant qu’utilisateur, je peux :</br>
+              - M’inscrire ou me connecter,</br>
+              - Accéder à la page d’accueil,</br>
+              - Voir la liste des annonces publiées,</br>
+              - Accéder à la page d’une annonce avec tous ses détails.</br></br>
+              En tant qu’administrateur, je peux :</br>
+              - M’inscrire ou me connecter,</br>
+              - Accéder à la page d’accueil,</br>
+              - Voir la liste des annonces (publiées et non publiées),</br>
+              - Publier une annonce pour la rendre visible à tous les utilisateurs,</br>
+              - Accéder à la page d’une annonce avec tous ses détails.
+            </p>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
+            </div>
             <div class="app-links">
                 <a href="https://github.com/Kwette/petites-annonces-rails" target="blank">
                   <h4>
-                    <span>Github Codebase </span>
                     <i class="fab fa-github-square"></i>
+                    <span>Github </span>
                   </h4>
                 </a>
                 <a href="https://www.behance.net/gallery/90445649/Buy-Co-_-Publication-dannonces-(Application-Rails)?tracking_source=" target="blank">
                   <h4>
-                    <span>Captures d’écrans</span>
                     <i class="fab fa-behance-square"></i>
+                    <span>Screenshots</span>
                   </h4>
                 </a>
             </div>
           </div>
         </div>
-        <!------------------- HACKATHON CINEMA  ----------------->
+        <!-------------------- FIN PROJET  ---------------------->
+        <!------------------ DEBUT PROJET  ---------------------->
         <div class="one-project">
-          <h2 class="project-name">Hackathon du Cinéma des Arcs
+          <h2 class="project-name">Developer Fullstack | Hackathon du Cinema des Arcs
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
-           <div class="shadow-box">
+          <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Developer Fullstack Rails/JS</h3>
-              <h4>Festival du cinéma des Arcs (Décembre  2019)</h4>
+              <h4>Les Festival du Cinema des Arcs (Décembre 2019)</h4>
               <a href="https://lesarcs-filmfest.com/fr" target="blank"><h4>https://lesarcs-filmfest.com/fr</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-les-arc.png"></div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Développement de l’application Rails « Ciné-Talks » en cours : une plateforme mettant en relation des « speakers » avec des salles de cinéma et des distributeurs afin de faciliter la création d’événements autour d’un film (débats, discussions avec un acteur, un auteur, des intervenants transversaux, des associations, etc.).
+            <p class="no-bg">
+              Développement en cours de l’application Rails « Cine-Talks » — une plateforme mettant en relation des « intervenants » avec des cinémas et des distributeurs afin de faciliter la création d’événements autour d’un film, tels que des débats, des discussions avec des acteurs, des auteurs, des intervenants pluridisciplinaires, des associations, etc.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Git, GitHub.
-            </p></br>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Git, GitHub.</span>
+            </div>
           </div>
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
         <div class="one-project">
-          <h2 class="project-name">Teacher assistant 
+          <h2 class="project-name">Teacher assistant | Le Wagon
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Le Wagon</h3>
-              <h4>Le Wagon Marseille (Novembre  2019)</h4>
-              <a href="https://www.lewagon.com/fr" target="blank"><h4>https://www.lewagon.com/fr</h4></a>
+              <h4>Le Wagon Marseille (Novembre 2019)</h4>
+              <a href="https://www.lewagon.com/" target="blank"><h4>www.lewagon.com</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Assistance au professeur lors de son cours du matin. Aide, déblocage et correction des étudiants sur leurs exercices du matin et de l’après-midi, ainsi que clarification du cours si besoin.
+            <p class="no-bg">
+              Assister l’enseignant pendant le cours du matin. Apporter aide, soutien et correction aux étudiants pour leurs exercices du matin et de l’après-midi, et clarifier la leçon si nécessaire. Compétences abordées : HTML5, CSS3, Bootstrap, CSS Grid, conception de composants, UI/UX.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             HTML5, CSS3, Bootstrap, CSS Grid, design de composants, UI/UX.
-            </p></br>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">HTML5, CSS3, Bootstrap, CSS Grid, design de composants, UI/UX.</span>
+            </div>
           </div>
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
         <div class="one-project">
-          <h2 class="project-name">Mentoring Rails
+          <h2 class="project-name">Mentoring Rails | Rails Girls
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Rails Girls</h3>
               <h4>Rails Girls (Novembre 2019)</h4>
-              <a href="https://railsgirls.com/" target="blank"><h4>https://railsgirls.com</h4></a>
+              <a href="https://railsgirls.com/" target="blank"><h4>railsgirls.com</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-rails-girls.jpg"></div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Mentorat lors de l'événement Rails Girls Saint-Étienne. Accompagnement des participants pour l'installation de leur environnement de développement et la création d'une petite application Rails via le scaffold.
+            <p class="no-bg">
+              Mentorat lors de l’événement Rails Girls à Saint-Étienne. Accompagnement des participantes pour la configuration de leur environnement de développement et la création d’une petite application Rails à l’aide de scaffold.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             Ruby on Rails, HTML/CSS, PostgreSQL, Git.
-            </p></br>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Ruby on Rails, HTML/CSS, PostgreSQL, Git.</span>
+            </div>
           </div>
         </div>
-        <!------------------- HACKATHON FRIOUL  ----------------->
+        <!------------------- UN PROJET  ----------------->
         <div class="one-project">
-          <h2 class="project-name">Hackathon du Frioul
+          <h2 class="project-name">Vue.js Developer | Hackathon du Frioul
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Developer Vue.js</h3>
-              <h4>Code4Marseille (Octobre 2019)</h4>
-              <a href="github.com/Kwette/marcelle-mobi-hackathon" target="blank"><h4>github.com/Kwette/marcelle-mobi-hackathon</h4></a>
+              <h4>Rails Girls (Novembre 2019)</h4>
+              <a href="https://github.com/Kwette/marcelle-mobi-hackathon" target="blank"><h4>https://github.com/Kwette/marcelle-mobi-hackathon</h4></a>
             </div>
-            <div class="card-right-side"><img src="images/CODE4MARSEILLE.png"></div>
+            <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
-
           <div class="app-details hidden">
-            <p>
-              Développement en Vue.js d'une fonctionnalité (non déployée) pour une application web existante, marcelle.mobi, pendant deux jours.</br></br>
-              Fonctionnalité : Ajout d'un filtre "lieux de tournage de films" à proximité sur la carte.</br></br>
-              En tant qu'utilisateur, je peux :</br></br>
-              - Afficher les "lieux de tournage de films" à proximité,</br>
-              - Cliquer sur le marqueur personnalisé pour accéder au lien vers le film,</br>
-              - Cliquer sur le lien pour voir les informations sur le film,</br>
-              - Cliquer sur le bouton "voir sur la carte" pour être redirigé directement vers la page Google Maps du lieu de tournage.</br></br>
-              Travail en équipe de 5 développeurs issus d'écoles, de niveaux et de stacks différents :</br></br>
-              - 2 étudiants en JAVA (Wild code school)</br>
-              - 2 futurs étudiants (le Wagon Marseille)</br>
-              - moi-même alumni du Wagon Marseille (Ruby/Rails/JS).
+            <p class="no-bg">
+              Développement en Vue.js d’une fonctionnalité (non déployée) sur une application web existante en deux jours : marcelle.mobi.</br>
+              Fonctionnalité : sur la carte, ajout d’un filtre pour les « lieux de tournage » à proximité.
             </p>
-            <!------------------- TECHNO  ----------------->
-             <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             Illustrator, Vue.js, HTML/CSS, Heroku, Git, GitHub.
-            </p></br>
+            <p>
+              En tant qu’utilisateur, je peux :</br>
+              - Afficher les « lieux de tournage » à proximité,</br>
+              - Cliquer sur un marqueur personnalisé pour afficher un lien vers le film,</br>
+              - Cliquer sur le lien pour consulter les informations relatives au film,</br>
+              - Cliquer sur le bouton « voir sur la carte », qui ouvre directement la page Google Maps du lieu de tournage.
+            </p>
+            <p class="no-bg">
+              Travail en équipe avec 5 développeurs issus d’écoles, de niveaux et de stacks différents :</br>
+              - 2 étudiants en Java (Wild Code School)</br>
+              - 2 futurs étudiants (Le Wagon Marseille)</br>
+              - Moi-même, ancienne élève du Wagon Marseille (Ruby / Rails / JS).</br>
+            </p>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Illustrator, Vue.js, HTML/CSS, Heroku, Git, GitHub.</span>
+            </div>
             <div class="app-links">
               <a href="https://github.com/Kwette/marcelle-mobi-hackathon" target="blank">
                 <h4>
-                  <span>Github Codebase</span>
                   <i class="fab fa-github-square"></i>
+                  <span>Github</span>
                 </h4>
               </a>
               <a href="https://www.behance.net/gallery/89008571/Web-Application-(developed-in-Vuejs)-marcellemobi?tracking_source=" target="blank">
                 <h4>
-                  <span>Captures d’écrans</span>
-                 <i class="fab fa-behance-square"></i>
+                  <i class="fab fa-behance-square"></i>
+                  <span>Screenshots</span>
                 </h4>
               </a>
             </div>
           </div>
         </div>
-        <!------------------- TRIPPER ----------------->
+        <!------------------ FIN PROJET  ---------------------->
+        <!------------------- UN PROJET  ----------------->
         <div class="one-project">
-          <h2 class="project-name">Tripper
+          <h2 class="project-name">Projet de fin d’études | Tripper
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Projet  de fin d'étude (Le Wagon)</h3>
-              <h4>Application Ruby On Rails (2019)</h4>
-              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="blank"><h4>https://github.com/Kwette/trip-planner-refonte-rails-app</h4></a>
+              <h4>Application Ruby On Rails</h4>
+              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="blank"><h4>github.com/Kwette/trip-planner-refonte-rails-app</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Application Rails - Planificateur de voyage : permet de planifier un voyage en sélectionnant des activités en fonction des préférences de l’utilisateur, qui peut également ajuster le « pourcentage de mystère » pour dévoiler ou masquer certaines activités.</br></br>
-              En tant qu'utilisateur, je peux :</br></br>
-              - M'inscrire,</br>
-              - Me connecter,</br>
-              - Créer un nouveau voyage,</br>
-              - Indiquer mes préférences pour le type d'activités,</br>
-              - Choisir des activités dans une liste d'activités par type,</br>
-              - Personnaliser mes voyages avec des moments de fête,</br>
-              - Choisir le niveau de mystère,</br>
-              - Visualiser mon voyage étape par étape,</br>
-              - Voir la liste des activités par étape,</br>
-              - Mettre à jour mes voyages,</br>
-              - Consulter ma liste de voyages.</br></br>
-              Projet réalisé en équipe de 4 personnes, avec une refonte graphique effectuée par mes soins.
+            <p class="no-bg">
+              Application Rails – Planificateur de voyage : planifier un voyage avec des activités sélectionnées selon les préférences et éventuellement masquées en fonction du « pourcentage de mystère » choisi par l’utilisateur.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-              Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.
-            </p></br>
-
+            <p>
+              En tant qu’utilisateur, je peux :</br>
+              - M’inscrire ou me connecter,</br>
+              - Créer un nouveau voyage,</br>
+              - Définir mes préférences pour les types d’activités,</br>
+              - Sélectionner des activités à partir d’une liste catégorisée,</br>
+              - Personnaliser mes voyages avec des options « party time »,</br>
+              - Choisir le niveau de mystère,</br>
+              - Voir mon voyage, étape par étape,</br>
+              - Voir la liste des activités pour chaque étape,</br>
+              - Mettre à jour mes voyages,</br>
+              - Consulter ma liste de voyages.
+            </p>
+            <p class="no-bg">
+              Ce projet a été initialement développé par une équipe de 5 personnes, avec une refonte graphique réalisée par mes soins.
+            </p>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Ruby on Rails, HTML/CSS, PostgreSQL, Git.</span>
+            </div>
             <div class="app-links">
               <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="blank">
                 <h4>
-                  <span>Github Codebase</span>
                   <i class="fab fa-github-square"></i>
+                  <span>Github</span>
                 </h4>
               </a>
               <a href="https://www.behance.net/gallery/89014253/Tripper-Travel-planner-(developed-in-Ruby-on-Rails)?tracking_source=" target="blank">
                 <h4>
-                  <span>Captures d’écrans</span>
                   <i class="fab fa-behance-square"></i>
+                  <span>Screenshots</span>
                 </h4>
               </a>
             </div>
           </div>
         </div>
-        <!------------------- WHATS ACT ----------------->
+        <!------------------ FIN PROJET  ---------------------->
+        <!------------------- UN PROJET  ----------------->
         <div class="one-project">
-          <h2 class="project-name">Whats_Act
+          <h2 class="project-name">Projet de fin d’études | Whats_Act
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Projet de fin d'étude (Le Wagon)</h3>
-              <h4>Application Ruby On Rails (2019)</h4>
-              <a href="https://github.com/Kwette/What-s-Act" target="blank"><h4>https://github.com/Kwette/What-s-Act</h4></a>
+              <h4>Application Ruby On Rails</h4>
+              <a href="https://github.com/Kwette/What-s-Act" target="blank"><h4>github.com/Kwette/What-s-Act</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
           <div class="app-details hidden">
-            <p>
-              Application Rails de réservation d’activités sportives, culturelles, etc... :</br></br>
-              En tant qu'utilisateur, je peux  :</br></br>
-              - M'inscrire,</br>
-              - Me connecter,</br>
-              - Aller sur la page d'accueil,</br>
-              - Consulter la liste des activités ou rechercher des activités par type ou localisation,</br>
-              - Accéder à la page d’une activité avec tous les détails,</br>
-              - Réserver des activités depuis la page de l'activité,</br>
-              - Consulter ma liste de réservations (filtrable par type d’activités) et suivre leur statut,</br>
-              - Contacter le propriétaire via un message dans l'application.</br></br>
-              En tant que vendeur, je peux :</br></br>
-              - Accéder aux mêmes fonctionnalités que les utilisateurs,</br>
-              - Créer une nouvelle activité (cliquer sur l’avatar du menu pour accéder à la session vendeur)</br>
-              - Consulter ma liste d'activités ou rechercher mes activités par type ou localisation,</br>
-              - Supprimer mes activités,</br>
-              - Consulter la liste de réservations de mes activités (filtrable par type) et suivre leur statut,</br>
-              - Changer le statut des réservations de mes activités avec les boutons « accepter » et « refuser »,</br>
-              - Contacter les acheteurs par message dans l'application.</br></br>
-              Projet de base réalisé en équipe de 5 personnes, puis repris par mes soins pour une refonte complète du site et l'ajout de fonctionnalités.
+            <p class="no-bg">
+              Application Rails de réservation d’activités sportives, culturelles et autres.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-              Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.
-            </p></br>
-
+            <p>
+              En tant qu’utilisateur, je peux :</br></br>
+              - M’inscrire ou me connecter,</br>
+              - Accéder à la page d’accueil,</br>
+              - Voir la liste des activités ou rechercher des activités par type ou par lieu,</br>
+              - Accéder à la page d’une activité avec tous ses détails,</br>
+              - Réserver des activités directement depuis la page de l’activité,</br>
+              - Voir ma liste de réservations (filtrée par type d’activité si souhaité) et suivre leur statut,</br>
+              - Contacter le propriétaire de l’activité via la messagerie intégrée.</br></br>
+              En tant que vendeur, je peux :</br></br>
+              - Accéder à toutes les fonctionnalités disponibles pour les utilisateurs,</br>
+              - Créer une nouvelle activité (accès à la session vendeur en cliquant sur l’avatar du menu),</br>
+              - Voir ma liste d’activités ou rechercher par type ou par lieu,</br>
+              - Supprimer mes activités,</br>
+              - Voir la liste des réservations pour mes activités (filtrée par type si souhaité) et suivre leur statut,</br>
+              - Modifier le statut de mes réservations avec les options « accepter » et « refuser »,</br>
+              - Contacter les acheteurs via la messagerie intégrée.
+            </p>
+            <p class="no-bg">
+              Ce projet de base a été initialement développé par une équipe de 5 personnes, puis j’ai pris le relais pour une refonte complète du site et l’ajout de nouvelles fonctionnalités.
+            </p>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
+            </div>
             <div class="app-links">
               <a href="https://github.com/Kwette/What-s-Act" target="blank">
                 <h4>
-                  <span>Github Codebase</span>
                   <i class="fab fa-github-square"></i>
+                  <span>Github</span>
                 </h4>
               </a>
               <a href="https://www.behance.net/gallery/89018763/Whats_Act-%28Ruby-On-Rails-Web-Application%29?tracking_source=project_owner_other_projects" target="blank">
                 <h4>
-                  <span>Captures d’écrans</span>
                   <i class="fab fa-behance-square"></i>
+                  <span>Screenshots</span>
                 </h4>
               </a>
             </div>
           </div>
         </div>
-        <!------------------- COCKTAIL RECIPE ----------------->
+        <!------------------ FIN PROJET  ---------------------->
+        <!------------------- UN PROJET  ----------------->
         <div class="one-project">
-          <h2 class="project-name">Cocktails-Recipes App
+          <h2 class="project-name">Fullstack Developer | Cocktails-Recipes App
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
             </span>
           </h2>
           <div class="shadow-box">
             <div class="card-left-side">
-              <h3>Projet d'étude (Le Wagon)</h3>
-              <h4>Application Ruby On Rails (2019)</h4>
-              <a href="https://my-cocktails-recipes.herokuapp.com/" target="blank"><h4>https://my-cocktails-recipes.herokuapp.com/</h4></a>
+              <h4>Projet d’études (Le Wagon)</h4>
+              <a href="https://my-cocktails-recipes.herokuapp.com/" target="blank"><h4>my-cocktails-recipes.herokuapp.com/</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
           <div class="app-details hidden">
-            <p>
-              "Mister Cocktails" est une application Rails basée sur un C.R.U.D.</br></br>
-              Créer ou consulter des recettes de cocktails.</br></br>
-              En tant qu'utilisateur, je peux :</br></br>
-              - Accéder à la liste de toutes les recettes de cocktails,</br>
-              - Ajouter, supprimer et mettre à jour une recette de cocktail,</br>
-              - Choisir les ingrédients dans la liste,</br>
-              - Ajouter ou supprimer une dose,</br>
-              - Ajouter des avis, mais sans pouvoir les supprimer.
+            <p class="no-bg">
+              « Mister Cocktails » est une application Rails basée sur les fonctionnalités C.R.U.D.
             </p>
-            <!------------------- TECHNO  ----------------->
-            <p><span class="bold" style="color: #585f7d">Technologies utilisées :</span></br></br>
-             Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.
-            </p></br>
-
+            <p>
+              Créer ou parcourir des recettes de cocktails :</br></br>
+              En tant qu’utilisateur, je peux :</br></br>
+              - Accéder à la liste de toutes les recettes de cocktails,</br>
+              - Ajouter, supprimer et modifier une recette de cocktail,</br>
+              - Sélectionner des ingrédients à partir d’une liste,</br>
+              - Ajouter ou supprimer des doses pour les ingrédients,</br>
+              - Ajouter des avis, mais je ne suis pas autorisé à les supprimer.
+            </p>
+            <!------------------ TECHNO ---------------------->
+            <div class="purple-bg">
+              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
+            </div>
             <div class="app-links">
               <a href="https://github.com/Kwette/mister-cocktail-rails-app" target="blank">
                 <h4>
-                  <span>Github Codebase</span>
                   <i class="fab fa-github-square"></i>
+                  <span>Github</span>
                 </h4>
               </a>
               <a href="https://www.behance.net/gallery/88966283/Cocktail_Recipes-(Ruby-On-Rails-Web-Application)?tracking_source=" target="blank">
                 <h4>
-                  <span>Captures d’écrans</span>
                   <i class="fab fa-behance-square"></i>
+                  <span>Screenshots</span>
                 </h4>
               </a>
             </div>
           </div>
         </div>
-<!--         <hr>
- -->        <!------------------ FIN PROJET  ---------------------->
+       <!------------------ FIN PROJET  ---------------------->
       </div>
       <!----------------------------- END RESUME --------------------------->
     </div>
