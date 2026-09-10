@@ -27,6 +27,7 @@ const styleSources = [
   "styles/components/content-disclosure.css",
   "styles/components/professional-experience.css",
   "styles/components/interaction-effects.css",
+  "styles/components/personal-project.css",
   "styles/legacy.css",
   "styles/components/project-card.css",
   "styles/components/experience-card.css",
