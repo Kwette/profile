@@ -3152,7 +3152,7 @@ hr {
     width: 280px;
   }
 
-  .d-flex > a, .d-flex > p, .myskills p, .skills p,  {font-size: 12px;}
+  .d-flex > a, .d-flex > p, .myskills p, .skills p {font-size: 12px;}
 
   .resume-body p.xp-info, .contact p, .contact a{font-size: 11px;}
 
