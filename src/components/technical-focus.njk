@@ -1,0 +1,39 @@
+      <section class="card technical-focus-card" id="technical-focus" aria-labelledby="technical-focus-title-{{ language }}">
+        <div class="text-center">
+          <h2 id="technical-focus-title-{{ language }}">{{ technicalFocus.title }}</h2>
+        </div>
+        <p class="technical-focus-intro">{{ technicalFocus.intro }}</p>
+        <div class="technical-carousel" data-technical-carousel data-topic-label="{{ technicalFocus.topicLabel }}" data-direct-label="{{ technicalFocus.directLabel }}">
+          <div class="technical-carousel-viewport">
+            <div class="technical-focus-grid">
+              {% for item in technicalFocus.items %}
+              <article class="technical-focus-item" data-carousel-label="{{ item.carouselLabel }}">
+                <div class="technical-focus-subject">
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.description }}</p>
+                  <ul class="technical-focus-keywords" aria-label="{{ technicalFocus.keywordsLabel }}">
+                    {% for keyword in item.keywords %}
+                    <li>{{ keyword }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <aside class="technical-focus-proof">
+                  <p class="technical-focus-proof-label">{{ item.proof.label }}</p>
+                  <h4>{{ item.proof.title }}</h4>
+                  <p>{{ item.proof.description }}</p>
+                  {% if item.proof.link %}
+                  <a class="technical-case-study-link" href="{{ item.proof.link.href }}">{{ item.proof.link.label }}</a>
+                  {% endif %}
+                </aside>
+              </article>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="technical-carousel-controls" hidden>
+            <button class="technical-carousel-arrow" type="button" data-carousel-previous aria-label="{{ technicalFocus.previousLabel }}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+            <div class="technical-carousel-indicators" data-carousel-indicators aria-label="{{ technicalFocus.indicatorsLabel }}"></div>
+            <span class="sr-only" data-carousel-announcement aria-live="polite"></span>
+            <button class="technical-carousel-arrow" type="button" data-carousel-next aria-label="{{ technicalFocus.nextLabel }}"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </section>

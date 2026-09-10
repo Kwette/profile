@@ -100,5 +100,45 @@
         "link": { "href": "#technical-focus", "label": "Voir →", "external": false }
       }
     ]
+  },
+  "technicalFocus": {
+    "title": "Focus technique",
+    "intro": "J’utilise mes projets personnels et mes sandboxes techniques pour approfondir la performance, la fiabilité, la sécurité et la maintenabilité des applications Rails.",
+    "topicLabel": "Sujet",
+    "directLabel": "Afficher le sujet",
+    "keywordsLabel": "Mots-clés",
+    "previousLabel": "Afficher le sujet précédent",
+    "indicatorsLabel": "Accéder directement à un sujet",
+    "nextLabel": "Afficher le sujet suivant",
+    "items": [
+      {
+        "carouselLabel": "01 Données",
+        "title": "Données & performance",
+        "description": "SQL, indexation PostgreSQL, détection des N+1 et profiling applicatif.",
+        "keywords": ["PostgreSQL", "Indexation", "N+1"],
+        "proof": { "label": "Application concrète", "title": "RecipeMatcher", "description": "Import et nettoyage d’environ 10 000 recettes JSON, avec recherche par ingrédients optimisée dans PostgreSQL.", "link": { "href": "#recipe-matcher-project", "label": "Voir" } }
+      },
+      {
+        "carouselLabel": "02 Fiabilité",
+        "title": "Fiabilité & sécurité",
+        "description": "Transactions, idempotence, gestion des erreurs et sécurité applicative.",
+        "keywords": ["Transactions", "Idempotence", "Sécurité"],
+        "proof": { "label": "Application concrète", "title": "DRIME", "description": "Sidekiq, Redis et résolution de problèmes en production.", "link": { "href": "#experience", "label": "Voir" } }
+      },
+      {
+        "carouselLabel": "03 Architecture",
+        "title": "Architecture & qualité",
+        "description": "Refactoring, tests et observabilité pour des applications Rails maintenables.",
+        "keywords": ["Refactoring", "Tests", "Observabilité"],
+        "proof": { "label": "Application concrète", "title": "Pickaden", "description": "MVP stabilisé, tests Capybara et temps de chargement optimisés.", "link": { "href": "#experience", "label": "Voir" } }
+      },
+      {
+        "carouselLabel": "04 Backend",
+        "title": "Exploration backend",
+        "description": "Approfondir Python et explorer d’autres technologies backend.",
+        "keywords": ["Python", "Backend", "Expérimentations"],
+        "proof": { "label": "Mise en pratique", "title": "Sandboxes techniques", "description": "Mise en pratique au fil de projets personnels et d’expérimentations.", "link": null }
+      }
+    ]
   }
 }

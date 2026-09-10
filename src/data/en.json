@@ -100,5 +100,45 @@
         "link": { "href": "#technical-focus", "label": "View project →", "external": false }
       }
     ]
+  },
+  "technicalFocus": {
+    "title": "Engineering Focus",
+    "intro": "I use personal projects and technical sandboxes to deepen my work on performance, reliability, security, and maintainability in Rails applications.",
+    "topicLabel": "Topic",
+    "directLabel": "Show topic",
+    "keywordsLabel": "Keywords",
+    "previousLabel": "Show previous topic",
+    "indicatorsLabel": "Go directly to a topic",
+    "nextLabel": "Show next topic",
+    "items": [
+      {
+        "carouselLabel": "01 Data",
+        "title": "Data & performance",
+        "description": "SQL, PostgreSQL indexing, N+1 detection, and application profiling.",
+        "keywords": ["PostgreSQL", "Indexing", "N+1"],
+        "proof": { "label": "Practical application", "title": "RecipeMatcher", "description": "Importing and cleaning around 10,000 JSON recipes, with ingredient search optimized in PostgreSQL.", "link": { "href": "#recipe-matcher-project", "label": "View project" } }
+      },
+      {
+        "carouselLabel": "02 Reliability",
+        "title": "Reliability & security",
+        "description": "Transactions, idempotency, error handling, and application security.",
+        "keywords": ["Transactions", "Idempotency", "Security"],
+        "proof": { "label": "Practical application", "title": "DRIME", "description": "Sidekiq, Redis, and resolving production issues.", "link": { "href": "#experience", "label": "View experience" } }
+      },
+      {
+        "carouselLabel": "03 Architecture",
+        "title": "Architecture & quality",
+        "description": "Refactoring, testing, and observability for maintainable Rails applications.",
+        "keywords": ["Refactoring", "Testing", "Observability"],
+        "proof": { "label": "Practical application", "title": "Pickaden", "description": "MVP stabilization, Capybara tests, and faster page loads.", "link": { "href": "#experience", "label": "View experience" } }
+      },
+      {
+        "carouselLabel": "04 Backend",
+        "title": "Backend exploration",
+        "description": "Deepening my Python skills and exploring other backend technologies.",
+        "keywords": ["Python", "Backend", "Experiments"],
+        "proof": { "label": "Practice", "title": "Technical sandboxes", "description": "Hands-on learning through personal projects and experiments.", "link": null }
+      }
+    ]
   }
 }
