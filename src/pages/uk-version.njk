@@ -204,31 +204,7 @@
       <!----------------------------- TECHNICAL FOCUS --------------------------->
 {% include "components/technical-focus.njk" %}
       <!--------------------------- PROFESSIONAL EXPERIENCE ------------------------->
-      <section class="card application professional-experience" id="experience" aria-labelledby="experience-title-en">
-        <header class="section-heading text-center">
-          <h2 id="experience-title-en">Professional Experience</h2>
-        </header>
-        <!------------------- PROJECT DRIME  ----------------->
-        <div class="one-project experience-item">
-          <!------------------- PROJECT HEADER  ----------------->
-{% set experienceSummary = experiences.summaries.drime %}
-{% include "components/experience-summary.njk" %}
-          <!------------------- PROJECT BODY  ----------------->
-          <div class="app-details hidden" id="experience-drime-en">
-{% include "content/en/experiences/drime.njk" %}
-        </div>
-        </div>
-        <!------------------- PROJECT PICKADEN  ----------------->
-        <div class="one-project experience-item">
-          <!------------------- PROJECT HEADER  ----------------->
-{% set experienceSummary = experiences.summaries.pickaden %}
-{% include "components/experience-summary.njk" %}
-          <!------------------- PROJECT BODY  ----------------->
-          <div class="app-details hidden" id="experience-pickaden-en">
-{% include "content/en/experiences/pickaden.njk" %}
-          </div>
-        </div>
-      </section>
+{% include "components/experiences.njk" %}
       <!--------------------------- OTHER PROJECTS ------------------------->
       <section class="card application other-projects" id="other-projects" aria-labelledby="other-projects-title-en">
         <header class="section-heading text-center other-projects-heading">

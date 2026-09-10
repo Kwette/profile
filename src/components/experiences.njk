@@ -1,0 +1,25 @@
+      <section class="card application professional-experience" id="experience" aria-labelledby="experience-title-{{ language }}">
+        <header class="section-heading text-center">
+          <h2 id="experience-title-{{ language }}">{{ experiences.title }}</h2>
+        </header>
+        <!------------------- PROJECT DRIME  ----------------->
+        <div class="one-project experience-item">
+          <!------------------- PROJECT HEADER  ----------------->
+{% set experienceSummary = experiences.summaries.drime %}
+{% include "components/experience-summary.njk" %}
+          <!------------------- PROJECT BODY  ----------------->
+          <div class="app-details hidden" id="experience-drime-{{ language }}">
+{% include experienceSummary.contentTemplate %}
+        </div>
+        </div>
+        <!------------------- PROJECT PICKADEN  ----------------->
+        <div class="one-project experience-item">
+          <!------------------- PROJECT HEADER  ----------------->
+{% set experienceSummary = experiences.summaries.pickaden %}
+{% include "components/experience-summary.njk" %}
+          <!------------------- PROJECT BODY  ----------------->
+          <div class="app-details hidden" id="experience-pickaden-{{ language }}">
+{% include experienceSummary.contentTemplate %}
+          </div>
+        </div>
+      </section>
