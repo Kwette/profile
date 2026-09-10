@@ -80,7 +80,9 @@
     "portraitAlt": "Portrait of Emilie Murat",
     "name": "EMILIE MURAT",
     "role": "RUBY ON RAILS FULL-STACK DEVELOPER",
-    "useHeaderRule": false
+    "useHeaderRule": false,
+    "bodyTemplate": "content/en/resume-body.njk",
+    "sidebarTemplate": "content/en/resume-sidebar.njk"
   },
   "selectedWork": {
     "title": "Selected Work",

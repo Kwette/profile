@@ -1,0 +1,17 @@
+<!----------------------------- START RESUME --------------------------->
+<div id="resume"></div>
+<div class="card resume-card" id="{{ resume.cardId }}" style="padding: 0">
+  <!----------------------------- HEADER --------------------------->
+  <div class="resume">
+{% include "components/resume-header.njk" %}
+    <!--------------------------- RESUME BODY ------------------------->
+    <div class="resume-body">
+{% include resume.bodyTemplate %}
+    </div>
+  </div>
+  <!----------------------------- SKILLS DIV --------------------------->
+  <div class="skills">
+{% include resume.sidebarTemplate %}
+  </div>
+  <!--------------------------- END SKILLS DIV ------------------------->
+</div>
