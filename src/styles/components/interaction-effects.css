@@ -1,7 +1,7 @@
 .reveal-item {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 400ms ease, transform 400ms ease;
+  transform: translateY(10px);
+  transition: opacity 380ms ease, transform 380ms ease;
   transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -68,4 +68,3 @@
     transform: none;
   }
 }
-

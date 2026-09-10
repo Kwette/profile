@@ -185,7 +185,8 @@ hr {
   border: 1px solid rgba(88, 95, 125, 0.15);
   border-radius: 4px;
   background: #fff;
-  transition: background-color 160ms ease, border-color 160ms ease;
+  box-shadow: none;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
 .project-archive-items.has-mini-cards .community-item,
@@ -197,6 +198,8 @@ hr {
 .project-archive-items.has-mini-cards .archive-mini:focus-within {
   background: #f8f8fa;
   border-color: rgba(88, 95, 125, 0.3);
+  box-shadow: 0 4px 12px rgba(28, 34, 57, 0.06);
+  transform: translateY(-1px);
 }
 
 .project-archive-items.has-mini-cards .community-heading {

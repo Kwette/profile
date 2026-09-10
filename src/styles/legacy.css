@@ -423,22 +423,6 @@
   overflow-wrap: anywhere;
 }
 
-/* Final elevation rules for archive cards. */
-.project-archive-items.has-mini-cards .archive-mini {
-  box-shadow: none;
-}
-
-.project-archive-items.has-mini-cards .archive-mini {
-  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.project-archive-items.has-mini-cards .archive-mini:hover,
-.project-archive-items.has-mini-cards .archive-mini:focus-within {
-  border-color: rgba(88, 95, 125, 0.3);
-  box-shadow: 0 4px 12px rgba(28, 34, 57, 0.06);
-  transform: translateY(-1px);
-}
-
 @media (max-width: 768px) {
   .resume-card {
     min-height: 0 !important;
@@ -492,16 +476,5 @@
     font-size: 0.62em;
     line-height: 1.35;
     text-align: center;
-  }
-}
-
-.reveal-item {
-  transform: translateY(10px);
-  transition-duration: 380ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-item {
-    transition: none;
   }
 }
