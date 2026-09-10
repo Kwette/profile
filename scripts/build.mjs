@@ -16,7 +16,11 @@ const styleSources = [
   "styles/tokens.css",
   "styles/base.css",
   "styles/utilities.css",
-  "styles/navigation.css",
+  "styles/components/buttons.css",
+  "styles/layout.css",
+  "styles/components/cards.css",
+  "styles/components/navigation.css",
+  "styles/components/hero.css",
   "styles/legacy.css"
 ];
 

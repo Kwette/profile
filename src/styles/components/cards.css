@@ -1,0 +1,57 @@
+.card{
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: none;
+  margin-top : 3em;
+  margin-bottom: 3em;
+  border: 1px solid rgba(88, 95, 125, 0.12);
+  /*padding-bottom : 55px;*/
+}
+
+.compact-card {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.compact-card h2 {
+  line-height: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.compact-list-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2em;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+.compact-list {
+  background-color: var(--color-canvas);
+  border-radius: 4px;
+  list-style-type: none;
+  margin: 0;
+  padding: 1.2em 1.4em;
+  text-align: left;
+}
+
+.compact-list li {
+  background-color: transparent;
+  color: var(--color-ink);
+  font-size: 14px;
+  line-height: 1.45em;
+  padding: 0;
+}
+
+.compact-list li + li {
+  margin-top: 0.55em;
+}
+
+.compact-list li::before {
+  content: "-";
+  color: var(--color-brand);
+  font-weight: 700;
+  margin-right: 0.6em;
+}
+
