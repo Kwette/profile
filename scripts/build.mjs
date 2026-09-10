@@ -26,6 +26,7 @@ const styleSources = [
   "styles/components/resume-document.css",
   "styles/components/content-disclosure.css",
   "styles/components/professional-experience.css",
+  "styles/components/interaction-effects.css",
   "styles/legacy.css",
   "styles/components/project-card.css",
   "styles/components/experience-card.css",

@@ -1,0 +1,71 @@
+.reveal-item {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms ease, transform 400ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes experience-panel-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.experience-dialog-slide.is-active {
+  animation: experience-panel-enter 180ms ease-out;
+}
+
+.site-nav-links a:not(.nav-contact) {
+  position: relative;
+}
+
+.site-nav-links a:not(.nav-contact)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 1px;
+  background: var(--color-brand);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
+.site-nav-links a[aria-current="location"]:not(.nav-contact)::after {
+  transform: scaleX(1);
+}
+
+.nav-contact[aria-current="location"] {
+  color: rgb(225, 218, 209) !important;
+  background-color: var(--color-brand);
+}
+
+.technical-case-study-link,
+.archive-action {
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.technical-case-study-link:hover,
+.archive-action:hover {
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item,
+  .site-nav-links a::after,
+  .experience-dialog-slide.is-active {
+    animation: none;
+    transition: none;
+  }
+
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
