@@ -1,0 +1,28 @@
+{
+  "language": "en",
+  "meta": {
+    "title": "Emilie Murat _ Ruby FullStack Developer _ Profile (UK version)",
+    "description": "Emz_Profile - Emilie Murat Fullstack developer Ruby on Rails and Javascript full remote",
+    "script": "script.js?v=20260908-12",
+    "stylesheet": "style.css?v=20260908-13"
+  },
+  "navigation": {
+    "brandLabel": "Back to top",
+    "ariaLabel": "Main navigation",
+    "menuOpenLabel": "Open menu",
+    "resumeLabel": "CV",
+    "languageLabel": "Language selection",
+    "backToTopLabel": "Back to top",
+    "items": [
+      { "href": "#help", "label": "How I Help" },
+      { "href": "#apps", "label": "Work" },
+      { "href": "#technical-focus", "label": "Engineering Focus" },
+      { "href": "#experience", "label": "Experience" },
+      { "href": "#contact", "label": "Contact", "className": "nav-contact" }
+    ],
+    "languages": [
+      { "label": "FR", "href": "index.html", "hreflang": "fr" },
+      { "label": "EN", "current": true }
+    ]
+  }
+}
