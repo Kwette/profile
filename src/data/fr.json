@@ -58,5 +58,16 @@
         "Renfort produit autonome au sein d’une petite équipe"
       ]
     ]
+  },
+  "hero": {
+    "heading": "Hello, I'm Emz 👋",
+    "role": "Développeuse Full-Stack / Product Engineer",
+    "stack": "Ruby on Rails · PostgreSQL · JavaScript",
+    "paragraphs": [
+      "Je conçois, fais évoluer et fiabilise des produits web, principalement pour des startups et des SaaS. Avec plus de quatre ans d’expérience professionnelle, je prends en charge des fonctionnalités de bout en bout, du besoin produit jusqu’à leur mise en production : backend Rails et PostgreSQL, interfaces JavaScript, intégrations externes et traitements asynchrones.",
+      "Habituée aux petites équipes et à l’ownership, j’associe développement produit, résolution de problèmes et sensibilité design / UX/UI. J’ai notamment conçu et livré de zéro un éditeur vidéo multilingue complexe, de l’architecture des données jusqu’à l’interface utilisateur.",
+      "Je suis ouverte à rejoindre une équipe produit sur le long terme ou à intervenir en freelance sur des applications Rails : évolution et maintenance, nouvelles fonctionnalités, intégrations, debugging et reprise de code existant.",
+      "Basée en France · Remote en France, en Europe ou à l’international"
+    ]
   }
 }

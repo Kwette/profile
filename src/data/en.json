@@ -58,5 +58,16 @@
         "Autonomous product engineering within a small team"
       ]
     ]
+  },
+  "hero": {
+    "heading": "Hello, I'm Emz 👋",
+    "role": "Full-Stack / Product Engineer",
+    "stack": "Ruby on Rails · PostgreSQL · JavaScript",
+    "paragraphs": [
+      "I design, evolve, and improve web products, mainly for startups and SaaS companies. With more than four years of professional experience, I own features end-to-end, from the initial product need through production delivery: Rails and PostgreSQL backends, JavaScript interfaces, external integrations, and background processing.",
+      "Comfortable working in small teams with a high level of ownership, I combine product development, problem-solving, and a strong design and UX/UI sensibility. I notably designed and shipped a complex multilingual video editor from scratch, covering everything from data architecture to the user interface.",
+      "I am open to joining a product team long term or working with clients on Rails applications: evolution and maintenance, feature development, integrations, production debugging, and existing codebases.",
+      "Based in France · Remote across France, Europe, or internationally"
+    ]
   }
 }
