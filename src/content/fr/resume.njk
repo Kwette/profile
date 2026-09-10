@@ -3,30 +3,7 @@
       <div class="card resume-card" id="resume-card-fr" style="padding: 0">
         <!----------------------------- HEADER --------------------------->
         <div class="resume">
-          <div class="resume-header">
-            <div class="resume-cover-actions">
-              <button class="resume-action resume-toggle" type="button" aria-expanded="false" aria-controls="resume-card-fr">
-                <i class="fa-regular fa-eye" aria-hidden="true"></i>
-                <span data-resume-label data-open-label="Voir" data-close-label="Masquer">Voir</span>
-                <i class="fa-solid fa-chevron-down resume-toggle-chevron" aria-hidden="true"></i>
-              </button>
-              <div class="tooltip resume-download-control">
-                <a class="button resume-download" href="images/CV_2026_Emilie_Murat_Fr.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger le CV au format PDF">
-                  <i class="fa-solid fa-download" aria-hidden="true"></i>
-                </a>
-                <span class="tooltiptext">C.V. PDF</span>
-              </div>
-            </div>
-            <div class="resume-preview-photo">
-              <img src="images/Portrait_Pro_Small.png" class="img-circle" alt="Portrait d’Emilie Murat">
-            </div>
-            <div class="margin-right">
-              <h1>EMILIE MURAT</h1>
-              <hr>
-              <h3>RUBY ON RAILS FULL-STACK DEVELOPER</h3>
-              <hr>
-            </div>
-          </div>
+{% include "components/resume-header.njk" %}
           <!--------------------------- RESUME BOBY ------------------------->
           <div class="resume-body">
             <p style="text-align: center; font-weight: 600; margin: 0; padding: 0;">4+ ans | Ruby on Rails - SaaS - Product-minded</p>

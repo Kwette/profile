@@ -70,6 +70,18 @@
       "Based in France · Remote across France, Europe, or internationally"
     ]
   },
+  "resume": {
+    "cardId": "resume-card-en",
+    "openLabel": "View",
+    "closeLabel": "Hide",
+    "pdfHref": "images/CV_2026_Emilie_Murat_En.pdf",
+    "downloadLabel": "Download the resume as a PDF",
+    "downloadTooltip": "C.V. PDF",
+    "portraitAlt": "Portrait of Emilie Murat",
+    "name": "EMILIE MURAT",
+    "role": "RUBY ON RAILS FULL-STACK DEVELOPER",
+    "useHeaderRule": false
+  },
   "selectedWork": {
     "title": "Selected Work",
     "intro": "Three projects illustrating my work across web products, from architecture and data to interfaces and production delivery.",

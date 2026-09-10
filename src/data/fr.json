@@ -70,6 +70,18 @@
       "Basée en France · Remote en France, en Europe ou à l’international"
     ]
   },
+  "resume": {
+    "cardId": "resume-card-fr",
+    "openLabel": "Voir",
+    "closeLabel": "Masquer",
+    "pdfHref": "images/CV_2026_Emilie_Murat_Fr.pdf",
+    "downloadLabel": "Télécharger le CV au format PDF",
+    "downloadTooltip": "C.V. PDF",
+    "portraitAlt": "Portrait d’Emilie Murat",
+    "name": "EMILIE MURAT",
+    "role": "RUBY ON RAILS FULL-STACK DEVELOPER",
+    "useHeaderRule": true
+  },
   "selectedWork": {
     "title": "Projets sélectionnés",
     "intro": "Trois réalisations qui illustrent mon travail sur des produits web, de l’architecture et des données jusqu’aux interfaces et à la mise en production.",

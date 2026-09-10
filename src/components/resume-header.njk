@@ -1,0 +1,28 @@
+<div class="resume-header">
+  <div class="resume-cover-actions">
+    <button class="resume-action resume-toggle" type="button" aria-expanded="false" aria-controls="{{ resume.cardId }}">
+      <i class="fa-regular fa-eye" aria-hidden="true"></i>
+      <span data-resume-label data-open-label="{{ resume.openLabel }}" data-close-label="{{ resume.closeLabel }}">{{ resume.openLabel }}</span>
+      <i class="fa-solid fa-chevron-down resume-toggle-chevron" aria-hidden="true"></i>
+    </button>
+    <div class="tooltip resume-download-control">
+      <a class="button resume-download" href="{{ resume.pdfHref }}" target="_blank" rel="noopener noreferrer" aria-label="{{ resume.downloadLabel }}">
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+      </a>
+      <span class="tooltiptext">{{ resume.downloadTooltip }}</span>
+    </div>
+  </div>
+  <div class="resume-preview-photo">
+    <img src="images/Portrait_Pro_Small.png" class="img-circle" alt="{{ resume.portraitAlt }}">
+  </div>
+  <div class="margin-right">
+    <h1>{{ resume.name }}</h1>
+    <hr>
+    <h3>{{ resume.role }}</h3>
+{% if resume.useHeaderRule %}
+    <hr>
+{% else %}
+    <br>
+{% endif %}
+  </div>
+</div>
