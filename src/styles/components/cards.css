@@ -55,3 +55,8 @@
   margin-right: 0.6em;
 }
 
+@media (max-width: 500px) {
+  .compact-list-panel {
+    grid-template-columns: 1fr;
+  }
+}

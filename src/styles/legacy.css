@@ -2,8 +2,6 @@
 
 @media (max-width: 1074px) {
   /* For a screen < 974px, this CSS will be read */
-  .container{width: 900px;}
-
   .resume-header{width: 834px;}
 
   .resume-body{
@@ -72,8 +70,6 @@
 }
 /* ---------- For a screen < 720px, this CSS will be read ---------- */
 @media (max-width: 850px) {
-
-  .container {width: 650px;}
 
   .skills{
     width: 200px;
@@ -167,21 +163,6 @@
 
 @media (max-width: 660px) {
   /* ------- XS SCREENS ---- For a screen < 540px ------ */
-  .container {width: 480px;}
-
-  .site-footer-content {
-    flex-direction: column;
-    gap: 1.25em;
-    padding-right: 1.25em;
-    padding-left: 1.25em;
-  }
-
-  .site-footer-nav {
-    width: 100%;
-    padding-top: 1.25em;
-    border-top: 1px solid rgba(225, 218, 209, 0.35);
-  }
-
   .skills{
     margin-top: 1.5em;
     margin-left: 0.5em;
@@ -287,27 +268,14 @@
 
 }
 
-@media (max-width: 500px){
-  .compact-list-panel {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 450px) {
   /* ------- XXS SCREENS ---- For a screen < 450px ------ */
-
-  .site-footer-nav {
-    grid-template-columns: 1fr;
-    gap: 1.25em;
-  }
 
   div.button {
     padding: 10px;
     width: 9px;
     height: 9px;
   }
-
-  .container {width: 95vw;}
 
   .resume{width: 95vw;}
 
