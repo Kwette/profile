@@ -1,8 +1,8 @@
-          <button class="experience-summary" type="button" aria-expanded="false" aria-controls="experience-{{ experienceSummary.key }}-{{ language }}" onclick="collapse(this)">
-            <span class="experience-company"><span class="experience-logo{% if experienceSummary.logo.className %} {{ experienceSummary.logo.className }}{% endif %}"><img src="{{ experienceSummary.logo.src }}" alt="{{ experienceSummary.logo.alt }}"></span></span>
-            <span class="experience-summary-content">
-              <span class="experience-role">{{ experienceSummary.role }}</span>
-              <span class="experience-meta">{{ experienceSummary.meta }}</span>
+          <button class="experience-card__trigger experience-summary" type="button" aria-expanded="false" aria-controls="experience-{{ experienceSummary.key }}-{{ language }}" onclick="collapse(this)">
+            <span class="experience-card__brand experience-company"><span class="experience-card__logo experience-logo{% if experienceSummary.logo.className %} {{ experienceSummary.logo.className }}{% endif %}"><img src="{{ experienceSummary.logo.src }}" alt="{{ experienceSummary.logo.alt }}"></span></span>
+            <span class="experience-card__content experience-summary-content">
+              <span class="experience-card__title experience-role">{{ experienceSummary.role }}</span>
+              <span class="experience-card__meta experience-meta">{{ experienceSummary.meta }}</span>
             </span>
-            <span class="experience-chevron"><span>{{ experiences.viewLabel }}</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+            <span class="experience-card__action experience-chevron"><span>{{ experiences.viewLabel }}</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
           </button>
