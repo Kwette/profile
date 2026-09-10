@@ -80,7 +80,9 @@ await Promise.all([
     writeFile(path.join(outputRoot, output), html, "utf8")
   ),
   writeFile(path.join(outputRoot, "style.css"), stylesheet, "utf8"),
-  cp(path.join(sourceRoot, "scripts/main.js"), path.join(outputRoot, "script.js"))
+  cp(path.join(sourceRoot, "scripts"), path.join(outputRoot, "scripts"), {
+    recursive: true
+  })
 ]);
 
 const staticEntries = ["images"];
