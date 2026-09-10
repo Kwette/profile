@@ -1,0 +1,337 @@
+/*--------- RESUME ---------*/
+.resume{
+  position: absolute;
+  overflow: hidden;
+}
+/*--------- RESUME HEADER ---------*/
+.resume h2{
+  background-color: var(--color-brand);
+  color: white;
+  border-radius: 2px;
+  font-weight: lighter;
+  font-size: 1.5em;
+  padding: 0.7em;
+  margin-bottom: 1.3em;
+  margin-top: 1.3em;
+}
+
+.resume-header{
+  background-color: var(--color-brand);
+  padding: 2em;
+  border-radius: 2px;
+  width: 935px;
+  display: flex;
+  justify-content: flex-end;
+  height: 15em;
+  position: relative;
+}
+
+.resume-card {
+  position: relative;
+}
+
+.resume-card:not(.is-expanded) .resume-header {
+  height: 12.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.resume-card:not(.is-expanded) .resume {
+  position: relative;
+  overflow: visible;
+}
+
+.resume-card:not(.is-expanded) .resume-body,
+.resume-card:not(.is-expanded) .skills {
+  display: none;
+}
+
+.resume-card.is-expanded .resume-body {
+  padding-top: 48px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 850px) {
+  .resume-card:not(.is-expanded) .resume-header {
+    height: 12vw;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 660px) {
+  .resume-card:not(.is-expanded) .resume-header {
+    height: 110px;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+  }
+}
+
+.resume-preview-photo {
+  display: none;
+}
+
+.resume-card:not(.is-expanded) .resume-preview-photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent-warm);
+}
+
+.resume-preview-photo img {
+  width: min(190px, 70%);
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.resume-card:not(.is-expanded) .margin-right {
+  width: 68%;
+  margin-right: 0;
+}
+
+.resume-toggle-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.resume-toggle {
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border: 1px solid var(--color-brand);
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.resume-toggle .fa-minus,
+.resume-toggle-input:checked + .resume-toggle .fa-plus {
+  display: none;
+}
+
+.resume-toggle-input:checked + .resume-toggle .fa-minus {
+  display: block;
+}
+
+.resume-toggle i {
+  color: var(--color-brand);
+  font-size: 18px;
+}
+
+.resume-download:focus-visible {
+  outline: 3px solid rgba(88, 95, 125, 0.35);
+  outline-offset: 3px;
+}
+
+.resume-download {
+  position: absolute;
+}
+
+.margin-right{
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.margin-right h1{margin-top: 0;}
+
+.resume-header h1, .resume-header h3, .resume-header hr{
+  color: var(--color-accent-warm);
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.resume-header h1{
+  font-size: 3.2em;
+  margin-bottom: 0;
+}
+
+.resume-header h3{
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+.resume-header hr{width: 5vw;}
+
+/*--------- RESUME BODY ---------*/
+
+.resume-body{
+  margin-top: 0.5em;
+  margin-left: 24em;
+  width: 580px;
+  overflow: hidden;
+}
+
+.resume-body p{
+  margin: 0;
+  padding: 0.1em;
+}
+
+body div.purple-bg, body div.no-bg{
+  padding: 0.2em 0.5em;
+  font-size: 0.85em;
+  color: var(--color-brand);
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+body div.purple-bg{
+  background-color: rgba(87, 95, 125, 0.2);
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+
+.resume-body p.xp-info, body .resume-body div.purple-bg span.bold.stack p,  .resume-body div.no-bg span.bold.stack p{
+  font-size: 14px;
+  line-height: 15px;
+  background: none;
+  margin-top: 0;
+}
+
+span.bold{
+  font-weight: 600;
+  margin-right: 0.5em;
+  font-size: 16px;
+}
+
+span.bold.stack{font-size: 14px;}
+
+span.grey{
+  color: grey;
+  font-weight: 300;
+  margin-left: 0.5em;
+}
+
+.flex-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.5em;
+}
+
+/*--------- LEFT PART SKILLS ---------*/
+.skills{
+  background-color: var(--color-accent-warm);
+  width: 322px;
+  position: relative;
+  border-radius: 2px;
+  margin-top: 2em;
+  margin-left: 2em;
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+}
+
+.skills img{
+  margin: inherit;
+  margin-top: 3em;
+  width: 230px;
+  height: 230px;
+}
+
+.skills h2{
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-left: 0.7em;
+}
+
+.d-flex > a, .d-flex > p, .skills p, .resume-body p{
+  background-color: inherit;
+  color: var(--color-brand);
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  text-align: left;
+}
+
+.skills p, .skills a{
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: break-spaces;
+  font-size: 14px;
+}
+
+.skills h2{font-size: 22px;}
+
+.skills .contact p, .skills .contact a{padding: 0.5em;}
+
+.skills span.bold { margin-right: 0; }
+
+.skills  .d-flex i {margin-bottom: 0;}
+
+.resume-body p{font-size: 1em;}
+
+.d-flex > a{padding: 0.7em;}
+
+.hr{
+  width: 17vw;
+  margin-left: 0.9em;
+  background-color: var(--color-brand);
+  margin-bottom: 1.5em;
+  height: 0.13em;
+  max-width: 200px;
+}
+
+.d-flex > i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color-brand);
+  color: white;
+  padding: 0.5em;
+  margin-left: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+.interets i{
+  font-size: 0.9em;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.interets{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.row p, .langage p, .langage p span.bold{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+  margin-right: 0;
+}
+
+.langage p{
+  margin-top: 0;
+  padding-top: 0.2em;
+  font-weight: 400;
+}
+

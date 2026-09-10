@@ -23,6 +23,7 @@ const styleSources = [
   "styles/components/hero.css",
   "styles/components/selected-project.css",
   "styles/components/technical-focus.css",
+  "styles/components/resume-document.css",
   "styles/legacy.css",
   "styles/components/project-card.css",
   "styles/components/experience-card.css",
