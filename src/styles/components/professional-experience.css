@@ -181,8 +181,8 @@
 /*--------- PROFESSIONAL EXPERIENCE DIALOGS ---------*/
 .experience-dialog {
   width: min(980px, calc(100% - 32px));
-  max-height: 80vh;
-  max-height: 80dvh;
+  max-height: 88vh;
+  max-height: 88dvh;
   padding: 0;
   overflow: hidden;
   color: #414141;
@@ -193,16 +193,17 @@
 }
 
 .experience-dialog-shell {
-  height: min(78vh, 720px);
-  height: min(78dvh, 720px);
-  display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  height: auto;
+  max-height: min(86vh, 800px);
+  max-height: min(86dvh, 800px);
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-dialog-header {
-  padding: 14px 18px 12px;
+  padding: 0 18px;
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) 44px;
+  grid-template-columns: 192px minmax(0, 1fr) 44px;
   gap: 10px;
   align-items: center;
   border-bottom: 1px solid rgba(88, 95, 125, 0.12);
@@ -210,16 +211,21 @@
 
 .experience-dialog-heading {
   min-width: 0;
+  margin-left: 50px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .experience-dialog-header .experience-logo {
-  width: 64px;
-  height: 40px;
+  width: 192px;
+  height: 114px;
 }
 
 .experience-dialog-header .experience-logo img {
-  max-width: 64px;
-  max-height: 38px;
+  max-width: 192px;
+  max-height: 114px;
 }
 
 .experience-dialog-heading h2,
@@ -248,6 +254,17 @@
   font-weight: 500;
 }
 
+.experience-dialog-heading:has(> p:not(.experience-dialog-meta)) > h2 {
+  display: none;
+}
+
+.experience-dialog-heading > p:not(.experience-dialog-meta) {
+  margin-top: 0;
+  color: #555b76;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
 .experience-dialog-close,
 .experience-dialog-step,
 .experience-dialog-tab {
@@ -270,6 +287,12 @@
   overflow-x: auto;
   border-bottom: 1px solid rgba(88, 95, 125, 0.14);
   scrollbar-width: thin;
+}
+
+.experience-dialog-header,
+.experience-dialog-tabs,
+.experience-dialog-controls {
+  flex: 0 0 auto;
 }
 
 .experience-dialog-tab {
@@ -295,18 +318,20 @@
 }
 
 .experience-dialog-content {
+  flex: 0 1 auto;
   min-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
   background: #fbfbfc;
 }
 
 .experience-dialog-slide {
-  height: 100%;
-  padding: 32px 40px;
+  height: auto;
+  padding: 26px 40px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  justify-content: flex-start;
+  overflow: visible;
   overscroll-behavior: contain;
 }
 
@@ -395,11 +420,11 @@
 }
 
 .experience-dialog .experience-dialog-slide > :first-child {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .experience-dialog .experience-dialog-slide > :last-child {
-  margin-bottom: auto;
+  margin-bottom: 0;
 }
 
 .experience-dialog-controls {
@@ -462,29 +487,26 @@
 @media (max-width: 768px) {
   .experience-dialog {
     width: calc(100% - 16px);
-    max-height: 94vh;
-    max-height: 94dvh;
-  }
-
-  .experience-dialog-shell {
-    height: 92vh;
-    height: 92dvh;
   }
 
   .experience-dialog-header {
-    padding: 14px 12px;
-    grid-template-columns: 48px minmax(0, 1fr) 44px;
+    padding: 0 12px;
+    grid-template-columns: 96px minmax(0, 1fr) 44px;
     gap: 10px;
   }
 
   .experience-dialog-header .experience-logo {
-    width: 48px;
-    height: 44px;
+    width: 96px;
+    height: 60px;
   }
 
   .experience-dialog-header .experience-logo img {
-    max-width: 48px;
-    max-height: 40px;
+    max-width: 96px;
+    max-height: 60px;
+  }
+
+  .experience-dialog-heading {
+    margin-left: 12px;
   }
 
   .experience-dialog-heading h2 {
@@ -510,7 +532,7 @@
   }
 
   .experience-dialog-slide {
-    padding: 24px 20px;
+    padding: 22px 20px;
   }
 
   .experience-dialog-slide p {
@@ -545,4 +567,3 @@
     justify-content: center;
   }
 }
-

@@ -517,86 +517,6 @@
   }
 }
 
-.experience-dialog {
-  max-height: 88vh;
-  max-height: 88dvh;
-}
-
-.experience-dialog-shell {
-  height: auto;
-  max-height: min(86vh, 800px);
-  max-height: min(86dvh, 800px);
-  display: flex;
-  flex-direction: column;
-}
-
-.experience-dialog-header,
-.experience-dialog-tabs,
-.experience-dialog-controls {
-  flex: 0 0 auto;
-}
-
-.experience-dialog-header {
-  grid-template-columns: 192px minmax(0, 1fr) 44px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.experience-dialog-header .experience-logo {
-  width: 192px;
-  height: 114px;
-}
-
-.experience-dialog-header .experience-logo img {
-  max-width: 192px;
-  max-height: 114px;
-}
-
-.experience-dialog-heading {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 50px;
-}
-
-.experience-dialog-heading h2,
-.experience-dialog-heading p {
-  text-align: left;
-}
-
-.experience-dialog-content {
-  flex: 0 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-}
-
-.experience-dialog-heading:has(> p:not(.experience-dialog-meta)) > h2 {
-  display: none;
-}
-
-.experience-dialog-heading > p:not(.experience-dialog-meta) {
-  margin-top: 0;
-  color: #555b76;
-  font-size: 1.35rem;
-  line-height: 1.25;
-}
-
-.experience-dialog-slide {
-  height: auto;
-  padding: 26px 40px;
-  justify-content: flex-start;
-  overflow: visible;
-}
-
-.experience-dialog .experience-dialog-slide > :first-child {
-  margin-top: 0;
-}
-
-.experience-dialog .experience-dialog-slide > :last-child {
-  margin-bottom: 0;
-}
-
 .technical-focus-subject,
 .technical-focus-proof {
   padding: 28px 40px;
@@ -621,28 +541,6 @@
 }
 
 @media (max-width: 768px) {
-  .experience-dialog-heading {
-    margin-left: 12px;
-  }
-
-  .experience-dialog-header {
-    grid-template-columns: 96px minmax(0, 1fr) 44px;
-  }
-
-  .experience-dialog-header .experience-logo {
-    width: 96px;
-    height: 60px;
-  }
-
-  .experience-dialog-header .experience-logo img {
-    max-width: 96px;
-    max-height: 60px;
-  }
-
-  .experience-dialog-slide {
-    padding: 22px 20px;
-  }
-
   .technical-focus-subject,
   .technical-focus-proof {
     padding: 24px 22px;
