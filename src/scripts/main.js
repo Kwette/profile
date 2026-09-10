@@ -18,70 +18,6 @@ function closeAnimatedDialog(dialog) {
   });
 }
 
-function collapse(elt) {
-  const icon = elt.querySelector("i");
-  const panel = elt.closest(".one-project").querySelector(".app-details");
-  const currentState = panel.dataset.disclosureState || (panel.classList.contains("hidden") ? "closed" : "open");
-  const isOpening = currentState === "closed";
-  const animationId = String(Date.now());
-
-  panel.dataset.disclosureState = isOpening ? "open" : "closed";
-  panel.dataset.animationId = animationId;
-  panel.getAnimations().forEach((animation) => animation.cancel());
-  const disclosureItem = elt.closest(".experience-item, .archive-project, .community-item");
-  const usesChevron = elt.classList.contains("experience-summary") || elt.classList.contains("compact-project-toggle");
-
-  if (usesChevron) {
-    icon.classList.toggle("fa-chevron-down", !isOpening);
-    icon.classList.toggle("fa-chevron-up", isOpening);
-    disclosureItem.classList.toggle("is-open", isOpening);
-  } else {
-    icon.classList.toggle("fa-plus", !isOpening);
-    icon.classList.toggle("fa-minus", isOpening);
-  }
-  elt.setAttribute("aria-expanded", String(isOpening));
-
-  if (reducedMotion.matches) {
-    panel.classList.toggle("hidden", !isOpening);
-    return;
-  }
-
-  if (isOpening) {
-    panel.classList.remove("hidden");
-    panel.style.overflow = "hidden";
-    const targetHeight = panel.scrollHeight;
-    const animation = panel.animate(
-      [
-        { height: "0px", opacity: 0 },
-        { height: `${targetHeight}px`, opacity: 1 }
-      ],
-      { duration: 320, easing: "ease-out" }
-    );
-
-    animation.finished.catch(() => {}).finally(() => {
-      if (panel.dataset.animationId === animationId) panel.style.removeProperty("overflow");
-    });
-    return;
-  }
-
-  const startHeight = panel.getBoundingClientRect().height;
-  panel.style.overflow = "hidden";
-  const animation = panel.animate(
-    [
-      { height: `${startHeight}px`, opacity: 1 },
-      { height: "0px", opacity: 0 }
-    ],
-    { duration: 280, easing: "ease-in" }
-  );
-
-  animation.finished.catch(() => {}).finally(() => {
-    if (panel.dataset.animationId === animationId) {
-      panel.classList.add("hidden");
-      panel.style.removeProperty("overflow");
-    }
-  });
-}
-
 function toggleProjectArchive(button) {
   const archive = document.getElementById(button.getAttribute("aria-controls"));
   const isOpening = button.getAttribute("aria-expanded") !== "true";
@@ -416,6 +352,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("[data-technical-carousel]").forEach(initializeTechnicalCarousel);
   document.querySelectorAll(".professional-experience .experience-item").forEach((item, index) => initializeExperienceDialog(item, index, isFrench));
+  document.querySelectorAll(".project-archive-toggle").forEach((button) => {
+    button.addEventListener("click", () => toggleProjectArchive(button));
+  });
 
   document.querySelectorAll(".project-archive-items .archive-project, .project-archive-items .community-item").forEach((item, index) => {
     const title = item.querySelector(".project-name");
@@ -555,19 +494,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const heading = archive.querySelector(".community-heading");
     const contributions = Array.from(archive.querySelectorAll(".community-item"));
     archive.append(...projects, heading, ...contributions);
-  });
-
-  document.querySelectorAll(".one-project .button").forEach((button) => {
-    button.setAttribute("role", "button");
-    button.setAttribute("tabindex", "0");
-    button.setAttribute("aria-expanded", "false");
-    button.setAttribute("aria-label", isFrench ? "Afficher ou masquer les détails" : "Show or hide details");
-    button.addEventListener("keydown", (event) => {
-      if (event.key === " " || event.key === "Enter") {
-        event.preventDefault();
-        collapse(button);
-      }
-    });
   });
 
   document.querySelectorAll(".resume-toggle").forEach((button) => {
