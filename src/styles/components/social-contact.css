@@ -1,0 +1,94 @@
+.social-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2em;
+  margin-top: 3em;
+}
+
+.social-contact-card {
+  min-height: 104px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  color: var(--color-ink);
+}
+
+.social-contact-column {
+  padding: 0;
+  text-align: center;
+}
+
+.social-contact-card h2 {
+  margin: 0 0 0.6rem;
+  color: var(--color-brand);
+  font-size: 1.2em;
+}
+
+.social-contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.social-contact-links a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--color-brand);
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.social-contact-links i {
+  width: 32px;
+  color: var(--color-brand);
+  font-size: 1.9em;
+  line-height: 1;
+  text-align: center;
+}
+
+.social-contact-links a:hover,
+.social-contact-links a:focus-visible {
+  background-color: rgba(88, 95, 125, 0.08);
+  transform: translateY(-1px);
+}
+
+.social-contact-links a:hover i,
+.social-contact-links a:focus i {
+  color: black;
+}
+
+.social-contact-links span {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .social-contact-grid {
+    gap: 0.8rem;
+  }
+
+  .social-contact-card {
+    min-height: 98px;
+    padding: 0.7rem 1rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .social-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-contact-links a {
+    transition: none;
+  }
+}

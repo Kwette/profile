@@ -31,6 +31,7 @@ const styleSources = [
   "styles/components/footer.css",
   "styles/legacy.css",
   "styles/components/navigation.css",
+  "styles/components/social-contact.css",
   "styles/components/project-card.css",
   "styles/components/experience-card.css",
   "styles/components/dialog.css",

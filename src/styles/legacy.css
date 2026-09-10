@@ -182,10 +182,6 @@
     border-top: 1px solid rgba(225, 218, 209, 0.35);
   }
 
-  .social-contact-grid {
-    grid-template-columns: 1fr;
-  }
-
   .skills{
     margin-top: 1.5em;
     margin-left: 0.5em;
@@ -465,39 +461,7 @@
   }
 }
 
-.social-contact-card {
-  min-height: 118px;
-  padding: 1rem 1.25rem;
-  box-sizing: border-box;
-  display: grid;
-  place-items: center;
-}
-
-.social-contact-card h2 {
-  margin-bottom: 0.6rem;
-  font-size: 1.2em;
-}
-
-.social-contact-links a {
-  width: 36px;
-  height: 36px;
-}
-
-.social-contact-links i {
-  width: 32px;
-  font-size: 1.9em;
-}
-
 @media (max-width: 768px) {
-  .social-contact-grid {
-    gap: 0.8rem;
-  }
-
-  .social-contact-card {
-    min-height: 108px;
-    padding: 0.85rem 1rem;
-  }
-
   .resume-card {
     min-height: 0 !important;
   }
@@ -651,31 +615,6 @@
   color: #555b76;
 }
 
-.social-contact-card {
-  min-height: 104px;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.social-contact-card:first-child {
-  background-color: #fff;
-}
-
-.social-contact-card:last-child {
-  background-color: #fff;
-}
-
-.social-contact-links a {
-  border-radius: 4px;
-  transition: background-color 180ms ease, transform 180ms ease;
-}
-
-.social-contact-links a:hover,
-.social-contact-links a:focus-visible {
-  background-color: rgba(88, 95, 125, 0.08);
-  transform: translateY(-1px);
-}
-
 .reveal-item {
   transform: translateY(10px);
   transition-duration: 380ms;
@@ -709,16 +648,9 @@
     padding: 24px 22px;
   }
 
-  .social-contact-card {
-    min-height: 98px;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-  }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .social-contact-links a,
   .reveal-item {
     transition: none;
   }
