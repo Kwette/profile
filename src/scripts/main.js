@@ -1,5 +1,6 @@
 import { initializeExperienceDialog } from "./experience-dialog.js";
 import { reducedMotion } from "./motion.js";
+import { initializeNavigation } from "./navigation.js";
 import { initializeProjectArchive } from "./project-archive.js";
 import { initializeResume } from "./resume.js";
 import { initializeTechnicalCarousel } from "./technical-carousel.js";
@@ -13,51 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("[data-technical-carousel]").forEach(initializeTechnicalCarousel);
   document.querySelectorAll(".professional-experience .experience-item").forEach((item) => initializeExperienceDialog(item, isFrench));
+  initializeNavigation(isFrench);
   initializeProjectArchive(isFrench);
   initializeResume();
-
-  const navToggle = document.querySelector(".site-nav-toggle");
-  const navLinks = document.querySelector(".site-nav-links");
-  if (navToggle && navLinks) {
-    const closeMenu = () => {
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", isFrench ? "Ouvrir le menu" : "Open menu");
-      navToggle.querySelector("i").className = "fa-solid fa-bars";
-      navLinks.classList.remove("is-open");
-    };
-
-    navToggle.addEventListener("click", () => {
-      const isOpening = navToggle.getAttribute("aria-expanded") !== "true";
-      navToggle.setAttribute("aria-expanded", String(isOpening));
-      navToggle.setAttribute("aria-label", isOpening ? (isFrench ? "Fermer le menu" : "Close menu") : (isFrench ? "Ouvrir le menu" : "Open menu"));
-      navToggle.querySelector("i").className = isOpening ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-      navLinks.classList.toggle("is-open", isOpening);
-    });
-    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
-        closeMenu();
-        navToggle.focus();
-      }
-    });
-  }
-
-  const observedNavLinks = Array.from(document.querySelectorAll(".site-nav-links a[href^='#']"));
-  const observedSections = observedNavLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
-  if ("IntersectionObserver" in window && observedSections.length) {
-    const navObserver = new IntersectionObserver((entries) => {
-      const activeEntry = entries.find((entry) => entry.isIntersecting);
-      if (!activeEntry) return;
-      observedNavLinks.forEach((link) => {
-        const isCurrent = link.getAttribute("href") === `#${activeEntry.target.id}`;
-        if (isCurrent) link.setAttribute("aria-current", "location");
-        else link.removeAttribute("aria-current");
-      });
-    }, { rootMargin: "-28% 0px -62% 0px", threshold: 0 });
-    observedSections.forEach((section) => navObserver.observe(section));
-  }
 
   if (!reducedMotion.matches && "IntersectionObserver" in window) {
     const revealSelector = [
