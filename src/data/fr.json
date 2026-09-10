@@ -222,5 +222,10 @@
         "status": "Prototype en cours de reprise"
       }
     ]
+  },
+  "projectArchive": {
+    "action": "Voir les 6 projets antérieurs",
+    "communityTitle": "Contributions & communauté",
+    "communityDescription": "Hackathons, mentorat et transmission."
   }
 }

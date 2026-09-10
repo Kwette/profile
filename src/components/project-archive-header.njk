@@ -1,0 +1,9 @@
+<button class="project-archive-toggle" type="button" aria-expanded="false" aria-controls="project-archive-{{ language }}" onclick="toggleProjectArchive(this)">
+  <span class="project-archive-action">{{ projectArchive.action }}</span>
+  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+</button>
+<div class="project-archive-items" id="project-archive-{{ language }}">
+  <div class="community-heading">
+    <h3>{{ projectArchive.communityTitle }}</h3>
+    <p>{{ projectArchive.communityDescription }}</p>
+  </div>

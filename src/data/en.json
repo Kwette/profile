@@ -222,5 +222,10 @@
         "status": "Prototype currently being reworked"
       }
     ]
+  },
+  "projectArchive": {
+    "action": "View 6 projects",
+    "communityTitle": "Community & Contributions",
+    "communityDescription": "Hackathons, mentoring, and knowledge sharing."
   }
 }
