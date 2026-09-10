@@ -12,6 +12,11 @@ const pages = [
   { template: "pages/uk-version.njk", data: "data/en.json", output: "uk-version.html", language: "en" }
 ];
 
+const styleSources = [
+  "styles/tokens.css",
+  "styles/legacy.css"
+];
+
 const templates = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(sourceRoot, { noCache: true }),
   {
@@ -48,16 +53,23 @@ const renderedPages = await Promise.all(pages.map(async ({ template, data, outpu
   };
 }));
 
+const stylesheet = (
+  await Promise.all(
+    styleSources.map(file => readFile(path.join(sourceRoot, file), "utf8"))
+  )
+).join("");
+
 await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 
-await Promise.all(
-  renderedPages.map(({ output, html }) =>
+await Promise.all([
+  ...renderedPages.map(({ output, html }) =>
     writeFile(path.join(outputRoot, output), html, "utf8")
-  )
-);
+  ),
+  writeFile(path.join(outputRoot, "style.css"), stylesheet, "utf8")
+]);
 
-const staticEntries = ["style.css", "script.js", "images"];
+const staticEntries = ["script.js", "images"];
 
 await Promise.all(
   staticEntries.map(entry =>

@@ -1,0 +1,8 @@
+:root {
+  --color-ink: rgb(50, 50, 50);
+  --color-brand: #585f7d;
+  --color-brand-muted: #777d95;
+  --color-canvas: rgb(250, 250, 250);
+  --color-accent-warm: #e1dad1;
+  --anchor-offset: 74px;
+}
