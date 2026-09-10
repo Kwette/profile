@@ -1,109 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <title>Emilie Murat _ Ruby FullSatck Developer _ Profile</title>
+    <title>Emilie Murat _ Ruby FullStack Developer _ Profile</title>
     <meta name="description" content="Emz_Profile - Emilie Murat Fullstack developer Ruby on Rails and Javascript full remote">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Open+Sans:300,400,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="script.js?v=20260908-12"></script>
+    <link rel="stylesheet" href="style.css?v=20260908-13">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><i class="fa-solid fa-arrow-up"></i></div>
+    <div class="site-nav">
+      <div class="site-nav-content">
+        <a href="#" class="site-brand" aria-label="Retour en haut de page">EMZ</a>
+        <nav class="site-nav-links" id="site-nav-links-fr" aria-label="Navigation principale">
+          <a href="#help">Ce que j’apporte</a>
+          <a href="#apps">Projets</a>
+          <a href="#technical-focus">Focus technique</a>
+          <a href="#experience">Expérience</a>
+          <a href="#contact" class="nav-contact">Contact</a>
+        </nav>
+        <div class="site-nav-actions">
+          <a href="#resume">CV</a>
+          <div class="language-switcher" aria-label="Choix de la langue">
+            <span aria-current="page">FR</span><span aria-hidden="true">|</span><a href="uk-version.html" hreflang="en">EN</a>
+          </div>
+        </div>
+        <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links-fr" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <button class="button back-to-top" type="button" data-back-to-top aria-label="Retour en haut de page" aria-hidden="true" tabindex="-1"><i class="fa-solid fa-arrow-up"></i></button>
     <div class="container">
       <!----------------------------- ABOUT --------------------------->
-      <div class="card" >
-        <a href="uk-version.html" class="lang-link"><span class="badge"><img src="images/en-flag.jpg"></span>EN</a>
+      <div class="card hero-card">
       <div class=" text-center">
-        <h1>Hello, I'm Emz 👋🏻</h1>
+        <h1>Hello, I'm Emz 👋</h1>
         <!--  <img  src="images/Portrait_Pro_Small.png" class="img-circle" alt=""> -->
-        <h3>Ruby on Rails / Js Fullstack Developer</h3>
-        <p style="margin-bottom: 30px">
-          Alumni du Wagon avec un background Graphic Design. J'aime l'UI/UX Design, le développement et les sports de glisse 🏄🏻‍♀️. Je suis ouverte aux opportunités FullStack Ruby dans le monde entier 🚀</br></br>
-          A la recherche de nouveaux défis après plus d’an en tant que Fullstack Rails Developer freelance. Afin de poursuivre ma montée en compétences, notamment sur du React, je souhaiterais aujourd’hui rejoindre une équipe et me confronter à de nouveaux challenges techniques.
+        <h3>Développeuse Full-Stack / Product Engineer<br>Ruby on Rails · PostgreSQL · JavaScript</h3>
+        <p class="hero-intro">
+          Je conçois, fais évoluer et fiabilise des produits web, principalement pour des startups et des SaaS. Avec plus de quatre ans d’expérience professionnelle, je prends en charge des fonctionnalités de bout en bout, du besoin produit jusqu’à leur mise en production : backend Rails et PostgreSQL, interfaces JavaScript, intégrations externes et traitements asynchrones.</br></br>
+          Habituée aux petites équipes et à l’ownership, j’associe développement produit, résolution de problèmes et sensibilité design / UX/UI. J’ai notamment conçu et livré de zéro un éditeur vidéo multilingue complexe, de l’architecture des données jusqu’à l’interface utilisateur.</br></br>
+          Je suis ouverte à rejoindre une équipe produit sur le long terme ou à intervenir en freelance sur des applications Rails : évolution et maintenance, nouvelles fonctionnalités, intégrations, debugging et reprise de code existant.</br></br>
+          Basée en France · Remote en France, en Europe ou à l’international
         </p>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-          <a href="#resume" class="btn">Voir mon C.V.</a>
-          <a href="#apps" class="btn">Voir mes Projets</a>
-        </div>
-
+        <!-- <div class="hero-actions" style="display: flex; justify-content: center; flex-wrap: wrap;">
+          <a href="#apps" class="btn">Voir mes projets</a>
+          <a href="images/CV_2026_Emilie_Murat_Fr.pdf" class="btn" target="_blank" rel="noopener noreferrer">Télécharger le CV</a>
+          <a href="https://www.linkedin.com/in/kprod/" class="btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:emz.dev.pro@gmail.com" class="btn">Contact</a>
+        </div> -->
       </div>
       </div>
       <!----------------------------- SOCIAL LINKS --------------------------->
-      <div class="card text-center" style="padding-bottom: 1em;">
-        <div>
-          <h2 style="margin-bottom: 1.5em; margin-top: 0;">Follow me</h2>
-          <ul class="list-inline" ><!-- style="margin-bottom: 3em;" -->
-            <li><a href="https://github.com/kwette" target="blank"><i class="fab fa-github-square"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/kprod/" target="blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://www.behance.net/kwet" target="blank"><i class="fab fa-behance-square"></i></a></li>
-          </ul>
+      <div class="social-contact-grid" id="contact">
+        <div class="card social-contact-card">
+          <div class="social-contact-column">
+          <h2>Follow Me</h2>
+          <div class="social-contact-links">
+            <a href="https://www.linkedin.com/in/kprod/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+            <a href="https://github.com/Kwette" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github-square"></i><span>GitHub</span></a>
+            <a href="https://www.behance.net/kwet" target="_blank" rel="noopener noreferrer" aria-label="Behance" title="Behance"><i class="fab fa-behance-square"></i><span>Behance</span></a>
+          </div>
+          </div>
+        </div>
+        <div class="card social-contact-card">
+          <div class="social-contact-column">
+          <h2>Let's Talk!</h2>
+          <div class="social-contact-links">
+            <a href="mailto:emz.dev.pro@gmail.com" aria-label="M’envoyer un email" title="M’envoyer un email"><i class="fas fa-envelope"></i><span>Email</span></a>
+            <a href="https://cal.com/emilie-murat-onq1pv/30min" target="_blank" rel="noopener noreferrer" aria-label="Réserver un échange de 30 minutes" title="Réserver un échange de 30 minutes"><i class="fas fa-calendar-check"></i><span>30 min</span></a>
+          </div>
+          </div>
         </div>
       </div>
-
+      <!----------------------------- HOW I CAN HELP --------------------------->
+      <div class="card compact-card" id="help">
+        <div class="text-center">
+          <h2>Ce que je peux apporter 🚀</h2>
+          <div class="compact-list-panel">
+            <ul class="compact-list">
+              <li>Développement et évolution d’applications Ruby on Rails</li>
+              <li>Reprise de codebase et compréhension d’un produit existant</li>
+              <li>Développement de fonctionnalités full-stack de bout en bout</li>
+              <li>API, intégrations de services externes et webhooks</li>
+            </ul>
+            <ul class="compact-list">
+              <li>Debugging et résolution de problèmes en production</li>
+              <li>Traitements asynchrones avec Sidekiq et Redis</li>
+              <li>SQL, PostgreSQL et modélisation de données</li>
+              <li>Renfort produit autonome au sein d’une petite équipe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <!----------------------------- START RESUME --------------------------->
       <div id="resume"></div>
-      <div class="card" style="padding: 0">
+      <div class="card resume-card" id="resume-card-fr" style="padding: 0">
         <!----------------------------- HEADER --------------------------->
         <div class="resume">
           <div class="resume-header">
-            <div class="tooltip">
-              <div class="button" style="position: absolute;" onclick="window.open('images/CV_2025_FR_Leger.pdf', '_blank')">
-                <i class="fa-solid fa-download"></i>
+            <div class="resume-cover-actions">
+              <button class="resume-action resume-toggle" type="button" aria-expanded="false" aria-controls="resume-card-fr">
+                <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                <span data-resume-label data-open-label="Voir" data-close-label="Masquer">Voir</span>
+                <i class="fa-solid fa-chevron-down resume-toggle-chevron" aria-hidden="true"></i>
+              </button>
+              <div class="tooltip resume-download-control">
+                <a class="button resume-download" href="images/CV_2026_Emilie_Murat_Fr.pdf" target="_blank" rel="noopener noreferrer" aria-label="Télécharger le CV au format PDF">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                </a>
+                <span class="tooltiptext">C.V. PDF</span>
               </div>
-              <span class="tooltiptext">C.V. PDF</span>
+            </div>
+            <div class="resume-preview-photo">
+              <img src="images/Portrait_Pro_Small.png" class="img-circle" alt="Portrait d’Emilie Murat">
             </div>
             <div class="margin-right">
               <h1>EMILIE MURAT</h1>
               <hr>
-              <h3>RAILS FULLSTACK DEVELOPER</h3>
+              <h3>RUBY ON RAILS FULL-STACK DEVELOPER</h3>
               <hr>
             </div>
           </div>
           <!--------------------------- RESUME BOBY ------------------------->
           <div class="resume-body">
-            <p style="text-align: center">4+ ans | Conception de plateformes SaaS from scratch</p>
+            <p style="text-align: center; font-weight: 600; margin: 0; padding: 0;">4+ ans | Ruby on Rails - SaaS - Product-minded</p>
             <!--------------------------- FORMATIONS ------------------------->
-            <h2 class="flex-header" style="margin-top: 1em;">FORMATIONS</h2>
+            <h2 class="flex-header" style="margin-top: 0.5em;">FORMATIONS & CERTIFICATIONS</h2>
             <p><span class="bold">2025</span>PTE Academic - Score 67 (eq. IELTS 7.5 / CEFR C1) <span class="grey">#Pearson</span></p>
-            <p><span class="bold">2019</span>Certifications Ruby, R.O.R. et Js <span class="grey">#Open Classroom</span></p>
-            <p><span class="bold">2019</span>Bootcamp Full-Stack Developer <span class="grey">#Le Wagon Marseille</span></p>
-            <p><span class="bold">2016</span>Certification Infographiste Multimédia <span class="grey">#AFIP Villeurbanne</span></p>
+            <p><span class="bold">2019</span>Certificats Ruby, Ruby on Rails et JS <span class="grey">#OpenClassrooms</span></p>
+            <p><span class="bold">2019</span>Bootcamp Full-Stack Developer <span class="grey">#Le Wagon</span></p>
+            <p><span class="bold">2016</span>BTS Infographiste Multimédia <span class="grey">#AFIP Villeurbanne</span></p>
             <!-------------------------- EXPERIENCES ------------------------>
             <h2 class="flex-header">EXPERIENCES PROFESSIONNELLES</h2>
-            <!-------------------------- DRIME ------------------------>
+            <!-------------------------- INDEPENDENT PRODUCT DEVELOPMENT ------------------------>
             <div class="purple-bg">
-              <span><span  class="bold">Lead Full-Stack Developer - Drime</span>| Fev 2021 - Avr 2024</span>
+              <span><span  class="bold">Independent Product Development</span>| Fév 2025 - Aujourd’hui</span>
               <span class="bold stack">
-                <p>Ruby on Rails, JavaScript (Vanilla, ES6, JQuery), PostgreSQL, AWS, Azure APIs, GitLab, Docker, Figma</p>
+                <p>Ruby on Rails, JavaScript, React, PostgreSQL, Stripe, APIs, ChatGPT, Codex</p>
               </span>
               <p class="xp-info">
-              - Conception from scratch d’une plateforme SaaS de lecteur et éditeur vidéo multilingue (front-end & back-end)</br>
-              - Création d’un format personnalisé .drime (JSON) pour la lecture multilingue à partir d’un seul fichier</br>
-              - Refonte du pipeline vidéo avec des jobs en arrière-plan permettant de gérer 10× plus de projets sans crash</br>
+              - Conception et développement de projets SaaS personnels en Ruby on Rails, JavaScript et React</br>
+              - Travail sur Trip&Share, RideShare NZ et RecipeMatcher</br>
+              - Intégration de services tiers et de paiements en cours de finalisation</br>
+              - Utilisation d’assistants IA (ChatGPT, Codex) pour accélérer le développement, le debugging et le refactoring</br>
+              - Amélioration continue de projets personnels autour des performances, de la sécurité et de la qualité du code</br>
+              </p>
+            </div>
+            <!-------------------------- DRIME ------------------------>
+            <div class="purple-bg">
+              <span><span  class="bold">Full-Stack Developer - Drime</span>| Fév 2021 - Avr 2024</span>
+              <span class="bold stack">
+                <p>Ruby on Rails, JavaScript (Vanilla, ES6, jQuery), PostgreSQL, AWS, Azure APIs, GitLab, Docker, Figma</p>
+              </span>
+              <p class="xp-info">
+              - Conception d’un éditeur vidéo multilingue from scratch et amélioration du player existant (front-end & back-end)</br>
+              - Conception d'un pipeline de traitements asynchrones avec background jobs permettant de gérer 10× plus de projets sans crash</br>
+              - Intégration des API Azure Translator, Text-to-Speech et AWS S3 pour la synthèse vocale, la traduction automatique et la gestion des assets</br>
+              - Création d'un format propriétaire (.drime JSON) pour la lecture multilingue</br>
+              - Refonte UI/UX : player, homepage, registration flow, dashboard admin</br>
               - Tableau de bord d’indicateurs intelligents, générateurs iframes et QR codes</br>
-              - Intégration des API Azure TTS etTranslator pour la synthèse vocale et la traduction automatique</br>
-              - Refonte complète UI/UX : player, homepage, registration, dashboard admin</br>
               - Automatisation lecture/écriture fichiers .drime sur AWS (stockage scalable)</br>
               - Migration complète de la plateforme vers Docker, AWS et GitLab avec un architecte externe</br>
               </p>
             </div>
             <!-------------------------- PICKADEN ------------------------>
             <div class="purple-bg">
-              <span><span  class="bold">Lead Full-Stack Developer - Pickaden</span>| Mar 2020 - Fev 2021</span>
+              <span><span  class="bold">Full-Stack Developer - Pickaden</span>| Mar 2020 - Fév 2021</span>
               <span class="bold stack">
                 <p>Ruby on Rails, JavaScript, PostgreSQL, Heroku, GitHub, AWS, Sendinblue, Figma</p>
               </span>
               <p class="xp-info">
-              - Développement de toutes les nouvelles fonctionnalités d’un SaaS de réservation de places en crèche en temps réel</br>
+              - Développement de nouvelles fonctionnalités sur un SaaS de réservation de places en crèche en temps réel</br>
+              - Intégration de services externes, dont Sendinblue</br>
               - Stabilisation et débogage de l’MVP initial</br>
-              - Refonte barre de recherche (UX/UI) avec filtres et recherche instantanée</br>
+              - Refonte de la barre de recherche (UX/UI) : filtres et recherche instantanée</br>
               - Création de tout l’espace parent et du parcours de demande de réservation</br>
               - Mise en place de l’espace de gestion pour les établissements</br>
-              - Amélioration de l’interface d’administration et ajout notification emails</br>
-              - Rédaction tests système Capybara et de requêtes SQL pour le suivi des KPIs</br>
+              - Amélioration de l’interface d’administration et ajout de notifications emails</br>
+              - Rédaction de tests système Capybara et de requêtes SQL pour le suivi des KPI</br>
               - Amélioration des performances (temps de chargement, responsive, images)</br>
               </p>
             </div>
@@ -111,7 +187,7 @@
             <div class="no-bg">
               <span><span  class="bold">Ruby on Rails Developer - Hackathon du Cinéma</span>| Dec 2019</span>
               <span class="bold stack">
-                <p>HTML/CSS, Ruby, Rails, Git, PostgreSQL</p>
+                <p>HTML/CSS, Ruby, Rails, Git, GitHub, PostgreSQL</p>
               </span>
             </div>
             <!-------------------------- RAILS GIRLS ------------------------>
@@ -145,11 +221,11 @@
         </div>
         <!----------------------------- SKILLS DIV --------------------------->
         <div class="skills">
-          <div style="display: flex; justify-content: center">
+          <div style="display: flex; justify-content: center; text-align: center;">
             <img  src="images/Portrait_Pro_Small.png" class="img-circle" alt="">
           </div>
           <div>
-            <p style="margin-top: 10px">«Lead Fullstack Developer avec 4 ans d’expérience, conçoit des plateformes SaaS from scratch. Forte sensibilité produit et UX/UI. À la recherche d’opportunités au sein de petites équipes agiles, idéalement axées sur React et des produits scalables.»</p>
+            <p style="margin-top: 10px; text-align: center;">Développeuse Full-stack Ruby on Rails avec plus de 4 ans d'expérience sur des produits SaaS en production. Forte sensibilité produit et UX/UI, avec une expérience du développement de nouvelles fonctionnalités, de la reprise et de l'évolution d'applications existantes. J'apprécie les environnements startup où l'autonomie, l'ownership et la collaboration permettent de construire des produits utiles.</p>
           </div>
           <!----------------------------- CONTACT --------------------------->
           <h2>CONTACT</h2>
@@ -166,34 +242,34 @@
             </div>
             <div class="d-flex mobile">
               <i class="fab fa-linkedin"></i>
-              <a href="http://www.linkedin.com/in/kprod" target="blank">www.linkedin.com/in/kprod</a>
+              <a href="http://www.linkedin.com/in/kprod" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/kprod</a>
             </div>
             <div class="d-flex mobile">
               <i class="fab fa-github"></i>
-              <a href="http://github.com/Kwette" target="blank">github.com/Kwette</a>
+              <a href="http://github.com/Kwette" target="_blank" rel="noopener noreferrer">github.com/Kwette</a>
             </div>
             <div class="d-flex mobile">
               <i class="fab fa-behance"></i>
-              <a href="http://www.behance.net/kwet" target="blank">www.behance.net/kwet</a>
+              <a href="http://www.behance.net/kwet" target="_blank" rel="noopener noreferrer">www.behance.net/kwet</a>
             </div>
           </div>
           <!----------------------------- SKILLS --------------------------->
           <h2>CORE SKILLS</h2>
           <div class="hr"></div>
           <div>
-            <div class="row"><p><span class="bold">BACKEND :</span> Ruby on Rails, SQL, PostgreSQL, PHP</p></div>
-            <div class="row"><p><span class="bold">FRONTEND :</span> Javascript (ES6, Vanilla, React.js), HTML5, CSS/SCSS, Bootstrap</p></div>
+            <div class="row"><p><span class="bold">BACKEND :</span> Ruby on Rails, PostgreSQL, SQL, background jobs, async workflows</p></div>
+            <div class="row"><p><span class="bold">FRONTEND :</span> JavaScript (ES6, Vanilla, React en projets personnels), HTML5, CSS/SCSS, Bootstrap</p></div>
             <div class="row"><p><span class="bold">PRODUCT & DESIGN :</span> Figma, UX/UI design, Lottie animations, Illustrator</p></div>
             <div class="row"><p><span class="bold">CLOUD & DEVOPS :</span> AWS (S3), Heroku, Docker, GitHub/GitLab CI</p></div>
-            <div class="row"><p><span class="bold">APIS :</span> Azure (TTS, Translate), AWS</p></div>
-            <div class="row"><p><span class="bold">AUTRES OUTILS :</span> Git, NPM, JSON, Webpack</p></div>
+            <div class="row"><p><span class="bold">API INTEGRATIONS :</span> Stripe, AWS (S3), Azure (Translator, Text-to-Speech)</p></div>
+            <div class="row"><p><span class="bold">AUTRES OUTILS :</span> Git, NPM, ChatGPT, Codex, JSON, Webpack</p></div>
             <div class="row"><p><span class="bold">SOFT SKILLS :</span> Autonomie, sens du produit, collaboration interdisciplinaire</p></div>
           </div>
           <!----------------------------- LANGUES --------------------------->
           <h2>LANGUES</h2>
           <div class="hr"></div>
           <div class="langage">
-            <p><span class="bold">FRANCAIS : </span>Langue maternelle</p>
+            <p><span class="bold">FRANÇAIS : </span>Langue maternelle</p>
             <p><span class="bold">ANGLAIS : </span>Avancé (CEFR niveau C1)</p>
             <p><span class="bold">ESPAGNOL & ALLEMAND : </span>Notions</p>
           </div>
@@ -221,34 +297,177 @@
         </div>
         <!--------------------------- END SKILLS DIV ------------------------->
       </div>
-      <!--------------------------- APPLICATIONS ------------------------->
-      <div class="card application" id="apps">
-        <h1 class="text-center apps-header" style="color: white;">Mes Projets</h1>
-        <!------------------- PROJECT DRIME  ----------------->
-        <div class="one-project">
-          <!------------------- PROJECT HEADER  ----------------->
-          <h2 class="project-name">Lead Fullstack Developer | Drime
-            <span>
-              <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
-            </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Temps plein en télétravail – Février 2021 à Avril 2024</h4>
-              <h4>Contrat à durée indéterminée</h4>
+      <!----------------------------- SELECTED WORK --------------------------->
+      <section class="card selected-work" id="apps" aria-labelledby="selected-work-title-fr">
+        <header class="selected-work-header text-center">
+          <h2 id="selected-work-title-fr">Projets sélectionnés</h2>
+          <p style="font-family: 'Montserrat';">Trois réalisations qui illustrent mon travail sur des produits web, de l’architecture et des données jusqu’aux interfaces et à la mise en production.</p>
+        </header>
+        <div class="selected-work-grid">
+          <article class="selected-project selected-project-featured" id="drime-project">
+            <div class="selected-project-media">
+              <img src="images/drime-video-editor.webp" width="1600" height="900" loading="lazy" alt="Interface de l’éditeur vidéo DRIME montrant l’édition des textes, le choix des langues et les réglages de prononciation.">
             </div>
-            <div class="card-right-side">
-              <img src="images/drime-new.png">
+            <div class="selected-project-content">
+              <p class="selected-project-label">Projet principal · SaaS vidéo · Projet professionnel</p>
+              <h3>DRIME — Éditeur vidéo multilingue</h3>
+              <p class="selected-project-description">J’ai conçu et développé de bout en bout un éditeur réunissant vidéo, sous-titres, traductions, voix off et traitements asynchrones. Une fonctionnalité complexe menée de l’architecture à la mise en production, avec une attention particulière portée à l’expérience d’édition.</p>
+              <p class="selected-project-stack">Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Heroku CI/CD · Azure APIs</p>
+              <a class="selected-project-link" href="#experience">Découvrir le projet →</a>
+            </div>
+          </article>
+          <div class="selected-project-secondary-grid">
+            <article class="selected-project selected-project-secondary selected-project-trip" id="trip-and-share-project">
+              <div class="selected-project-media">
+                <img src="images/tripshare-resources.webp" width="1600" height="1000" loading="lazy" alt="Catalogue Trip&amp;Share affichant des filtres et plusieurs ressources numériques gratuites ou payantes.">
+              </div>
+              <div class="selected-project-content">
+                <p class="selected-project-label">Projet personnel · Plateforme éditoriale</p>
+                <h3>Trip&amp;Share</h3>
+                <p class="selected-project-description">Plateforme de contenus et de ressources réunissant gestion éditoriale, produits numériques et intégration Stripe en cours.</p>
+                <p class="selected-project-stack">Ruby on Rails · PostgreSQL · JavaScript · Stripe</p>
+                <a class="selected-project-link" href="images/tripshare-resources.webp" target="_blank" rel="noopener noreferrer">Voir →</a>
+              </div>
+            </article>
+            <article class="selected-project selected-project-secondary selected-project-recipe" id="recipe-matcher-project">
+              <div class="selected-project-media">
+                <img src="images/recipe-matcher-best-matches.webp" width="2880" height="1512" loading="lazy" alt="Résultats RecipeMatcher montrant plusieurs recettes immédiatement réalisables avec les ingrédients disponibles.">
+              </div>
+              <div class="selected-project-content">
+                <p class="selected-project-label">Projet personnel · Data &amp; recherche</p>
+                <h3>RecipeMatcher</h3>
+                <p class="selected-project-description">Application Rails qui classe les recettes selon les ingrédients disponibles et distingue celles réalisables immédiatement.</p>
+                <p class="selected-project-stack">Rails · PostgreSQL · JavaScript · Render</p>
+                <a class="selected-project-link" href="#technical-focus">Voir →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!----------------------------- TECHNICAL FOCUS --------------------------->
+      <section class="card technical-focus-card" id="technical-focus" aria-labelledby="technical-focus-title-fr">
+        <div class="text-center">
+          <h2 id="technical-focus-title-fr">Focus technique</h2>
+        </div>
+        <p class="technical-focus-intro" style="font-family: 'Montserrat';">J’utilise mes projets personnels et mes sandboxes techniques pour approfondir la performance, la fiabilité, la sécurité et la maintenabilité des applications Rails.</p>
+        <div class="technical-carousel" data-technical-carousel data-topic-label="Sujet" data-direct-label="Afficher le sujet">
+          <div class="technical-carousel-viewport">
+            <div class="technical-focus-grid">
+              <article class="technical-focus-item" data-carousel-label="01 Données">
+                <div class="technical-focus-subject">
+                  <h3>Données &amp; performance</h3>
+                  <p>SQL, indexation PostgreSQL, détection des N+1 et profiling applicatif.</p>
+                  <ul class="technical-focus-keywords" aria-label="Mots-clés">
+                    <li>PostgreSQL</li>
+                    <li>Indexation</li>
+                    <li>N+1</li>
+                  </ul>
+                </div>
+                <aside class="technical-focus-proof">
+                  <p class="technical-focus-proof-label">Application concrète</p>
+                  <h4>RecipeMatcher</h4>
+                  <p>Import et nettoyage d’environ 10 000 recettes JSON, avec recherche par ingrédients optimisée dans PostgreSQL.</p>
+                  <a class="technical-case-study-link" href="#recipe-matcher-project">Voir</a>
+                </aside>
+              </article>
+              <article class="technical-focus-item" data-carousel-label="02 Fiabilité">
+                <div class="technical-focus-subject">
+                  <h3>Fiabilité &amp; sécurité</h3>
+                  <p>Transactions, idempotence, gestion des erreurs et sécurité applicative.</p>
+                  <ul class="technical-focus-keywords" aria-label="Mots-clés">
+                    <li>Transactions</li>
+                    <li>Idempotence</li>
+                    <li>Sécurité</li>
+                  </ul>
+                </div>
+                <aside class="technical-focus-proof">
+                  <p class="technical-focus-proof-label">Application concrète</p>
+                  <h4>DRIME</h4>
+                  <p>Sidekiq, Redis et résolution de problèmes en production.</p>
+                  <a class="technical-case-study-link" href="#experience">Voir</a>
+                </aside>
+              </article>
+              <article class="technical-focus-item" data-carousel-label="03 Architecture">
+                <div class="technical-focus-subject">
+                  <h3>Architecture &amp; qualité</h3>
+                  <p>Refactoring, tests et observabilité pour des applications Rails maintenables.</p>
+                  <ul class="technical-focus-keywords" aria-label="Mots-clés">
+                    <li>Refactoring</li>
+                    <li>Tests</li>
+                    <li>Observabilité</li>
+                  </ul>
+                </div>
+                <aside class="technical-focus-proof">
+                  <p class="technical-focus-proof-label">Application concrète</p>
+                  <h4>Pickaden</h4>
+                  <p>MVP stabilisé, tests Capybara et temps de chargement optimisés.</p>
+                  <a class="technical-case-study-link" href="#experience">Voir</a>
+                </aside>
+              </article>
+              <article class="technical-focus-item" data-carousel-label="04 Backend">
+                <div class="technical-focus-subject">
+                  <h3>Exploration backend</h3>
+                  <p>Approfondir Python et explorer d’autres technologies backend.</p>
+                  <ul class="technical-focus-keywords" aria-label="Mots-clés">
+                    <li>Python</li>
+                    <li>Backend</li>
+                    <li>Expérimentations</li>
+                  </ul>
+                </div>
+                <aside class="technical-focus-proof">
+                  <p class="technical-focus-proof-label">Mise en pratique</p>
+                  <h4>Sandboxes techniques</h4>
+                  <p>Mise en pratique au fil de projets personnels et d’expérimentations.</p>
+                </aside>
+              </article>
             </div>
           </div>
+          <div class="technical-carousel-controls" hidden>
+            <button class="technical-carousel-arrow" type="button" data-carousel-previous aria-label="Afficher le sujet précédent"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+            <div class="technical-carousel-indicators" data-carousel-indicators aria-label="Accéder directement à un sujet"></div>
+            <span class="sr-only" data-carousel-announcement aria-live="polite"></span>
+            <button class="technical-carousel-arrow" type="button" data-carousel-next aria-label="Afficher le sujet suivant"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </section>
+      <!--------------------------- PROFESSIONAL EXPERIENCE ------------------------->
+      <section class="card application professional-experience" id="experience" aria-labelledby="experience-title-fr">
+        <header class="section-heading text-center">
+          <h2 id="experience-title-fr">Expériences professionnelles</h2>
+        </header>
+        <!------------------- PROJECT DRIME  ----------------->
+        <div class="one-project experience-item">
+          <!------------------- PROJECT HEADER  ----------------->
+          <button class="experience-summary" type="button" aria-expanded="false" aria-controls="experience-drime-fr" onclick="collapse(this)">
+            <span class="experience-company"><span class="experience-logo"><img src="images/drime-new.png" alt="DRIME"></span></span>
+            <span class="experience-summary-content">
+              <span class="experience-role">Full-Stack Rails Developer / Product Engineer</span>
+              <span class="experience-meta">Fév. 2021 — Avr. 2024 · CDI · Télétravail</span>
+            </span>
+            <span class="experience-chevron"><span>Voir</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+          </button>
           <!------------------- PROJECT BODY  ----------------->
-          <div class="app-details hidden">
-            <p class="no-bg">
-              <span class="bold">Présentation du produit</span></br></br>
+          <div class="app-details hidden" id="experience-drime-fr">
+            <section class="experience-overview">
+              <span class="experience-section-kicker">Contexte & rôle</span>
+              <h3>Présentation du produit</h3>
+              <p>
               DRIME est un lecteur vidéo réactif, multilingue, interactif et encapsulable, sans cookies, avec un éditeur vidéo intégré. Il repose sur un format personnalisé basé sur JSON (.drime) qui permet la lecture en plusieurs langues (sous-titres, voix off, designs dynamiques) à partir d’un seul fichier vidéo. Cela réduit le temps de production, les coûts de stockage et l’empreinte écologique liée à l’hébergement des fichiers (une vidéo hébergée par projet, un fichier DRIME par projet).
-              </br></br>
+              </p>
+            </section>
+            <section class="experience-stack" aria-labelledby="drime-stack-fr">
+              <h3 id="drime-stack-fr">Stack technique</h3>
+              <div class="experience-stack-grid">
+                <div><span>Backend & données</span><p>Ruby on Rails · PostgreSQL · SQL</p></div>
+                <div><span>Frontend</span><p>JavaScript ES6 · jQuery · HTML · CSS/SCSS</p></div>
+                <div><span>Services & infrastructure</span><p>JSON · AWS · Heroku · Azure APIs · Docker</p></div>
+                <div><span>Produit & outils</span><p>Figma · Git · GitHub · GitLab</p></div>
+              </div>
+            </section>
+            <p class="no-bg experience-detail-section">
               <!------------------- DRIME PLAYER  ----------------->
-              1/ Lecteur DRIME & format de fichier .drime</br></br>
+              <span class="experience-section-kicker">01 · Étude de cas</span>
+              <span class="experience-section-title">Lecteur DRIME & format de fichier .drime</span></br></br>
               Pour les professionnels/clients</br><br>
               - Les tutoriels vidéo sont filmés par l’équipe DRIME et optimisés pour toutes les résolutions d’écran.<br>
               - Les fonctionnalités incluent la diffusion multilingue via des voix off, des sous-titres et des designs dynamiques dans toutes les langues sélectionnées, ainsi que des commandes vocales. Les tutoriels/manuels peuvent être découpés en séquences étape par étape.<br>
@@ -275,12 +494,10 @@
               - Création d’un tableau de bord Super Admin pour créer/modifier les types de designs, incluant la création, la lecture et l’édition directe de fichiers d’animation JSON.</br>
               - Création d’une seconde page landing page.</br>
             </p>
-            <!------------------- STACK ----------------->
-            <div class="purple-bg"><span class="bold">Figma, Ruby on Rails, Vanilla JS, ES6, jQuery, JSON, HTML, CSS, SCSS, PostgreSQL, SQL, Heroku, AWS, Git</span>
-            </div>
             <!------------------- DRIME EDITOR  ----------------->
-          <p class="no-bg">
-            2/ Éditeur vidéo DRIME</br></br>
+          <p class="no-bg experience-detail-section">
+            <span class="experience-section-kicker">02 · Étude de cas</span>
+            <span class="experience-section-title">Éditeur vidéo DRIME</span></br></br>
             Ce que c’est</br></br>
             Un éditeur autonome (distinct du lecteur) permettant de créer des diaporamas à partir de courtes vidéos/photos avec des transitions personnalisables. Comme le lecteur, il est multilingue, adaptatif, interactif, intégrable et léger.</br></br>
             Vitesse de production</br></br>
@@ -303,44 +520,54 @@
             - Activation de la prévisualisation des projets avant publication et sauvegarde en brouillon.</br>
             - Migration du projet vers GitLab, Docker et AWS, en collaboration avec un architecte indépendant qui a mis en place le nouvel environnement.</br>
           </p>
-          <!------------------- STACK  ----------------->
-          <div class="purple-bg"><span class="bold">Figma, Ruby on Rails, Vanilla JS, ES6, jQuery, JSON, HTML, CSS, SCSS, PostgreSQL, SQL, Heroku, AWS, Azure APIs, Git, GitHub, GitLab, Docker.</span>
-          </div>
           <!------------------- RESULTS  ----------------->
-          <p><span class="bold">Résultats :</span>Livraison d’une plateforme de niveau production permettant aux utilisateurs de créer et de publier des vidéos multilingues en quelques minutes à partir d’un seul fichier source, tout en améliorant la stabilité et la scalabilité (pipeline reconstruit avec des tâches en arrière-plan ; refactorisations du modèle ; nouveaux tableaux de bord et générateurs).</p>
+          <p class="experience-results"><span class="bold">Résultats :</span> Livraison d’une plateforme de niveau production permettant aux utilisateurs de créer et de publier des vidéos multilingues en quelques minutes à partir d’un seul fichier source, tout en améliorant la stabilité et la scalabilité (pipeline reconstruit avec des tâches en arrière-plan ; refactorisations du modèle ; nouveaux tableaux de bord et générateurs).</p>
+        </div>
         </div>
         <!------------------- PROJECT PICKADEN  ----------------->
-        <div class="one-project">
+        <div class="one-project experience-item">
           <!------------------- PROJECT HEADER  ----------------->
-          <h2 class="project-name">Lead Fullstack Developer | Pickaden
-            <span>
-              <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
+          <button class="experience-summary" type="button" aria-expanded="false" aria-controls="experience-pickaden-fr" onclick="collapse(this)">
+            <span class="experience-company"><span class="experience-logo experience-logo-pickaden"><img src="images/PickadenHD.png" alt="Pickaden"></span></span>
+            <span class="experience-summary-content">
+              <span class="experience-role">Full-Stack Ruby On Rails Developer</span>
+              <span class="experience-meta">Mars 2020 — Fév. 2021 · Freelance · Télétravail</span>
             </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Temps plein en télétravail – Mars 2020 à Février 2021</h4>
-              <h4>Freelance</h4>
-            </div>
-            <div class="card-right-side">
-              <img src="images/PickadenHD.png">
-            </div>
-          </div>
+            <span class="experience-chevron"><span>Voir</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+          </button>
           <!------------------- PROJECT BODY  ----------------->
-          <div class="app-details hidden">
-            <p class="no-bg">
-              <span class="bold">Présentation du produit</span></br></br>
+          <div class="app-details hidden" id="experience-pickaden-fr">
+            <section class="experience-overview">
+              <span class="experience-section-kicker">Contexte & rôle</span>
+              <h3>Présentation du produit</h3>
+              <p>
               Pickaden est une startup parisienne proposant une plateforme SaaS pour la gestion et la réservation en temps réel de services de garde d’enfants.</br></br>
-              Pour les professionnels</br>
+              J’ai développé et stabilisé le MVP en autonomie, du backend Rails aux interfaces et parcours utilisateurs.
+              </p>
+            </section>
+            <section class="experience-stack" aria-labelledby="pickaden-stack-fr">
+              <h3 id="pickaden-stack-fr">Stack technique</h3>
+              <div class="experience-stack-grid">
+                <div><span>Backend & données</span><p>Ruby on Rails · PostgreSQL · SQL</p></div>
+                <div><span>Frontend</span><p>JavaScript · HTML · CSS</p></div>
+                <div><span>Services & infrastructure</span><p>Heroku · AWS · Sendinblue</p></div>
+                <div><span>Produit & outils</span><p>Figma · Git · GitHub · WordPress</p></div>
+              </div>
+            </section>
+            <p class="no-bg experience-detail-section">
+              <span class="experience-section-kicker">01 · Produit</span>
+              <span class="experience-section-title">Parcours professionnels et parents</span></br></br>
+              <span class="bold">Pour les professionnels</span></br>
               - Gérer et optimiser les plannings de garde</br>
               - Recevoir, accepter ou refuser les demandes de garde des parents en fonction des disponibilités en temps réel</br>
               - Publier et maintenir un profil en ligne</br></br>
-              Pour les parents</br>
+              <span class="bold">Pour les parents</span></br>
               - Moteur de recherche pour trouver des établissements de garde disponibles près d’une adresse donnée</br>
               - Soumettre des demandes de garde en ligne</br>
               - Créer et gérer un tableau de bord et un profil personnel</br>
+            </p>
               <!------------------- RÉALISATIONS CLÉS  ----------------->
-              <p><span class="bold">Réalisations clés</span></br></br>
+              <p class="experience-detail-section"><span class="experience-section-kicker">02 · Contributions</span><span class="experience-section-title">Réalisations clés</span></br></br>
               - Développement de toutes les nouvelles fonctionnalités de bout en bout (front end et back end).</br>
               - Débogage et stabilisation du MVP initial.</br>
               - Amélioration significative de la réactivité sur une grande partie du site.</br>
@@ -355,16 +582,66 @@
               - Préparation de la migration technique de Woonies vers Pickaden.</br>
               - Rédaction de requêtes SQL sur la plateforme d’analyse des KPI.</br>
             </p>
-           <!------------------- STACK  ----------------->
-           <div class="purple-bg"><span class="bold">Photoshop, Illustrator, Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub, AWS, Sendinblue, WordPress.</span>
-          </div>
           <!------------------- RESULTS  ----------------->
-          <p><span class="bold">Résultats</span>Livraison d’un MVP SaaS fonctionnel, stable et convivial, améliorant les performances et l’expérience utilisateur tout en implémentant l’ensemble des fonctionnalités principales à partir de zéro.
+          <p class="experience-results"><span class="bold">Résultats :</span> Livraison d’un MVP SaaS fonctionnel, stable et convivial, améliorant les performances et l’expérience utilisateur tout en implémentant l’ensemble des fonctionnalités principales à partir de zéro.
           </p>
           </div>
         </div>
+      </section>
+      <!--------------------------- OTHER PROJECTS ------------------------->
+      <section class="card application other-projects" id="other-projects" aria-labelledby="other-projects-title-fr">
+        <header class="section-heading text-center other-projects-heading">
+          <h2 id="other-projects-title-fr">Projets personnels</h2>
+        </header>
+        <div class="personal-projects-list">
+          <article class="personal-project-card personal-project-recipe">
+            <a class="personal-project-media" href="#recipe-matcher-project" aria-label="Voir RecipeMatcher dans les projets sélectionnés">
+              <img src="images/recipe-matcher-results.webp" width="1600" height="900" loading="lazy" alt="Recherche RecipeMatcher avec les ingrédients disponibles et le premier résultat correspondant.">
+            </a>
+            <div class="personal-project-content">
+              <p class="selected-project-label">Étude de cas technique · Projet local privé</p>
+              <h3>RecipeMatcher</h3>
+              <p>Recherche de recettes par ingrédients avec Rails, PostgreSQL et traitement de données JSON.</p>
+              <p class="personal-project-stack">Rails · PostgreSQL · SQL · JSON</p>
+              <a class="personal-project-action" href="#recipe-matcher-project">Voir →</a>
+            </div>
+          </article>
+          <article class="personal-project-card personal-project-blog">
+            <a class="personal-project-media" href="#trip-and-share-project" aria-label="Voir Trip&amp;Share Blog dans les projets sélectionnés">
+              <img src="images/tripshare-blog-homepage.webp" width="2880" height="1800" loading="lazy" alt="Page d’accueil de Trip&amp;Share Blog présentant ses guides de voyage et ses ressources pour travailler à distance.">
+            </a>
+            <div class="personal-project-content">
+              <p class="selected-project-label">Produit personnel · Plateforme éditoriale</p>
+              <h3>Trip&amp;Share | Blog</h3>
+              <p>Blog et catalogue de ressources réunissant gestion éditoriale, produits numériques et paiement Stripe en cours.</p>
+              <p class="personal-project-stack">Rails · PostgreSQL · JavaScript · Stripe</p>
+              <a class="personal-project-action" href="#trip-and-share-project">Voir →</a>
+            </div>
+          </article>
+          <article class="personal-project-card personal-project-ridesharing">
+            <div class="personal-project-media">
+              <img src="images/ridesharing-nz-homepage.webp" width="1584" height="1034" loading="lazy" alt="Page d’accueil de Trip&amp;Share | RideShare avec son formulaire de recherche d’un trajet.">
+            </div>
+            <div class="personal-project-content">
+              <p class="selected-project-label">Prototype de mobilité · Écosystème Trip&amp;Share</p>
+              <h3>Trip&amp;Share | RideShare</h3>
+              <p>Prototype de covoiturage local avec cartes, géolocalisation, recherche par rayon et avis utilisateurs.</p>
+              <p class="personal-project-stack">Ruby on Rails · React · Maps · Geocoder</p>
+              <span class="personal-project-status">Prototype en cours de reprise</span>
+            </div>
+          </article>
+        </div>
+        <button class="project-archive-toggle" type="button" aria-expanded="false" aria-controls="project-archive-fr" onclick="toggleProjectArchive(this)">
+          <span class="project-archive-action">Voir les 6 projets antérieurs</span>
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="project-archive-items" id="project-archive-fr">
+        <div class="community-heading">
+          <h3>Contributions &amp; communauté</h3>
+          <p>Hackathons, mentorat et transmission.</p>
+        </div>
         <!------------------- UN PROJET  ----------------->
-        <div class="one-project">
+        <div class="one-project archive-project">
           <h2 class="project-name">Application React.js | React-Flats
           <span>
             <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus"></i></div>
@@ -373,7 +650,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Projet personnel – exercice (Janvier 2020)</h4>
-              <a href="kwette.github.io/react-flats/" target="blank"><h4>kwette.github.io/react-flats/</h4></a>
+              <a href="kwette.github.io/react-flats/" target="_blank" rel="noopener noreferrer"><h4>kwette.github.io/react-flats/</h4></a>
             </div>
              <div class="card-right-side">
               <img src="images/logo-react.png">
@@ -388,14 +665,14 @@
             </div>
 
             <div class="app-links">
-                <a href="https://github.com/Kwette/react-flats" target="blank">
+                <a href="https://github.com/Kwette/react-flats" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-github-square"></i>
                   <span>Github</span>
                 </h4>
                 </a>
 
-                <a href=" https://www.behance.net/gallery/90610133/Affiche-appartements-sur-Go-ogleMap-_-Appli-Reactjs?tracking_source=" target="blank">
+                <a href=" https://www.behance.net/gallery/90610133/Affiche-appartements-sur-Go-ogleMap-_-Appli-Reactjs?tracking_source=" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-behance-square"></i>
                   <span>Screenshots</span>
@@ -406,7 +683,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project">
+        <div class="one-project archive-project">
           <h2 class="project-name">Application React.js | Giphy-api_lil' app
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -415,7 +692,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Projet personnel – exercice (Janvier 2020)</h4>
-              <a href="https://github.com/Kwette/react-gifs" target="blank"><h4>https://github.com/Kwette/react-gifs</h4></a>
+              <a href="https://github.com/Kwette/react-gifs" target="_blank" rel="noopener noreferrer"><h4>https://github.com/Kwette/react-gifs</h4></a>
             </div>
             <div class="card-right-side">
               <img src="images/logo-react.png">
@@ -429,13 +706,13 @@
             <div class="purple-bg"><span class="bold">React.js, HTML/CSS, Git, GitHub.</span>
             </div>
             <div class="app-links">
-              <a href="https://github.com/Kwette/react-gifs" target="blank">
+              <a href="https://github.com/Kwette/react-gifs" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-github-square"></i>
                   <span>Github</span>
                 </h4>
               </a>
-              <a href="https://www.behance.net/gallery/90443427/Giphy-api_lil-app-Gnrateur-de-gifs-(Reactjs-app)?tracking_source=" target="blank">
+              <a href="https://www.behance.net/gallery/90443427/Giphy-api_lil-app-Gnrateur-de-gifs-(Reactjs-app)?tracking_source=" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-behance-square"></i>
                   <span>Screenshots</span>
@@ -446,7 +723,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project">
+        <div class="one-project archive-project">
           <h2 class="project-name">Application Ruby On Rails | Buy & Co !
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -455,7 +732,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Projet personnel – exercice (Décembre 2020)</h4>
-              <a href="https://github.com/Kwette/petites-annonces-rails" target="blank"><h4>https://github.com/Kwette/petites-annonces-rails</h4></a>
+              <a href="https://github.com/Kwette/petites-annonces-rails" target="_blank" rel="noopener noreferrer"><h4>https://github.com/Kwette/petites-annonces-rails</h4></a>
             </div>
             <div class="card-right-side">
               <img src="images/logo-wagon.png">
@@ -483,13 +760,13 @@
               <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
             </div>
             <div class="app-links">
-                <a href="https://github.com/Kwette/petites-annonces-rails" target="blank">
+                <a href="https://github.com/Kwette/petites-annonces-rails" target="_blank" rel="noopener noreferrer">
                   <h4>
                     <i class="fab fa-github-square"></i>
                     <span>Github </span>
                   </h4>
                 </a>
-                <a href="https://www.behance.net/gallery/90445649/Buy-Co-_-Publication-dannonces-(Application-Rails)?tracking_source=" target="blank">
+                <a href="https://www.behance.net/gallery/90445649/Buy-Co-_-Publication-dannonces-(Application-Rails)?tracking_source=" target="_blank" rel="noopener noreferrer">
                   <h4>
                     <i class="fab fa-behance-square"></i>
                     <span>Screenshots</span>
@@ -500,7 +777,7 @@
         </div>
         <!-------------------- FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project">
+        <div class="one-project community-item">
           <h2 class="project-name">Developer Fullstack | Hackathon du Cinema des Arcs
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -509,7 +786,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Les Festival du Cinema des Arcs (Décembre 2019)</h4>
-              <a href="https://lesarcs-filmfest.com/fr" target="blank"><h4>https://lesarcs-filmfest.com/fr</h4></a>
+              <a href="https://lesarcs-filmfest.com/fr" target="_blank" rel="noopener noreferrer"><h4>https://lesarcs-filmfest.com/fr</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-les-arc.png"></div>
           </div>
@@ -525,7 +802,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project">
+        <div class="one-project community-item">
           <h2 class="project-name">Teacher assistant | Le Wagon
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -534,7 +811,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Le Wagon Marseille (Novembre 2019)</h4>
-              <a href="https://www.lewagon.com/" target="blank"><h4>www.lewagon.com</h4></a>
+              <a href="https://www.lewagon.com/" target="_blank" rel="noopener noreferrer"><h4>www.lewagon.com</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
@@ -550,7 +827,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project">
+        <div class="one-project community-item">
           <h2 class="project-name">Mentoring Rails | Rails Girls
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -559,7 +836,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Rails Girls (Novembre 2019)</h4>
-              <a href="https://railsgirls.com/" target="blank"><h4>railsgirls.com</h4></a>
+              <a href="https://railsgirls.com/" target="_blank" rel="noopener noreferrer"><h4>railsgirls.com</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-rails-girls.jpg"></div>
           </div>
@@ -574,7 +851,7 @@
           </div>
         </div>
         <!------------------- UN PROJET  ----------------->
-        <div class="one-project">
+        <div class="one-project community-item">
           <h2 class="project-name">Vue.js Developer | Hackathon du Frioul
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -583,7 +860,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Rails Girls (Novembre 2019)</h4>
-              <a href="https://github.com/Kwette/marcelle-mobi-hackathon" target="blank"><h4>https://github.com/Kwette/marcelle-mobi-hackathon</h4></a>
+              <a href="https://github.com/Kwette/marcelle-mobi-hackathon" target="_blank" rel="noopener noreferrer"><h4>https://github.com/Kwette/marcelle-mobi-hackathon</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
@@ -610,13 +887,13 @@
               <span class="bold">Illustrator, Vue.js, HTML/CSS, Heroku, Git, GitHub.</span>
             </div>
             <div class="app-links">
-              <a href="https://github.com/Kwette/marcelle-mobi-hackathon" target="blank">
+              <a href="https://github.com/Kwette/marcelle-mobi-hackathon" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-github-square"></i>
                   <span>Github</span>
                 </h4>
               </a>
-              <a href="https://www.behance.net/gallery/89008571/Web-Application-(developed-in-Vuejs)-marcellemobi?tracking_source=" target="blank">
+              <a href="https://www.behance.net/gallery/89008571/Web-Application-(developed-in-Vuejs)-marcellemobi?tracking_source=" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-behance-square"></i>
                   <span>Screenshots</span>
@@ -627,7 +904,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------- UN PROJET  ----------------->
-        <div class="one-project">
+        <div class="one-project archive-project">
           <h2 class="project-name">Projet de fin d’études | Tripper
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -636,7 +913,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Application Ruby On Rails</h4>
-              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="blank"><h4>github.com/Kwette/trip-planner-refonte-rails-app</h4></a>
+              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="_blank" rel="noopener noreferrer"><h4>github.com/Kwette/trip-planner-refonte-rails-app</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
@@ -665,13 +942,13 @@
               <span class="bold">Ruby on Rails, HTML/CSS, PostgreSQL, Git.</span>
             </div>
             <div class="app-links">
-              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="blank">
+              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-github-square"></i>
                   <span>Github</span>
                 </h4>
               </a>
-              <a href="https://www.behance.net/gallery/89014253/Tripper-Travel-planner-(developed-in-Ruby-on-Rails)?tracking_source=" target="blank">
+              <a href="https://www.behance.net/gallery/89014253/Tripper-Travel-planner-(developed-in-Ruby-on-Rails)?tracking_source=" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-behance-square"></i>
                   <span>Screenshots</span>
@@ -682,7 +959,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------- UN PROJET  ----------------->
-        <div class="one-project">
+        <div class="one-project archive-project">
           <h2 class="project-name">Projet de fin d’études | Whats_Act
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -691,7 +968,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Application Ruby On Rails</h4>
-              <a href="https://github.com/Kwette/What-s-Act" target="blank"><h4>github.com/Kwette/What-s-Act</h4></a>
+              <a href="https://github.com/Kwette/What-s-Act" target="_blank" rel="noopener noreferrer"><h4>github.com/Kwette/What-s-Act</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
@@ -725,13 +1002,13 @@
               <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
             </div>
             <div class="app-links">
-              <a href="https://github.com/Kwette/What-s-Act" target="blank">
+              <a href="https://github.com/Kwette/What-s-Act" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-github-square"></i>
                   <span>Github</span>
                 </h4>
               </a>
-              <a href="https://www.behance.net/gallery/89018763/Whats_Act-%28Ruby-On-Rails-Web-Application%29?tracking_source=project_owner_other_projects" target="blank">
+              <a href="https://www.behance.net/gallery/89018763/Whats_Act-%28Ruby-On-Rails-Web-Application%29?tracking_source=project_owner_other_projects" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-behance-square"></i>
                   <span>Screenshots</span>
@@ -742,7 +1019,7 @@
         </div>
         <!------------------ FIN PROJET  ---------------------->
         <!------------------- UN PROJET  ----------------->
-        <div class="one-project">
+        <div class="one-project archive-project">
           <h2 class="project-name">Fullstack Developer | Cocktails-Recipes App
             <span>
               <div class="button" onclick="collapse(this)"><i class="fa-solid fa-plus" ></i></div>
@@ -751,7 +1028,7 @@
           <div class="shadow-box">
             <div class="card-left-side">
               <h4>Projet d’études (Le Wagon)</h4>
-              <a href="https://my-cocktails-recipes.herokuapp.com/" target="blank"><h4>my-cocktails-recipes.herokuapp.com/</h4></a>
+              <a href="https://my-cocktails-recipes.herokuapp.com/" target="_blank" rel="noopener noreferrer"><h4>my-cocktails-recipes.herokuapp.com/</h4></a>
             </div>
             <div class="card-right-side"><img src="images/logo-wagon.png"></div>
           </div>
@@ -773,13 +1050,13 @@
               <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
             </div>
             <div class="app-links">
-              <a href="https://github.com/Kwette/mister-cocktail-rails-app" target="blank">
+              <a href="https://github.com/Kwette/mister-cocktail-rails-app" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-github-square"></i>
                   <span>Github</span>
                 </h4>
               </a>
-              <a href="https://www.behance.net/gallery/88966283/Cocktail_Recipes-(Ruby-On-Rails-Web-Application)?tracking_source=" target="blank">
+              <a href="https://www.behance.net/gallery/88966283/Cocktail_Recipes-(Ruby-On-Rails-Web-Application)?tracking_source=" target="_blank" rel="noopener noreferrer">
                 <h4>
                   <i class="fab fa-behance-square"></i>
                   <span>Screenshots</span>
@@ -788,11 +1065,28 @@
             </div>
           </div>
         </div>
-       <!------------------ FIN PROJET  ---------------------->
-      </div>
+        <!------------------ FIN PROJET  ---------------------->
+        </div>
+      </section>
       <!----------------------------- END RESUME --------------------------->
     </div>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p class="site-footer-copyright">© <span data-current-year></span> EmilieCode · Emilie Murat</p>
+        <div class="site-footer-links">
+          <div class="site-footer-socials" aria-label="Liens de contact">
+            <a href="mailto:emz.dev.pro@gmail.com" aria-label="Envoyer un email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/kprod/" target="_blank" rel="noopener noreferrer" aria-label="Voir mon profil LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/Kwette" target="_blank" rel="noopener noreferrer" aria-label="Voir mon profil GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.behance.net/kwet" target="_blank" rel="noopener noreferrer" aria-label="Voir mon profil Behance" title="Behance"><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
+          </div>
+          <div class="site-footer-cvs">
+            <a href="images/CV_2026_Emilie_Murat_Fr.pdf" target="_blank" rel="noopener noreferrer">CV FR</a>
+            <span aria-hidden="true">·</span>
+            <a href="images/CV_2026_Emilie_Murat_En.pdf" target="_blank" rel="noopener noreferrer">CV EN</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-
-
