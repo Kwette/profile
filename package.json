@@ -6,7 +6,8 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs && node scripts/check.mjs"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
