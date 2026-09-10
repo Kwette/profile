@@ -21,6 +21,7 @@ const styleSources = [
   "styles/components/cards.css",
   "styles/components/navigation.css",
   "styles/components/hero.css",
+  "styles/components/selected-project.css",
   "styles/legacy.css",
   "styles/components/project-card.css",
   "styles/components/experience-card.css",
