@@ -225,73 +225,7 @@
 {% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden" id="experience-drime-fr">
-            <section class="experience-overview">
-              <span class="experience-section-kicker">Contexte & rôle</span>
-              <h3>Présentation du produit</h3>
-              <p>
-              DRIME est un lecteur vidéo réactif, multilingue, interactif et encapsulable, sans cookies, avec un éditeur vidéo intégré. Il repose sur un format personnalisé basé sur JSON (.drime) qui permet la lecture en plusieurs langues (sous-titres, voix off, designs dynamiques) à partir d’un seul fichier vidéo. Cela réduit le temps de production, les coûts de stockage et l’empreinte écologique liée à l’hébergement des fichiers (une vidéo hébergée par projet, un fichier DRIME par projet).
-              </p>
-            </section>
-{% set experienceStack = experiences.stacks.drime %}
-{% include "components/experience-stack.njk" %}
-            <p class="no-bg experience-detail-section">
-              <!------------------- DRIME PLAYER  ----------------->
-              <span class="experience-section-kicker">01 · Étude de cas</span>
-              <span class="experience-section-title">Lecteur DRIME & format de fichier .drime</span></br></br>
-              Pour les professionnels/clients</br><br>
-              - Les tutoriels vidéo sont filmés par l’équipe DRIME et optimisés pour toutes les résolutions d’écran.<br>
-              - Les fonctionnalités incluent la diffusion multilingue via des voix off, des sous-titres et des designs dynamiques dans toutes les langues sélectionnées, ainsi que des commandes vocales. Les tutoriels/manuels peuvent être découpés en séquences étape par étape.<br>
-              - Au-delà de la vidéothèque de la plateforme DRIME, les clients peuvent intégrer des vidéos individuelles ou des bibliothèques entières sur leurs propres sites via des iframes (indexées par Google).<br>
-              - La plateforme comprend un tableau de bord avec des “indicateurs intelligents”, une gestion des droits utilisateurs, des iframes personnalisées et des codes QR. Des designs vidéo dynamiques étaient également planifiés dans la feuille de route.</br><br>
-              Pour les utilisateurs finaux</br><br>
-              - Une expérience de lecture vidéo qui s’adapte à la résolution de l’écran, avec lecture continue ou étape par étape, commandes vocales, réglages du son/des sous-titres et sélection de la langue.<br>
-              - Par défaut, la vidéo s’affiche dans la langue du navigateur de l’utilisateur lorsqu’elle est disponible, sinon en anglais.<br>
-            </p>
-            <!------------------- KEY ACHIEVEMENTS  ----------------->
-            <p><span class="bold">Réalisations clés — Lecteur</span></br></br>
-              - Développement de nouvelles fonctionnalités de bout en bout (front end et back end).</br>
-              - Refonte du lecteur : conservation des paramètres son/sous-titres ; animations CSS et Lottie pour les boutons ; compteurs d’étapes pour les vidéos pas à pas ; amélioration des commandes vocales.</br>
-              - Refonte de la page d’accueil avec animations Lottie et création du menu.</br>
-              - Correction des plantages lors de la création de vidéos (>5 vidéos) en implémentant un traitement en tâche de fond pour la génération multilingue ; refonte ultérieure du pipeline pour une meilleure scalabilité.</br>
-              - Création d’un nouveau type de bibliothèque, refonte de l’ancienne bibliothèque et refactorisation du modèle de données pour prendre en charge les designs personnalisés des clients à grande échelle.</br>
-              - Création des Indicateurs Intelligents (tableau de bord des bibliothèques, classements, graphiques, moyennes, pourcentages).</br>
-              - Refonte complète de la gestion des droits utilisateurs et des favoris avec un mini moteur de recherche (recherche par e-mail).</br>
-              - Création d’un générateur d’iframe personnalisé (logo, bannière, menu, filtres, langue forcée, copie du code de l’Indicateur Intelligent).</br>
-              - Création d’un générateur de QR code (couleur, couleur de fond, taille, format, Indicateur Intelligent, téléchargement).</br>
-              - Refonte des pages d’erreur et création de pages statiques (tarifs, mentions légales, politique de confidentialité).</br>
-              - Refonte des pages d’inscription et de connexion.</br>
-              - Mise en place de designs vidéo dynamiques multilingues.</br>
-              - Création d’un tableau de bord Super Admin pour créer/modifier les types de designs, incluant la création, la lecture et l’édition directe de fichiers d’animation JSON.</br>
-              - Création d’une seconde page landing page.</br>
-            </p>
-            <!------------------- DRIME EDITOR  ----------------->
-          <p class="no-bg experience-detail-section">
-            <span class="experience-section-kicker">02 · Étude de cas</span>
-            <span class="experience-section-title">Éditeur vidéo DRIME</span></br></br>
-            Ce que c’est</br></br>
-            Un éditeur autonome (distinct du lecteur) permettant de créer des diaporamas à partir de courtes vidéos/photos avec des transitions personnalisables. Comme le lecteur, il est multilingue, adaptatif, interactif, intégrable et léger.</br></br>
-            Vitesse de production</br></br>
-            Avec les médias et textes pré-sélectionnés, les clients peuvent créer et publier une vidéo en environ 5 minutes. L’ajout d’une autre langue (voix off, sous-titres, etc.) prend environ 2 minutes. Des logos et bandes sonores peuvent être ajoutés. En résumé, avec une préparation minimale, une vidéo multilingue peut être produite en environ 10 minutes et publiée immédiatement. Exportation via iframe, une seule ligne de code d’intégration, ou en vitrine sur la plateforme DRIME.<br>
-            </p>
-            <!------------------- RÉALISATIONS CLÉS  ----------------->
-            <p><span class="bold">Réalisations clés — Éditeur</span></br></br>
-            - Mise en place du projet sur Heroku et installation sur GitHub.</br>
-            - Création d’une troisième page d’accueil avec animations (déroulement de la chronologie vidéo au défilement, effet de parallaxe et autres effets).</br>
-            - Développement de l’éditeur vidéo DRIME à partir de zéro (front end et back end).</br>
-            - Mise en place des pages statiques standard de l’application.</br>
-            - Création d’un espace Super Admin pour gérer les clients et leurs projets.</br>
-            - Création d’un espace client où les utilisateurs peuvent lister, créer, modifier, dupliquer, publier et supprimer des projets.</br>
-            - Automatisation de la lecture/écriture des fichiers DRIME requis sur AWS pour le stockage.</br>
-            - Activation de la création de projets utilisateurs, de la création de fichiers DRIME et de la gestion du statut des vidéos (temporaire, brouillon, publié).</br>
-            - Ajout d’options de projet (choix d’édition, designs, mise au point en mode responsive).</br>
-            - Activation des aperçus en temps réel de tous les effets lors de leur sélection.</br>
-            - Intégration d’Azure Text-to-Speech (voix off) avec filtres de genre/région ; les utilisateurs peuvent écouter un échantillon de chaque voix sélectionnée sur un exemple DRIME personnalisé traduit dans toutes les langues ; prise en charge des prononciations personnalisées ainsi que de la suppression/modification.</br>
-            - Intégration d’Azure Translator pour les traductions de projet, avec possibilité de correction manuelle par le client.</br>
-            - Activation de la prévisualisation des projets avant publication et sauvegarde en brouillon.</br>
-            - Migration du projet vers GitLab, Docker et AWS, en collaboration avec un architecte indépendant qui a mis en place le nouvel environnement.</br>
-          </p>
-          <!------------------- RESULTS  ----------------->
-          <p class="experience-results"><span class="bold">Résultats :</span> Livraison d’une plateforme de niveau production permettant aux utilisateurs de créer et de publier des vidéos multilingues en quelques minutes à partir d’un seul fichier source, tout en améliorant la stabilité et la scalabilité (pipeline reconstruit avec des tâches en arrière-plan ; refactorisations du modèle ; nouveaux tableaux de bord et générateurs).</p>
+{% include "content/fr/experiences/drime.njk" %}
         </div>
         </div>
         <!------------------- PROJECT PICKADEN  ----------------->

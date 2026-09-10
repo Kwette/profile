@@ -1,0 +1,67 @@
+            <section class="experience-overview">
+              <span class="experience-section-kicker">Context & role</span>
+              <h3>Product overview</h3>
+              <p>
+              DRIME is a responsive, multilingual, interactive, embeddable video player with no cookies, plus an integrated video editor. It relies on a custom .drime JSON-based format that enables playback in multiple languages (subtitles, voiceovers, dynamic designs) from a single video file. This reduces production time, storage costs, and the ecological footprint associated with file storage (one hosted video per project, one DRIME file per project).
+              </p>
+            </section>
+{% set experienceStack = experiences.stacks.drime %}
+{% include "components/experience-stack.njk" %}
+            <p class="no-bg experience-detail-section">
+              <!------------------- DRIME PLAYER  ----------------->
+              <span class="experience-section-kicker">01 · Case study</span>
+              <span class="experience-section-title">DRIME Player & .drime file format</span></br></br>
+                For professionals/clients</br><br>
+                - Video tutorials are filmed by the DRIME team and optimized for all screen resolutions.<br>
+                - Features include multi-language broadcasting via voiceovers, subtitles, and dynamic designs in all selected languages, plus voice commands. Tutorials/manuals can be broken into step-by-step sequences.<br>
+                - Beyond the DRIME platform’s video library, clients can embed single videos or entire libraries on their own sites via iframes (indexed by Google).<br>
+                - The platform includes a dashboard with “Smart Indicators”, user-rights management, custom iframes, and QR codes. Dynamic video designs were also road-mapped.</br><br>
+                For end users</br><br>
+                - A video playback experience that adapts to screen resolution, with step-by-step or continuous playback, voice commands, sound/subtitle settings, and language selection.<br>
+                - By default, the video displays in the user’s browser language when available, otherwise in English.<br>
+            </p>
+            <!------------------- KEY ACHIEVEMENTS  ----------------->
+             <p><span class="bold">Key Achievements — Player</span></br></br>
+              - Developed new features end to end (front end & back end).</br>
+              - Player redesign: persistent sound/subtitle settings; CSS & Lottie animations for buttons; step counters for step-by-step videos; improved voice commands.</br>
+              - Homepage redesign with Lottie animations and menu creation.</br>
+              - Fixed video creation crashes (>5 videos) by implementing a background job for multilingual generation; later redesigned the pipeline for scalability.</br>
+              - Created a new library type, redesigned the previous library, and refactored the data model to support custom client designs at scale.</br>
+              - Built Smart Indicators (library dashboard, rankings, graphs, averages, percentages).</br>
+              - Fully redesigned user-rights & favorites with a mini search engine (search by email).</br>
+              - Built a custom iframe generator (logo, banner, menu, filters, forced language, Smart Indicator code copy).</br>
+              - Built a QR code generator (color, background color, size, format, Smart Indicator, download).</br>
+              - Redesigned error pages and created static pages (pricing, legal notices, privacy policy).</br>
+              - Redesigned registration and login pages.</br>
+              - Implemented multilingual dynamic video designs.</br>
+              - Built a Super Admin dashboard to create/modify design types, including creating/reading/editing JSON animation files directly.</br>
+              - Created a second landing page.</br>
+            </p>
+            <!------------------- DRIME EDITOR  ----------------->
+          <p class="no-bg experience-detail-section">
+            <span class="experience-section-kicker">02 · Case study</span>
+            <span class="experience-section-title">DRIME Video Editor</span></br></br>
+            What it is</br></br>
+            A standalone editor (distinct from the player) to create slideshows from short videos/photos with customizable transitions. Like the player, it’s multilingual, responsive, interactive, embeddable, and lightweight.</br></br>
+            Speed of production</br></br>
+            With pre-selected media and text, clients can create & publish a video in ~5 minutes. Adding another language (voiceover, subtitles, etc.) takes ~2 minutes. Logos and soundtracks can be added. In short, with minimal prep, a multilingual video can be produced in ~10 minutes and published immediately. Export via iframe, a single embed code line, or as a showcase on the DRIME platform<br>
+          </p>
+          <!------------------- KEY ACHIEVEMENTS  ----------------->
+          <p><span class="bold">Key Achievements — Editor</span></br></br>
+            - Set up the project on Heroku and installed it on GitHub.</br>
+            - Created a third landing page with animations (scroll-unfolding video timeline, parallax, and other effects).</br>
+            - Built the DRIME video editor from scratch (front end & back end).</br>
+            - Implemented the app’s standard static pages.</br>
+            - Created a Super Admin area to manage clients and their projects.</br>
+            - Built a client area where clients can list, create, modify, duplicate, publish, and delete projects.</br>
+            - Automated reading/writing of the required DRIME files on AWS for storage.</br>
+            - Enabled user project creation, DRIME file creation, and video status management (temporary, draft, published).</br>
+            - Added project options (editing choices, designs, responsive-mode focus).</br>
+            - Enabled real-time previews of all effects upon selection.</br>
+            - Integrated Azure Text-to-Speech (voiceovers) with gender/region filters; users can sample each selected voice on a personalized DRIME sample translated into all languages; supported custom pronunciations and deletion/editing.</br>
+            - Integrated Azure Translator for project translations, with manual client overrides.</br>
+            - Enabled project preview before publishing and draft saving.</br>
+            - Migrated the project to GitLab, Docker, and AWS, in collaboration with an independent architect who built the new environment.</br>
+          </p>
+          <!------------------- RESULTS  ----------------->
+          <p class="experience-results"><span class="bold">Results:</span> Delivered a production-grade platform that lets users build and publish multilingual videos in minutes from a single source file, while improving stability and scalability (pipeline rebuilt with background jobs; model refactors; new dashboards & generators).</p>
