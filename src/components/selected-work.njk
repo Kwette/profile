@@ -1,0 +1,36 @@
+      <section class="card selected-work" id="apps" aria-labelledby="selected-work-title-{{ language }}">
+        <header class="selected-work-header text-center">
+          <h2 id="selected-work-title-{{ language }}">{{ selectedWork.title }}</h2>
+          <p>{{ selectedWork.intro }}</p>
+        </header>
+        <div class="selected-work-grid">
+          <article class="selected-project selected-project-featured" id="{{ selectedWork.featured.id }}">
+            <div class="selected-project-media">
+              <img src="{{ selectedWork.featured.image.src }}" width="{{ selectedWork.featured.image.width }}" height="{{ selectedWork.featured.image.height }}" loading="lazy" alt="{{ selectedWork.featured.image.alt }}">
+            </div>
+            <div class="selected-project-content">
+              <p class="selected-project-label">{{ selectedWork.featured.label }}</p>
+              <h3>{{ selectedWork.featured.title }}</h3>
+              <p class="selected-project-description">{{ selectedWork.featured.description }}</p>
+              <p class="selected-project-stack">{{ selectedWork.featured.stack }}</p>
+              <a class="selected-project-link" href="{{ selectedWork.featured.link.href }}">{{ selectedWork.featured.link.label }}</a>
+            </div>
+          </article>
+          <div class="selected-project-secondary-grid">
+            {% for project in selectedWork.secondary %}
+            <article class="selected-project selected-project-secondary selected-project-{{ project.modifier }}" id="{{ project.id }}">
+              <div class="selected-project-media">
+                <img src="{{ project.image.src }}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" alt="{{ project.image.alt }}">
+              </div>
+              <div class="selected-project-content">
+                <p class="selected-project-label">{{ project.label }}</p>
+                <h3>{{ project.title }}</h3>
+                <p class="selected-project-description">{{ project.description }}</p>
+                <p class="selected-project-stack">{{ project.stack }}</p>
+                <a class="selected-project-link" href="{{ project.link.href }}"{% if project.link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ project.link.label }}</a>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>

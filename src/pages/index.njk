@@ -214,52 +214,7 @@
         <!--------------------------- END SKILLS DIV ------------------------->
       </div>
       <!----------------------------- SELECTED WORK --------------------------->
-      <section class="card selected-work" id="apps" aria-labelledby="selected-work-title-fr">
-        <header class="selected-work-header text-center">
-          <h2 id="selected-work-title-fr">Projets sélectionnés</h2>
-          <p style="font-family: 'Montserrat';">Trois réalisations qui illustrent mon travail sur des produits web, de l’architecture et des données jusqu’aux interfaces et à la mise en production.</p>
-        </header>
-        <div class="selected-work-grid">
-          <article class="selected-project selected-project-featured" id="drime-project">
-            <div class="selected-project-media">
-              <img src="images/drime-video-editor.webp" width="1600" height="900" loading="lazy" alt="Interface de l’éditeur vidéo DRIME montrant l’édition des textes, le choix des langues et les réglages de prononciation.">
-            </div>
-            <div class="selected-project-content">
-              <p class="selected-project-label">Projet principal · SaaS vidéo · Projet professionnel</p>
-              <h3>DRIME — Éditeur vidéo multilingue</h3>
-              <p class="selected-project-description">J’ai conçu et développé de bout en bout un éditeur réunissant vidéo, sous-titres, traductions, voix off et traitements asynchrones. Une fonctionnalité complexe menée de l’architecture à la mise en production, avec une attention particulière portée à l’expérience d’édition.</p>
-              <p class="selected-project-stack">Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Heroku CI/CD · Azure APIs</p>
-              <a class="selected-project-link" href="#experience">Découvrir le projet →</a>
-            </div>
-          </article>
-          <div class="selected-project-secondary-grid">
-            <article class="selected-project selected-project-secondary selected-project-trip" id="trip-and-share-project">
-              <div class="selected-project-media">
-                <img src="images/tripshare-resources.webp" width="1600" height="1000" loading="lazy" alt="Catalogue Trip&amp;Share affichant des filtres et plusieurs ressources numériques gratuites ou payantes.">
-              </div>
-              <div class="selected-project-content">
-                <p class="selected-project-label">Projet personnel · Plateforme éditoriale</p>
-                <h3>Trip&amp;Share</h3>
-                <p class="selected-project-description">Plateforme de contenus et de ressources réunissant gestion éditoriale, produits numériques et intégration Stripe en cours.</p>
-                <p class="selected-project-stack">Ruby on Rails · PostgreSQL · JavaScript · Stripe</p>
-                <a class="selected-project-link" href="images/tripshare-resources.webp" target="_blank" rel="noopener noreferrer">Voir →</a>
-              </div>
-            </article>
-            <article class="selected-project selected-project-secondary selected-project-recipe" id="recipe-matcher-project">
-              <div class="selected-project-media">
-                <img src="images/recipe-matcher-best-matches.webp" width="2880" height="1512" loading="lazy" alt="Résultats RecipeMatcher montrant plusieurs recettes immédiatement réalisables avec les ingrédients disponibles.">
-              </div>
-              <div class="selected-project-content">
-                <p class="selected-project-label">Projet personnel · Data &amp; recherche</p>
-                <h3>RecipeMatcher</h3>
-                <p class="selected-project-description">Application Rails qui classe les recettes selon les ingrédients disponibles et distingue celles réalisables immédiatement.</p>
-                <p class="selected-project-stack">Rails · PostgreSQL · JavaScript · Render</p>
-                <a class="selected-project-link" href="#technical-focus">Voir →</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+{% include "components/selected-work.njk" %}
       <!----------------------------- TECHNICAL FOCUS --------------------------->
       <section class="card technical-focus-card" id="technical-focus" aria-labelledby="technical-focus-title-fr">
         <div class="text-center">

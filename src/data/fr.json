@@ -69,5 +69,36 @@
       "Je suis ouverte à rejoindre une équipe produit sur le long terme ou à intervenir en freelance sur des applications Rails : évolution et maintenance, nouvelles fonctionnalités, intégrations, debugging et reprise de code existant.",
       "Basée en France · Remote en France, en Europe ou à l’international"
     ]
+  },
+  "selectedWork": {
+    "title": "Projets sélectionnés",
+    "intro": "Trois réalisations qui illustrent mon travail sur des produits web, de l’architecture et des données jusqu’aux interfaces et à la mise en production.",
+    "featured": {
+      "id": "drime-project",
+      "image": { "src": "images/drime-video-editor.webp", "width": 1600, "height": 900, "alt": "Interface de l’éditeur vidéo DRIME montrant l’édition des textes, le choix des langues et les réglages de prononciation." },
+      "label": "Projet principal · SaaS vidéo · Projet professionnel",
+      "title": "DRIME — Éditeur vidéo multilingue",
+      "description": "J’ai conçu et développé de bout en bout un éditeur réunissant vidéo, sous-titres, traductions, voix off et traitements asynchrones. Une fonctionnalité complexe menée de l’architecture à la mise en production, avec une attention particulière portée à l’expérience d’édition.",
+      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Heroku CI/CD · Azure APIs",
+      "link": { "href": "#experience", "label": "Découvrir le projet →", "external": false }
+    },
+    "secondary": [
+      {
+        "id": "trip-and-share-project", "modifier": "trip",
+        "image": { "src": "images/tripshare-resources.webp", "width": 1600, "height": 1000, "alt": "Catalogue Trip&Share affichant des filtres et plusieurs ressources numériques gratuites ou payantes." },
+        "label": "Projet personnel · Plateforme éditoriale", "title": "Trip&Share",
+        "description": "Plateforme de contenus et de ressources réunissant gestion éditoriale, produits numériques et intégration Stripe en cours.",
+        "stack": "Ruby on Rails · PostgreSQL · JavaScript · Stripe",
+        "link": { "href": "images/tripshare-resources.webp", "label": "Voir →", "external": true }
+      },
+      {
+        "id": "recipe-matcher-project", "modifier": "recipe",
+        "image": { "src": "images/recipe-matcher-best-matches.webp", "width": 2880, "height": 1512, "alt": "Résultats RecipeMatcher montrant plusieurs recettes immédiatement réalisables avec les ingrédients disponibles." },
+        "label": "Projet personnel · Data & recherche", "title": "RecipeMatcher",
+        "description": "Application Rails qui classe les recettes selon les ingrédients disponibles et distingue celles réalisables immédiatement.",
+        "stack": "Rails · PostgreSQL · JavaScript · Render",
+        "link": { "href": "#technical-focus", "label": "Voir →", "external": false }
+      }
+    ]
   }
 }

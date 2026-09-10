@@ -204,52 +204,7 @@
         <!--------------------------- END SKILLS DIV ------------------------->
       </div>
       <!----------------------------- SELECTED WORK --------------------------->
-      <section class="card selected-work" id="apps" aria-labelledby="selected-work-title-en">
-        <header class="selected-work-header text-center">
-          <h2 id="selected-work-title-en">Selected Work</h2>
-          <p>Three projects illustrating my work across web products, from architecture and data to interfaces and production delivery.</p>
-        </header>
-        <div class="selected-work-grid">
-          <article class="selected-project selected-project-featured" id="drime-project">
-            <div class="selected-project-media">
-              <img src="images/drime-video-editor.webp" width="1600" height="900" loading="lazy" alt="DRIME video editor showing text editing, language selection and pronunciation settings.">
-            </div>
-            <div class="selected-project-content">
-              <p class="selected-project-label">Main project · Video SaaS · Professional project</p>
-              <h3>DRIME — Multilingual video editor</h3>
-              <p class="selected-project-description">I designed and built an editor bringing together video, subtitles, translations, voice-over generation and background processing. I took this complex feature from architecture through production, with particular attention to the editing experience.</p>
-              <p class="selected-project-stack">Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Heroku CI/CD · Azure APIs</p>
-              <a class="selected-project-link" href="#experience">View project →</a>
-            </div>
-          </article>
-          <div class="selected-project-secondary-grid">
-            <article class="selected-project selected-project-secondary selected-project-trip" id="trip-and-share-project">
-              <div class="selected-project-media">
-                <img src="images/tripshare-resources.webp" width="1600" height="1000" loading="lazy" alt="Trip&amp;Share catalogue showing filters and several free or paid digital resources.">
-              </div>
-              <div class="selected-project-content">
-                <p class="selected-project-label">Personal project · Content platform</p>
-                <h3>Trip&amp;Share</h3>
-                <p class="selected-project-description">A content and resources platform combining editorial management, digital products, and Stripe integration currently in progress.</p>
-                <p class="selected-project-stack">Ruby on Rails · PostgreSQL · JavaScript · Stripe</p>
-                <a class="selected-project-link" href="images/tripshare-resources.webp" target="_blank" rel="noopener noreferrer">View project →</a>
-              </div>
-            </article>
-            <article class="selected-project selected-project-secondary selected-project-recipe" id="recipe-matcher-project">
-              <div class="selected-project-media">
-                <img src="images/recipe-matcher-best-matches.webp" width="2880" height="1512" loading="lazy" alt="RecipeMatcher results showing several recipes that can be made immediately with the available ingredients.">
-              </div>
-              <div class="selected-project-content">
-                <p class="selected-project-label">Personal project · Data &amp; search</p>
-                <h3>RecipeMatcher</h3>
-                <p class="selected-project-description">A Rails application that ranks recipes by available ingredients and identifies those that can be made immediately.</p>
-                <p class="selected-project-stack">Rails · PostgreSQL · JavaScript · Render</p>
-                <a class="selected-project-link" href="#technical-focus">View project →</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+{% include "components/selected-work.njk" %}
       <!----------------------------- TECHNICAL FOCUS --------------------------->
       <section class="card technical-focus-card" id="technical-focus" aria-labelledby="technical-focus-title-en">
         <div class="text-center">
