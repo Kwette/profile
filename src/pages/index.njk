@@ -235,47 +235,7 @@
 {% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden" id="experience-pickaden-fr">
-            <section class="experience-overview">
-              <span class="experience-section-kicker">Contexte & rôle</span>
-              <h3>Présentation du produit</h3>
-              <p>
-              Pickaden est une startup parisienne proposant une plateforme SaaS pour la gestion et la réservation en temps réel de services de garde d’enfants.</br></br>
-              J’ai développé et stabilisé le MVP en autonomie, du backend Rails aux interfaces et parcours utilisateurs.
-              </p>
-            </section>
-{% set experienceStack = experiences.stacks.pickaden %}
-{% include "components/experience-stack.njk" %}
-            <p class="no-bg experience-detail-section">
-              <span class="experience-section-kicker">01 · Produit</span>
-              <span class="experience-section-title">Parcours professionnels et parents</span></br></br>
-              <span class="bold">Pour les professionnels</span></br>
-              - Gérer et optimiser les plannings de garde</br>
-              - Recevoir, accepter ou refuser les demandes de garde des parents en fonction des disponibilités en temps réel</br>
-              - Publier et maintenir un profil en ligne</br></br>
-              <span class="bold">Pour les parents</span></br>
-              - Moteur de recherche pour trouver des établissements de garde disponibles près d’une adresse donnée</br>
-              - Soumettre des demandes de garde en ligne</br>
-              - Créer et gérer un tableau de bord et un profil personnel</br>
-            </p>
-              <!------------------- RÉALISATIONS CLÉS  ----------------->
-              <p class="experience-detail-section"><span class="experience-section-kicker">02 · Contributions</span><span class="experience-section-title">Réalisations clés</span></br></br>
-              - Développement de toutes les nouvelles fonctionnalités de bout en bout (front end et back end).</br>
-              - Débogage et stabilisation du MVP initial.</br>
-              - Amélioration significative de la réactivité sur une grande partie du site.</br>
-              - Refonte de la barre de recherche principale pour une meilleure UX/UI : ajout de filtres, amélioration du design et activation de la recherche automatique lors de la validation d’un filtre.</br>
-              - Installation de plusieurs plugins JavaScript : carrousel de logos sur la page d’accueil et recherche par mots-clés sur la page d’aide (y compris la création complète de cette page).</br>
-              - Création de l’ensemble de l’espace parent, y compris les parcours de soumission de demandes.</br>
-              - Mise en place de l’espace de gestion pour les établissements.</br>
-              - Implémentation de la fonctionnalité d’envoi d’e-mails.</br>
-              - Amélioration de l’interface administrateur avec de nombreuses nouvelles fonctionnalités.</br>
-              - Rédaction de tests système avec Capybara.</br>
-              - Optimisation des temps de chargement, notamment pour les images.</br>
-              - Préparation de la migration technique de Woonies vers Pickaden.</br>
-              - Rédaction de requêtes SQL sur la plateforme d’analyse des KPI.</br>
-            </p>
-          <!------------------- RESULTS  ----------------->
-          <p class="experience-results"><span class="bold">Résultats :</span> Livraison d’un MVP SaaS fonctionnel, stable et convivial, améliorant les performances et l’expérience utilisateur tout en implémentant l’ensemble des fonctionnalités principales à partir de zéro.
-          </p>
+{% include "content/fr/experiences/pickaden.njk" %}
           </div>
         </div>
       </section>
