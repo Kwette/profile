@@ -78,10 +78,11 @@ await Promise.all([
   ...renderedPages.map(({ output, html }) =>
     writeFile(path.join(outputRoot, output), html, "utf8")
   ),
-  writeFile(path.join(outputRoot, "style.css"), stylesheet, "utf8")
+  writeFile(path.join(outputRoot, "style.css"), stylesheet, "utf8"),
+  cp(path.join(sourceRoot, "scripts/main.js"), path.join(outputRoot, "script.js"))
 ]);
 
-const staticEntries = ["script.js", "images"];
+const staticEntries = ["images"];
 
 await Promise.all(
   staticEntries.map(entry =>
