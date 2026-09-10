@@ -35,5 +35,11 @@
       { "href": "images/CV_2026_Emilie_Murat_En.pdf", "label": "CV EN" },
       { "href": "images/CV_2026_Emilie_Murat_Fr.pdf", "label": "CV FR" }
     ]
+  },
+  "socialContact": {
+    "followTitle": "Follow me",
+    "talkTitle": "Let's talk",
+    "emailLabel": "Email me",
+    "calendarLabel": "Book a 30-minute call"
   }
 }
