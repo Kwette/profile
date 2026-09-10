@@ -1,0 +1,25 @@
+.resume-card {
+  padding: 0;
+}
+
+.resume-portrait {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills .resume-profile-summary {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.resume-body .resume-profile-tagline {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.resume-body .resume-section-title--first {
+  margin-top: 0.5em;
+}
