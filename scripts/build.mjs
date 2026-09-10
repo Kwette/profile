@@ -29,7 +29,7 @@ const styleSources = [
   "styles/components/personal-project.css",
   "styles/components/project-archive.css",
   "styles/components/footer.css",
-  "styles/legacy.css",
+  "styles/components/resume-responsive.css",
   "styles/components/navigation.css",
   "styles/components/social-contact.css",
   "styles/components/project-card.css",

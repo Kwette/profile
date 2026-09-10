@@ -303,6 +303,10 @@
 }
 
 @media (max-width: 768px) {
+  .other-projects.application p {
+    text-align: left;
+  }
+
   #experience,
   #other-projects {
     scroll-margin-top: var(--anchor-offset);

@@ -485,6 +485,10 @@
 }
 
 @media (max-width: 768px) {
+  .professional-experience.application p {
+    text-align: left;
+  }
+
   .experience-dialog {
     width: calc(100% - 16px);
   }

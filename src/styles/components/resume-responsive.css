@@ -139,13 +139,6 @@
 }
 
 
-@media (max-width: 768px) {
-  .card > .text-center p,
-  .application p,
-  .app-details p {
-    text-align: left;
-  }
-}
 @media (max-width: 660px) {
   /* ------- XS SCREENS ---- For a screen < 540px ------ */
   .skills{

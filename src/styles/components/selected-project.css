@@ -323,6 +323,10 @@
 }
 
 @media (max-width: 768px) {
+  .selected-work > .selected-work-header p {
+    text-align: left;
+  }
+
   .selected-project-featured,
   .selected-project-secondary-grid {
     grid-template-columns: 1fr;
@@ -397,4 +401,3 @@
     padding: 10px;
   }
 }
-
