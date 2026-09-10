@@ -1,0 +1,162 @@
+.professional-experience .experience-card,
+.professional-experience .experience-card:first-of-type,
+.professional-experience .experience-card:last-child,
+.professional-experience .experience-card + .experience-card {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--color-canvas);
+  box-shadow: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.professional-experience .experience-card:has(.experience-card__trigger:hover),
+.professional-experience .experience-card:has(.experience-card__trigger:focus-visible) {
+  border-color: rgba(88, 95, 125, 0.3);
+  box-shadow: 0 4px 12px rgba(28, 34, 57, 0.06);
+  transform: translateY(-1px);
+}
+
+.professional-experience .experience-card__trigger {
+  width: 100%;
+  min-height: 152px;
+  height: 100%;
+  margin: 0;
+  padding: 17px 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "company company"
+    "content content"
+    ". action";
+  grid-template-rows: auto 1fr auto;
+  gap: 8px 12px;
+  align-items: start;
+  border: 0;
+  border-radius: 3px;
+  background-color: var(--color-canvas);
+  box-sizing: border-box;
+  color: #3f4358;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.professional-experience .experience-card:first-of-type .experience-card__trigger {
+  background-color: rgba(225, 218, 209, 0.22);
+}
+
+.professional-experience .experience-card:last-child .experience-card__trigger {
+  background-color: rgba(88, 95, 125, 0.045);
+}
+
+.professional-experience .experience-card__trigger:hover,
+.professional-experience .experience-card__trigger:focus-visible,
+.professional-experience .experience-card.is-open .experience-card__trigger {
+  background-color: rgba(88, 95, 125, 0.045);
+}
+
+.professional-experience .experience-card:first-of-type .experience-card__trigger:hover,
+.professional-experience .experience-card:first-of-type .experience-card__trigger:focus-visible {
+  background-color: rgba(225, 218, 209, 0.34);
+}
+
+.professional-experience .experience-card:last-child .experience-card__trigger:hover,
+.professional-experience .experience-card:last-child .experience-card__trigger:focus-visible {
+  background-color: rgba(88, 95, 125, 0.085);
+}
+
+.professional-experience .experience-card__trigger:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--color-brand);
+  outline-offset: -3px;
+}
+
+.experience-card__brand {
+  grid-area: company;
+  min-width: 0;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.experience-card__brand .experience-card__logo,
+.experience-card__brand .experience-logo-pickaden {
+  width: 76px;
+  height: 36px;
+  flex: 0 0 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.experience-card__brand .experience-card__logo img,
+.experience-card__brand .experience-logo-pickaden img {
+  width: auto;
+  height: auto;
+  max-width: 72px;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+.professional-experience .experience-card__content {
+  grid-area: content;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: flex-start;
+}
+
+.professional-experience .experience-card__title {
+  max-width: 100%;
+  color: #555b76;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.professional-experience .experience-card__meta {
+  margin-top: 0.25rem;
+  color: #686868;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.professional-experience .experience-card__action {
+  grid-area: action;
+  width: auto;
+  height: 28px;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  color: var(--color-brand);
+  font: 700 0.68rem/1 'Montserrat', sans-serif;
+  white-space: nowrap;
+}
+
+.professional-experience .experience-card__action i {
+  font-size: 0.68rem;
+}
+
+@media (max-width: 768px) {
+  .professional-experience .experience-card__trigger {
+    min-height: 148px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .professional-experience .experience-card,
+  .professional-experience .experience-card__trigger {
+    transition: none;
+  }
+}
