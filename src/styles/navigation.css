@@ -1,0 +1,84 @@
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+  background-color: var(--color-canvas);
+  border-bottom: 1px solid rgba(88, 95, 125, 0.14);
+  box-shadow: none;
+}
+
+@media (max-width: 850px) {
+  :root {
+    --anchor-offset: 110px;
+  }
+}
+
+@media (max-width: 660px) {
+  :root {
+    --anchor-offset: 170px;
+  }
+}
+
+#apps,
+#experience,
+#help,
+#technical-focus,
+#contact,
+#resume {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+.site-nav-content {
+  width: 1000px;
+  min-height: 54px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.site-nav a {
+  color: var(--color-brand);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.site-brand {
+  letter-spacing: 0.08em;
+}
+
+.site-nav-links,
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.site-nav-actions a {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: black;
+}
+
+.nav-contact {
+  padding: 0.55em 0.8em;
+  border: 1.5px solid var(--color-brand);
+  border-radius: 4px;
+  background-color: rgba(88, 95, 125, 0.05);
+  color: var(--color-brand) !important;
+}
+
+.nav-contact:hover,
+.nav-contact:focus-visible,
+body:has(#contact:target) .nav-contact {
+  color: rgb(225, 218, 209) !important;
+  background-color: var(--color-brand);
+}
+

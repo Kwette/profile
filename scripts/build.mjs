@@ -14,6 +14,9 @@ const pages = [
 
 const styleSources = [
   "styles/tokens.css",
+  "styles/base.css",
+  "styles/utilities.css",
+  "styles/navigation.css",
   "styles/legacy.css"
 ];
 
