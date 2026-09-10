@@ -1,5 +1,5 @@
-{% macro contributionEntry(title, metadata, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots") %}
-<div class="one-project community-item">
+{% macro projectEntry(variant, title, metadata, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots") %}
+<div class="one-project {{ variant }}">
   <h2 class="project-name">{{ title }}
     <span>
       <div class="button"><i class="fa-solid fa-plus"></i></div>

@@ -1,300 +1,160 @@
-        <!------------------- UN PROJET  ----------------->
-        <div class="one-project archive-project">
-          <h2 class="project-name">Application React.js | React-Flats
-          <span>
-            <div class="button"><i class="fa-solid fa-plus"></i></div>
-          </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Projet personnel – exercice (Janvier 2020)</h4>
-              <a href="kwette.github.io/react-flats/" target="_blank" rel="noopener noreferrer"><h4>kwette.github.io/react-flats/</h4></a>
-            </div>
-             <div class="card-right-side">
-              <img src="images/logo-react.png">
-            </div>
-          </div>
-          <div class="app-details hidden">
-            <p class="no-bg">
-              Une petite application développée avec React.js.</br>
-              Affiche une liste d’appartements accompagnée d’une carte Google Map. Lorsqu’un utilisateur clique sur un appartement, un marqueur rouge apparaît sur la carte.
-            </p>
-            <div class="purple-bg"><span class="bold">React.js, HTML/CSS, Git, GitHub.</span>
-            </div>
+{% from "components/project-entry.njk" import projectEntry %}
 
-            <div class="app-links">
-                <a href="https://github.com/Kwette/react-flats" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-github-square"></i>
-                  <span>Github</span>
-                </h4>
-                </a>
+{% call projectEntry(
+  "archive-project",
+  "Application React.js | React-Flats",
+  "Projet personnel – exercice (Janvier 2020)",
+  "kwette.github.io/react-flats/",
+  "kwette.github.io/react-flats/",
+  "images/logo-react.png",
+  "React.js, HTML/CSS, Git, GitHub.",
+  "https://github.com/Kwette/react-flats",
+  " https://www.behance.net/gallery/90610133/Affiche-appartements-sur-Go-ogleMap-_-Appli-Reactjs?tracking_source="
+) %}
+  <p class="no-bg">
+    Une petite application développée avec React.js.<br>
+    Affiche une liste d’appartements accompagnée d’une carte Google Map. Lorsqu’un utilisateur clique sur un appartement, un marqueur rouge apparaît sur la carte.
+  </p>
+{% endcall %}
 
-                <a href=" https://www.behance.net/gallery/90610133/Affiche-appartements-sur-Go-ogleMap-_-Appli-Reactjs?tracking_source=" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-behance-square"></i>
-                  <span>Screenshots</span>
-                </h4>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!------------------ FIN PROJET  ---------------------->
-        <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project archive-project">
-          <h2 class="project-name">Application React.js | Giphy-api_lil' app
-            <span>
-              <div class="button"><i class="fa-solid fa-plus" ></i></div>
-            </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Projet personnel – exercice (Janvier 2020)</h4>
-              <a href="https://github.com/Kwette/react-gifs" target="_blank" rel="noopener noreferrer"><h4>https://github.com/Kwette/react-gifs</h4></a>
-            </div>
-            <div class="card-right-side">
-              <img src="images/logo-react.png">
-            </div>
-          </div>
-          <div class="app-details hidden">
-            <p class="no-bg">
-              Une petite application développée avec React.js.</br>
-              Générateur de GIF utilisant l’API Giphy. L’utilisateur saisit une requête dans le champ de recherche, et les GIFs correspondants de Giphy apparaissent dans la liste à droite. Lorsque l’utilisateur clique sur un GIF, celui-ci s’affiche sur la partie gauche, sous le champ de recherche.
-            </p>
-            <div class="purple-bg"><span class="bold">React.js, HTML/CSS, Git, GitHub.</span>
-            </div>
-            <div class="app-links">
-              <a href="https://github.com/Kwette/react-gifs" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-github-square"></i>
-                  <span>Github</span>
-                </h4>
-              </a>
-              <a href="https://www.behance.net/gallery/90443427/Giphy-api_lil-app-Gnrateur-de-gifs-(Reactjs-app)?tracking_source=" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-behance-square"></i>
-                  <span>Screenshots</span>
-                </h4>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!------------------ FIN PROJET  ---------------------->
-        <!------------------ DEBUT PROJET  ---------------------->
-        <div class="one-project archive-project">
-          <h2 class="project-name">Application Ruby On Rails | Buy & Co !
-            <span>
-              <div class="button"><i class="fa-solid fa-plus" ></i></div>
-            </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Projet personnel – exercice (Décembre 2020)</h4>
-              <a href="https://github.com/Kwette/petites-annonces-rails" target="_blank" rel="noopener noreferrer"><h4>https://github.com/Kwette/petites-annonces-rails</h4></a>
-            </div>
-            <div class="card-right-side">
-              <img src="images/logo-wagon.png">
-            </div>
-          </div>
-          <div class="app-details hidden">
-            <p class="no-bg">
-              Une application Rails pour la publication d’annonces.
-            </p>
-            <p>
-              En tant qu’utilisateur, je peux :</br>
-              - M’inscrire ou me connecter,</br>
-              - Accéder à la page d’accueil,</br>
-              - Voir la liste des annonces publiées,</br>
-              - Accéder à la page d’une annonce avec tous ses détails.</br></br>
-              En tant qu’administrateur, je peux :</br>
-              - M’inscrire ou me connecter,</br>
-              - Accéder à la page d’accueil,</br>
-              - Voir la liste des annonces (publiées et non publiées),</br>
-              - Publier une annonce pour la rendre visible à tous les utilisateurs,</br>
-              - Accéder à la page d’une annonce avec tous ses détails.
-            </p>
-            <!------------------ TECHNO ---------------------->
-            <div class="purple-bg">
-              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
-            </div>
-            <div class="app-links">
-                <a href="https://github.com/Kwette/petites-annonces-rails" target="_blank" rel="noopener noreferrer">
-                  <h4>
-                    <i class="fab fa-github-square"></i>
-                    <span>Github </span>
-                  </h4>
-                </a>
-                <a href="https://www.behance.net/gallery/90445649/Buy-Co-_-Publication-dannonces-(Application-Rails)?tracking_source=" target="_blank" rel="noopener noreferrer">
-                  <h4>
-                    <i class="fab fa-behance-square"></i>
-                    <span>Screenshots</span>
-                  </h4>
-                </a>
-            </div>
-          </div>
-        </div>
-        <!-------------------- FIN PROJET  ---------------------->
-        <!------------------ DEBUT PROJET  ---------------------->
+{% call projectEntry(
+  "archive-project",
+  "Application React.js | Giphy-api_lil' app",
+  "Projet personnel – exercice (Janvier 2020)",
+  "https://github.com/Kwette/react-gifs",
+  "https://github.com/Kwette/react-gifs",
+  "images/logo-react.png",
+  "React.js, HTML/CSS, Git, GitHub.",
+  "https://github.com/Kwette/react-gifs",
+  "https://www.behance.net/gallery/90443427/Giphy-api_lil-app-Gnrateur-de-gifs-(Reactjs-app)?tracking_source="
+) %}
+  <p class="no-bg">
+    Une petite application développée avec React.js.<br>
+    Générateur de GIF utilisant l’API Giphy. L’utilisateur saisit une requête dans le champ de recherche, et les GIFs correspondants de Giphy apparaissent dans la liste à droite. Lorsque l’utilisateur clique sur un GIF, celui-ci s’affiche sur la partie gauche, sous le champ de recherche.
+  </p>
+{% endcall %}
+
+{% call projectEntry(
+  "archive-project",
+  "Application Ruby On Rails | Buy & Co !",
+  "Projet personnel – exercice (Décembre 2020)",
+  "https://github.com/Kwette/petites-annonces-rails",
+  "https://github.com/Kwette/petites-annonces-rails",
+  "images/logo-wagon.png",
+  "Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.",
+  "https://github.com/Kwette/petites-annonces-rails",
+  "https://www.behance.net/gallery/90445649/Buy-Co-_-Publication-dannonces-(Application-Rails)?tracking_source="
+) %}
+  <p class="no-bg">
+    Une application Rails pour la publication d’annonces.
+  </p>
+  <p>
+    En tant qu’utilisateur, je peux :<br>
+    - M’inscrire ou me connecter,<br>
+    - Accéder à la page d’accueil,<br>
+    - Voir la liste des annonces publiées,<br>
+    - Accéder à la page d’une annonce avec tous ses détails.<br><br>
+    En tant qu’administrateur, je peux :<br>
+    - M’inscrire ou me connecter,<br>
+    - Accéder à la page d’accueil,<br>
+    - Voir la liste des annonces (publiées et non publiées),<br>
+    - Publier une annonce pour la rendre visible à tous les utilisateurs,<br>
+    - Accéder à la page d’une annonce avec tous ses détails.
+  </p>
+{% endcall %}
+
 {% include "content/fr/projects/contributions.njk" %}
-        <div class="one-project archive-project">
-          <h2 class="project-name">Projet de fin d’études | Tripper
-            <span>
-              <div class="button"><i class="fa-solid fa-plus" ></i></div>
-            </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Application Ruby On Rails</h4>
-              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="_blank" rel="noopener noreferrer"><h4>github.com/Kwette/trip-planner-refonte-rails-app</h4></a>
-            </div>
-            <div class="card-right-side"><img src="images/logo-wagon.png"></div>
-          </div>
-          <div class="app-details hidden">
-            <p class="no-bg">
-              Application Rails – Planificateur de voyage : planifier un voyage avec des activités sélectionnées selon les préférences et éventuellement masquées en fonction du « pourcentage de mystère » choisi par l’utilisateur.
-            </p>
-            <p>
-              En tant qu’utilisateur, je peux :</br>
-              - M’inscrire ou me connecter,</br>
-              - Créer un nouveau voyage,</br>
-              - Définir mes préférences pour les types d’activités,</br>
-              - Sélectionner des activités à partir d’une liste catégorisée,</br>
-              - Personnaliser mes voyages avec des options « party time »,</br>
-              - Choisir le niveau de mystère,</br>
-              - Voir mon voyage, étape par étape,</br>
-              - Voir la liste des activités pour chaque étape,</br>
-              - Mettre à jour mes voyages,</br>
-              - Consulter ma liste de voyages.
-            </p>
-            <p class="no-bg">
-              Ce projet a été initialement développé par une équipe de 5 personnes, avec une refonte graphique réalisée par mes soins.
-            </p>
-            <!------------------ TECHNO ---------------------->
-            <div class="purple-bg">
-              <span class="bold">Ruby on Rails, HTML/CSS, PostgreSQL, Git.</span>
-            </div>
-            <div class="app-links">
-              <a href="https://github.com/Kwette/trip-planner-refonte-rails-app" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-github-square"></i>
-                  <span>Github</span>
-                </h4>
-              </a>
-              <a href="https://www.behance.net/gallery/89014253/Tripper-Travel-planner-(developed-in-Ruby-on-Rails)?tracking_source=" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-behance-square"></i>
-                  <span>Screenshots</span>
-                </h4>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!------------------ FIN PROJET  ---------------------->
-        <!------------------- UN PROJET  ----------------->
-        <div class="one-project archive-project">
-          <h2 class="project-name">Projet de fin d’études | Whats_Act
-            <span>
-              <div class="button"><i class="fa-solid fa-plus" ></i></div>
-            </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Application Ruby On Rails</h4>
-              <a href="https://github.com/Kwette/What-s-Act" target="_blank" rel="noopener noreferrer"><h4>github.com/Kwette/What-s-Act</h4></a>
-            </div>
-            <div class="card-right-side"><img src="images/logo-wagon.png"></div>
-          </div>
-          <div class="app-details hidden">
-            <p class="no-bg">
-              Application Rails de réservation d’activités sportives, culturelles et autres.
-            </p>
-            <p>
-              En tant qu’utilisateur, je peux :</br></br>
-              - M’inscrire ou me connecter,</br>
-              - Accéder à la page d’accueil,</br>
-              - Voir la liste des activités ou rechercher des activités par type ou par lieu,</br>
-              - Accéder à la page d’une activité avec tous ses détails,</br>
-              - Réserver des activités directement depuis la page de l’activité,</br>
-              - Voir ma liste de réservations (filtrée par type d’activité si souhaité) et suivre leur statut,</br>
-              - Contacter le propriétaire de l’activité via la messagerie intégrée.</br></br>
-              En tant que vendeur, je peux :</br></br>
-              - Accéder à toutes les fonctionnalités disponibles pour les utilisateurs,</br>
-              - Créer une nouvelle activité (accès à la session vendeur en cliquant sur l’avatar du menu),</br>
-              - Voir ma liste d’activités ou rechercher par type ou par lieu,</br>
-              - Supprimer mes activités,</br>
-              - Voir la liste des réservations pour mes activités (filtrée par type si souhaité) et suivre leur statut,</br>
-              - Modifier le statut de mes réservations avec les options « accepter » et « refuser »,</br>
-              - Contacter les acheteurs via la messagerie intégrée.
-            </p>
-            <p class="no-bg">
-              Ce projet de base a été initialement développé par une équipe de 5 personnes, puis j’ai pris le relais pour une refonte complète du site et l’ajout de nouvelles fonctionnalités.
-            </p>
-            <!------------------ TECHNO ---------------------->
-            <div class="purple-bg">
-              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
-            </div>
-            <div class="app-links">
-              <a href="https://github.com/Kwette/What-s-Act" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-github-square"></i>
-                  <span>Github</span>
-                </h4>
-              </a>
-              <a href="https://www.behance.net/gallery/89018763/Whats_Act-%28Ruby-On-Rails-Web-Application%29?tracking_source=project_owner_other_projects" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-behance-square"></i>
-                  <span>Screenshots</span>
-                </h4>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!------------------ FIN PROJET  ---------------------->
-        <!------------------- UN PROJET  ----------------->
-        <div class="one-project archive-project">
-          <h2 class="project-name">Fullstack Developer | Cocktails-Recipes App
-            <span>
-              <div class="button"><i class="fa-solid fa-plus" ></i></div>
-            </span>
-          </h2>
-          <div class="shadow-box">
-            <div class="card-left-side">
-              <h4>Projet d’études (Le Wagon)</h4>
-              <a href="https://my-cocktails-recipes.herokuapp.com/" target="_blank" rel="noopener noreferrer"><h4>my-cocktails-recipes.herokuapp.com/</h4></a>
-            </div>
-            <div class="card-right-side"><img src="images/logo-wagon.png"></div>
-          </div>
-          <div class="app-details hidden">
-            <p class="no-bg">
-              « Mister Cocktails » est une application Rails basée sur les fonctionnalités C.R.U.D.
-            </p>
-            <p>
-              Créer ou parcourir des recettes de cocktails :</br></br>
-              En tant qu’utilisateur, je peux :</br></br>
-              - Accéder à la liste de toutes les recettes de cocktails,</br>
-              - Ajouter, supprimer et modifier une recette de cocktail,</br>
-              - Sélectionner des ingrédients à partir d’une liste,</br>
-              - Ajouter ou supprimer des doses pour les ingrédients,</br>
-              - Ajouter des avis, mais je ne suis pas autorisé à les supprimer.
-            </p>
-            <!------------------ TECHNO ---------------------->
-            <div class="purple-bg">
-              <span class="bold">Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.</span>
-            </div>
-            <div class="app-links">
-              <a href="https://github.com/Kwette/mister-cocktail-rails-app" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-github-square"></i>
-                  <span>Github</span>
-                </h4>
-              </a>
-              <a href="https://www.behance.net/gallery/88966283/Cocktail_Recipes-(Ruby-On-Rails-Web-Application)?tracking_source=" target="_blank" rel="noopener noreferrer">
-                <h4>
-                  <i class="fab fa-behance-square"></i>
-                  <span>Screenshots</span>
-                </h4>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!------------------ FIN PROJET  ---------------------->
+
+{% call projectEntry(
+  "archive-project",
+  "Projet de fin d’études | Tripper",
+  "Application Ruby On Rails",
+  "https://github.com/Kwette/trip-planner-refonte-rails-app",
+  "github.com/Kwette/trip-planner-refonte-rails-app",
+  "images/logo-wagon.png",
+  "Ruby on Rails, HTML/CSS, PostgreSQL, Git.",
+  "https://github.com/Kwette/trip-planner-refonte-rails-app",
+  "https://www.behance.net/gallery/89014253/Tripper-Travel-planner-(developed-in-Ruby-on-Rails)?tracking_source="
+) %}
+  <p class="no-bg">
+    Application Rails – Planificateur de voyage : planifier un voyage avec des activités sélectionnées selon les préférences et éventuellement masquées en fonction du « pourcentage de mystère » choisi par l’utilisateur.
+  </p>
+  <p>
+    En tant qu’utilisateur, je peux :<br>
+    - M’inscrire ou me connecter,<br>
+    - Créer un nouveau voyage,<br>
+    - Définir mes préférences pour les types d’activités,<br>
+    - Sélectionner des activités à partir d’une liste catégorisée,<br>
+    - Personnaliser mes voyages avec des options « party time »,<br>
+    - Choisir le niveau de mystère,<br>
+    - Voir mon voyage, étape par étape,<br>
+    - Voir la liste des activités pour chaque étape,<br>
+    - Mettre à jour mes voyages,<br>
+    - Consulter ma liste de voyages.
+  </p>
+  <p class="no-bg">
+    Ce projet a été initialement développé par une équipe de 5 personnes, avec une refonte graphique réalisée par mes soins.
+  </p>
+{% endcall %}
+
+{% call projectEntry(
+  "archive-project",
+  "Projet de fin d’études | Whats_Act",
+  "Application Ruby On Rails",
+  "https://github.com/Kwette/What-s-Act",
+  "github.com/Kwette/What-s-Act",
+  "images/logo-wagon.png",
+  "Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.",
+  "https://github.com/Kwette/What-s-Act",
+  "https://www.behance.net/gallery/89018763/Whats_Act-%28Ruby-On-Rails-Web-Application%29?tracking_source=project_owner_other_projects"
+) %}
+  <p class="no-bg">
+    Application Rails de réservation d’activités sportives, culturelles et autres.
+  </p>
+  <p>
+    En tant qu’utilisateur, je peux :<br><br>
+    - M’inscrire ou me connecter,<br>
+    - Accéder à la page d’accueil,<br>
+    - Voir la liste des activités ou rechercher des activités par type ou par lieu,<br>
+    - Accéder à la page d’une activité avec tous ses détails,<br>
+    - Réserver des activités directement depuis la page de l’activité,<br>
+    - Voir ma liste de réservations (filtrée par type d’activité si souhaité) et suivre leur statut,<br>
+    - Contacter le propriétaire de l’activité via la messagerie intégrée.<br><br>
+    En tant que vendeur, je peux :<br><br>
+    - Accéder à toutes les fonctionnalités disponibles pour les utilisateurs,<br>
+    - Créer une nouvelle activité (accès à la session vendeur en cliquant sur l’avatar du menu),<br>
+    - Voir ma liste d’activités ou rechercher par type ou par lieu,<br>
+    - Supprimer mes activités,<br>
+    - Voir la liste des réservations pour mes activités (filtrée par type si souhaité) et suivre leur statut,<br>
+    - Modifier le statut de mes réservations avec les options « accepter » et « refuser »,<br>
+    - Contacter les acheteurs via la messagerie intégrée.
+  </p>
+  <p class="no-bg">
+    Ce projet de base a été initialement développé par une équipe de 5 personnes, puis j’ai pris le relais pour une refonte complète du site et l’ajout de nouvelles fonctionnalités.
+  </p>
+{% endcall %}
+
+{% call projectEntry(
+  "archive-project",
+  "Fullstack Developer | Cocktails-Recipes App",
+  "Projet d’études (Le Wagon)",
+  "https://my-cocktails-recipes.herokuapp.com/",
+  "my-cocktails-recipes.herokuapp.com/",
+  "images/logo-wagon.png",
+  "Figma, Ruby on Rails, JavaScript, HTML/CSS, PostgreSQL, SQL, Heroku, Git, GitHub.",
+  "https://github.com/Kwette/mister-cocktail-rails-app",
+  "https://www.behance.net/gallery/88966283/Cocktail_Recipes-(Ruby-On-Rails-Web-Application)?tracking_source="
+) %}
+  <p class="no-bg">
+    « Mister Cocktails » est une application Rails basée sur les fonctionnalités C.R.U.D.
+  </p>
+  <p>
+    Créer ou parcourir des recettes de cocktails :<br><br>
+    En tant qu’utilisateur, je peux :<br><br>
+    - Accéder à la liste de toutes les recettes de cocktails,<br>
+    - Ajouter, supprimer et modifier une recette de cocktail,<br>
+    - Sélectionner des ingrédients à partir d’une liste,<br>
+    - Ajouter ou supprimer des doses pour les ingrédients,<br>
+    - Ajouter des avis, mais je ne suis pas autorisé à les supprimer.
+  </p>
+{% endcall %}
