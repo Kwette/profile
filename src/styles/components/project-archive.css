@@ -290,6 +290,18 @@
   padding: 0.65em 1em;
 }
 
+@media (max-width: 1074px) {
+  .project-archive-items .card-left-side h4 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .project-archive-items .card-left-side h4 {
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   #experience,
   #other-projects {

@@ -63,10 +63,6 @@
     height: 1em;
   }
 
-  .app-links h4{width: 25vw}
-
-  .one-project .card-left-side h4{font-size: 15px;}
-
 }
 /* ---------- For a screen < 720px, this CSS will be read ---------- */
 @media (max-width: 850px) {
@@ -140,13 +136,6 @@
 
   .d-flex {display: inherit;}
 
-  h2.project-name {font-size: 16px;}
-
-  .one-project .card-left-side h4 {font-size: 10px;}
-
-  .app-links h4 {padding: 0.5em; width: 30vw;}
-
-  .app-links i {margin-left: 0.3em;}
 }
 
 
@@ -157,10 +146,6 @@
     text-align: left;
   }
 }
-@media (max-width: 770px) {
-  .app-links h4 {width: 35vw;}
-}
-
 @media (max-width: 660px) {
   /* ------- XS SCREENS ---- For a screen < 540px ------ */
   .skills{
@@ -192,12 +177,6 @@
   .resume-header h3{
     font-size: 0.8em;
     margin: 0;
-  }
-
-  div.button{
-    padding: 10px;
-    width: 20px;
-    height: 20px;
   }
 
   .resume h2{
@@ -250,32 +229,10 @@
 
   .interets {flex-wrap: wrap;}
 
-  .app-links h4 {
-    padding: 0.2em;
-    width: 30vw;
-    font-size: 12px;
-  }
-
-  h2.project-name {font-size: 12px;}
-
-}
-
-
-@media (max-width: 500px){
-  .app-links h4 {
-    width: 35vw;
-  }
-
 }
 
 @media (max-width: 450px) {
   /* ------- XXS SCREENS ---- For a screen < 450px ------ */
-
-  div.button {
-    padding: 10px;
-    width: 9px;
-    height: 9px;
-  }
 
   .resume{width: 95vw;}
 
@@ -341,14 +298,6 @@
     width: 0.7em;
     height: 0.7em;
   }
-
-  .app-links h4 {
-    width: 35vw;
-    font-size: 10px;
-  }
-
-  h2.project-name {font-size: 10px; line-height: 12px;}
-
 
 }
 
