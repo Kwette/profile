@@ -140,5 +140,28 @@
         "proof": { "label": "Practice", "title": "Technical sandboxes", "description": "Hands-on learning through personal projects and experiments.", "link": null }
       }
     ]
+  },
+  "experiences": {
+    "stackTitle": "Technical stack",
+    "stacks": {
+      "drime": {
+        "key": "drime",
+        "groups": [
+          { "label": "Backend & data", "technologies": "Ruby on Rails · PostgreSQL · SQL" },
+          { "label": "Frontend", "technologies": "JavaScript ES6 · jQuery · HTML · CSS/SCSS" },
+          { "label": "Services & infrastructure", "technologies": "JSON · AWS · Heroku · Azure APIs · Docker" },
+          { "label": "Product & tools", "technologies": "Figma · Git · GitHub · GitLab" }
+        ]
+      },
+      "pickaden": {
+        "key": "pickaden",
+        "groups": [
+          { "label": "Backend & data", "technologies": "Ruby on Rails · PostgreSQL · SQL" },
+          { "label": "Frontend", "technologies": "JavaScript · HTML · CSS" },
+          { "label": "Services & infrastructure", "technologies": "Heroku · AWS · Sendinblue" },
+          { "label": "Product & tools", "technologies": "Figma · Git · GitHub · WordPress" }
+        ]
+      }
+    }
   }
 }

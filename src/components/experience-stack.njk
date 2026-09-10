@@ -1,0 +1,8 @@
+            <section class="experience-stack" aria-labelledby="{{ experienceStack.key }}-stack-{{ language }}">
+              <h3 id="{{ experienceStack.key }}-stack-{{ language }}">{{ experiences.stackTitle }}</h3>
+              <div class="experience-stack-grid">
+                {% for group in experienceStack.groups %}
+                <div><span>{{ group.label }}</span><p>{{ group.technologies }}</p></div>
+                {% endfor %}
+              </div>
+            </section>

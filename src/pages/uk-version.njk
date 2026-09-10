@@ -232,15 +232,8 @@
               DRIME is a responsive, multilingual, interactive, embeddable video player with no cookies, plus an integrated video editor. It relies on a custom .drime JSON-based format that enables playback in multiple languages (subtitles, voiceovers, dynamic designs) from a single video file. This reduces production time, storage costs, and the ecological footprint associated with file storage (one hosted video per project, one DRIME file per project).
               </p>
             </section>
-            <section class="experience-stack" aria-labelledby="drime-stack-en">
-              <h3 id="drime-stack-en">Technical stack</h3>
-              <div class="experience-stack-grid">
-                <div><span>Backend & data</span><p>Ruby on Rails · PostgreSQL · SQL</p></div>
-                <div><span>Frontend</span><p>JavaScript ES6 · jQuery · HTML · CSS/SCSS</p></div>
-                <div><span>Services & infrastructure</span><p>JSON · AWS · Heroku · Azure APIs · Docker</p></div>
-                <div><span>Product & tools</span><p>Figma · Git · GitHub · GitLab</p></div>
-              </div>
-            </section>
+{% set experienceStack = experiences.stacks.drime %}
+{% include "components/experience-stack.njk" %}
             <p class="no-bg experience-detail-section">
               <!------------------- DRIME PLAYER  ----------------->
               <span class="experience-section-kicker">01 · Case study</span>
@@ -322,15 +315,8 @@
               I independently developed and stabilized the MVP, from its Rails backend to its interfaces and user journeys.
               </p>
             </section>
-            <section class="experience-stack" aria-labelledby="pickaden-stack-en">
-              <h3 id="pickaden-stack-en">Technical stack</h3>
-              <div class="experience-stack-grid">
-                <div><span>Backend & data</span><p>Ruby on Rails · PostgreSQL · SQL</p></div>
-                <div><span>Frontend</span><p>JavaScript · HTML · CSS</p></div>
-                <div><span>Services & infrastructure</span><p>Heroku · AWS · Sendinblue</p></div>
-                <div><span>Product & tools</span><p>Figma · Git · GitHub · WordPress</p></div>
-              </div>
-            </section>
+{% set experienceStack = experiences.stacks.pickaden %}
+{% include "components/experience-stack.njk" %}
             <p class="no-bg experience-detail-section">
               <span class="experience-section-kicker">01 · Product</span>
               <span class="experience-section-title">Professional and parent journeys</span></br></br>

@@ -140,5 +140,28 @@
         "proof": { "label": "Mise en pratique", "title": "Sandboxes techniques", "description": "Mise en pratique au fil de projets personnels et d’expérimentations.", "link": null }
       }
     ]
+  },
+  "experiences": {
+    "stackTitle": "Stack technique",
+    "stacks": {
+      "drime": {
+        "key": "drime",
+        "groups": [
+          { "label": "Backend & données", "technologies": "Ruby on Rails · PostgreSQL · SQL" },
+          { "label": "Frontend", "technologies": "JavaScript ES6 · jQuery · HTML · CSS/SCSS" },
+          { "label": "Services & infrastructure", "technologies": "JSON · AWS · Heroku · Azure APIs · Docker" },
+          { "label": "Produit & outils", "technologies": "Figma · Git · GitHub · GitLab" }
+        ]
+      },
+      "pickaden": {
+        "key": "pickaden",
+        "groups": [
+          { "label": "Backend & données", "technologies": "Ruby on Rails · PostgreSQL · SQL" },
+          { "label": "Frontend", "technologies": "JavaScript · HTML · CSS" },
+          { "label": "Services & infrastructure", "technologies": "Heroku · AWS · Sendinblue" },
+          { "label": "Produit & outils", "technologies": "Figma · Git · GitHub · WordPress" }
+        ]
+      }
+    }
   }
 }
