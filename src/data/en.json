@@ -181,5 +181,46 @@
         ]
       }
     }
+  },
+  "personalProjects": {
+    "title": "Personal Projects",
+    "items": [
+      {
+        "modifier": "recipe",
+        "mediaHref": "#recipe-matcher-project",
+        "mediaLabel": "View RecipeMatcher in Selected Work",
+        "image": { "src": "images/recipe-matcher-results.webp", "width": 1600, "height": 900, "alt": "RecipeMatcher search showing available ingredients and the first matching result." },
+        "label": "Technical case study · Local private project",
+        "title": "RecipeMatcher",
+        "description": "Ingredient-based recipe search using Rails, PostgreSQL, and JSON data processing.",
+        "stack": "Rails · PostgreSQL · SQL · JSON",
+        "action": { "href": "#recipe-matcher-project", "label": "View project →" },
+        "status": null
+      },
+      {
+        "modifier": "blog",
+        "mediaHref": "#trip-and-share-project",
+        "mediaLabel": "View Trip&Share Blog in Selected Work",
+        "image": { "src": "images/tripshare-blog-homepage.webp", "width": 2880, "height": 1800, "alt": "Trip&Share Blog homepage featuring travel guides and remote work resources." },
+        "label": "Personal product · Editorial platform",
+        "title": "Trip&Share Blog",
+        "description": "Blog and resource catalogue combining editorial management, digital products, and Stripe payment integration in progress.",
+        "stack": "Rails · PostgreSQL · JavaScript · Stripe",
+        "action": { "href": "#trip-and-share-project", "label": "View project →" },
+        "status": null
+      },
+      {
+        "modifier": "ridesharing",
+        "mediaHref": null,
+        "mediaLabel": null,
+        "image": { "src": "images/ridesharing-nz-homepage.webp", "width": 1584, "height": 1034, "alt": "Trip&Share | RideShare homepage showing its ride search form." },
+        "label": "Mobility prototype · Trip&Share ecosystem",
+        "title": "Trip&Share | RideShare",
+        "description": "Local ride-sharing prototype with maps, geolocation, radius search, and user reviews.",
+        "stack": "Ruby on Rails · React · Maps · Geocoder",
+        "action": null,
+        "status": "Prototype currently being reworked"
+      }
+    ]
   }
 }

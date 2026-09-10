@@ -181,5 +181,46 @@
         ]
       }
     }
+  },
+  "personalProjects": {
+    "title": "Projets personnels",
+    "items": [
+      {
+        "modifier": "recipe",
+        "mediaHref": "#recipe-matcher-project",
+        "mediaLabel": "Voir RecipeMatcher dans les projets sélectionnés",
+        "image": { "src": "images/recipe-matcher-results.webp", "width": 1600, "height": 900, "alt": "Recherche RecipeMatcher avec les ingrédients disponibles et le premier résultat correspondant." },
+        "label": "Étude de cas technique · Projet local privé",
+        "title": "RecipeMatcher",
+        "description": "Recherche de recettes par ingrédients avec Rails, PostgreSQL et traitement de données JSON.",
+        "stack": "Rails · PostgreSQL · SQL · JSON",
+        "action": { "href": "#recipe-matcher-project", "label": "Voir →" },
+        "status": null
+      },
+      {
+        "modifier": "blog",
+        "mediaHref": "#trip-and-share-project",
+        "mediaLabel": "Voir Trip&Share Blog dans les projets sélectionnés",
+        "image": { "src": "images/tripshare-blog-homepage.webp", "width": 2880, "height": 1800, "alt": "Page d’accueil de Trip&Share Blog présentant ses guides de voyage et ses ressources pour travailler à distance." },
+        "label": "Produit personnel · Plateforme éditoriale",
+        "title": "Trip&Share | Blog",
+        "description": "Blog et catalogue de ressources réunissant gestion éditoriale, produits numériques et paiement Stripe en cours.",
+        "stack": "Rails · PostgreSQL · JavaScript · Stripe",
+        "action": { "href": "#trip-and-share-project", "label": "Voir →" },
+        "status": null
+      },
+      {
+        "modifier": "ridesharing",
+        "mediaHref": null,
+        "mediaLabel": null,
+        "image": { "src": "images/ridesharing-nz-homepage.webp", "width": 1584, "height": 1034, "alt": "Page d’accueil de Trip&Share | RideShare avec son formulaire de recherche d’un trajet." },
+        "label": "Prototype de mobilité · Écosystème Trip&Share",
+        "title": "Trip&Share | RideShare",
+        "description": "Prototype de covoiturage local avec cartes, géolocalisation, recherche par rayon et avis utilisateurs.",
+        "stack": "Ruby on Rails · React · Maps · Geocoder",
+        "action": null,
+        "status": "Prototype en cours de reprise"
+      }
+    ]
   }
 }
