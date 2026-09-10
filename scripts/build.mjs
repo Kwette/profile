@@ -8,8 +8,8 @@ const sourceRoot = path.join(projectRoot, "src");
 const outputRoot = path.join(projectRoot, "dist");
 
 const pages = [
-  { template: "pages/index.njk", data: "data/fr.json", output: "index.html", language: "fr" },
-  { template: "pages/uk-version.njk", data: "data/en.json", output: "uk-version.html", language: "en" }
+  { template: "pages/portfolio.njk", data: "data/fr.json", output: "index.html", language: "fr" },
+  { template: "pages/portfolio.njk", data: "data/en.json", output: "uk-version.html", language: "en" }
 ];
 
 const styleSources = [
