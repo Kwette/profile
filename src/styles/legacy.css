@@ -2531,29 +2531,6 @@ hr {
   transform: translateY(0);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .selected-project,
-  .personal-project-card {
-    transition: border-color 200ms ease, transform 200ms ease;
-  }
-
-  .selected-project:hover,
-  .personal-project-card:hover {
-    border-color: rgba(88, 95, 125, 0.3);
-    transform: translateY(-2px);
-  }
-
-  .selected-project-media img,
-  .personal-project-media img {
-    transition: transform 200ms ease;
-  }
-
-  .selected-project:hover .selected-project-media img,
-  .personal-project-card:hover .personal-project-media img {
-    transform: scale(1.015);
-  }
-}
-
 .technical-carousel.is-carousel-ready .technical-focus-grid {
   display: grid;
   transform: none !important;
@@ -2664,15 +2641,11 @@ hr {
   background-color: var(--color-brand);
 }
 
-.selected-project-link,
-.personal-project-link,
 .technical-case-study-link,
 .archive-action {
   transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
-.selected-project-link:hover,
-.personal-project-link:hover,
 .technical-case-study-link:hover,
 .archive-action:hover {
   transform: translateY(-1px);
@@ -2699,10 +2672,6 @@ hr {
   .resume-action,
   .resume-toggle-chevron,
   .reveal-item,
-  .selected-project,
-  .personal-project-card,
-  .selected-project-media img,
-  .personal-project-media img,
   .technical-carousel.is-carousel-ready .technical-focus-item,
   .technical-carousel-indicator::after,
   .site-nav-links a::after,
@@ -3893,8 +3862,6 @@ hr {
 }
 
 /* Final compact layout for closed professional experiences. */
-.selected-project,
-.personal-project-card,
 .technical-carousel.is-carousel-ready .technical-focus-item,
 .project-archive-items.has-mini-cards .archive-mini,
 .professional-experience .experience-item {
@@ -4512,9 +4479,6 @@ hr {
   background-color: #fff;
 }
 
-.selected-project,
-.selected-project-secondary,
-.personal-project-card,
 .technical-carousel.is-carousel-ready .technical-focus-item,
 .technical-carousel.is-carousel-ready .technical-focus-item:nth-child(odd),
 .technical-carousel.is-carousel-ready .technical-focus-item:nth-child(-n + 2),
@@ -4525,19 +4489,9 @@ hr {
   border: 0;
 }
 
-.selected-project,
-.selected-project-content,
-.personal-project-card,
-.personal-project-content,
 .professional-experience .experience-item,
 .professional-experience .experience-summary {
   background-color: var(--color-canvas);
-}
-
-.selected-project,
-.personal-project-card {
-  overflow: hidden;
-  border-radius: 4px;
 }
 
 .social-contact-links a {

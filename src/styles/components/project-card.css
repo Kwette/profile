@@ -1,0 +1,51 @@
+.project-card {
+  overflow: hidden;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--color-canvas);
+  box-shadow: none;
+}
+
+.project-card__content {
+  background-color: var(--color-canvas);
+}
+
+.project-card__action {
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card {
+    transition: border-color 200ms ease, transform 200ms ease;
+  }
+
+  .project-card:hover {
+    border-color: rgba(88, 95, 125, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .project-card__media img {
+    transition: transform 200ms ease;
+  }
+
+  .project-card:hover .project-card__media img {
+    transform: scale(1.015);
+  }
+
+  .project-card__action:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card__media img,
+  .project-card__action {
+    animation: none;
+    transition: none;
+  }
+}

@@ -21,7 +21,8 @@ const styleSources = [
   "styles/components/cards.css",
   "styles/components/navigation.css",
   "styles/components/hero.css",
-  "styles/legacy.css"
+  "styles/legacy.css",
+  "styles/components/project-card.css"
 ];
 
 const templates = new nunjucks.Environment(
