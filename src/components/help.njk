@@ -1,0 +1,14 @@
+      <div class="card compact-card" id="help">
+        <div class="text-center">
+          <h2>{{ help.title }}</h2>
+          <div class="compact-list-panel">
+            {% for column in help.columns %}
+            <ul class="compact-list">
+              {% for item in column %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+            {% endfor %}
+          </div>
+        </div>
+      </div>

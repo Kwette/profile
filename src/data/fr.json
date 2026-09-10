@@ -41,5 +41,22 @@
     "talkTitle": "Let's Talk!",
     "emailLabel": "M’envoyer un email",
     "calendarLabel": "Réserver un échange de 30 minutes"
+  },
+  "help": {
+    "title": "Ce que je peux apporter 🚀",
+    "columns": [
+      [
+        "Développement et évolution d’applications Ruby on Rails",
+        "Reprise de codebase et compréhension d’un produit existant",
+        "Développement de fonctionnalités full-stack de bout en bout",
+        "API, intégrations de services externes et webhooks"
+      ],
+      [
+        "Debugging et résolution de problèmes en production",
+        "Traitements asynchrones avec Sidekiq et Redis",
+        "SQL, PostgreSQL et modélisation de données",
+        "Renfort produit autonome au sein d’une petite équipe"
+      ]
+    ]
   }
 }
