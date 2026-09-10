@@ -1,5 +1,15 @@
 {
+  "name": "emilie-murat-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "nunjucks": "^3.2.4"
   }
 }
