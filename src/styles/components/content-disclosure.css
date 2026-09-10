@@ -167,28 +167,6 @@ hr {
   text-align: center;
 }
 
-.professional-experience .experience-item {
-  margin: 0;
-  overflow: hidden;
-  border: 0;
-  border-right: 1px solid rgba(88, 95, 125, 0.14);
-  border-left: 1px solid rgba(88, 95, 125, 0.14);
-  background-color: white;
-}
-
-.professional-experience .experience-item + .experience-item {
-  border-top: 1px solid rgba(88, 95, 125, 0.14);
-}
-
-.professional-experience .experience-item:first-of-type {
-  border-top: 1px solid rgba(88, 95, 125, 0.14);
-}
-
-.professional-experience .experience-item:last-child {
-  border-bottom: 1px solid rgba(88, 95, 125, 0.14);
-}
-
-.professional-experience .project-name,
 .project-archive-items.has-mini-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -450,7 +428,6 @@ hr {
   line-height: 1.35em;
 }
 
-.professional-experience .project-name .button,
 .other-projects .project-name .button {
   position: absolute;
   top: 50%;
@@ -471,22 +448,18 @@ hr {
   cursor: pointer;
 }
 
-.professional-experience .project-name .button:hover,
-.professional-experience .project-name .button:focus,
 .other-projects .project-name .button:hover,
 .other-projects .project-name .button:focus {
   border-color: var(--color-brand);
   color: black;
 }
 
-.professional-experience .project-name .button:focus-visible,
 .other-projects .project-name .button:focus-visible,
 .project-archive-toggle:focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 3px;
 }
 
-.professional-experience .shadow-box,
 .other-projects .shadow-box {
   min-height: 58px;
   padding: 0.75em 1.25em;
@@ -496,7 +469,6 @@ hr {
   box-shadow: none;
 }
 
-.professional-experience .shadow-box h4,
 .other-projects .shadow-box h4 {
   color: #555b76;
   font-size: 12px;
@@ -504,12 +476,10 @@ hr {
   overflow-wrap: anywhere;
 }
 
-.professional-experience .card-right-side,
 .other-projects .card-right-side {
   flex: 0 0 90px;
 }
 
-.professional-experience .card-right-side img,
 .other-projects .card-right-side img {
   max-width: 76px;
   max-height: 42px;
@@ -530,9 +500,7 @@ hr {
   background-color: transparent;
 }
 
-.professional-experience .purple-bg,
 .other-projects .purple-bg {
   border-radius: 3px;
   box-shadow: none;
 }
-

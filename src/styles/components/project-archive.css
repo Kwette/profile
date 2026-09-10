@@ -308,12 +308,6 @@
     aspect-ratio: 16 / 10;
   }
 
-  .professional-experience .project-name {
-    padding-left: 1em;
-    font-size: 0.95em;
-  }
-
-  .professional-experience .shadow-box,
   .other-projects .shadow-box {
     align-items: center;
   }
@@ -341,14 +335,12 @@
     text-align: left;
   }
 
-  .professional-experience .project-name,
   .other-projects .project-name {
     min-height: 70px;
     padding-right: 3.8em;
     font-size: 0.8em;
   }
 
-  .professional-experience .project-name .button,
   .other-projects .project-name .button {
     right: 0.8em;
     width: 34px;
@@ -361,18 +353,15 @@
     right: 0.45rem;
   }
 
-  .professional-experience .shadow-box,
   .other-projects .shadow-box {
     gap: 0.75em;
     padding: 0.75em;
   }
 
-  .professional-experience .card-right-side,
   .other-projects .card-right-side {
     flex-basis: 64px;
   }
 
-  .professional-experience .card-right-side img,
   .other-projects .card-right-side img {
     max-width: 58px;
   }
@@ -380,31 +369,6 @@
   .professional-experience .app-details,
   .other-projects .app-details {
     padding: 0.9em;
-  }
-
-  .professional-experience .experience-summary {
-    min-height: 110px;
-    grid-template-columns: 48px minmax(0, 1fr) 44px;
-    gap: 0.75rem;
-    padding: 1rem 0.9rem;
-  }
-
-  .experience-logo {
-    width: 48px;
-    height: 44px;
-  }
-
-  .experience-logo img {
-    max-width: 48px;
-    max-height: 40px;
-  }
-
-  .experience-role {
-    font-size: 0.92rem;
-  }
-
-  .experience-meta {
-    font-size: 0.7rem;
   }
 
   .professional-experience .app-details {
@@ -454,4 +418,3 @@
     flex-basis: 48px;
   }
 }
-

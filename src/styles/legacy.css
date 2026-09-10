@@ -439,28 +439,6 @@
   transform: translateY(-1px);
 }
 
-.professional-experience {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.professional-experience > .section-heading {
-  grid-column: 1 / -1;
-  margin-bottom: 0.75rem;
-}
-
-.experience-company-name {
-  color: #555b76;
-  font: 800 0.78rem/1.2 'Montserrat', sans-serif;
-}
-
-@media (max-width: 768px) {
-  .professional-experience {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .resume-card {
     min-height: 0 !important;
