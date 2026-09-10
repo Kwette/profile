@@ -35,7 +35,7 @@
 .technical-focus-subject,
 .technical-focus-proof {
   min-width: 0;
-  padding: 32px 40px;
+  padding: 28px 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -43,8 +43,12 @@
   box-sizing: border-box;
 }
 
+.technical-focus-subject {
+  background-color: rgba(225, 218, 209, 0.24);
+}
+
 .technical-focus-proof {
-  background-color: rgba(88, 95, 125, 0.055);
+  background-color: rgba(88, 95, 125, 0.085);
 }
 
 .technical-focus-subject h3,
@@ -96,6 +100,11 @@
   font-weight: 600;
   line-height: 1.2em;
   cursor: default;
+}
+
+.technical-focus-keywords li {
+  background-color: rgba(88, 95, 125, 0.1);
+  color: #555b76;
 }
 
 .technical-focus-evidence {
@@ -180,7 +189,7 @@
 @media (max-width: 768px) {
   .technical-focus-subject,
   .technical-focus-proof {
-    padding: 28px;
+    padding: 24px 22px;
   }
 }
 
