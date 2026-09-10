@@ -24,5 +24,16 @@
       { "label": "FR", "href": "index.html", "hreflang": "fr" },
       { "label": "EN", "current": true }
     ]
+  },
+  "footer": {
+    "socialsLabel": "Contact links",
+    "emailLabel": "Send me an email",
+    "linkedinLabel": "View my LinkedIn profile",
+    "githubLabel": "View my GitHub profile",
+    "behanceLabel": "View my Behance profile",
+    "resumes": [
+      { "href": "images/CV_2026_Emilie_Murat_En.pdf", "label": "CV EN" },
+      { "href": "images/CV_2026_Emilie_Murat_Fr.pdf", "label": "CV FR" }
+    ]
   }
 }
