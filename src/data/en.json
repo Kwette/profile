@@ -226,6 +226,7 @@
   "projectArchive": {
     "action": "View 6 projects",
     "communityTitle": "Community & Contributions",
-    "communityDescription": "Hackathons, mentoring, and knowledge sharing."
+    "communityDescription": "Hackathons, mentoring, and knowledge sharing.",
+    "contentTemplate": "content/en/projects/archive.njk"
   }
 }

@@ -226,6 +226,7 @@
   "projectArchive": {
     "action": "Voir les 6 projets antérieurs",
     "communityTitle": "Contributions & communauté",
-    "communityDescription": "Hackathons, mentorat et transmission."
+    "communityDescription": "Hackathons, mentorat et transmission.",
+    "contentTemplate": "content/fr/projects/archive.njk"
   }
 }
