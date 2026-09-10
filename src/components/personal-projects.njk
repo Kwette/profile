@@ -3,25 +3,25 @@
         </header>
         <div class="personal-projects-list">
           {% for project in personalProjects.items %}
-          <article class="personal-project-card personal-project-{{ project.modifier }}">
+          <article class="project-card personal-project-card personal-project-{{ project.modifier }}">
             {% if project.mediaHref %}
-            <a class="personal-project-media" href="{{ project.mediaHref }}" aria-label="{{ project.mediaLabel }}">
+            <a class="project-card__media personal-project-media" href="{{ project.mediaHref }}" aria-label="{{ project.mediaLabel }}">
               <img src="{{ project.image.src }}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" alt="{{ project.image.alt }}">
             </a>
             {% else %}
-            <div class="personal-project-media">
+            <div class="project-card__media personal-project-media">
               <img src="{{ project.image.src }}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" alt="{{ project.image.alt }}">
             </div>
             {% endif %}
-            <div class="personal-project-content">
-              <p class="selected-project-label">{{ project.label }}</p>
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.description }}</p>
-              <p class="personal-project-stack">{{ project.stack }}</p>
+            <div class="project-card__content personal-project-content">
+              <p class="project-card__eyebrow selected-project-label">{{ project.label }}</p>
+              <h3 class="project-card__title">{{ project.title }}</h3>
+              <p class="project-card__description">{{ project.description }}</p>
+              <p class="project-card__stack personal-project-stack">{{ project.stack }}</p>
               {% if project.action %}
-              <a class="personal-project-action" href="{{ project.action.href }}">{{ project.action.label }}</a>
+              <a class="project-card__action personal-project-action" href="{{ project.action.href }}">{{ project.action.label }}</a>
               {% else %}
-              <span class="personal-project-status">{{ project.status }}</span>
+              <span class="project-card__status personal-project-status">{{ project.status }}</span>
               {% endif %}
             </div>
           </article>
