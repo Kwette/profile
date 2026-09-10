@@ -1,10 +1,11 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceRoot = path.join(projectRoot, "src");
+const outputRoot = path.join(projectRoot, "dist");
 
 const pages = [
   { template: "pages/index.njk", data: "data/fr.json", output: "index.html", language: "fr" },
@@ -47,10 +48,24 @@ const renderedPages = await Promise.all(pages.map(async ({ template, data, outpu
   };
 }));
 
+await rm(outputRoot, { recursive: true, force: true });
+await mkdir(outputRoot, { recursive: true });
+
 await Promise.all(
   renderedPages.map(({ output, html }) =>
-    writeFile(path.join(projectRoot, output), html, "utf8")
+    writeFile(path.join(outputRoot, output), html, "utf8")
   )
 );
 
-console.log(`Generated ${renderedPages.length} localized pages.`);
+const staticEntries = ["style.css", "script.js", "images"];
+
+await Promise.all(
+  staticEntries.map(entry =>
+    cp(path.join(projectRoot, entry), path.join(outputRoot, entry), {
+      recursive: true,
+      filter: source => path.basename(source) !== ".DS_Store"
+    })
+  )
+);
+
+console.log(`Generated ${renderedPages.length} localized pages in dist/.`);
