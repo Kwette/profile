@@ -1567,26 +1567,16 @@ hr {
 
 .archive-dialog {
   width: min(740px, calc(100% - 32px));
-  max-width: none;
   max-height: 85vh;
   max-height: 85dvh;
-  margin: auto;
   padding: 30px;
-  box-sizing: border-box;
   overflow: auto;
   overscroll-behavior: contain;
-  border: 1px solid #dedee6;
-  border-radius: 6px;
-  background: #fff;
   color: #555b76;
 }
 
 .archive-dialog::backdrop {
   background: rgba(29, 31, 42, 0.4);
-}
-
-.archive-dialog[open] {
-  animation: archive-dialog-enter 180ms ease-out;
 }
 
 .archive-dialog-header {
@@ -1614,17 +1604,7 @@ hr {
 }
 
 .archive-dialog-close {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 0;
-  border-radius: 3px;
-  background: transparent;
-  color: var(--color-brand);
   font-size: 20px;
-  cursor: pointer;
 }
 
 .archive-dialog-close:hover {
@@ -1661,11 +1641,6 @@ hr {
 
 .archive-dialog-links {
   margin-top: 16px;
-}
-
-@keyframes archive-dialog-enter {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
@@ -1714,7 +1689,6 @@ hr {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .archive-dialog[open] { animation: none; }
   .project-archive-items.has-mini-cards .archive-mini { transition: none; }
 }
 
@@ -2003,24 +1977,15 @@ hr {
 /*--------- PROFESSIONAL EXPERIENCE DIALOGS ---------*/
 .experience-dialog {
   width: min(980px, calc(100% - 32px));
-  max-width: none;
   max-height: 80vh;
   max-height: 80dvh;
-  margin: auto;
   padding: 0;
   overflow: hidden;
-  border: 1px solid rgba(88, 95, 125, 0.2);
-  border-radius: 6px;
-  background: #fff;
   color: #414141;
 }
 
 .experience-dialog::backdrop {
   background: rgba(29, 31, 42, 0.48);
-}
-
-.experience-dialog[open] {
-  animation: archive-dialog-enter 180ms ease-out;
 }
 
 .experience-dialog-shell {
@@ -2087,15 +2052,6 @@ hr {
 }
 
 .experience-dialog-close {
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  display: inline-grid;
-  place-items: center;
-  border: 0;
-  border-radius: 3px;
-  background: transparent;
-  color: var(--color-brand);
   font-size: 1.1rem;
 }
 
@@ -2576,36 +2532,6 @@ hr {
   }
 }
 
-@keyframes dialog-enter-soft {
-  from { opacity: 0; transform: scale(0.985); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes dialog-backdrop-enter {
-  from { background: rgba(29, 31, 42, 0); }
-  to { background: rgba(29, 31, 42, 0.48); }
-}
-
-@keyframes dialog-backdrop-exit {
-  from { background: rgba(29, 31, 42, 0.48); }
-  to { background: rgba(29, 31, 42, 0); }
-}
-
-.archive-dialog[open],
-.experience-dialog[open] {
-  animation: dialog-enter-soft 200ms ease-out;
-}
-
-.archive-dialog[open]::backdrop,
-.experience-dialog[open]::backdrop {
-  animation: dialog-backdrop-enter 200ms ease-out;
-}
-
-.archive-dialog.is-closing::backdrop,
-.experience-dialog.is-closing::backdrop {
-  animation: dialog-backdrop-exit 180ms ease-in;
-}
-
 @keyframes experience-panel-enter {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -2675,11 +2601,7 @@ hr {
   .technical-carousel.is-carousel-ready .technical-focus-item,
   .technical-carousel-indicator::after,
   .site-nav-links a::after,
-  .experience-dialog-slide.is-active,
-  .archive-dialog[open],
-  .experience-dialog[open],
-  .archive-dialog[open]::backdrop,
-  .experience-dialog[open]::backdrop {
+  .experience-dialog-slide.is-active {
     animation: none;
     transition: none;
   }
@@ -2687,12 +2609,6 @@ hr {
   .reveal-item {
     opacity: 1;
     transform: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .experience-dialog[open] {
-    animation: none;
   }
 }
 
@@ -3876,12 +3792,6 @@ hr {
   border-color: rgba(88, 95, 125, 0.3);
   box-shadow: 0 4px 12px rgba(28, 34, 57, 0.06);
   transform: translateY(-1px);
-}
-
-.archive-dialog,
-.experience-dialog {
-  border-color: rgba(88, 95, 125, 0.18);
-  box-shadow: 0 24px 64px rgba(28, 34, 57, 0.22);
 }
 
 .resume-download,
