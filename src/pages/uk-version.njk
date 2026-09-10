@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ language }}">
-{% include "components/head.njk" %}
-  <body>
-{% include "components/navigation.njk" %}
-    <div class="container">
+{% extends "layouts/base.njk" %}
+{% block content %}
       <!----------------------------- ABOUT --------------------------->
 {% include "components/hero.njk" %}
       <!----------------------------- SOCIAL LINKS --------------------------->
@@ -819,7 +815,4 @@
         </div>
       </section>
       <!----------------------------- END RESUME --------------------------->
-    </div>
-{% include "components/footer.njk" %}
-  </body>
-</html>
+{% endblock %}
