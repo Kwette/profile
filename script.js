@@ -255,15 +255,15 @@ function initializeExperienceDialog(item, index, isFrench) {
   });
 
   const dialog = document.createElement("dialog");
-  dialog.className = "experience-dialog";
+  dialog.className = "app-dialog experience-dialog";
   dialog.id = panel.id;
   const dialogTitleId = `${dialog.id}-title`;
   dialog.setAttribute("aria-labelledby", dialogTitleId);
 
   const shell = document.createElement("div");
-  shell.className = "experience-dialog-shell";
+  shell.className = "app-dialog__shell experience-dialog-shell";
   const header = document.createElement("header");
-  header.className = "experience-dialog-header";
+  header.className = "app-dialog__header experience-dialog-header";
   const heading = document.createElement("div");
   heading.className = "experience-dialog-heading";
   const title = document.createElement("h2");
@@ -275,7 +275,7 @@ function initializeExperienceDialog(item, index, isFrench) {
   heading.append(title, metaLine);
 
   const close = document.createElement("button");
-  close.className = "experience-dialog-close";
+  close.className = "app-dialog__close experience-dialog-close";
   close.type = "button";
   close.setAttribute("aria-label", isFrench ? "Fermer l’expérience" : "Close experience");
   close.innerHTML = '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
@@ -287,7 +287,7 @@ function initializeExperienceDialog(item, index, isFrench) {
   tabs.setAttribute("role", "tablist");
   tabs.setAttribute("aria-label", isFrench ? "Sections de l’expérience" : "Experience sections");
   const content = document.createElement("div");
-  content.className = "experience-dialog-content";
+  content.className = "app-dialog__content experience-dialog-content";
 
   const tabButtons = [];
   const slides = [];
@@ -474,15 +474,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Preserve the original descriptions as DOM nodes inside the native modal.
     const hasDetail = Array.from(panel.querySelectorAll("p, ul, ol")).some((node) => node.textContent.trim());
     if (hasDetail) {
-      const dialog = makeElement("dialog", "archive-dialog");
+      const dialog = makeElement("dialog", "app-dialog archive-dialog");
       dialog.id = `archive-dialog-${isFrench ? "fr" : "en"}-${index + 1}`;
-      const dialogHeader = makeElement("header", "archive-dialog-header");
+      const dialogHeader = makeElement("header", "app-dialog__header archive-dialog-header");
       const dialogTitle = makeElement("h3", "archive-dialog-title", name);
       dialogTitle.id = `${dialog.id}-title`;
       dialog.setAttribute("aria-labelledby", dialogTitle.id);
       const dialogIntro = makeElement("div", "archive-dialog-intro");
       dialogIntro.append(dialogTitle, makeElement("p", "archive-dialog-meta", `${type} · ${metadata}`));
-      const close = makeElement("button", "archive-dialog-close");
+      const close = makeElement("button", "app-dialog__close archive-dialog-close");
       close.type = "button";
       close.autofocus = true;
       close.setAttribute("aria-label", isFrench ? "Fermer" : "Close");
@@ -491,7 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
       close.append(closeIcon);
       if (logo) dialogHeader.append(logo.cloneNode(true));
       dialogHeader.append(dialogIntro, close);
-      panel.className = "archive-dialog-body";
+      panel.className = "app-dialog__content archive-dialog-body";
       dialog.append(dialogHeader, panel, links);
       document.body.append(dialog);
 
