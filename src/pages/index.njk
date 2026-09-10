@@ -225,14 +225,8 @@
         <!------------------- PROJECT DRIME  ----------------->
         <div class="one-project experience-item">
           <!------------------- PROJECT HEADER  ----------------->
-          <button class="experience-summary" type="button" aria-expanded="false" aria-controls="experience-drime-fr" onclick="collapse(this)">
-            <span class="experience-company"><span class="experience-logo"><img src="images/drime-new.png" alt="DRIME"></span></span>
-            <span class="experience-summary-content">
-              <span class="experience-role">Full-Stack Rails Developer / Product Engineer</span>
-              <span class="experience-meta">Fév. 2021 — Avr. 2024 · CDI · Télétravail</span>
-            </span>
-            <span class="experience-chevron"><span>Voir</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
-          </button>
+{% set experienceSummary = experiences.summaries.drime %}
+{% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden" id="experience-drime-fr">
             <section class="experience-overview">
@@ -307,14 +301,8 @@
         <!------------------- PROJECT PICKADEN  ----------------->
         <div class="one-project experience-item">
           <!------------------- PROJECT HEADER  ----------------->
-          <button class="experience-summary" type="button" aria-expanded="false" aria-controls="experience-pickaden-fr" onclick="collapse(this)">
-            <span class="experience-company"><span class="experience-logo experience-logo-pickaden"><img src="images/PickadenHD.png" alt="Pickaden"></span></span>
-            <span class="experience-summary-content">
-              <span class="experience-role">Full-Stack Ruby On Rails Developer</span>
-              <span class="experience-meta">Mars 2020 — Fév. 2021 · Freelance · Télétravail</span>
-            </span>
-            <span class="experience-chevron"><span>Voir</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></span>
-          </button>
+{% set experienceSummary = experiences.summaries.pickaden %}
+{% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden" id="experience-pickaden-fr">
             <section class="experience-overview">

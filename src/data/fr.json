@@ -143,6 +143,21 @@
   },
   "experiences": {
     "stackTitle": "Stack technique",
+    "viewLabel": "Voir",
+    "summaries": {
+      "drime": {
+        "key": "drime",
+        "logo": { "src": "images/drime-new.png", "alt": "DRIME", "className": "" },
+        "role": "Full-Stack Rails Developer / Product Engineer",
+        "meta": "Fév. 2021 — Avr. 2024 · CDI · Télétravail"
+      },
+      "pickaden": {
+        "key": "pickaden",
+        "logo": { "src": "images/PickadenHD.png", "alt": "Pickaden", "className": "experience-logo-pickaden" },
+        "role": "Full-Stack Ruby On Rails Developer",
+        "meta": "Mars 2020 — Fév. 2021 · Freelance · Télétravail"
+      }
+    },
     "stacks": {
       "drime": {
         "key": "drime",

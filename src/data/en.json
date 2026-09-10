@@ -143,6 +143,21 @@
   },
   "experiences": {
     "stackTitle": "Technical stack",
+    "viewLabel": "View experience",
+    "summaries": {
+      "drime": {
+        "key": "drime",
+        "logo": { "src": "images/drime-new.png", "alt": "DRIME", "className": "" },
+        "role": "Full-Stack Rails Developer / Product Engineer",
+        "meta": "Feb 2021 — Apr 2024 · Permanent contract · Remote"
+      },
+      "pickaden": {
+        "key": "pickaden",
+        "logo": { "src": "images/PickadenHD.png", "alt": "Pickaden", "className": "experience-logo-pickaden" },
+        "role": "Full-Stack Ruby On Rails Developer",
+        "meta": "Mar 2020 — Feb 2021 · Freelance · Remote"
+      }
+    },
     "stacks": {
       "drime": {
         "key": "drime",
