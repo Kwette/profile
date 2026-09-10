@@ -1,0 +1,301 @@
+.technical-focus-card > .text-center h2 {
+  margin: 0 0 0.55em;
+}
+
+#technical-focus {
+  scroll-margin-top: var(--anchor-offset);
+  padding-block: 32px;
+}
+
+.technical-focus-intro {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 700px;
+  margin: 0 auto 14px;
+  padding: 0;
+  background-color: transparent;
+  font-size: 1.05em;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.technical-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--color-canvas);
+}
+
+.technical-focus-item {
+  padding: 0;
+  text-align: left;
+}
+
+.technical-focus-subject,
+.technical-focus-proof {
+  min-width: 0;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.technical-focus-proof {
+  background-color: rgba(88, 95, 125, 0.055);
+}
+
+.technical-focus-subject h3,
+.technical-focus-proof h4 {
+  margin: 0.75em 0 0.65em;
+  color: var(--color-brand);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3em;
+}
+
+.technical-focus-subject h3 {
+  font-size: 1.3em;
+}
+
+.technical-focus-proof h4 {
+  font-size: 1.1em;
+  margin: 6px 0 10px;
+}
+
+.technical-focus-proof .technical-focus-proof-label {
+  color: var(--color-brand-muted);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.technical-focus-keywords,
+.technical-focus-evidence {
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55em;
+  list-style-type: none;
+}
+
+.technical-focus-keywords li,
+.technical-focus-evidence li {
+  margin: 0;
+  padding: 0.35em 0.65em;
+  border: 0;
+  border-radius: 2px;
+  background-color: rgba(88, 95, 125, 0.08);
+  color: var(--color-brand);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  line-height: 1.2em;
+  cursor: default;
+}
+
+.technical-focus-evidence {
+  margin-top: 1em;
+  gap: 0.45em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.technical-focus-item:nth-child(odd) {
+  border-right: 1px solid var(--color-accent-warm);
+}
+
+.technical-focus-item:nth-child(-n + 2) {
+  border-bottom: 1px solid var(--color-accent-warm);
+}
+
+.technical-focus-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.technical-focus-item h3 {
+  margin: 0 0 0.65em;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+.technical-focus-item p,
+.technical-case-study p {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.55em;
+  text-align: left;
+}
+
+.technical-focus-item .technical-focus-proof .technical-focus-proof-label {
+  color: var(--color-brand-muted);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.technical-case-study {
+  margin-top: 1.7em;
+  padding: 1.4em 1.5em;
+  border-radius: 4px;
+  background-color: rgba(88, 95, 125, 0.08);
+}
+
+.technical-case-study .technical-case-study-label {
+  margin-bottom: 0.45em;
+  color: var(--color-brand);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.technical-case-study h3 {
+  margin: 0 0 0.45em;
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+
+@media (max-width: 768px) {
+  .technical-focus-subject,
+  .technical-focus-proof {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 660px) {
+  #technical-focus {
+    scroll-margin-top: var(--anchor-offset);
+  }
+
+  .technical-focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-focus-item:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .technical-focus-item:not(:last-child) {
+    border-bottom: 1px solid var(--color-accent-warm);
+  }
+
+  .technical-focus-intro {
+    text-align: left;
+  }
+
+  .technical-focus-keywords,
+  .technical-focus-evidence {
+    gap: 0.4em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .selected-project-secondary .selected-project-media > img {
+    transition: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.list-inline > li {
+  display: inline;
+}
+
+li{
+  padding-right : 15px;
+  padding-left : 15px;
+  background-color: white;
+}
+
+.list-inline{padding-left: 0px;}
+
+.social-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2em;
+  margin-top: 3em;
+}
+
+.social-contact-card {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1.5em;
+  background-color: white;
+  color: var(--color-ink);
+}
+
+.social-contact-column {
+  padding: 0;
+  text-align: center;
+}
+
+.social-contact-card h2 {
+  margin: 0 0 1em;
+  color: var(--color-brand);
+  font-size: 1.5em;
+}
+
+.social-contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.social-contact-links a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand);
+}
+
+.social-contact-links i {
+  width: 30px;
+  color: var(--color-brand);
+  font-size: 2.2em;
+  line-height: 1;
+  text-align: center;
+}
+
+.social-contact-links a:hover i,
+.social-contact-links a:focus i {
+  color: black;
+}
+
+.social-contact-links span {
+  display: none;
+}
+
