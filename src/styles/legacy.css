@@ -2122,139 +2122,6 @@ hr {
   }
 }
 
-/* Polished resume controls and restrained motion system. */
-.resume-cover-actions {
-  position: static;
-  display: contents;
-}
-
-.resume-action,
-.resume-toggle {
-  position: static;
-  width: auto;
-  height: 42px;
-  min-width: 0;
-  padding: 0 13px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  box-sizing: border-box;
-  transform: none;
-  border: 1px solid rgba(88, 95, 125, 0.28);
-  border-radius: 7px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: none;
-  color: var(--color-brand);
-  font: 700 0.72rem/1 'Montserrat', sans-serif;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.resume-action i,
-.resume-action:hover i {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  color: inherit;
-  font-size: 0.8rem;
-}
-
-.resume-action:hover,
-.resume-action:focus-visible {
-  transform: translateY(-1px);
-  border-color: rgba(88, 95, 125, 0.5);
-  background: #fff;
-  box-shadow: none;
-}
-
-.resume-action:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
-
-.resume-cover-actions .resume-toggle {
-  position: absolute;
-  right: auto;
-  bottom: -21px;
-  left: 50%;
-  z-index: 3;
-  transform: translateX(-50%);
-}
-
-.resume-cover-actions .resume-toggle:hover,
-.resume-cover-actions .resume-toggle:focus-visible {
-  transform: translate(-50%, -1px);
-  border-color: rgba(88, 95, 125, 0.28);
-  background: #f3f3f6;
-  outline: none;
-  box-shadow: none;
-}
-
-.resume-toggle-chevron {
-  transition: transform 420ms ease;
-}
-
-.resume-card.is-expanded .resume-toggle-chevron {
-  transform: rotate(180deg);
-}
-
-.resume-download-control.tooltip {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-}
-
-.resume-download-control .resume-download {
-  position: static;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border: 1px solid var(--color-brand);
-  border-radius: 50%;
-  background: #fff;
-  color: var(--color-brand);
-  text-decoration: none;
-}
-
-.resume-download-control .resume-download i,
-.resume-download-control .resume-download:hover i {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  color: inherit;
-  font-size: 1rem;
-}
-
-.resume-download-control .resume-download:hover,
-.resume-download-control .resume-download:focus-visible {
-  border-color: #3f4358;
-  box-shadow: 0 4px 12px rgba(28, 34, 57, 0.08);
-  transform: translateY(-1px);
-}
-
-.resume-download-control .tooltiptext {
-  top: calc(100% + 7px);
-  right: 0;
-  margin: 0;
-}
-
-.resume-card:not(.is-expanded) .resume-header {
-  transition: filter 180ms ease;
-}
-
-.resume-card:not(.is-expanded):hover .resume-header {
-  filter: brightness(1.025);
-}
-
 .reveal-item {
   opacity: 0;
   transform: translateY(12px);
@@ -2312,26 +2179,7 @@ hr {
   transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
-  .resume-download-control.tooltip {
-    top: 10px;
-    right: 10px;
-  }
-
-  .resume-card .resume-toggle {
-    display: none !important;
-  }
-
-  .resume-card .resume-download {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .resume-action,
-  .resume-toggle-chevron,
   .reveal-item,
   .site-nav-links a::after,
   .experience-dialog-slide.is-active {
@@ -3526,22 +3374,6 @@ hr {
   transform: translateY(-1px);
 }
 
-.resume-download,
-.resume-toggle {
-  box-shadow: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.resume-download:hover,
-.resume-download:focus-visible {
-  box-shadow: 0 4px 12px rgba(28, 34, 57, 0.08);
-}
-
-.resume-cover-actions .resume-toggle:hover,
-.resume-cover-actions .resume-toggle:focus-visible {
-  box-shadow: none;
-}
-
 .professional-experience {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3803,8 +3635,7 @@ hr {
   }
 
   .resume-card .resume-body,
-  .resume-card .skills,
-  .resume-card .resume-toggle {
+  .resume-card .skills {
     display: none !important;
   }
 
@@ -3964,16 +3795,6 @@ hr {
   transform: translateY(-1px);
 }
 
-.resume-download-control.tooltip,
-.resume-download-control .resume-download {
-  width: 40px;
-  height: 40px;
-}
-
-.resume-download-control.tooltip {
-  flex-basis: 40px;
-}
-
 .reveal-item {
   transform: translateY(10px);
   transition-duration: 380ms;
@@ -4013,15 +3834,6 @@ hr {
     padding-bottom: 0.7rem;
   }
 
-  .resume-download-control.tooltip,
-  .resume-download-control .resume-download {
-    width: 38px;
-    height: 38px;
-  }
-
-  .resume-download-control.tooltip {
-    flex-basis: 38px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -25,7 +25,8 @@ const styleSources = [
   "styles/components/project-card.css",
   "styles/components/experience-card.css",
   "styles/components/dialog.css",
-  "styles/components/carousel.css"
+  "styles/components/carousel.css",
+  "styles/components/resume-controls.css"
 ];
 
 const templates = new nunjucks.Environment(
