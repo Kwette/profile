@@ -71,15 +71,8 @@ i.fa-solid:hover{ color: var(--color-brand);}
 
 .button:hover{border: 1px solid var(--color-brand); cursor: pointer;}
 
-.back-to-top {
-  top: 70px;
-  z-index: 11;
-  padding: 17px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
-
