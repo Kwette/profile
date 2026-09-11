@@ -43,6 +43,66 @@ function countElementsWithClass(html, className) {
   ).length;
 }
 
+const languageLinkKeys = new Set(["current", "href", "hreflang"]);
+
+function comparableKeys(value, location) {
+  return Object.keys(value)
+    .filter((key) => !(/^navigation\.languages\[\d+\]$/.test(location) && languageLinkKeys.has(key)))
+    .sort();
+}
+
+function compareDataStructure(reference, localized, location = "") {
+  const label = location || "data";
+
+  if (Array.isArray(reference)) {
+    if (!Array.isArray(localized)) {
+      failures.push(`${label} has different value types across locales.`);
+      return;
+    }
+    assert(reference.length === localized.length, `${label} has different array lengths across locales.`);
+    reference.slice(0, localized.length).forEach((item, index) => {
+      compareDataStructure(item, localized[index], `${label}[${index}]`);
+    });
+    return;
+  }
+
+  if (reference === null || localized === null) {
+    assert(reference === localized, `${label} has different nullable values across locales.`);
+    return;
+  }
+
+  if (typeof reference === "object") {
+    if (typeof localized !== "object" || Array.isArray(localized)) {
+      failures.push(`${label} has different value types across locales.`);
+      return;
+    }
+    const referenceKeys = comparableKeys(reference, label);
+    const localizedKeys = comparableKeys(localized, label);
+    assert(
+      referenceKeys.join("|") === localizedKeys.join("|"),
+      `${label} has different keys across locales (${referenceKeys.join(", ")} / ${localizedKeys.join(", ")}).`
+    );
+    referenceKeys.filter((key) => key in localized).forEach((key) => {
+      compareDataStructure(reference[key], localized[key], location ? `${location}.${key}` : key);
+    });
+    return;
+  }
+
+  assert(typeof reference === typeof localized, `${label} has different value types across locales.`);
+}
+
+function validateLanguageSwitcher(data, language) {
+  const links = data.navigation?.languages;
+  assert(Array.isArray(links) && links.length > 1, `${language} navigation must provide language choices.`);
+  if (!Array.isArray(links)) return;
+
+  const currentLinks = links.filter((link) => link.current === true);
+  assert(currentLinks.length === 1, `${language} navigation must mark exactly one current language.`);
+  links.filter((link) => !link.current).forEach((link) => {
+    assert(Boolean(link.href && link.hreflang), `${language} alternate languages must provide href and hreflang.`);
+  });
+}
+
 const sourceFiles = await listFiles(sourceRoot);
 const templateFiles = sourceFiles.filter((file) => file.endsWith(".njk"));
 const styleFiles = sourceFiles.filter((file) => file.endsWith(".css"));
@@ -78,6 +138,15 @@ for (const file of scriptFiles) {
     assert(await exists(importedFile), `${relativePath} imports missing file ${specifier}.`);
   }
 }
+
+const [frenchData, englishData] = await Promise.all(
+  ["fr", "en"].map(async (language) =>
+    JSON.parse(await readFile(path.join(sourceRoot, "data", `${language}.json`), "utf8"))
+  )
+);
+compareDataStructure(frenchData, englishData);
+validateLanguageSwitcher(frenchData, "French");
+validateLanguageSwitcher(englishData, "English");
 
 const pages = [
   { file: "index.html", language: "fr" },

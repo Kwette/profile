@@ -46,7 +46,7 @@ The required Node.js version is declared in `.nvmrc`.
 nvm use
 yarn install
 yarn build
-yarn check
+yarn validate
 python3 -m http.server 8002 --directory dist
 ```
 
@@ -58,7 +58,7 @@ The build command:
 2. concatenates the ordered CSS sources into `dist/style.css`;
 3. copies the native JavaScript modules and static assets into `dist/`.
 
-`yarn check` rebuilds the site and validates the generated pages, local asset
+`yarn validate` rebuilds the site and validates the generated pages, local asset
 references, HTML identifiers, JavaScript imports, and source-level conventions.
 
 ## Architecture
