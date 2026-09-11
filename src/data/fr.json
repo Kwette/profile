@@ -119,6 +119,8 @@
     "title": "Focus technique",
     "intro": "J’utilise mes projets personnels et mes sandboxes techniques pour approfondir la performance, la fiabilité, la sécurité et la maintenabilité des applications Rails.",
     "topicLabel": "Sujet",
+    "positionSeparator": "sur",
+    "slideRoleDescription": "sujet",
     "directLabel": "Afficher le sujet",
     "keywordsLabel": "Mots-clés",
     "previousLabel": "Afficher le sujet précédent",

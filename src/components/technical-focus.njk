@@ -3,7 +3,7 @@
           <h2 id="technical-focus-title-{{ language }}">{{ technicalFocus.title }}</h2>
         </div>
         <p class="technical-focus-intro">{{ technicalFocus.intro }}</p>
-        <div class="technical-carousel" data-technical-carousel data-topic-label="{{ technicalFocus.topicLabel }}" data-direct-label="{{ technicalFocus.directLabel }}">
+        <div class="technical-carousel" data-technical-carousel data-topic-label="{{ technicalFocus.topicLabel }}" data-position-separator="{{ technicalFocus.positionSeparator }}" data-slide-role-description="{{ technicalFocus.slideRoleDescription }}" data-direct-label="{{ technicalFocus.directLabel }}">
           <div class="technical-carousel-viewport">
             <div class="technical-focus-grid">
               {% for item in technicalFocus.items %}

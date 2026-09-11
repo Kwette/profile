@@ -119,6 +119,8 @@
     "title": "Engineering Focus",
     "intro": "I use personal projects and technical sandboxes to deepen my work on performance, reliability, security, and maintainability in Rails applications.",
     "topicLabel": "Topic",
+    "positionSeparator": "of",
+    "slideRoleDescription": "topic",
     "directLabel": "Show topic",
     "keywordsLabel": "Keywords",
     "previousLabel": "Show previous topic",

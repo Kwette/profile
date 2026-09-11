@@ -8,6 +8,8 @@ export function initializeTechnicalCarousel(carousel) {
   const announcement = carousel.querySelector("[data-carousel-announcement]");
   const indicatorsContainer = carousel.querySelector("[data-carousel-indicators]");
   const topicLabel = carousel.dataset.topicLabel;
+  const positionSeparator = carousel.dataset.positionSeparator;
+  const slideRoleDescription = carousel.dataset.slideRoleDescription;
   const directLabel = carousel.dataset.directLabel;
   let currentIndex = 0;
   let swipeStartX = null;
@@ -22,10 +24,10 @@ export function initializeTechnicalCarousel(carousel) {
 
   const indicators = slides.map((slide, index) => {
     const title = slide.querySelector("h3").textContent.trim();
-    const position = `${topicLabel} ${index + 1} ${document.documentElement.lang === "fr" ? "sur" : "of"} ${slides.length}`;
+    const position = `${topicLabel} ${index + 1} ${positionSeparator} ${slides.length}`;
 
     slide.setAttribute("role", "group");
-    slide.setAttribute("aria-roledescription", document.documentElement.lang === "fr" ? "sujet" : "topic");
+    slide.setAttribute("aria-roledescription", slideRoleDescription);
     slide.setAttribute("aria-label", `${position}: ${title}`);
 
     const button = document.createElement("button");
@@ -54,7 +56,7 @@ export function initializeTechnicalCarousel(carousel) {
     });
 
     if (shouldAnnounce) {
-      announcement.textContent = `${topicLabel} ${currentIndex + 1} ${document.documentElement.lang === "fr" ? "sur" : "of"} ${slides.length}`;
+      announcement.textContent = `${topicLabel} ${currentIndex + 1} ${positionSeparator} ${slides.length}`;
     }
   };
 
