@@ -220,16 +220,6 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .selected-project-secondary .selected-project-media > img {
-    transition: none;
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
 .d-flex{
   display: flex;
   align-items: center;

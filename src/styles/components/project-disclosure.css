@@ -99,17 +99,17 @@
 
 .other-projects .project-name {
   position: relative;
-  min-height: 64px;
+  min-height: 58px;
   height: auto;
   margin: 0;
-  padding: 1em 4.25em 1em 1.25em;
+  padding: 1em 4.25em 1em 1em;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   border-radius: 0;
   background-color: white;
   color: var(--color-brand);
-  font-size: 1.05em;
+  font-size: 0.86em;
   line-height: 1.35em;
 }
 
@@ -147,7 +147,7 @@
 
 .other-projects .shadow-box {
   min-height: 58px;
-  padding: 0.75em 1.25em;
+  padding: 0.65em 1em;
   border-top: 1px solid #ece9e4;
   border-radius: 0;
   background-color: rgba(225, 218, 209, 0.18);

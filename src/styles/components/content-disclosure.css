@@ -56,13 +56,3 @@
   line-height: 1.55em;
   text-align: center;
 }
-
-.professional-experience .app-details {
-  padding: 1.25em;
-  border-top: 1px solid var(--color-accent-warm);
-  background-color: rgb(249, 249, 250);
-}
-
-.professional-experience .app-details p {
-  background-color: transparent;
-}

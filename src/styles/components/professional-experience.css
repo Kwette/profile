@@ -81,6 +81,7 @@
 
 .professional-experience .app-details {
   padding: clamp(2rem, 5vw, 3.25rem);
+  border-top: 1px solid var(--color-accent-warm);
   background-color: #fbfbfc;
 }
 
@@ -91,6 +92,7 @@
 }
 
 .professional-experience .app-details p {
+  background-color: transparent;
   line-height: 1.7;
   text-align: left;
 }

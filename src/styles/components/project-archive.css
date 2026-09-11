@@ -280,16 +280,6 @@
   display: none;
 }
 
-.other-projects .project-name {
-  min-height: 58px;
-  padding-left: 1em;
-  font-size: 0.86em;
-}
-
-.other-projects .shadow-box {
-  padding: 0.65em 1em;
-}
-
 @media (max-width: 1074px) {
   .project-archive-items .card-left-side h4 {
     font-size: 15px;

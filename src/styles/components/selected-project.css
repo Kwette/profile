@@ -401,3 +401,9 @@
     padding: 10px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .selected-project-secondary .selected-project-media > img {
+    transition: none;
+  }
+}
