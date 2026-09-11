@@ -1,9 +1,7 @@
 {% macro projectEntry(variant, type, name, metadata, date, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots", summaryKind="site", summaryStack="") %}
 <div class="one-project {{ variant }}" data-project-type="{{ type }}" data-project-name="{{ name }}" data-project-metadata="{{ metadata }}" data-project-date="{{ date }}" data-project-stack="{{ stack }}" data-project-summary-stack="{{ summaryStack or stack }}">
   <h2 class="project-name">{{ type }} | {{ name }}
-    <span>
-      <div class="button"><i class="fa-solid fa-plus"></i></div>
-    </span>
+    <span class="button" aria-hidden="true"><i class="fa-solid fa-plus" aria-hidden="true"></i></span>
   </h2>
   <div class="shadow-box">
     <div class="card-left-side">
