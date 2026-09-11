@@ -9,11 +9,14 @@ function createElement(tag, className, text) {
 }
 
 function formatArchiveLink(link, name, labels) {
-  const href = link.getAttribute("href");
-  const isCode = href.includes("github.com");
-  const isCapture = href.includes("behance.net");
-  const label = isCode ? labels.code : isCapture ? labels.captures : labels.site;
-  const icon = createElement("i", isCode ? "fab fa-github" : isCapture ? "fab fa-behance" : "fas fa-globe");
+  const kind = link.dataset.archiveLinkKind || "site";
+  const iconClasses = {
+    code: "fab fa-github",
+    captures: "fab fa-behance",
+    site: "fas fa-globe"
+  };
+  const label = labels[kind] || labels.site;
+  const icon = createElement("i", iconClasses[kind] || iconClasses.site);
 
   icon.setAttribute("aria-hidden", "true");
   link.className = "archive-action";

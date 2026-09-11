@@ -1,4 +1,4 @@
-{% macro projectEntry(variant, type, name, metadata, date, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots") %}
+{% macro projectEntry(variant, type, name, metadata, date, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots", summaryKind="site") %}
 <div class="one-project {{ variant }}" data-project-type="{{ type }}" data-project-name="{{ name }}" data-project-metadata="{{ metadata }}" data-project-date="{{ date }}" data-project-stack="{{ stack }}">
   <h2 class="project-name">{{ type }} | {{ name }}
     <span>
@@ -8,7 +8,7 @@
   <div class="shadow-box">
     <div class="card-left-side">
       <h4>{{ metadata }}{% if date %} ({{ date }}){% endif %}</h4>
-      <a href="{{ summaryHref }}" target="_blank" rel="noopener noreferrer"><h4>{{ summaryLabel }}</h4></a>
+      <a href="{{ summaryHref }}" target="_blank" rel="noopener noreferrer" data-archive-link-kind="{{ summaryKind }}"><h4>{{ summaryLabel }}</h4></a>
     </div>
     <div class="card-right-side"><img src="{{ logoSrc }}" alt=""></div>
   </div>
@@ -20,7 +20,7 @@
     {% if githubHref or behanceHref %}
     <div class="app-links">
       {% if githubHref %}
-      <a href="{{ githubHref }}" target="_blank" rel="noopener noreferrer">
+      <a href="{{ githubHref }}" target="_blank" rel="noopener noreferrer" data-archive-link-kind="code">
         <h4>
           <i class="fab fa-github-square"></i>
           <span>Github</span>
@@ -28,7 +28,7 @@
       </a>
       {% endif %}
       {% if behanceHref %}
-      <a href="{{ behanceHref }}" target="_blank" rel="noopener noreferrer">
+      <a href="{{ behanceHref }}" target="_blank" rel="noopener noreferrer" data-archive-link-kind="captures">
         <h4>
           <i class="fab fa-behance-square"></i>
           <span>{{ screenshotsLabel }}</span>
