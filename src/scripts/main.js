@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelectorAll("[data-technical-carousel]").forEach(initializeTechnicalCarousel);
-  document.querySelectorAll(".professional-experience .experience-item").forEach((item) => initializeExperienceDialog(item, isFrench));
+  document.querySelectorAll(".professional-experience .experience-item").forEach(initializeExperienceDialog);
   initializeNavigation(isFrench);
   initializeProjectArchive(isFrench);
   initializeResume();

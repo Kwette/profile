@@ -1,11 +1,11 @@
-      <section class="card application professional-experience" id="experience" aria-labelledby="experience-title-{{ language }}">
+      <section class="card application professional-experience" id="experience" aria-labelledby="experience-title-{{ language }}" data-dialog-close-label="{{ experiences.dialog.closeLabel }}" data-dialog-sections-label="{{ experiences.dialog.sectionsLabel }}" data-dialog-previous-label="{{ experiences.dialog.previousLabel }}" data-dialog-next-label="{{ experiences.dialog.nextLabel }}">
         <header class="section-heading text-center">
           <h2 id="experience-title-{{ language }}">{{ experiences.title }}</h2>
         </header>
         <!------------------- PROJECT DRIME  ----------------->
-        <div class="experience-card one-project experience-item">
-          <!------------------- PROJECT HEADER  ----------------->
 {% set experienceSummary = experiences.summaries.drime %}
+        <div class="experience-card one-project experience-item" data-dialog-tabs="{{ experienceSummary.dialogTabs | json }}">
+          <!------------------- PROJECT HEADER  ----------------->
 {% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden" id="experience-drime-{{ language }}">
@@ -13,9 +13,9 @@
         </div>
         </div>
         <!------------------- PROJECT PICKADEN  ----------------->
-        <div class="experience-card one-project experience-item">
-          <!------------------- PROJECT HEADER  ----------------->
 {% set experienceSummary = experiences.summaries.pickaden %}
+        <div class="experience-card one-project experience-item" data-dialog-tabs="{{ experienceSummary.dialogTabs | json }}">
+          <!------------------- PROJECT HEADER  ----------------->
 {% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
           <div class="app-details hidden" id="experience-pickaden-{{ language }}">

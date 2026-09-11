@@ -1,22 +1,16 @@
 import { closeAnimatedDialog, trapDialogFocus } from "./dialog.js";
 
-export function initializeExperienceDialog(item, isFrench) {
+export function initializeExperienceDialog(item) {
   const trigger = item.querySelector(".experience-summary");
   const panel = item.querySelector(".app-details");
-  if (!trigger || !panel) return;
+  const section = item.closest(".professional-experience");
+  if (!trigger || !panel || !section) return;
 
-  const isDrime = panel.id.includes("drime");
   const role = trigger.querySelector(".experience-role")?.textContent.trim() || "";
   const meta = trigger.querySelector(".experience-meta")?.textContent.trim() || "";
   const logo = trigger.querySelector(".experience-logo")?.cloneNode(true);
   const chevron = trigger.querySelector(".experience-chevron i");
-  const labels = isFrench
-    ? (isDrime
-        ? ["Vue d’ensemble", "Stack technique", "Player DRIME", "Éditeur vidéo", "Résultats"]
-        : ["Vue d’ensemble", "Stack technique", "Parcours utilisateur", "Contributions", "Résultats"])
-    : (isDrime
-        ? ["Overview", "Technical stack", "DRIME Player", "Video editor", "Results"]
-        : ["Overview", "Technical stack", "User journeys", "Contributions", "Results"]);
+  const labels = JSON.parse(item.dataset.dialogTabs);
 
   const groups = labels.map(() => []);
   let activeGroup = 0;
@@ -52,7 +46,7 @@ export function initializeExperienceDialog(item, isFrench) {
   const close = document.createElement("button");
   close.className = "app-dialog__close experience-dialog-close";
   close.type = "button";
-  close.setAttribute("aria-label", isFrench ? "Fermer l’expérience" : "Close experience");
+  close.setAttribute("aria-label", section.dataset.dialogCloseLabel);
   close.innerHTML = '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
   if (logo) header.append(logo);
   header.append(heading, close);
@@ -60,7 +54,7 @@ export function initializeExperienceDialog(item, isFrench) {
   const tabs = document.createElement("div");
   tabs.className = "experience-dialog-tabs";
   tabs.setAttribute("role", "tablist");
-  tabs.setAttribute("aria-label", isFrench ? "Sections de l’expérience" : "Experience sections");
+  tabs.setAttribute("aria-label", section.dataset.dialogSectionsLabel);
   const content = document.createElement("div");
   content.className = "app-dialog__content experience-dialog-content";
 
@@ -92,14 +86,14 @@ export function initializeExperienceDialog(item, isFrench) {
   const previous = document.createElement("button");
   previous.type = "button";
   previous.className = "experience-dialog-step";
-  previous.innerHTML = `<i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>${isFrench ? "Précédent" : "Previous"}</span>`;
+  previous.innerHTML = `<i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>${section.dataset.dialogPreviousLabel}</span>`;
   const progress = document.createElement("span");
   progress.className = "experience-dialog-progress";
   progress.setAttribute("aria-live", "polite");
   const next = document.createElement("button");
   next.type = "button";
   next.className = "experience-dialog-step";
-  next.innerHTML = `<span>${isFrench ? "Suivant" : "Next"}</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>`;
+  next.innerHTML = `<span>${section.dataset.dialogNextLabel}</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>`;
   footer.append(previous, progress, next);
   shell.append(header, tabs, content, footer);
   dialog.append(shell);

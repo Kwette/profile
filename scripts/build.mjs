@@ -54,6 +54,8 @@ const templates = new nunjucks.Environment(
   }
 );
 
+templates.addFilter("json", value => JSON.stringify(value));
+
 const renderedPages = await Promise.all(pages.map(async ({ template, data, output, language }) => {
   const pageData = JSON.parse(await readFile(path.join(sourceRoot, data), "utf8"));
 
