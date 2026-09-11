@@ -127,6 +127,8 @@ for (const file of templateFiles) {
   const relativePath = path.relative(projectRoot, file);
   assert(!/\sstyle\s*=/i.test(source), `${relativePath} contains an inline style attribute.`);
   assert(!/\son[a-z]+\s*=/i.test(source), `${relativePath} contains an inline event handler.`);
+  assert(!/<\/br\s*>/i.test(source), `${relativePath} contains an invalid closing br tag.`);
+  assert(!/^\s*-\s+\S/m.test(source), `${relativePath} contains a text bullet that should use a list element.`);
 }
 
 for (const file of styleFiles) {

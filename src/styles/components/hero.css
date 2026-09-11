@@ -7,8 +7,24 @@
   margin: 30px auto 0;
   padding: 2em;
   box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--color-canvas);
   line-height: 1.7em;
   text-align: left;
+}
+
+.hero-card h3 span {
+  display: block;
+}
+
+.hero-card .hero-intro p {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.hero-card .hero-intro p + p {
+  margin-top: 1.7em;
 }
 
 .hero-actions {

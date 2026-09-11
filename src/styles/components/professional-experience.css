@@ -114,6 +114,10 @@
   padding: 0;
 }
 
+.experience-overview p + p {
+  margin-top: 1rem;
+}
+
 .experience-section-kicker {
   display: block;
   color: #777d98;
@@ -171,6 +175,27 @@
   margin-top: 2.75rem;
   padding: 2rem 0 0;
   border-top: 1px solid #e2e2e5;
+}
+
+.professional-experience .experience-detail-section h4 {
+  margin: 1.5rem 0 0.5rem;
+  color: #555b76;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.professional-experience .experience-detail-section ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: transparent;
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.professional-experience .experience-detail-section li {
+  background-color: transparent;
+  font-size: inherit;
 }
 
 .professional-experience .experience-results {

@@ -204,11 +204,37 @@ body div.purple-bg{
 }
 
 
-.resume-body p.xp-info, body .resume-body div.purple-bg span.bold.stack p,  .resume-body div.no-bg span.bold.stack p{
+.resume-body .xp-info, body .resume-body div.purple-bg span.bold.stack p,  .resume-body div.no-bg span.bold.stack p{
   font-size: 14px;
   line-height: 15px;
   background: none;
   margin-top: 0;
+}
+
+.resume-body ul.xp-info {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: transparent;
+}
+
+.resume-body ul.xp-info li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 0.8em;
+  list-style: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.resume-body ul.xp-info li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
 }
 
 span.bold{
@@ -334,4 +360,3 @@ span.grey{
   padding-top: 0.2em;
   font-weight: 400;
 }
-

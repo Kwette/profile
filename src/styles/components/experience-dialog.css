@@ -168,10 +168,33 @@
 }
 
 .experience-dialog-slide p {
+  background-color: transparent;
   color: #414141;
   font-size: 0.9rem;
   line-height: 1.68;
   text-align: left;
+}
+
+.experience-dialog-slide h4 {
+  margin: 1.5rem 0 0.5rem;
+  color: #555b76;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.experience-dialog-slide ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: transparent;
+  color: #414141;
+  font-size: 0.9rem;
+  line-height: 1.68;
+}
+
+.experience-dialog-slide li {
+  background-color: transparent;
+  font-size: inherit;
 }
 
 .experience-dialog .experience-overview,
@@ -227,10 +250,6 @@
   color: #414141;
   font-size: 0.82rem;
   line-height: 1.55;
-}
-
-.experience-dialog .experience-detail-section + p {
-  margin-top: 2rem;
 }
 
 .experience-dialog .experience-results {
@@ -355,7 +374,8 @@
     padding: 22px 20px;
   }
 
-  .experience-dialog-slide p {
+  .experience-dialog-slide p,
+  .experience-dialog-slide ul {
     font-size: 0.84rem;
   }
 

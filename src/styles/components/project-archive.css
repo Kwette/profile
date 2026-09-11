@@ -204,6 +204,7 @@
 }
 
 .project-archive-items .app-details > p,
+.project-archive-items .app-details > ul,
 .project-archive-items .app-details > .app-links {
   max-width: 70ch;
   margin-right: auto;
@@ -214,7 +215,23 @@
   margin-top: 0;
   margin-bottom: 0.85rem;
   padding: 0;
+  background-color: transparent;
   line-height: 1.65;
+}
+
+.project-archive-items .app-details > ul {
+  margin-top: -0.35rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+  background-color: transparent;
+  font-size: 1.1em;
+  line-height: 1.65;
+}
+
+.project-archive-items .app-details > ul li {
+  background-color: transparent;
+  font-size: inherit;
 }
 
 .project-archive-items .app-links {

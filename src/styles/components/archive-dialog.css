@@ -67,6 +67,21 @@
   overflow-wrap: anywhere;
 }
 
+.archive-dialog .archive-dialog-body ul {
+  margin: -6px 0 18px;
+  padding-left: 0;
+  list-style: none;
+  background-color: transparent;
+  color: #45495b;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.archive-dialog .archive-dialog-body li {
+  background-color: transparent;
+  font-size: inherit;
+}
+
 .archive-dialog-stack {
   margin: 18px 0;
   padding: 12px 0 0;

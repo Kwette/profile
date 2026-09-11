@@ -1,12 +1,14 @@
       <div class="card hero-card">
       <div class="text-center">
         <h1>{{ hero.heading }}</h1>
-        <h3>{{ hero.role }}<br>{{ hero.stack }}</h3>
-        <p class="hero-intro">
-          {{ hero.paragraphs[0] }}<br><br>
-          {{ hero.paragraphs[1] }}<br><br>
-          {{ hero.paragraphs[2] }}<br><br>
-          {{ hero.paragraphs[3] }}
-        </p>
+        <h3>
+          <span>{{ hero.role }}</span>
+          <span>{{ hero.stack }}</span>
+        </h3>
+        <div class="hero-intro">
+          {% for paragraph in hero.paragraphs %}
+            <p>{{ paragraph }}</p>
+          {% endfor %}
+        </div>
       </div>
       </div>
