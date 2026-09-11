@@ -1,5 +1,5 @@
-{% macro projectEntry(variant, type, name, metadata, date, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots", summaryKind="site") %}
-<div class="one-project {{ variant }}" data-project-type="{{ type }}" data-project-name="{{ name }}" data-project-metadata="{{ metadata }}" data-project-date="{{ date }}" data-project-stack="{{ stack }}">
+{% macro projectEntry(variant, type, name, metadata, date, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots", summaryKind="site", summaryStack="") %}
+<div class="one-project {{ variant }}" data-project-type="{{ type }}" data-project-name="{{ name }}" data-project-metadata="{{ metadata }}" data-project-date="{{ date }}" data-project-stack="{{ stack }}" data-project-summary-stack="{{ summaryStack or stack }}">
   <h2 class="project-name">{{ type }} | {{ name }}
     <span>
       <div class="button"><i class="fa-solid fa-plus"></i></div>

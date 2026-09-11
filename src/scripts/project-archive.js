@@ -96,8 +96,7 @@ function initializeArchiveItem(item, index, archive) {
   const heading = createElement("h3", "archive-mini-title", name);
   content.append(heading, createElement("p", "archive-mini-meta", date ? `${type} · ${date}` : `${type} · ${metadata}`));
   if (item.classList.contains("archive-project")) {
-    const primary = technologies.filter((tech) => /rails|react|vue|javascript|postgresql|html|css/i.test(tech));
-    content.append(createElement("p", "archive-mini-stack", (primary.length ? primary : technologies).slice(0, 3).join(" · ")));
+    content.append(createElement("p", "archive-mini-stack", item.dataset.projectSummaryStack));
   }
 
   const actions = createElement("div", "archive-mini-actions");
