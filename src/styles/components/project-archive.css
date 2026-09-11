@@ -23,12 +23,6 @@
   background-color: rgba(225, 218, 209, 0.16);
 }
 
-.project-archive-toggle-meta {
-  flex: 0 0 auto;
-  color: var(--color-brand-muted);
-  font-size: 11px;
-}
-
 .project-archive-toggle i {
   margin-left: 0.35em;
   transition: transform 280ms ease;
@@ -105,37 +99,6 @@
   background-color: rgba(88, 95, 125, 0.045);
 }
 
-.archive-project-name {
-  color: #555b76;
-  font-weight: 700;
-}
-
-.archive-project-type {
-  margin-top: 0.2rem;
-  color: var(--color-brand-muted);
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-
-.project-archive-items .project-name .compact-project-toggle {
-  top: 50%;
-  right: 0.7rem;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background-color: transparent;
-  box-shadow: none;
-  transform: translateY(-50%);
-  scale: 1;
-}
-
-.project-archive-items .project-name .compact-project-toggle:hover,
-.project-archive-items .project-name .compact-project-toggle:focus {
-  background-color: rgba(88, 95, 125, 0.08);
-  color: #3f4358;
-  scale: 1;
-}
-
 .project-archive-items .shadow-box {
   min-height: 52px;
   padding: 0.25rem 1rem 0.8rem;
@@ -168,19 +131,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
-}
-
-.project-archive-items .archive-stack-line {
-  grid-column: 1 / -1;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  color: #666c88;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.64rem;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: left;
 }
 
 .project-archive-items .card-right-side {
@@ -293,10 +243,6 @@
   outline-offset: 2px;
 }
 
-.project-archive-items .archive-detail-stack {
-  display: none;
-}
-
 @media (max-width: 1074px) {
   .project-archive-items .card-left-side h4 {
     font-size: 15px;
@@ -349,12 +295,6 @@
     height: 34px;
   }
 
-  .project-archive-items .project-name .compact-project-toggle {
-    width: 44px;
-    height: 44px;
-    right: 0.45rem;
-  }
-
   .other-projects .shadow-box {
     gap: 0.75em;
     padding: 0.75em;
@@ -377,10 +317,6 @@
     align-items: center;
     padding-right: 0.85em;
     padding-left: 0.85em;
-  }
-
-  .project-archive-toggle-meta {
-    white-space: nowrap;
   }
 
   .project-archive-items .project-name {

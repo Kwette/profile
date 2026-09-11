@@ -95,14 +95,6 @@
   margin-right: 0;
 }
 
-.resume-toggle-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-}
-
 .resume-toggle {
   position: absolute;
   left: 50%;
@@ -120,15 +112,6 @@
   box-shadow: none;
   cursor: pointer;
   z-index: 2;
-}
-
-.resume-toggle .fa-minus,
-.resume-toggle-input:checked + .resume-toggle .fa-plus {
-  display: none;
-}
-
-.resume-toggle-input:checked + .resume-toggle .fa-minus {
-  display: block;
 }
 
 .resume-toggle i {

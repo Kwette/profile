@@ -2,20 +2,6 @@
   text-align: center;
 }
 
-span.badge{
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 5px;
-  border: 0.5px solid var(--color-brand);
-}
-
-span.badge img {height: 100%;}
-
 .img-circle{
   border-radius : 50%;
 }

@@ -26,22 +26,3 @@
 .hero-card .hero-intro p + p {
   margin-top: 1.7em;
 }
-
-.hero-actions {
-  gap: 0.6em;
-}
-
-.hero-actions .btn {
-  width: auto;
-  min-width: 135px;
-  margin: 0.4em;
-  padding: 12px 14px;
-  font-size: 0.95em;
-}
-
-@media (max-width: 660px) {
-  .hero-actions .btn {
-    width: 40%;
-    min-width: 150px;
-  }
-}

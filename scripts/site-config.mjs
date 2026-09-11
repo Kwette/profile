@@ -7,7 +7,6 @@ export const styleSources = [
   "styles/tokens.css",
   "styles/base.css",
   "styles/utilities.css",
-  "styles/components/buttons.css",
   "styles/layout.css",
   "styles/components/cards.css",
   "styles/components/hero.css",

@@ -113,21 +113,6 @@ body:has(#contact:target) .nav-contact {
   justify-content: center;
 }
 
-.lang-link {
-  display: flex;
-  justify-content: flex-start;
-  color: var(--color-brand);
-  font-weight: 500;
-}
-
-.lang-link:hover {
-  font-weight: 600;
-}
-
-.lang-link:hover span.badge {
-  border: 1px solid var(--color-brand);
-}
-
 .back-to-top {
   position: fixed;
   top: auto;
