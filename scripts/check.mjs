@@ -1,11 +1,14 @@
+import { execFile } from "node:child_process";
 import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceRoot = path.join(projectRoot, "src");
 const outputRoot = path.join(projectRoot, "dist");
 const failures = [];
+const executeFile = promisify(execFile);
 
 async function listFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -60,10 +63,19 @@ for (const file of styleFiles) {
 
 for (const file of scriptFiles) {
   const source = await readFile(file, "utf8");
+  const relativePath = path.relative(projectRoot, file);
+
+  try {
+    await executeFile(process.execPath, ["--check", file]);
+  } catch (error) {
+    const details = error.stderr?.trim();
+    failures.push(`${relativePath} contains invalid JavaScript${details ? `:\n${details}` : "."}`);
+  }
+
   const imports = Array.from(source.matchAll(/\bfrom\s+["'](\.[^"']+)["']/g), (match) => match[1]);
   for (const specifier of imports) {
     const importedFile = path.resolve(path.dirname(file), specifier);
-    assert(await exists(importedFile), `${path.relative(projectRoot, file)} imports missing file ${specifier}.`);
+    assert(await exists(importedFile), `${relativePath} imports missing file ${specifier}.`);
   }
 }
 
