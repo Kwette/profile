@@ -489,6 +489,10 @@
     text-align: left;
   }
 
+  .experience-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
   .experience-dialog {
     width: calc(100% - 16px);
   }
@@ -552,6 +556,26 @@
     min-height: 58px;
     padding: 7px 10px;
     gap: 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .professional-experience .app-details {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .experience-stack {
+    padding: 1.2rem;
+  }
+
+  .experience-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .professional-experience .experience-detail-section,
+  .professional-experience .experience-results {
+    margin-top: 2rem;
   }
 }
 

@@ -76,3 +76,18 @@
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .personal-project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-project-media {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 450px) {
+  .personal-project-content {
+    padding: 1.25rem;
+  }
+}

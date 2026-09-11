@@ -307,29 +307,12 @@
     text-align: left;
   }
 
-  #experience,
-  #other-projects {
-    scroll-margin-top: var(--anchor-offset);
-  }
-
   .project-archive-items {
     grid-template-columns: 1fr;
   }
 
-  .personal-project-card {
-    grid-template-columns: 1fr;
-  }
-
-  .personal-project-media {
-    aspect-ratio: 16 / 10;
-  }
-
   .other-projects .shadow-box {
     align-items: center;
-  }
-
-  .experience-stack-grid {
-    grid-template-columns: 1fr;
   }
 
   .project-archive-items .community-heading {
@@ -347,10 +330,6 @@
 }
 
 @media (max-width: 450px) {
-  .section-heading p {
-    text-align: left;
-  }
-
   .other-projects .project-name {
     min-height: 70px;
     padding-right: 3.8em;
@@ -382,27 +361,8 @@
     max-width: 58px;
   }
 
-  .professional-experience .app-details,
   .other-projects .app-details {
     padding: 0.9em;
-  }
-
-  .professional-experience .app-details {
-    padding: 1.5rem 1.1rem;
-  }
-
-  .experience-stack {
-    padding: 1.2rem;
-  }
-
-  .experience-stack-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .professional-experience .experience-detail-section,
-  .professional-experience .experience-results {
-    margin-top: 2rem;
   }
 
   .project-archive-toggle {
@@ -414,10 +374,6 @@
 
   .project-archive-toggle-meta {
     white-space: nowrap;
-  }
-
-  .personal-project-content {
-    padding: 1.25rem;
   }
 
   .project-archive-items .project-name {
