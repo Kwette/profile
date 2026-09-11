@@ -70,17 +70,13 @@ function toggleProjectArchive(button) {
 }
 
 function initializeArchiveItem(item, index, archive) {
-  const title = item.querySelector(".project-name");
   const panel = item.querySelector(".app-details");
   const stack = panel.querySelector(".purple-bg");
   const summary = item.querySelector(".shadow-box .card-left-side");
   const summaryLink = summary.querySelector("a");
-  const titleNode = Array.from(title.childNodes).find((node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
-  const [type, projectName] = titleNode.textContent.split("|").map((part) => part.trim());
-  const name = projectName || type;
-  const metadata = summary.querySelector("h4").textContent.trim();
-  const date = metadata.match(/\(([^)]+\d{4}[^)]*)\)/)?.[1];
-  const technologies = stack ? stack.textContent.trim().replace(/\.$/, "").split(/,\s*/) : [];
+  const { projectType: type, projectName: name, projectMetadata: metadata, projectDate: date } = item.dataset;
+  const displayMetadata = date ? `${metadata} (${date})` : metadata;
+  const technologies = item.dataset.projectStack.replace(/\.$/, "").split(/,\s*/);
   const logo = item.querySelector(".card-right-side img");
   const labels = {
     code: archive.dataset.codeLabel,
@@ -123,7 +119,7 @@ function initializeArchiveItem(item, index, archive) {
     dialogTitle.id = `${dialog.id}-title`;
     dialog.setAttribute("aria-labelledby", dialogTitle.id);
     const dialogIntro = createElement("div", "archive-dialog-intro");
-    dialogIntro.append(dialogTitle, createElement("p", "archive-dialog-meta", `${type} · ${metadata}`));
+    dialogIntro.append(dialogTitle, createElement("p", "archive-dialog-meta", `${type} · ${displayMetadata}`));
     const close = createElement("button", "app-dialog__close archive-dialog-close");
     close.type = "button";
     close.autofocus = true;

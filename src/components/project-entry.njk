@@ -1,13 +1,13 @@
-{% macro projectEntry(variant, title, metadata, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots") %}
-<div class="one-project {{ variant }}">
-  <h2 class="project-name">{{ title }}
+{% macro projectEntry(variant, type, name, metadata, date, summaryHref, summaryLabel, logoSrc, stack, githubHref="", behanceHref="", screenshotsLabel="Screenshots") %}
+<div class="one-project {{ variant }}" data-project-type="{{ type }}" data-project-name="{{ name }}" data-project-metadata="{{ metadata }}" data-project-date="{{ date }}" data-project-stack="{{ stack }}">
+  <h2 class="project-name">{{ type }} | {{ name }}
     <span>
       <div class="button"><i class="fa-solid fa-plus"></i></div>
     </span>
   </h2>
   <div class="shadow-box">
     <div class="card-left-side">
-      <h4>{{ metadata }}</h4>
+      <h4>{{ metadata }}{% if date %} ({{ date }}){% endif %}</h4>
       <a href="{{ summaryHref }}" target="_blank" rel="noopener noreferrer"><h4>{{ summaryLabel }}</h4></a>
     </div>
     <div class="card-right-side"><img src="{{ logoSrc }}" alt=""></div>
