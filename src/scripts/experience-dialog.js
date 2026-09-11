@@ -111,7 +111,6 @@ export function initializeExperienceDialog(item) {
   document.body.append(dialog);
 
   panel.remove();
-  trigger.removeAttribute("onclick");
   trigger.setAttribute("aria-haspopup", "dialog");
   trigger.setAttribute("aria-controls", dialog.id);
 

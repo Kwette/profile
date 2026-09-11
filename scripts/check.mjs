@@ -110,6 +110,7 @@ const styleFiles = sourceFiles.filter((file) => file.endsWith(".css"));
 const scriptFiles = sourceFiles.filter((file) => file.endsWith(".js"));
 const registeredStyleFiles = styleSources.map((file) => path.normalize(path.join(sourceRoot, file)));
 const registeredStyleSet = new Set(registeredStyleFiles);
+const scriptGraph = new Map();
 
 assert(
   registeredStyleFiles.length === registeredStyleSet.size,
@@ -140,6 +141,10 @@ for (const file of styleFiles) {
 for (const file of scriptFiles) {
   const source = await readFile(file, "utf8");
   const relativePath = path.relative(projectRoot, file);
+  assert(
+    !/\b(?:innerHTML|outerHTML|insertAdjacentHTML)\b/.test(source),
+    `${relativePath} uses direct HTML injection instead of DOM APIs.`
+  );
 
   try {
     await executeFile(process.execPath, ["--check", file]);
@@ -149,11 +154,24 @@ for (const file of scriptFiles) {
   }
 
   const imports = Array.from(source.matchAll(/\bfrom\s+["'](\.[^"']+)["']/g), (match) => match[1]);
+  scriptGraph.set(file, imports.map((specifier) => path.resolve(path.dirname(file), specifier)));
   for (const specifier of imports) {
     const importedFile = path.resolve(path.dirname(file), specifier);
     assert(await exists(importedFile), `${relativePath} imports missing file ${specifier}.`);
   }
 }
+
+const scriptEntry = path.join(sourceRoot, "scripts", "main.js");
+const reachableScripts = new Set();
+function visitScript(file) {
+  if (reachableScripts.has(file)) return;
+  reachableScripts.add(file);
+  (scriptGraph.get(file) || []).forEach(visitScript);
+}
+visitScript(scriptEntry);
+scriptFiles.forEach((file) => {
+  assert(reachableScripts.has(file), `${path.relative(projectRoot, file)} is not reachable from src/scripts/main.js.`);
+});
 
 const [frenchData, englishData] = await Promise.all(
   ["fr", "en"].map(async (language) =>
@@ -235,6 +253,26 @@ if (referencePage && localizedPage) {
       `Localized pages have different .${className} counts (${referenceCount} and ${localizedCount}).`
     );
   }
+}
+
+const renderedAndScriptSources = [
+  ...renderedPages.values(),
+  ...await Promise.all(scriptFiles.map((file) => readFile(file, "utf8")))
+].join("\n");
+const referencedToken = (token) =>
+  new RegExp(`(^|[^A-Za-z0-9_-])${token}([^A-Za-z0-9_-]|$)`).test(renderedAndScriptSources);
+
+for (const file of styleFiles) {
+  const source = await readFile(file, "utf8");
+  const classNames = new Set(
+    Array.from(source.matchAll(/\.([A-Za-z_][A-Za-z0-9_-]*)/g), (match) => match[1])
+  );
+  classNames.forEach((className) => {
+    assert(
+      referencedToken(className),
+      `${path.relative(projectRoot, file)} defines unused class .${className}.`
+    );
+  });
 }
 
 if (failures.length) {
