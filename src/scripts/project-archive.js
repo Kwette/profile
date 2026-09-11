@@ -8,11 +8,11 @@ function createElement(tag, className, text) {
   return element;
 }
 
-function formatArchiveLink(link, name, isFrench) {
+function formatArchiveLink(link, name, labels) {
   const href = link.getAttribute("href");
   const isCode = href.includes("github.com");
   const isCapture = href.includes("behance.net");
-  const label = isCode ? "Code" : isCapture ? (isFrench ? "Captures" : "Screenshots") : "Site";
+  const label = isCode ? labels.code : isCapture ? labels.captures : labels.site;
   const icon = createElement("i", isCode ? "fab fa-github" : isCapture ? "fab fa-behance" : "fas fa-globe");
 
   icon.setAttribute("aria-hidden", "true");
@@ -22,7 +22,7 @@ function formatArchiveLink(link, name, isFrench) {
   return link;
 }
 
-function toggleProjectArchive(button, isFrench) {
+function toggleProjectArchive(button) {
   const archive = document.getElementById(button.getAttribute("aria-controls"));
   const isOpening = button.getAttribute("aria-expanded") !== "true";
   const projects = Array.from(archive.querySelectorAll(".archive-project"));
@@ -30,9 +30,7 @@ function toggleProjectArchive(button, isFrench) {
   const animationId = String(Date.now());
 
   button.setAttribute("aria-expanded", String(isOpening));
-  action.textContent = isOpening
-    ? (isFrench ? "Masquer les 6 projets" : "Hide 6 projects")
-    : (isFrench ? "Voir les 6 projets antérieurs" : "View 6 projects");
+  action.textContent = isOpening ? button.dataset.closeLabel : button.dataset.openLabel;
   archive.dataset.animationId = animationId;
   projects.forEach((project) => {
     project.getAnimations().forEach((animation) => animation.cancel());
@@ -71,7 +69,7 @@ function toggleProjectArchive(button, isFrench) {
   }
 }
 
-function initializeArchiveItem(item, index, isFrench) {
+function initializeArchiveItem(item, index, archive) {
   const title = item.querySelector(".project-name");
   const panel = item.querySelector(".app-details");
   const stack = panel.querySelector(".purple-bg");
@@ -84,6 +82,11 @@ function initializeArchiveItem(item, index, isFrench) {
   const date = metadata.match(/\(([^)]+\d{4}[^)]*)\)/)?.[1];
   const technologies = stack ? stack.textContent.trim().replace(/\.$/, "").split(/,\s*/) : [];
   const logo = item.querySelector(".card-right-side img");
+  const labels = {
+    code: archive.dataset.codeLabel,
+    captures: archive.dataset.capturesLabel,
+    site: archive.dataset.siteLabel
+  };
 
   if (logo) {
     logo.alt = "";
@@ -101,9 +104,9 @@ function initializeArchiveItem(item, index, isFrench) {
   const actions = createElement("div", "archive-mini-actions");
   const links = createElement("div", "archive-dialog-links");
   if (summaryLink && !item.classList.contains("archive-project")) {
-    links.append(formatArchiveLink(summaryLink, name, isFrench));
+    links.append(formatArchiveLink(summaryLink, name, labels));
   }
-  panel.querySelectorAll(".app-links a").forEach((link) => links.append(formatArchiveLink(link, name, isFrench)));
+  panel.querySelectorAll(".app-links a").forEach((link) => links.append(formatArchiveLink(link, name, labels)));
   panel.querySelectorAll(".app-links").forEach((group) => group.remove());
   if (stack) {
     stack.className = "archive-dialog-stack";
@@ -114,7 +117,7 @@ function initializeArchiveItem(item, index, isFrench) {
   const hasDetail = Array.from(panel.querySelectorAll("p, ul, ol")).some((node) => node.textContent.trim());
   if (hasDetail) {
     const dialog = createElement("dialog", "app-dialog archive-dialog");
-    dialog.id = `archive-dialog-${isFrench ? "fr" : "en"}-${index + 1}`;
+    dialog.id = `archive-dialog-${archive.id}-${index + 1}`;
     const dialogHeader = createElement("header", "app-dialog__header archive-dialog-header");
     const dialogTitle = createElement("h3", "archive-dialog-title", name);
     dialogTitle.id = `${dialog.id}-title`;
@@ -124,7 +127,7 @@ function initializeArchiveItem(item, index, isFrench) {
     const close = createElement("button", "app-dialog__close archive-dialog-close");
     close.type = "button";
     close.autofocus = true;
-    close.setAttribute("aria-label", isFrench ? "Fermer" : "Close");
+    close.setAttribute("aria-label", archive.dataset.dialogCloseLabel);
     const closeIcon = createElement("i", "fas fa-times");
     closeIcon.setAttribute("aria-hidden", "true");
     close.append(closeIcon);
@@ -134,11 +137,11 @@ function initializeArchiveItem(item, index, isFrench) {
     dialog.append(dialogHeader, panel, links);
     document.body.append(dialog);
 
-    const trigger = createElement("button", "archive-action", isFrench ? "Détails" : "Details");
+    const trigger = createElement("button", "archive-action", archive.dataset.detailsLabel);
     trigger.type = "button";
     trigger.setAttribute("aria-haspopup", "dialog");
     trigger.setAttribute("aria-controls", dialog.id);
-    trigger.setAttribute("aria-label", `${isFrench ? "Détails" : "Details"} · ${name}`);
+    trigger.setAttribute("aria-label", `${archive.dataset.detailsLabel} · ${name}`);
     let previousOverflow = null;
     const restorePage = () => {
       if (previousOverflow === null) return;
@@ -177,13 +180,15 @@ function initializeArchiveItem(item, index, isFrench) {
   item.parentElement.classList.add("has-mini-cards");
 }
 
-export function initializeProjectArchive(isFrench) {
+export function initializeProjectArchive() {
   document.querySelectorAll(".project-archive-toggle").forEach((button) => {
-    button.addEventListener("click", () => toggleProjectArchive(button, isFrench));
+    button.addEventListener("click", () => toggleProjectArchive(button));
   });
 
-  document.querySelectorAll(".project-archive-items .archive-project, .project-archive-items .community-item").forEach((item, index) => {
-    initializeArchiveItem(item, index, isFrench);
+  document.querySelectorAll(".project-archive-items").forEach((archive) => {
+    archive.querySelectorAll(".archive-project, .community-item").forEach((item, index) => {
+      initializeArchiveItem(item, index, archive);
+    });
   });
 
   document.querySelectorAll(".project-archive-items.has-mini-cards").forEach((archive) => {

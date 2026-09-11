@@ -247,6 +247,14 @@
   },
   "projectArchive": {
     "action": "Voir les 6 projets antérieurs",
+    "closeAction": "Masquer les 6 projets",
+    "closeLabel": "Fermer",
+    "detailsLabel": "Détails",
+    "linkLabels": {
+      "code": "Code",
+      "captures": "Captures",
+      "site": "Site"
+    },
     "communityTitle": "Contributions & communauté",
     "communityDescription": "Hackathons, mentorat et transmission.",
     "contentTemplate": "content/fr/projects/archive.njk"

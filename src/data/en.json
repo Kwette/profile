@@ -247,6 +247,14 @@
   },
   "projectArchive": {
     "action": "View 6 projects",
+    "closeAction": "Hide 6 projects",
+    "closeLabel": "Close",
+    "detailsLabel": "Details",
+    "linkLabels": {
+      "code": "Code",
+      "captures": "Screenshots",
+      "site": "Site"
+    },
     "communityTitle": "Community & Contributions",
     "communityDescription": "Hackathons, mentoring, and knowledge sharing.",
     "contentTemplate": "content/en/projects/archive.njk"
