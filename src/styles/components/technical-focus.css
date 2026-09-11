@@ -187,9 +187,3 @@
   align-items: center;
   justify-content: flex-start;
 }
-
-li{
-  padding-right : 15px;
-  padding-left : 15px;
-  background-color: white;
-}

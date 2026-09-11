@@ -180,6 +180,7 @@
 }
 
 .project-archive-items .app-details > ul li {
+  padding-inline: 15px;
   background-color: transparent;
   font-size: inherit;
 }

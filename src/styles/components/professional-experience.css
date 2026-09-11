@@ -194,6 +194,7 @@
 }
 
 .professional-experience .experience-detail-section li {
+  padding-inline: 15px;
   background-color: transparent;
   font-size: inherit;
 }

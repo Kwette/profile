@@ -193,6 +193,7 @@
 }
 
 .experience-dialog-slide li {
+  padding-inline: 15px;
   background-color: transparent;
   font-size: inherit;
 }
