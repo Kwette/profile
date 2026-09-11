@@ -6,15 +6,13 @@ import { initializeScrollEffects } from "./scroll-effects.js";
 import { initializeTechnicalCarousel } from "./technical-carousel.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const isFrench = document.documentElement.lang === "fr";
-
   document.querySelectorAll("[data-current-year]").forEach((year) => {
     year.textContent = String(new Date().getFullYear());
   });
 
   document.querySelectorAll("[data-technical-carousel]").forEach(initializeTechnicalCarousel);
   document.querySelectorAll(".professional-experience .experience-item").forEach(initializeExperienceDialog);
-  initializeNavigation(isFrench);
+  initializeNavigation();
   initializeProjectArchive();
   initializeResume();
   initializeScrollEffects();

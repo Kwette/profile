@@ -1,11 +1,11 @@
-function initializeMobileMenu(isFrench) {
+function initializeMobileMenu() {
   const navToggle = document.querySelector(".site-nav-toggle");
   const navLinks = document.querySelector(".site-nav-links");
   if (!navToggle || !navLinks) return;
 
   const closeMenu = () => {
     navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", isFrench ? "Ouvrir le menu" : "Open menu");
+    navToggle.setAttribute("aria-label", navToggle.dataset.openLabel);
     navToggle.querySelector("i").className = "fa-solid fa-bars";
     navLinks.classList.remove("is-open");
   };
@@ -13,7 +13,7 @@ function initializeMobileMenu(isFrench) {
   navToggle.addEventListener("click", () => {
     const isOpening = navToggle.getAttribute("aria-expanded") !== "true";
     navToggle.setAttribute("aria-expanded", String(isOpening));
-    navToggle.setAttribute("aria-label", isOpening ? (isFrench ? "Fermer le menu" : "Close menu") : (isFrench ? "Ouvrir le menu" : "Open menu"));
+    navToggle.setAttribute("aria-label", isOpening ? navToggle.dataset.closeLabel : navToggle.dataset.openLabel);
     navToggle.querySelector("i").className = isOpening ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     navLinks.classList.toggle("is-open", isOpening);
   });
@@ -45,7 +45,7 @@ function initializeActiveSection() {
   observedSections.forEach((section) => navObserver.observe(section));
 }
 
-export function initializeNavigation(isFrench) {
-  initializeMobileMenu(isFrench);
+export function initializeNavigation() {
+  initializeMobileMenu();
   initializeActiveSection();
 }
