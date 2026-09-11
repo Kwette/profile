@@ -3,6 +3,7 @@ import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
+import { pages, styleSources } from "./site-config.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceRoot = path.join(projectRoot, "src");
@@ -107,6 +108,19 @@ const sourceFiles = await listFiles(sourceRoot);
 const templateFiles = sourceFiles.filter((file) => file.endsWith(".njk"));
 const styleFiles = sourceFiles.filter((file) => file.endsWith(".css"));
 const scriptFiles = sourceFiles.filter((file) => file.endsWith(".js"));
+const registeredStyleFiles = styleSources.map((file) => path.normalize(path.join(sourceRoot, file)));
+const registeredStyleSet = new Set(registeredStyleFiles);
+
+assert(
+  registeredStyleFiles.length === registeredStyleSet.size,
+  "CSS source configuration contains duplicate entries."
+);
+styleFiles.forEach((file) => {
+  assert(registeredStyleSet.has(path.normalize(file)), `${path.relative(projectRoot, file)} is missing from the CSS source configuration.`);
+});
+registeredStyleFiles.forEach((file) => {
+  assert(styleFiles.includes(file), `${path.relative(projectRoot, file)} is registered but does not exist.`);
+});
 
 for (const file of templateFiles) {
   const source = await readFile(file, "utf8");
@@ -148,10 +162,7 @@ compareDataStructure(frenchData, englishData);
 validateLanguageSwitcher(frenchData, "French");
 validateLanguageSwitcher(englishData, "English");
 
-const pages = [
-  { file: "index.html", language: "fr" },
-  { file: "uk-version.html", language: "en" }
-];
+const checkedPages = pages.map(({ output: file, language }) => ({ file, language }));
 const requiredSectionIds = ["help", "apps", "technical-focus", "experience", "contact", "other-projects"];
 const structuralClasses = [
   "selected-project",
@@ -164,7 +175,7 @@ const structuralClasses = [
 ];
 const renderedPages = new Map();
 
-for (const page of pages) {
+for (const page of checkedPages) {
   const pagePath = path.join(outputRoot, page.file);
   if (!(await exists(pagePath))) {
     failures.push(`dist/${page.file} was not generated.`);
@@ -212,7 +223,7 @@ for (const page of pages) {
   }
 }
 
-const [referencePage, localizedPage] = pages.map(({ file }) => renderedPages.get(file));
+const [referencePage, localizedPage] = checkedPages.map(({ file }) => renderedPages.get(file));
 if (referencePage && localizedPage) {
   for (const className of structuralClasses) {
     const referenceCount = countElementsWithClass(referencePage, className);
@@ -229,5 +240,5 @@ if (failures.length) {
   failures.forEach((failure) => console.error(`- ${failure}`));
   process.exitCode = 1;
 } else {
-  console.log(`Static validation passed for ${pages.length} pages.`);
+  console.log(`Static validation passed for ${checkedPages.length} pages.`);
 }
