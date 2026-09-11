@@ -24,6 +24,7 @@ const styleSources = [
   "styles/components/technical-focus.css",
   "styles/components/resume-document.css",
   "styles/components/content-disclosure.css",
+  "styles/components/archive-entry.css",
   "styles/components/archive-dialog.css",
   "styles/components/professional-experience.css",
   "styles/components/interaction-effects.css",
