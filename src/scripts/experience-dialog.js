@@ -1,5 +1,12 @@
 import { closeAnimatedDialog, trapDialogFocus } from "./dialog.js";
 
+function createIcon(className) {
+  const icon = document.createElement("i");
+  icon.className = className;
+  icon.setAttribute("aria-hidden", "true");
+  return icon;
+}
+
 export function initializeExperienceDialog(item) {
   const trigger = item.querySelector(".experience-summary");
   const panel = item.querySelector(".app-details");
@@ -47,7 +54,7 @@ export function initializeExperienceDialog(item) {
   close.className = "app-dialog__close experience-dialog-close";
   close.type = "button";
   close.setAttribute("aria-label", section.dataset.dialogCloseLabel);
-  close.innerHTML = '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
+  close.append(createIcon("fa-solid fa-xmark"));
   if (logo) header.append(logo);
   header.append(heading, close);
 
@@ -86,14 +93,18 @@ export function initializeExperienceDialog(item) {
   const previous = document.createElement("button");
   previous.type = "button";
   previous.className = "experience-dialog-step";
-  previous.innerHTML = `<i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>${section.dataset.dialogPreviousLabel}</span>`;
+  const previousLabel = document.createElement("span");
+  previousLabel.textContent = section.dataset.dialogPreviousLabel;
+  previous.append(createIcon("fa-solid fa-arrow-left"), previousLabel);
   const progress = document.createElement("span");
   progress.className = "experience-dialog-progress";
   progress.setAttribute("aria-live", "polite");
   const next = document.createElement("button");
   next.type = "button";
   next.className = "experience-dialog-step";
-  next.innerHTML = `<span>${section.dataset.dialogNextLabel}</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i>`;
+  const nextLabel = document.createElement("span");
+  nextLabel.textContent = section.dataset.dialogNextLabel;
+  next.append(nextLabel, createIcon("fa-solid fa-arrow-right"));
   footer.append(previous, progress, next);
   shell.append(header, tabs, content, footer);
   dialog.append(shell);
