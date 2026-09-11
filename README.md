@@ -19,6 +19,7 @@ the browser interactions use native JavaScript modules.
 
 ```text
 .
+├── examples/               Standalone reference demos, excluded from the build
 ├── images/                 Static images, documents, and favicon
 ├── scripts/
 │   └── build.mjs           Static-site build pipeline
@@ -71,6 +72,12 @@ references, HTML identifiers, JavaScript imports, and source-level conventions.
 
 The generated pages retain separate URLs so each language remains directly
 linkable and can declare the correct document language.
+
+## Reference demos
+
+`examples/drime-player-demo.html` preserves a standalone DRIME player integration
+for reference. It uses historical external dependencies and is intentionally not
+copied into `dist/` or included in the production portfolio.
 
 ## Accessibility and interaction
 
