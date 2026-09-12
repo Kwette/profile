@@ -154,7 +154,10 @@ for (const file of scriptFiles) {
     failures.push(`${relativePath} contains invalid JavaScript${details ? `:\n${details}` : "."}`);
   }
 
-  const imports = Array.from(source.matchAll(/\bfrom\s+["'](\.[^"']+)["']/g), (match) => match[1]);
+  const imports = [...new Set([
+    ...Array.from(source.matchAll(/\bfrom\s+["'](\.[^"']+)["']/g), match => match[1]),
+    ...Array.from(source.matchAll(/^\s*import\s*["'](\.[^"']+)["']/gm), match => match[1])
+  ])];
   scriptGraph.set(file, imports.map((specifier) => path.resolve(path.dirname(file), specifier)));
   for (const specifier of imports) {
     const importedFile = path.resolve(path.dirname(file), specifier);
