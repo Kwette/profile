@@ -10,7 +10,7 @@ the browser interactions use native JavaScript modules.
 ## Tech stack
 
 - HTML generated with [Nunjucks](https://mozilla.github.io/nunjucks/)
-- Component-oriented CSS compiled into a single stylesheet
+- Component-oriented CSS concatenated into a single stylesheet
 - Native JavaScript modules
 - Font Awesome icons
 - Node.js build script
@@ -22,7 +22,9 @@ the browser interactions use native JavaScript modules.
 ├── examples/               Standalone reference demos, excluded from the build
 ├── images/                 Static images, documents, and favicon
 ├── scripts/
-│   └── build.mjs           Static-site build pipeline
+│   ├── build.mjs           Static-site build pipeline
+│   ├── check.mjs           Static validation of sources and generated pages
+│   └── site-config.mjs     Localized outputs, CSS order, and static assets
 ├── src/
 │   ├── components/         Shared Nunjucks components
 │   ├── content/            Localized long-form content
@@ -30,7 +32,7 @@ the browser interactions use native JavaScript modules.
 │   │   └── fr/
 │   ├── data/               Localized structured page data
 │   ├── layouts/            Shared document layout
-│   ├── pages/              French and English page entry points
+│   ├── pages/              Shared portfolio.njk page template
 │   ├── scripts/            Browser-side JavaScript modules
 │   └── styles/             CSS foundations and components
 └── dist/                   Generated site, ignored by Git
@@ -46,12 +48,15 @@ The required Node.js version is declared in `.nvmrc`.
 ```bash
 nvm use
 yarn install
-yarn build
 yarn validate
 python3 -m http.server 8002 --directory dist
 ```
 
 Then open [http://127.0.0.1:8002/](http://127.0.0.1:8002/).
+
+After changing source files, run `yarn build` again and refresh the browser.
+There is no watch mode or automatic rebuild. The build runs locally or in CI,
+not when a visitor loads the page.
 
 The build command:
 
@@ -61,6 +66,10 @@ The build command:
 
 `yarn validate` rebuilds the site and validates the generated pages, local asset
 references, HTML identifiers, JavaScript imports, and source-level conventions.
+
+`yarn test` is an alias for `yarn validate`. These are static checks, not
+browser-based functional tests. Use `yarn validate`, not `yarn check`, which is
+a separate built-in Yarn command.
 
 ## Architecture
 
@@ -72,6 +81,23 @@ references, HTML identifiers, JavaScript imports, and source-level conventions.
 
 The generated pages retain separate URLs so each language remains directly
 linkable and can declare the correct document language.
+
+Both pages use `src/pages/portfolio.njk`: French is generated as `index.html`
+and English as `uk-version.html`. Output names and CSS concatenation order are
+declared in `scripts/site-config.mjs`.
+
+## Continuous integration and deployment
+
+`.github/workflows/validate.yml` installs dependencies using the frozen lockfile
+and runs `yarn validate` on pushes and pull requests. This workflow validates
+the site; it does not deploy it.
+
+The existing GitHub Pages site has historically been published from the
+`gh-pages` branch. This source architecture generates the publishable site in
+`dist/`, which is ignored by Git. Pushing this source branch does not publish
+that directory. Before publishing the refactor, configure and verify a
+deployment process that publishes the contents of `dist/`; do not assume that
+merging the source files into `gh-pages` is sufficient.
 
 ## Reference demos
 
