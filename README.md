@@ -67,9 +67,10 @@ The build command:
 `yarn validate` rebuilds the site and validates the generated pages, local asset
 references, HTML identifiers, JavaScript imports, and source-level conventions.
 
-`yarn test` is an alias for `yarn validate`. These are static checks, not
-browser-based functional tests. Use `yarn validate`, not `yarn check`, which is
-a separate built-in Yarn command.
+`yarn test` runs the lightweight Node.js regression tests in `tests/`, then
+`yarn validate`. The regression tests simulate browser APIs; they do not replace
+browser-based layout and interaction checks. Use `yarn validate`, not
+`yarn check`, which is a separate built-in Yarn command.
 
 ## Architecture
 
@@ -89,7 +90,7 @@ declared in `scripts/site-config.mjs`.
 ## Continuous integration and deployment
 
 `.github/workflows/validate.yml` installs dependencies using the frozen lockfile
-and runs `yarn validate` on pushes and pull requests. This workflow validates
+and runs `yarn test` on pushes and pull requests. This workflow tests and validates
 the site; it does not deploy it.
 
 The existing GitHub Pages site has historically been published from the

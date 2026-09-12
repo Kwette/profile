@@ -2,13 +2,14 @@
   "name": "emilie-murat-portfolio",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "engines": {
     "node": "24.x"
   },
   "scripts": {
     "build": "node scripts/build.mjs",
     "validate": "node scripts/build.mjs && node scripts/check.mjs",
-    "test": "yarn run validate"
+    "test": "node --test tests/*.test.mjs && yarn run validate"
   },
   "devDependencies": {
     "nunjucks": "^3.2.4"

@@ -25,5 +25,5 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Validate site
-        run: yarn validate
+      - name: Test and validate site
+        run: yarn test
