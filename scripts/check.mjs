@@ -3,6 +3,7 @@ import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
+import nunjucks from "nunjucks";
 import { pages, styleSources } from "./site-config.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -181,6 +182,46 @@ const [frenchData, englishData] = await Promise.all(
 compareDataStructure(frenchData, englishData);
 validateLanguageSwitcher(frenchData, "French");
 validateLanguageSwitcher(englishData, "English");
+
+const templates = new nunjucks.Environment(
+  new nunjucks.FileSystemLoader(sourceRoot),
+  { autoescape: true, throwOnUndefined: true }
+);
+
+for (const data of [frenchData, englishData]) {
+  for (const [name, summary] of Object.entries(data.experiences.summaries)) {
+    const context = `${data.language}/${name}`;
+    const keys = summary.dialogTabKeys;
+    const labels = summary.dialogTabs;
+    const validKeys = Array.isArray(keys) && keys.length === 5 &&
+      keys.every(key => typeof key === "string" && key.length > 0) &&
+      new Set(keys).size === keys.length;
+    assert(validKeys, `${context} must define five unique experience tab keys.`);
+    assert(Array.isArray(labels) && labels.length === 5 &&
+      labels.every(label => typeof label === "string" && label.trim().length > 0),
+    `${context} must define five non-empty experience tab labels.`);
+    if (!validKeys) continue;
+
+    try {
+      const html = templates.render(summary.contentTemplate, data);
+      const views = getAttributeValues(html, "data-dialog-view");
+      for (const key of keys) {
+        assert(views.filter(view => view === key).length === 1,
+          `${context} must provide exactly one content block for view "${key}".`);
+      }
+      assert(views.every(view => keys.includes(view)),
+        `${context} contains an unknown experience view.`);
+    } catch (error) {
+      failures.push(`${context} experience content could not be validated: ${error.message}`);
+    }
+  }
+}
+
+for (const name of Object.keys(frenchData.experiences.summaries)) {
+  assert(JSON.stringify(frenchData.experiences.summaries[name].dialogTabKeys) ===
+    JSON.stringify(englishData.experiences.summaries[name]?.dialogTabKeys),
+  `${name} experience tab keys must match across languages.`);
+}
 
 const checkedPages = pages.map(({ output: file, language }) => ({ file, language }));
 const requiredSectionIds = ["help", "apps", "technical-focus", "experience", "contact", "other-projects"];
