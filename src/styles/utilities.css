@@ -1,3 +1,21 @@
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1001;
+  padding: 12px 16px;
+  background-color: white;
+  color: var(--color-brand);
+  border-radius: 4px;
+  transform: translateY(calc(-100% - 16px));
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
 .text-center {
   text-align: center;
 }
