@@ -171,7 +171,7 @@
   padding: 0.1em;
 }
 
-body div.purple-bg, body div.no-bg{
+body :where(.resume-body) div.purple-bg, body :where(.resume-body) div.no-bg{
   padding: 0.2em 0.5em;
   font-size: 0.85em;
   color: var(--color-brand);
@@ -180,7 +180,7 @@ body div.purple-bg, body div.no-bg{
   margin-top: 10px;
 }
 
-body div.purple-bg{
+body :where(.resume-body) div.purple-bg{
   background-color: rgba(87, 95, 125, 0.2);
   margin-top: 20px;
   border-radius: 6px;
