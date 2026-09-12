@@ -1,6 +1,7 @@
 import { reducedMotion } from "./motion.js";
 
 export function initializeResume() {
+  const mobileResume = window.matchMedia("(max-width: 768px)");
   document.querySelectorAll(".resume-toggle").forEach((button) => {
     const card = button.closest(".resume-card");
     const label = button.querySelector("[data-resume-label]");
@@ -53,21 +54,23 @@ export function initializeResume() {
       ));
 
       cardAnimation.finished
-        .then(() => card.classList.toggle("is-expanded", isOpening))
+        .then(() => card.classList.toggle("is-expanded", isOpening && !mobileResume.matches))
         .catch(() => {})
         .finally(() => {
           card.style.removeProperty("overflow");
-          button.disabled = false;
+          button.disabled = mobileResume.matches;
         });
     });
   });
 
-  const mobileResume = window.matchMedia("(max-width: 768px)");
   const syncResumeAvailability = () => {
     document.querySelectorAll(".resume-toggle").forEach((button) => {
       const card = button.closest(".resume-card");
       const label = button.querySelector("[data-resume-label]");
       if (mobileResume.matches) {
+        card.getAnimations().forEach(animation => animation.cancel());
+        card.querySelectorAll(".resume-body, .skills").forEach(node =>
+          node.getAnimations().forEach(animation => animation.cancel()));
         button.disabled = true;
         button.setAttribute("aria-expanded", "false");
         label.textContent = label.dataset.openLabel;

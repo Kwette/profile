@@ -21,6 +21,7 @@ the browser interactions use native JavaScript modules.
 .
 ├── examples/               Standalone reference demos, excluded from the build
 ├── images/                 Static images, documents, and favicon
+├── tests/                  Node.js regression tests with simulated browser APIs
 ├── scripts/
 │   ├── build.mjs           Static-site build pipeline
 │   ├── check.mjs           Static validation of sources and generated pages
@@ -71,6 +72,11 @@ references, HTML identifiers, JavaScript imports, and source-level conventions.
 `yarn validate`. The regression tests simulate browser APIs; they do not replace
 browser-based layout and interaction checks. Use `yarn validate`, not
 `yarn check`, which is a separate built-in Yarn command.
+
+Regression tests cover scroll reveal boundaries and fallbacks, dialog focus
+wrapping and closing, carousel navigation and swipe handling, and resume control
+state during animation and viewport changes. These tests verify logic, not
+rendered layout, native browser focus behavior, or real touch gestures.
 
 ## Architecture
 
