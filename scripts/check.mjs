@@ -230,9 +230,9 @@ const checkedPages = pages.map(({ output: file, language }) => ({ file, language
 const requiredSectionIds = ["help", "apps", "technical-focus", "experience", "contact", "other-projects"];
 const structuralClasses = [
   "selected-project",
-  "technical-focus-tab",
+  "technical-focus-item",
   "experience-card",
-  "experience-dialog",
+  "experience-summary",
   "personal-project-card",
   "archive-project",
   "community-item"
@@ -250,6 +250,11 @@ for (const page of checkedPages) {
   renderedPages.set(page.file, html);
   assert(html.startsWith("<!DOCTYPE html>"), `dist/${page.file} has no HTML doctype.`);
   assert(html.includes(`<html lang="${page.language}">`), `dist/${page.file} must declare lang="${page.language}".`);
+
+  for (const className of structuralClasses) {
+    assert(countElementsWithClass(html, className) > 0,
+      `dist/${page.file} is missing required component .${className}.`);
+  }
 
   const ids = getAttributeValues(html, "id");
   const idSet = new Set(ids);
