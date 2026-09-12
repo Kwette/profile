@@ -229,8 +229,7 @@
   line-height: 1.55em;
 }
 
-.selected-project-link,
-.technical-case-study-link {
+.selected-project-link {
   margin-top: 1.25em;
   color: var(--color-brand);
   font-family: 'Montserrat', sans-serif;
@@ -239,21 +238,14 @@
 }
 
 .selected-project-link:hover,
-.selected-project-link:focus,
-.technical-case-study-link:hover,
-.technical-case-study-link:focus {
+.selected-project-link:focus {
   color: black;
   text-decoration: underline;
 }
 
-.selected-project-link:focus-visible,
-.technical-case-study-link:focus-visible {
+.selected-project-link:focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 4px;
-}
-
-.technical-case-study-link {
-  display: inline-block;
 }
 
 @media (max-width: 768px) {

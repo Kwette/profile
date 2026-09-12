@@ -1,3 +1,23 @@
+.technical-case-study-link {
+  display: inline-block;
+  margin-top: 1.25em;
+  color: var(--color-brand);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.technical-case-study-link:hover,
+.technical-case-study-link:focus {
+  color: black;
+  text-decoration: underline;
+}
+
+.technical-case-study-link:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 4px;
+}
+
 .technical-focus-card > .text-center h2 {
   margin: 0 0 0.55em;
 }
