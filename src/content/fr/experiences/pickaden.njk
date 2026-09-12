@@ -1,4 +1,4 @@
-            <section class="experience-overview">
+            <section data-dialog-view="overview" class="experience-overview">
               <span class="experience-section-kicker">Contexte & rôle</span>
               <h3>Présentation du produit</h3>
               <p>Pickaden est une startup parisienne proposant une plateforme SaaS pour la gestion et la réservation en temps réel de services de garde d’enfants.</p>
@@ -6,7 +6,7 @@
             </section>
 {% set experienceStack = experiences.stacks.pickaden %}
 {% include "components/experience-stack.njk" %}
-            <section class="no-bg experience-detail-section">
+            <section data-dialog-view="journeys" class="no-bg experience-detail-section">
               <span class="experience-section-kicker">01 · Produit</span>
               <h3 class="experience-section-title">Parcours professionnels et parents</h3>
               <h4>Pour les professionnels</h4>
@@ -22,7 +22,7 @@
                 <li>Créer et gérer un tableau de bord et un profil personnel</li>
               </ul>
             </section>
-            <section class="experience-detail-section">
+            <section data-dialog-view="contributions" class="experience-detail-section">
               <span class="experience-section-kicker">02 · Contributions</span>
               <h3 class="experience-section-title">Réalisations clés</h3>
               <ul>
@@ -41,4 +41,4 @@
                 <li>Rédaction de requêtes SQL sur la plateforme d’analyse des KPI.</li>
               </ul>
             </section>
-            <p class="experience-results"><span class="bold">Résultats :</span> Livraison d’un MVP SaaS fonctionnel, stable et convivial, améliorant les performances et l’expérience utilisateur tout en implémentant l’ensemble des fonctionnalités principales à partir de zéro.</p>
+            <p data-dialog-view="results" class="experience-results"><span class="bold">Résultats :</span> Livraison d’un MVP SaaS fonctionnel, stable et convivial, améliorant les performances et l’expérience utilisateur tout en implémentant l’ensemble des fonctionnalités principales à partir de zéro.</p>

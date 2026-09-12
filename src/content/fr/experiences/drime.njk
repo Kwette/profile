@@ -1,11 +1,11 @@
-            <section class="experience-overview">
+            <section data-dialog-view="overview" class="experience-overview">
               <span class="experience-section-kicker">Contexte & rôle</span>
               <h3>Présentation du produit</h3>
               <p>DRIME est un lecteur vidéo réactif, multilingue, interactif et encapsulable, sans cookies, avec un éditeur vidéo intégré. Il repose sur un format personnalisé basé sur JSON (.drime) qui permet la lecture en plusieurs langues (sous-titres, voix off, designs dynamiques) à partir d’un seul fichier vidéo. Cela réduit le temps de production, les coûts de stockage et l’empreinte écologique liée à l’hébergement des fichiers (une vidéo hébergée par projet, un fichier DRIME par projet).</p>
             </section>
 {% set experienceStack = experiences.stacks.drime %}
 {% include "components/experience-stack.njk" %}
-            <section class="no-bg experience-detail-section">
+            <section data-dialog-view="player" class="no-bg experience-detail-section">
               <span class="experience-section-kicker">01 · Étude de cas</span>
               <h3 class="experience-section-title">Lecteur DRIME & format de fichier .drime</h3>
               <h4>Pour les professionnels/clients</h4>
@@ -38,7 +38,7 @@
                 <li>Création d’une seconde page landing page.</li>
               </ul>
             </section>
-            <section class="no-bg experience-detail-section">
+            <section data-dialog-view="editor" class="no-bg experience-detail-section">
               <span class="experience-section-kicker">02 · Étude de cas</span>
               <h3 class="experience-section-title">Éditeur vidéo DRIME</h3>
               <h4>Ce que c’est</h4>
@@ -63,4 +63,4 @@
                 <li>Migration du projet vers GitLab, Docker et AWS, en collaboration avec un architecte indépendant qui a mis en place le nouvel environnement.</li>
               </ul>
             </section>
-            <p class="experience-results"><span class="bold">Résultats :</span> Livraison d’une plateforme de niveau production permettant aux utilisateurs de créer et de publier des vidéos multilingues en quelques minutes à partir d’un seul fichier source, tout en améliorant la stabilité et la scalabilité (pipeline reconstruit avec des tâches en arrière-plan ; refactorisations du modèle ; nouveaux tableaux de bord et générateurs).</p>
+            <p data-dialog-view="results" class="experience-results"><span class="bold">Résultats :</span> Livraison d’une plateforme de niveau production permettant aux utilisateurs de créer et de publier des vidéos multilingues en quelques minutes à partir d’un seul fichier source, tout en améliorant la stabilité et la scalabilité (pipeline reconstruit avec des tâches en arrière-plan ; refactorisations du modèle ; nouveaux tableaux de bord et générateurs).</p>

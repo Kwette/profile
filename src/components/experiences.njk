@@ -4,7 +4,7 @@
         </header>
         <!------------------- PROJECT DRIME  ----------------->
 {% set experienceSummary = experiences.summaries.drime %}
-        <div class="experience-card one-project experience-item" data-dialog-tabs="{{ experienceSummary.dialogTabs | json }}">
+        <div class="experience-card one-project experience-item" data-dialog-tab-keys="{{ experienceSummary.dialogTabKeys | json }}" data-dialog-tabs="{{ experienceSummary.dialogTabs | json }}">
           <!------------------- PROJECT HEADER  ----------------->
 {% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->
@@ -14,7 +14,7 @@
         </div>
         <!------------------- PROJECT PICKADEN  ----------------->
 {% set experienceSummary = experiences.summaries.pickaden %}
-        <div class="experience-card one-project experience-item" data-dialog-tabs="{{ experienceSummary.dialogTabs | json }}">
+        <div class="experience-card one-project experience-item" data-dialog-tab-keys="{{ experienceSummary.dialogTabKeys | json }}" data-dialog-tabs="{{ experienceSummary.dialogTabs | json }}">
           <!------------------- PROJECT HEADER  ----------------->
 {% include "components/experience-summary.njk" %}
           <!------------------- PROJECT BODY  ----------------->

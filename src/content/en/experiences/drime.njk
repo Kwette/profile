@@ -1,11 +1,11 @@
-            <section class="experience-overview">
+            <section data-dialog-view="overview" class="experience-overview">
               <span class="experience-section-kicker">Context & role</span>
               <h3>Product overview</h3>
               <p>DRIME is a responsive, multilingual, interactive, embeddable video player with no cookies, plus an integrated video editor. It relies on a custom .drime JSON-based format that enables playback in multiple languages (subtitles, voiceovers, dynamic designs) from a single video file. This reduces production time, storage costs, and the ecological footprint associated with file storage (one hosted video per project, one DRIME file per project).</p>
             </section>
 {% set experienceStack = experiences.stacks.drime %}
 {% include "components/experience-stack.njk" %}
-            <section class="no-bg experience-detail-section">
+            <section data-dialog-view="player" class="no-bg experience-detail-section">
               <span class="experience-section-kicker">01 · Case study</span>
               <h3 class="experience-section-title">DRIME Player & .drime file format</h3>
               <h4>For professionals/clients</h4>
@@ -38,7 +38,7 @@
                 <li>Created a second landing page.</li>
               </ul>
             </section>
-            <section class="no-bg experience-detail-section">
+            <section data-dialog-view="editor" class="no-bg experience-detail-section">
               <span class="experience-section-kicker">02 · Case study</span>
               <h3 class="experience-section-title">DRIME Video Editor</h3>
               <h4>What it is</h4>
@@ -63,4 +63,4 @@
                 <li>Migrated the project to GitLab, Docker, and AWS, in collaboration with an independent architect who built the new environment.</li>
               </ul>
             </section>
-            <p class="experience-results"><span class="bold">Results:</span> Delivered a production-grade platform that lets users build and publish multilingual videos in minutes from a single source file, while improving stability and scalability (pipeline rebuilt with background jobs; model refactors; new dashboards & generators).</p>
+            <p data-dialog-view="results" class="experience-results"><span class="bold">Results:</span> Delivered a production-grade platform that lets users build and publish multilingual videos in minutes from a single source file, while improving stability and scalability (pipeline rebuilt with background jobs; model refactors; new dashboards & generators).</p>

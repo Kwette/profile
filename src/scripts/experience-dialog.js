@@ -18,16 +18,18 @@ export function initializeExperienceDialog(item) {
   const logo = trigger.querySelector(".experience-logo")?.cloneNode(true);
   const chevron = trigger.querySelector(".experience-chevron i");
   const labels = JSON.parse(item.dataset.dialogTabs);
+  const keys = JSON.parse(item.dataset.dialogTabKeys);
+  if (keys.length !== labels.length || new Set(keys).size !== keys.length) {
+    throw new Error(`Invalid experience tab keys for ${panel.id}.`);
+  }
 
   const groups = labels.map(() => []);
-  let activeGroup = 0;
-  let detailGroup = 2;
   Array.from(panel.children).forEach((node) => {
-    if (node.classList.contains("experience-overview")) activeGroup = 0;
-    else if (node.classList.contains("experience-stack")) activeGroup = 1;
-    else if (node.classList.contains("experience-results")) activeGroup = labels.length - 1;
-    else if (node.classList.contains("experience-detail-section")) activeGroup = Math.min(detailGroup++, labels.length - 2);
-    groups[activeGroup].push(node);
+    const groupIndex = keys.indexOf(node.dataset.dialogView);
+    if (groupIndex === -1) {
+      throw new Error(`Unknown experience view "${node.dataset.dialogView}" in ${panel.id}.`);
+    }
+    groups[groupIndex].push(node);
   });
 
   const dialog = document.createElement("dialog");

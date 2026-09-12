@@ -172,6 +172,7 @@
     "summaries": {
       "drime": {
         "key": "drime",
+        "dialogTabKeys": ["overview", "stack", "player", "editor", "results"],
         "contentTemplate": "content/fr/experiences/drime.njk",
         "logo": { "src": "images/drime-new.png", "alt": "DRIME", "className": "" },
         "role": "Full-Stack Rails Developer / Product Engineer",
@@ -180,6 +181,7 @@
       },
       "pickaden": {
         "key": "pickaden",
+        "dialogTabKeys": ["overview", "stack", "journeys", "contributions", "results"],
         "contentTemplate": "content/fr/experiences/pickaden.njk",
         "logo": { "src": "images/PickadenHD.png", "alt": "Pickaden", "className": "experience-logo-pickaden" },
         "role": "Full-Stack Ruby On Rails Developer",
