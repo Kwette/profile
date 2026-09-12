@@ -187,7 +187,7 @@ body div.purple-bg{
 }
 
 
-.resume-body .xp-info, body .resume-body div.purple-bg span.bold.stack p,  .resume-body div.no-bg span.bold.stack p{
+.resume-body .xp-info, .resume-body p.stack{
   font-size: 14px;
   line-height: 15px;
   background: none;
@@ -226,7 +226,11 @@ span.bold{
   font-size: 16px;
 }
 
-span.bold.stack{font-size: 14px;}
+.resume-body p.stack {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 0.5em;
+}
 
 span.grey{
   color: grey;
