@@ -23,14 +23,23 @@ function initializeRevealAnimations() {
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.intersectionRatio >= 0.16) {
+      if (entry.isIntersecting) {
         entry.target.classList.add("is-revealed");
-      } else if (entry.intersectionRatio <= 0.08) {
+      }
+    });
+  }, { rootMargin: "-24px 0px -24px", threshold: 0 });
+
+  const exitObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
         entry.target.classList.remove("is-revealed");
       }
     });
-  }, { rootMargin: "0px 0px -5%", threshold: [0.08, 0.16] });
-  revealItems.forEach((item) => revealObserver.observe(item));
+  }, { threshold: 0 });
+  revealItems.forEach((item) => {
+    revealObserver.observe(item);
+    exitObserver.observe(item);
+  });
 }
 
 function initializeBackToTop() {
