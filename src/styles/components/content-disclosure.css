@@ -56,3 +56,9 @@
   line-height: 1.55em;
   text-align: center;
 }
+:where(.app-details) p {
+  margin: 30px 30px 50px 0;
+  padding: 2em;
+  text-align: justify;
+  border-radius: 4px;
+}

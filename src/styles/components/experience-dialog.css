@@ -408,3 +408,8 @@
     justify-content: center;
   }
 }
+:where(.experience-dialog-slide) p {
+  margin: 30px 30px 50px 0;
+  padding: 2em;
+  border-radius: 4px;
+}
