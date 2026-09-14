@@ -94,9 +94,58 @@
       "image": { "src": "images/drime-video-editor.webp", "width": 1600, "height": 900, "alt": "Interface de l’éditeur vidéo DRIME montrant l’édition des textes, le choix des langues et les réglages de prononciation." },
       "label": "Projet principal · SaaS vidéo · Projet professionnel",
       "title": "DRIME — Éditeur vidéo multilingue",
-      "description": "J’ai conçu et développé de bout en bout un éditeur réunissant vidéo, sous-titres, traductions, voix off et traitements asynchrones. Une fonctionnalité complexe menée de l’architecture à la mise en production, avec une attention particulière portée à l’expérience d’édition.",
-      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Heroku CI/CD · Azure APIs",
-      "link": { "href": "#experience", "label": "Découvrir le projet →", "external": false }
+      "description": "J’ai conçu et développé de zéro un éditeur permettant de créer et publier des vidéos multilingues à partir d’un seul projet source. L’interface réunit séquences, textes, traductions, sous-titres et voix off, avec des traitements asynchrones jusqu’à la publication.",
+      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq / Redis · AWS S3 · Azure APIs",
+      "link": { "label": "Voir l’étude de cas →" },
+      "caseStudy": {
+        "tabs": ["Aperçu","Besoin & rôle","L’éditeur","Architecture & résultat"],
+        "navigationLabel": "Étapes de l’étude de cas",
+        "workflow": "Le principal enjeu produit consistait à rendre lisible un workflow comportant plusieurs langues, médias et états de traitement.",
+        "architectureTitle": "Architecture",
+        "architectureText": "Les opérations longues étaient exécutées en arrière-plan avec Sidekiq et Redis, les médias stockés sur AWS S3 et les traductions et voix générées à partir des API Azure.",
+        "architectureStack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Azure APIs · CI/CD",
+        "actionLabel": "Voir l’étude de cas DRIME — Éditeur vidéo multilingue",
+        "context": "DRIME · Projet professionnel · 2021–2024",
+        "label": "Étude de cas produit",
+        "title": "DRIME — Éditeur vidéo multilingue",
+        "intro": "Un éditeur conçu pour transformer un seul projet source en plusieurs versions linguistiques, depuis la préparation des séquences jusqu’à la prévisualisation et à la publication.",
+        "role": "Full-Stack Rails Developer / Product Engineer",
+        "closeLabel": "Fermer l’étude de cas",
+        "video": {
+        "src": "images/drime-editor.mp4",
+          "type": "video/mp4",
+          "label": "Démonstration de l’éditeur vidéo DRIME",
+          "pendingLabel": "Vidéo de démonstration à venir."
+        },
+        "sections": [
+          {
+            "title": "Le besoin",
+            "text": "Produire plusieurs versions d’une même vidéo demandait de coordonner les textes, les sous-titres, les traductions, les voix off et les fichiers média. L’objectif était de réunir ce flux dans une interface compréhensible, sans reconstruire séparément chaque version.",
+            "items": []
+          },
+          {
+            "title": "Mon rôle",
+            "text": "J’ai défini l’architecture et développé le produit côté backend et frontend. J’ai conçu les interactions d’édition, relié les services de traduction et de synthèse vocale, organisé le stockage des fichiers et mis en place les traitements asynchrones nécessaires aux opérations longues.",
+            "items": []
+          },
+          {
+            "title": "Ce que permet l’éditeur",
+            "text": "",
+            "items": [
+              "structurer et réordonner les séquences",
+              "éditer les contenus et les sous-titres",
+              "gérer les traductions et les prononciations",
+              "générer les voix off",
+              "prévisualiser puis publier le projet"
+            ]
+          },
+          {
+            "title": "Résultat",
+            "text": "L’éditeur a été livré en production et permettait de créer et publier des vidéos multilingues en quelques minutes à partir d’un seul projet source. Le travail a couvert l’architecture, l’expérience d’édition, les intégrations externes et la livraison par CI/CD.",
+            "items": []
+          }
+        ]
+      }
     },
     "secondary": [
       {

@@ -1,6 +1,7 @@
 import { initializeExperienceDialog } from "./experience-dialog.js";
 import { initializeNavigation } from "./navigation.js";
 import { initializeProjectArchive } from "./project-archive.js";
+import { initializeProjectCaseStudies } from "./project-case-study.js";
 import { initializeResume } from "./resume.js";
 import { initializeScrollEffects } from "./scroll-effects.js";
 import { initializeTechnicalCarousel } from "./technical-carousel.js";
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".professional-experience .experience-item").forEach(initializeExperienceDialog);
   initializeNavigation();
   initializeProjectArchive();
+  initializeProjectCaseStudies();
   initializeResume();
   initializeScrollEffects();
 });

@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+.app-dialog::backdrop {
+  background: rgba(29, 31, 42, 0.48);
+}
+
 @keyframes dialog-enter-soft {
   from {
     opacity: 0;

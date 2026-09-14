@@ -106,6 +106,18 @@ that directory. Before publishing the refactor, configure and verify a
 deployment process that publishes the contents of `dist/`; do not assume that
 merging the source files into `gh-pages` is sufficient.
 
+## DRIME editor case study video
+
+The dedicated editor case study uses `images/drime-editor.mp4`, configured through
+`selectedWork.featured.caseStudy.video.src` in both localized data files.
+If this value is empty, the product screenshot is shown instead. After replacing
+the video or updating its path, rebuild the site. The video uses native controls,
+metadata-only preload and no autoplay; closing the dialog pauses and resets it.
+The four case-study steps share tab, keyboard, previous/next and progress behavior
+with experience dialogs through `src/scripts/dialog-navigation.js` and
+`src/styles/components/dialog-navigation.css`. Leaving the overview pauses the
+video; reopening the dialog always returns to the first step.
+
 ## Reference demos
 
 `examples/drime-player-demo.html` preserves a standalone DRIME player integration

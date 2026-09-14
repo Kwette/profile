@@ -1,4 +1,5 @@
 import { closeAnimatedDialog, trapDialogFocus } from "./dialog.js";
+import { initializeDialogNavigation } from "./dialog-navigation.js";
 
 function createIcon(className) {
   const icon = document.createElement("i");
@@ -61,7 +62,7 @@ export function initializeExperienceDialog(item) {
   header.append(heading, close);
 
   const tabs = document.createElement("div");
-  tabs.className = "experience-dialog-tabs";
+  tabs.className = "dialog-tabs";
   tabs.setAttribute("role", "tablist");
   tabs.setAttribute("aria-label", section.dataset.dialogSectionsLabel);
   const content = document.createElement("div");
@@ -71,7 +72,7 @@ export function initializeExperienceDialog(item) {
   const slides = [];
   labels.forEach((label, slideIndex) => {
     const tab = document.createElement("button");
-    tab.className = "experience-dialog-tab";
+    tab.className = "dialog-tab";
     tab.type = "button";
     tab.id = `${dialog.id}-tab-${slideIndex + 1}`;
     tab.setAttribute("role", "tab");
@@ -91,19 +92,19 @@ export function initializeExperienceDialog(item) {
   });
 
   const footer = document.createElement("footer");
-  footer.className = "experience-dialog-controls";
+  footer.className = "dialog-controls";
   const previous = document.createElement("button");
   previous.type = "button";
-  previous.className = "experience-dialog-step";
+  previous.className = "dialog-step";
   const previousLabel = document.createElement("span");
   previousLabel.textContent = section.dataset.dialogPreviousLabel;
   previous.append(createIcon("fa-solid fa-arrow-left"), previousLabel);
   const progress = document.createElement("span");
-  progress.className = "experience-dialog-progress";
+  progress.className = "dialog-progress";
   progress.setAttribute("aria-live", "polite");
   const next = document.createElement("button");
   next.type = "button";
-  next.className = "experience-dialog-step";
+  next.className = "dialog-step";
   const nextLabel = document.createElement("span");
   nextLabel.textContent = section.dataset.dialogNextLabel;
   next.append(nextLabel, createIcon("fa-solid fa-arrow-right"));
@@ -116,37 +117,12 @@ export function initializeExperienceDialog(item) {
   trigger.setAttribute("aria-haspopup", "dialog");
   trigger.setAttribute("aria-controls", dialog.id);
 
-  let currentIndex = 0;
   let previousOverflow = "";
-  const update = (nextIndex, focusTab = false) => {
-    currentIndex = Math.max(0, Math.min(nextIndex, slides.length - 1));
-    slides.forEach((slide, slideIndex) => {
-      const active = slideIndex === currentIndex;
-      slide.hidden = !active;
-      slide.classList.toggle("is-active", active);
-      tabButtons[slideIndex].setAttribute("aria-selected", String(active));
-      tabButtons[slideIndex].tabIndex = active ? 0 : -1;
-    });
-    previous.disabled = currentIndex === 0;
-    next.disabled = currentIndex === slides.length - 1;
-    progress.textContent = `${currentIndex + 1} / ${slides.length}`;
-    content.scrollTop = 0;
-    slides[currentIndex].scrollTop = 0;
-    if (focusTab) tabButtons[currentIndex].focus();
-  };
+  const navigation = initializeDialogNavigation({
+    dialog, tabs: tabButtons, panels: slides, content, previous, next, progress
+  });
   const closeDialog = () => closeAnimatedDialog(dialog);
 
-  tabButtons.forEach((tab, tabIndex) => {
-    tab.addEventListener("click", () => update(tabIndex));
-    tab.addEventListener("keydown", (event) => {
-      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-      event.preventDefault();
-      event.stopPropagation();
-      update(event.key === "ArrowRight" ? currentIndex + 1 : currentIndex - 1, true);
-    });
-  });
-  previous.addEventListener("click", () => update(currentIndex - 1));
-  next.addEventListener("click", () => update(currentIndex + 1));
   close.addEventListener("click", closeDialog);
   trigger.addEventListener("click", () => {
     previousOverflow = document.documentElement.style.overflow;
@@ -154,7 +130,7 @@ export function initializeExperienceDialog(item) {
     trigger.setAttribute("aria-expanded", "true");
     item.classList.add("is-open");
     chevron?.classList.replace("fa-chevron-down", "fa-chevron-up");
-    update(0);
+    navigation.reset();
     dialog.showModal();
     close.focus({ preventScroll: true });
   });
@@ -170,10 +146,7 @@ export function initializeExperienceDialog(item) {
     trigger.focus({ preventScroll: true });
   });
   dialog.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") update(currentIndex - 1);
-    if (event.key === "ArrowRight") update(currentIndex + 1);
     trapDialogFocus(dialog, event);
   });
 
-  update(0);
 }

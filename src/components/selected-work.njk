@@ -4,7 +4,7 @@
           <p>{{ selectedWork.intro }}</p>
         </header>
         <div class="selected-work-grid">
-          <article class="project-card selected-project selected-project-featured" id="{{ selectedWork.featured.id }}">
+          <article class="project-card selected-project selected-project-featured case-study-trigger" id="{{ selectedWork.featured.id }}" role="button" tabindex="0" data-case-study-trigger aria-haspopup="dialog" aria-controls="drime-editor-case-study-{{ language }}" aria-label="{{ selectedWork.featured.caseStudy.actionLabel }}">
             <div class="project-card__media selected-project-media">
               <img src="{{ selectedWork.featured.image.src }}" width="{{ selectedWork.featured.image.width }}" height="{{ selectedWork.featured.image.height }}" loading="lazy" alt="{{ selectedWork.featured.image.alt }}">
             </div>
@@ -13,7 +13,7 @@
               <h3 class="project-card__title">{{ selectedWork.featured.title }}</h3>
               <p class="project-card__description selected-project-description">{{ selectedWork.featured.description }}</p>
               <p class="project-card__stack selected-project-stack">{{ selectedWork.featured.stack }}</p>
-              <a class="project-card__action selected-project-link" href="{{ selectedWork.featured.link.href }}">{{ selectedWork.featured.link.label }}</a>
+              <span class="project-card__action selected-project-link" aria-hidden="true">{{ selectedWork.featured.link.label }}</span>
             </div>
           </article>
           <div class="selected-project-secondary-grid">
@@ -34,3 +34,4 @@
           </div>
         </div>
       </section>
+{% include "components/project-case-study.njk" %}

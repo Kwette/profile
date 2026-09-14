@@ -1,0 +1,67 @@
+{% set study = selectedWork.featured.caseStudy %}
+<dialog class="app-dialog project-case-study" id="drime-editor-case-study-{{ language }}" aria-labelledby="drime-editor-case-study-title-{{ language }}">
+  <div class="app-dialog__shell project-case-study-shell">
+    <header class="app-dialog__header project-case-study-header">
+      <div>
+        <p class="project-case-study-label">{{ study.label }}</p>
+        <h2 id="drime-editor-case-study-title-{{ language }}">{{ study.title }}</h2>
+      </div>
+      <button class="app-dialog__close" type="button" data-case-study-close aria-label="{{ study.closeLabel }}" autofocus><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </header>
+    <div class="dialog-tabs" role="tablist" aria-label="{{ study.navigationLabel }}">
+      {% for label in study.tabs %}
+      <button class="dialog-tab" type="button" role="tab" id="drime-case-tab-{{ language }}-{{ loop.index }}" aria-controls="drime-case-panel-{{ language }}-{{ loop.index }}" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}">{{ label }}</button>
+      {% endfor %}
+    </div>
+    <div class="app-dialog__content project-case-study-body">
+      <section class="project-case-study-panel project-case-study-overview" role="tabpanel" id="drime-case-panel-{{ language }}-1" aria-labelledby="drime-case-tab-{{ language }}-1">
+        <p>{{ study.intro }}</p>
+        <p class="project-case-study-context">{{ study.context }}</p>
+        <p class="project-case-study-role">{{ study.role }}</p>
+        <figure class="project-case-study-media">
+          {% if study.video.src %}
+          <video controls preload="metadata" poster="{{ selectedWork.featured.image.src }}" aria-label="{{ study.video.label }}">
+            <source src="{{ study.video.src }}" type="{{ study.video.type }}">
+          </video>
+          {% else %}
+          <img src="{{ selectedWork.featured.image.src }}" width="{{ selectedWork.featured.image.width }}" height="{{ selectedWork.featured.image.height }}" alt="{{ selectedWork.featured.image.alt }}">
+          <figcaption>{{ study.video.pendingLabel }}</figcaption>
+          {% endif %}
+        </figure>
+      </section>
+      <section class="project-case-study-panel" role="tabpanel" id="drime-case-panel-{{ language }}-2" aria-labelledby="drime-case-tab-{{ language }}-2" hidden>
+        {% for index in [0, 1] %}
+        <section class="project-case-study-section">
+          <h3>{{ study.sections[index].title }}</h3>
+          <p>{{ study.sections[index].text }}</p>
+        </section>
+        {% endfor %}
+      </section>
+      <section class="project-case-study-panel" role="tabpanel" id="drime-case-panel-{{ language }}-3" aria-labelledby="drime-case-tab-{{ language }}-3" hidden>
+        <section class="project-case-study-section">
+          <h3>{{ study.sections[2].title }}</h3>
+          <ul class="project-case-study-features">
+            {% for item in study.sections[2].items %}<li>{{ item }}</li>{% endfor %}
+          </ul>
+          <p>{{ study.workflow }}</p>
+        </section>
+      </section>
+      <section class="project-case-study-panel" role="tabpanel" id="drime-case-panel-{{ language }}-4" aria-labelledby="drime-case-tab-{{ language }}-4" hidden>
+        <section class="project-case-study-section">
+          <h3>{{ study.architectureTitle }}</h3>
+          <p>{{ study.architectureText }}</p>
+          <p class="project-case-study-stack">{{ study.architectureStack }}</p>
+        </section>
+        <section class="project-case-study-section">
+          <h3>{{ study.sections[3].title }}</h3>
+          <p>{{ study.sections[3].text }}</p>
+        </section>
+      </section>
+    </div>
+    <footer class="dialog-controls">
+      <button class="dialog-step" type="button" data-case-study-previous><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>{{ experiences.dialog.previousLabel }}</span></button>
+      <span class="dialog-progress" aria-live="polite">1 / 4</span>
+      <button class="dialog-step" type="button" data-case-study-next><span>{{ experiences.dialog.nextLabel }}</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+    </footer>
+  </div>
+</dialog>

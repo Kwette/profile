@@ -19,6 +19,7 @@ export const styleSources = [
   "styles/components/archive-dialog.css",
   "styles/components/professional-experience.css",
   "styles/components/experience-dialog.css",
+  "styles/components/dialog-navigation.css",
   "styles/components/interaction-effects.css",
   "styles/components/personal-project.css",
   "styles/components/project-archive.css",
@@ -29,6 +30,7 @@ export const styleSources = [
   "styles/components/project-card.css",
   "styles/components/experience-card.css",
   "styles/components/dialog.css",
+  "styles/components/project-case-study.css",
   "styles/components/carousel.css",
   "styles/components/resume-controls.css",
   "styles/components/resume.css"

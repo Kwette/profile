@@ -94,9 +94,58 @@
       "image": { "src": "images/drime-video-editor.webp", "width": 1600, "height": 900, "alt": "DRIME video editor showing text editing, language selection and pronunciation settings." },
       "label": "Main project · Video SaaS · Professional project",
       "title": "DRIME — Multilingual video editor",
-      "description": "I designed and built an editor bringing together video, subtitles, translations, voice-over generation and background processing. I took this complex feature from architecture through production, with particular attention to the editing experience.",
-      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Heroku CI/CD · Azure APIs",
-      "link": { "href": "#experience", "label": "View project →", "external": false }
+      "description": "I designed and built from scratch an editor for creating and publishing multilingual videos from a single source project. The interface brings together sequences, text, translations, subtitles and voice-over, with asynchronous processing through publication.",
+      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq / Redis · AWS S3 · Azure APIs",
+      "link": { "label": "View case study →" },
+      "caseStudy": {
+        "tabs": ["Overview","Challenge & role","The editor","Architecture & outcome"],
+        "navigationLabel": "Case study steps",
+        "workflow": "The main product challenge was making a workflow involving multiple languages, media and processing states understandable.",
+        "architectureTitle": "Architecture",
+        "architectureText": "Long-running operations ran in the background with Sidekiq and Redis, media were stored on AWS S3, and translations and voice-over were generated using Azure APIs.",
+        "architectureStack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Azure APIs · CI/CD",
+        "actionLabel": "View the DRIME case study — Multilingual video editor",
+        "context": "DRIME · Professional project · 2021–2024",
+        "label": "Product case study",
+        "title": "DRIME — Multilingual video editor",
+        "intro": "An editor designed to turn a single source project into multiple language versions, from preparing sequences to previewing and publishing.",
+        "role": "Full-Stack Rails Developer / Product Engineer",
+        "closeLabel": "Close case study",
+        "video": {
+        "src": "images/drime-editor.mp4",
+          "type": "video/mp4",
+          "label": "DRIME video editor demonstration",
+          "pendingLabel": "Demonstration video coming soon."
+        },
+        "sections": [
+          {
+            "title": "The need",
+            "text": "Producing multiple versions of the same video required coordinating text, subtitles, translations, voice-over and media files. The goal was to bring this workflow together in an understandable interface, without rebuilding each version separately.",
+            "items": []
+          },
+          {
+            "title": "My role",
+            "text": "I defined the architecture and developed the backend and frontend. I designed the editing interactions, connected translation and speech synthesis services, organized file storage and implemented the asynchronous processing required for long-running operations.",
+            "items": []
+          },
+          {
+            "title": "What the editor enables",
+            "text": "",
+            "items": [
+              "structure and reorder sequences",
+              "edit content and subtitles",
+              "manage translations and pronunciations",
+              "generate voice-over",
+              "preview and publish the project"
+            ]
+          },
+          {
+            "title": "Outcome",
+            "text": "The editor was delivered to production and enabled users to create and publish multilingual videos in minutes from a single source project. The work covered architecture, the editing experience, external integrations and CI/CD delivery.",
+            "items": []
+          }
+        ]
+      }
     },
     "secondary": [
       {
