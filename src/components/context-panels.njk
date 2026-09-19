@@ -1,0 +1,11 @@
+{% macro contextPanels(panels) %}
+<div class="dialog-content-pair">
+  {% for panel in panels %}
+  <section class="dialog-content-panel">
+    <span class="experience-section-kicker">{{ panel.label }}</span>
+    <h3>{{ panel.title }}</h3>
+    <p>{{ panel.text }}</p>
+  </section>
+  {% endfor %}
+</div>
+{% endmacro %}

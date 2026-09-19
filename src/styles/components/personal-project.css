@@ -1,11 +1,14 @@
 .personal-projects-list {
   display: grid;
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 20px;
 }
 
 .personal-project-card {
-  display: grid;
-  grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(88, 95, 125, 0.16);
   background-color: white;
@@ -13,7 +16,7 @@
 
 .personal-project-media {
   min-width: 0;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background-color: #f2f3f7;
 }
@@ -27,21 +30,31 @@
   transition: transform 220ms ease;
 }
 
-.personal-project-media:hover img {
+.personal-project-card:hover .personal-project-media img {
   transform: scale(1.015);
 }
 
+.personal-project-recipe .personal-project-media img {
+  transform: scale(1.16);
+  transform-origin: top center;
+}
+
+.personal-project-recipe:hover .personal-project-media img {
+  transform: scale(1.175);
+}
+
 .personal-project-ridesharing .personal-project-media img {
-  object-position: center;
+  object-position: center top;
 }
 
 .personal-project-content {
   min-width: 0;
-  padding: 1.75rem 2rem;
+  padding: 1.35rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .personal-project-content h3 {
@@ -67,22 +80,24 @@
   line-height: 1.5;
 }
 
-.personal-project-action,
-.personal-project-status {
-  margin-top: 0.85rem;
+.personal-project-action {
+  margin-top: auto;
+  padding-top: 1rem;
   color: var(--color-brand);
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .personal-project-card {
-    grid-template-columns: 1fr;
+@media (max-width: 980px) {
+  .personal-projects-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
 
-  .personal-project-media {
-    aspect-ratio: 16 / 10;
+@media (max-width: 640px) {
+  .personal-projects-list {
+    grid-template-columns: 1fr;
   }
 }
 

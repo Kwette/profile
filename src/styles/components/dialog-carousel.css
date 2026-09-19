@@ -1,0 +1,102 @@
+/* Shared modal carousel; dimensions inherited from the experience dialog. */
+.dialog-carousel {
+  --dialog-carousel-max-height: min(86vh, 800px);
+  --dialog-carousel-max-height: min(86dvh, 800px);
+  width: min(980px, calc(100% - 32px));
+  max-height: 88vh;
+  max-height: 88dvh;
+  padding: 0;
+  overflow: hidden;
+  color: #414141;
+}
+
+.dialog-carousel-shell {
+  height: auto;
+  max-height: var(--dialog-carousel-max-height);
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-carousel-close {
+  font-size: 1.1rem;
+}
+
+.dialog-carousel-close:hover,
+.dialog-carousel-close:focus-visible {
+  background: rgba(88, 95, 125, 0.08);
+}
+
+.dialog-carousel-content {
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 24px;
+  scrollbar-gutter: stable;
+  background: #fbfbfc;
+}
+
+.experience-dialog-slide {
+  height: auto;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.experience-dialog-slide h4 {
+  margin: 1.5rem 0 0.5rem;
+  color: #555b76;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.experience-dialog-slide ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: transparent;
+  color: #414141;
+  font-size: 0.9rem;
+  line-height: 1.68;
+}
+
+.experience-dialog-slide li {
+  padding-inline: 15px;
+  background-color: transparent;
+  font-size: inherit;
+}
+
+.dialog-carousel .experience-overview,
+.dialog-carousel .experience-detail-section,
+.dialog-carousel .experience-results {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.dialog-carousel .experience-detail-section {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.dialog-carousel .experience-dialog-slide > :first-child {
+  margin-top: 0;
+}
+
+.dialog-carousel .experience-dialog-slide > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .dialog-carousel {
+    width: calc(100% - 16px);
+  }
+
+  .experience-dialog-slide ul {
+    font-size: 0.84rem;
+  }
+
+}
+:where(.experience-dialog-slide) p {
+  margin: 30px 30px 50px 0;
+  padding: 2em;
+  border-radius: 4px;
+}

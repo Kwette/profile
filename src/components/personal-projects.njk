@@ -3,23 +3,21 @@
         </header>
         <div class="personal-projects-list">
           {% for project in personalProjects.items %}
-          <article class="project-card personal-project-card personal-project-{{ project.modifier }}">
-            {% if project.mediaHref %}
-            <a class="project-card__media personal-project-media" href="{{ project.mediaHref }}" aria-label="{{ project.mediaLabel }}">
-              <img src="{{ project.image.src }}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" alt="{{ project.image.alt }}">
-            </a>
-            {% else %}
+          <article class="project-card personal-project-card personal-project-{{ project.modifier }}"{% if project.caseStudy is defined %} role="button" tabindex="0" data-case-study-trigger aria-haspopup="dialog" aria-controls="{{ project.caseStudy.id }}-{{ language }}" aria-label="{{ project.caseStudy.actionLabel }}"{% elif project.action and project.action.dialogId is defined %} role="button" tabindex="0" data-case-study-open="{{ project.action.dialogId }}-{{ language }}" aria-label="{{ project.action.label }} {{ project.title }}"{% endif %}>
             <div class="project-card__media personal-project-media">
               <img src="{{ project.image.src }}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" alt="{{ project.image.alt }}">
             </div>
-            {% endif %}
             <div class="project-card__content personal-project-content">
               <p class="project-card__eyebrow selected-project-label">{{ project.label }}</p>
               <h3 class="project-card__title">{{ project.title }}</h3>
               <p class="project-card__description">{{ project.description }}</p>
               <p class="project-card__stack personal-project-stack">{{ project.stack }}</p>
               {% if project.action %}
+              {% if project.caseStudy is defined or project.action.dialogId is defined %}
+              <span class="project-card__action personal-project-action" aria-hidden="true">{{ project.action.label }}</span>
+              {% else %}
               <a class="project-card__action personal-project-action" href="{{ project.action.href }}">{{ project.action.label }}</a>
+              {% endif %}
               {% else %}
               <span class="project-card__status personal-project-status">{{ project.status }}</span>
               {% endif %}
@@ -27,3 +25,9 @@
           </article>
           {% endfor %}
         </div>
+        {% for project in personalProjects.items %}
+        {% if project.caseStudy is defined %}
+        {% set caseStudyProject = project %}
+{% include "components/secondary-case-study.njk" %}
+        {% endif %}
+        {% endfor %}

@@ -196,21 +196,21 @@ for (const data of [frenchData, englishData]) {
     const context = `${data.language}/${name}`;
     const keys = summary.dialogTabKeys;
     const labels = summary.dialogTabs;
-    const validKeys = Array.isArray(keys) && keys.length === 5 &&
+    const validKeys = Array.isArray(keys) && keys.length > 0 &&
       keys.every(key => typeof key === "string" && key.length > 0) &&
       new Set(keys).size === keys.length;
-    assert(validKeys, `${context} must define five unique experience tab keys.`);
-    assert(Array.isArray(labels) && labels.length === 5 &&
+    assert(validKeys, `${context} must define unique experience tab keys.`);
+    assert(Array.isArray(labels) && labels.length === keys?.length &&
       labels.every(label => typeof label === "string" && label.trim().length > 0),
-    `${context} must define five non-empty experience tab labels.`);
+    `${context} must define one non-empty label per experience tab.`);
     if (!validKeys) continue;
 
     try {
       const html = templates.render(summary.contentTemplate, data);
       const views = getAttributeValues(html, "data-dialog-view");
       for (const key of keys) {
-        assert(views.filter(view => view === key).length === 1,
-          `${context} must provide exactly one content block for view "${key}".`);
+        assert(views.some(view => view === key),
+          `${context} must provide content for view "${key}".`);
       }
       assert(views.every(view => keys.includes(view)),
         `${context} contains an unknown experience view.`);
@@ -285,7 +285,7 @@ for (const page of checkedPages) {
   ];
   for (const reference of references) {
     if (/^(?:https?:|mailto:|tel:|data:|#)/i.test(reference)) continue;
-    const localPath = reference.split(/[?#]/)[0];
+    const localPath = reference.replaceAll("&amp;", "&").split(/[?#]/)[0];
     if (!localPath) continue;
     const resolvedPath = path.resolve(outputRoot, localPath.replace(/^\//, ""));
     assert(await exists(resolvedPath), `dist/${page.file} references missing file ${reference}.`);

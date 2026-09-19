@@ -1,0 +1,12 @@
+{% from "components/structured-content.njk" import structuredContent %}
+            <section data-dialog-view="overview" class="experience-overview">
+              <span class="experience-section-kicker">{{ experiences.drimeContent.overview.kicker }}</span>
+              <h3>{{ experiences.drimeContent.overview.title }}</h3>
+              <p>{{ experiences.drimeContent.overview.text }}</p>
+            </section>
+{% set experienceStack = experiences.stacks.drime %}
+{% include "components/experience-stack.njk" %}
+{% include "components/experience-demos.njk" %}
+{{ structuredContent(experiences.drimeContent.player) }}
+{{ structuredContent(experiences.drimeContent.editor) }}
+            <p data-dialog-view="results" class="experience-results"><span class="bold">{{ experiences.drimeContent.results.label }}</span> {{ experiences.drimeContent.results.text }}</p>

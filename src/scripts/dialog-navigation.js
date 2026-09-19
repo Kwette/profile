@@ -40,5 +40,5 @@ export function initializeDialogNavigation({ dialog, tabs, panels, content, prev
     update(currentIndex + (event.key === "ArrowRight" ? 1 : -1));
   });
   update(0);
-  return { reset: () => update(0) };
+  return { reset: (index = 0) => update(index) };
 }

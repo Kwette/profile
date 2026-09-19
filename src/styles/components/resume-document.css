@@ -181,6 +181,7 @@ body :where(.resume-body) div.purple-bg, body :where(.resume-body) div.no-bg{
 }
 
 body :where(.resume-body) div.purple-bg{
+  padding: 0.7em 0.75em;
   background-color: rgba(87, 95, 125, 0.2);
   margin-top: 20px;
   border-radius: 6px;

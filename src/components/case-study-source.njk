@@ -1,0 +1,11 @@
+{% macro caseStudySource(id, logo, study, meta, navigation) %}
+<div id="{{ id }}" hidden data-case-study-content
+  data-logo-src="{{ logo.src }}" data-logo-alt="{{ logo.alt }}"
+  {% if logo.className is defined %}data-logo-class="{{ logo.className }}"{% endif %}
+  data-label="{{ study.label }}" data-title="{{ study.title }}" data-meta="{{ meta }}"
+  data-tabs="{{ study.tabs | json }}" data-close-label="{{ study.closeLabel }}"
+  data-sections-label="{{ study.navigationLabel }}"
+  data-previous-label="{{ navigation.previousLabel }}" data-next-label="{{ navigation.nextLabel }}">
+  {{ caller() }}
+</div>
+{% endmacro %}

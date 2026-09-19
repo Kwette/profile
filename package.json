@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
     "validate": "node scripts/build.mjs && node scripts/check.mjs",
     "test": "node --test tests/*.test.mjs && yarn run validate"
   },

@@ -1,10 +1,10 @@
 {
   "language": "en",
   "meta": {
-    "title": "Emilie Murat _ Ruby FullStack Developer _ Profile (UK version)",
-    "description": "Emz_Profile - Emilie Murat Fullstack developer Ruby on Rails and Javascript full remote",
+    "title": "Emilie Murat | Ruby on Rails Full-Stack Developer",
+    "description": "Portfolio of Emilie Murat, a Ruby on Rails Full-Stack Developer and Product Engineer available for remote work.",
     "script": "scripts/main.js?v=20260908-12",
-    "stylesheet": "style.css?v=20260908-13"
+    "stylesheet": "style.css?v=20260918-1"
   },
   "navigation": {
     "skipLinkLabel": "Skip to content",
@@ -57,7 +57,7 @@
         "Production debugging and problem-solving",
         "Background processing with Sidekiq and Redis",
         "SQL, PostgreSQL, and data modelling",
-        "Autonomous product engineering within a small team"
+        "Autonomous product engineering within a team"
       ]
     ]
   },
@@ -66,10 +66,9 @@
     "role": "Full-Stack / Product Engineer",
     "stack": "Ruby on Rails · PostgreSQL · JavaScript",
     "paragraphs": [
-      "I design, evolve, and improve web products, mainly for startups and SaaS companies. With more than four years of professional experience, I own features end-to-end, from the initial product need through production delivery: Rails and PostgreSQL backends, JavaScript interfaces, external integrations, and background processing.",
-      "Comfortable working in small teams with a high level of ownership, I combine product development, problem-solving, and a strong design and UX/UI sensibility. I notably designed and shipped a complex multilingual video editor from scratch, covering everything from data architecture to the user interface.",
-      "I am open to joining a product team long term or working with clients on Rails applications: evolution and maintenance, feature development, integrations, production debugging, and existing codebases.",
-      "Based in France · Remote across France, Europe, or internationally"
+      "I design, evolve, and make web products more reliable end to end, from product needs through production delivery. Comfortable working in small teams with a high level of ownership, I take responsibility for complete features by combining development, problem-solving, and product and UX sensibility.",
+      "I notably designed and shipped a complex multilingual video editor from scratch, covering everything from data architecture to the user interface.",
+      "4+ years of experience · Based in France · Remote"
     ]
   },
   "resume": {
@@ -95,80 +94,525 @@
       "label": "Main project · Video SaaS · Professional project",
       "title": "DRIME — Multilingual video editor",
       "description": "I designed and built from scratch an editor for creating and publishing multilingual videos from a single source project. The interface brings together sequences, text, translations, subtitles and voice-over, with asynchronous processing through publication.",
-      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq / Redis · AWS S3 · Azure APIs",
+      "stack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq / Redis · AWS S3 · Azure APIs · Heroku · CI/CD",
       "link": { "label": "View case study →" },
       "caseStudy": {
-        "tabs": ["Overview","Challenge & role","The editor","Architecture & outcome"],
-        "navigationLabel": "Case study steps",
-        "workflow": "The main product challenge was making a workflow involving multiple languages, media and processing states understandable.",
-        "architectureTitle": "Architecture",
-        "architectureText": "Long-running operations ran in the background with Sidekiq and Redis, media were stored on AWS S3, and translations and voice-over were generated using Azure APIs.",
-        "architectureStack": "Ruby on Rails · PostgreSQL · JavaScript · Sidekiq · Redis · AWS S3 · Azure APIs · CI/CD",
-        "actionLabel": "View the DRIME case study — Multilingual video editor",
-        "context": "DRIME · Professional project · 2021–2024",
         "label": "Product case study",
-        "title": "DRIME — Multilingual video editor",
-        "intro": "An editor designed to turn a single source project into multiple language versions, from preparing sequences to previewing and publishing.",
+        "title": "Multilingual video editor",
         "role": "Full-Stack Rails Developer / Product Engineer",
+        "meta": "2021–2024",
+        "actionLabel": "View the DRIME case study — Multilingual video editor",
         "closeLabel": "Close case study",
+        "intro": "An editor designed to turn a single source project into multiple language versions, from preparing sequences to previewing and publishing.",
         "video": {
-        "src": "images/drime-editor.mp4",
+          "src": "images/drime-editor.mp4?v=20260919-2",
           "type": "video/mp4",
           "label": "DRIME video editor demonstration",
           "pendingLabel": "Demonstration video coming soon."
         },
-        "sections": [
+        "tabs": [
+          "Overview",
+          "Challenge & role",
+          "The editor",
+          "Technical stack",
+          "Outcomes"
+        ],
+        "navigationLabel": "Case study steps",
+        "challengePanels": [
           {
+            "label": "PRODUCT CONTEXT",
             "title": "The need",
-            "text": "Producing multiple versions of the same video required coordinating text, subtitles, translations, voice-over and media files. The goal was to bring this workflow together in an understandable interface, without rebuilding each version separately.",
-            "items": []
+            "text": "Producing multiple versions of the same video required coordinating text, subtitles, translations, voice-over and media files. The goal was to bring this workflow together in an understandable interface, without rebuilding each version separately."
           },
           {
+            "label": "RESPONSIBILITY",
             "title": "My role",
-            "text": "I defined the architecture and developed the backend and frontend. I designed the editing interactions, connected translation and speech synthesis services, organized file storage and implemented the asynchronous processing required for long-running operations.",
-            "items": []
+            "text": "I defined the architecture and developed the backend and frontend. I designed the editing interactions, connected translation and speech synthesis services, organized file storage and implemented the asynchronous processing required for long-running operations."
+          }
+        ],
+        "editorTitle": "What the editor enables",
+        "workflowSteps": [
+          {
+            "title": "Structure",
+            "detail": "Organize and reorder sequences."
           },
           {
-            "title": "What the editor enables",
-            "text": "",
-            "items": [
-              "structure and reorder sequences",
-              "edit content and subtitles",
-              "manage translations and pronunciations",
-              "generate voice-over",
-              "preview and publish the project"
+            "title": "Edit",
+            "detail": "Content and subtitles."
+          },
+          {
+            "title": "Translate",
+            "detail": "Translations and pronunciations."
+          },
+          {
+            "title": "Generate",
+            "detail": "Voice-over."
+          },
+          {
+            "title": "Preview and publish",
+            "detail": "Review and publish the project."
+          }
+        ],
+        "workflowLabel": "PRODUCT CHALLENGE",
+        "workflow": "Make a workflow involving multiple languages, media and processing states understandable while keeping the editing experience fluid.",
+        "technicalContext": "Video projects relied on a complex JSON structure combining sequences, media, timings, subtitles, translations, voice-overs and animations. The editor and player both had to interpret and evolve this same representation consistently.",
+        "outcomes": [
+          {
+            "title": "Delivered product",
+            "text": "Editor designed, developed and deployed to production."
+          },
+          {
+            "title": "One source project",
+            "text": "Multiple language versions without rebuilding each video."
+          },
+          {
+            "title": "End to end",
+            "text": "Architecture, interface, background processing, integrations and CI/CD."
+          }
+        ],
+        "conclusion": "The editor enabled users to create and publish multilingual videos in minutes from a single source project.",
+        "stackSummary": "Long-running processing ran in the background, while external services provided translation, speech synthesis and media storage.",
+        "stackPanels": [
+          {
+            "label": "APPLICATION",
+            "groups": [
+              {
+                "label": "Interface",
+                "technologies": [
+                  "JavaScript"
+                ]
+              },
+              {
+                "label": "Backend and data",
+                "technologies": [
+                  "Ruby on Rails",
+                  "PostgreSQL",
+                  "JSON modelling"
+                ]
+              },
+              {
+                "label": "Background processing",
+                "technologies": [
+                  "Sidekiq",
+                  "Redis"
+                ]
+              }
             ]
           },
           {
-            "title": "Outcome",
-            "text": "The editor was delivered to production and enabled users to create and publish multilingual videos in minutes from a single source project. The work covered architecture, the editing experience, external integrations and CI/CD delivery.",
-            "items": []
+            "label": "SERVICES & DELIVERY",
+            "groups": [
+              {
+                "label": "Translation and voice",
+                "technologies": [
+                  "Azure Translator",
+                  "Azure Text-to-Speech"
+                ]
+              },
+              {
+                "label": "Media and storage",
+                "technologies": [
+                  "AWS S3"
+                ]
+              },
+              {
+                "label": "Deployment",
+                "technologies": [
+                  "Heroku",
+                  "CI/CD"
+                ]
+              }
+            ]
           }
         ]
       }
     },
     "secondary": [
       {
-        "id": "trip-and-share-project", "modifier": "trip",
-        "image": { "src": "images/tripshare-resources.webp", "width": 1600, "height": 1000, "alt": "Trip&Share catalogue showing filters and several free or paid digital resources." },
-        "label": "Personal project · Content platform", "title": "Trip&Share",
-        "description": "A content and resources platform combining editorial management, digital products, and Stripe integration currently in progress.",
+        "id": "trip-and-share-project",
+        "modifier": "trip",
+        "image": {
+          "src": "images/tripshare-resources.webp",
+          "width": 1600,
+          "height": 1000,
+          "alt": "Trip&Share catalogue showing filters and several free or paid digital resources."
+        },
+        "label": "Personal project · Editorial CMS",
+        "title": "Trip&Share",
+        "description": "An editorial CMS combining content, a resource catalogue and digital products, with Stripe payments integrated.",
         "stack": "Ruby on Rails · PostgreSQL · JavaScript · Stripe",
-        "link": { "href": "images/tripshare-resources.webp", "label": "View project →", "external": true }
+        "link": {
+          "href": "images/tripshare-resources.webp",
+          "label": "View case study →",
+          "external": true
+        },
+        "caseStudy": {
+          "id": "tripshare-case-study",
+          "logo": {
+            "src": "images/Trip&Share_logo.png",
+            "alt": "Trip&Share",
+            "className": "experience-logo--brand-tile"
+          },
+          "label": "Personal project · Editorial CMS",
+          "title": "Trip&Share | Content & resources",
+          "meta": "Product design & full-stack development",
+          "actionLabel": "View the Trip&Share case study — Content & resources",
+          "closeLabel": "Close case study",
+          "navigationLabel": "Case study steps",
+          "tabs": [
+            "Overview",
+            "Concept",
+            "The product",
+            "Stack",
+            "Progress"
+          ],
+          "intro": "Trip&Share is an editorial CMS for digital nomads. It brings articles, practical resources and digital products together in a coherent journey, from discovering a need to downloading or purchasing a resource.",
+          "caption": "Articles, tools and practical resources brought together in one journey.",
+          "conceptPanels": [
+            {
+              "label": "CONTEXT",
+              "title": "The need",
+              "text": "Information for digital nomads is often scattered across articles, tools and downloadable resources. The goal was to bring it together in a coherent space that is easy to explore and addresses concrete needs."
+            },
+            {
+              "label": "PROPOSITION",
+              "title": "The response",
+              "text": "Trip&Share brings editorial content, a catalogue of free or paid resources and a Stripe payment journey together in a single CMS. Users can gradually move from information to a directly usable resource."
+            }
+          ],
+          "productTitle": "From content to action",
+          "workflowSteps": [
+            {
+              "title": "Learn",
+              "detail": "Read articles about travel and remote work."
+            },
+            {
+              "title": "Explore",
+              "detail": "Browse a catalogue of resources suited to different needs."
+            },
+            {
+              "title": "Filter",
+              "detail": "Quickly identify the resource type and whether it is free or paid."
+            },
+            {
+              "title": "Obtain",
+              "detail": "Download a free resource or purchase a digital product through Stripe."
+            }
+          ],
+          "workflowLabel": "PRODUCT CHALLENGE",
+          "workflow": "Connect editorial content, resources and payment in a single experience, without making it feel like a blog and a shop placed side by side.",
+          "stackGroups": [
+            {
+              "label": "Backend",
+              "technologies": [
+                "Ruby on Rails",
+                "PostgreSQL"
+              ]
+            },
+            {
+              "label": "Frontend",
+              "technologies": [
+                "HTML",
+                "CSS / SCSS",
+                "JavaScript"
+              ]
+            },
+            {
+              "label": "Payment",
+              "technologies": [
+                "Stripe"
+              ]
+            },
+            {
+              "label": "Internationalisation",
+              "technologies": [
+                "Rails I18n",
+                ".yml files",
+                "FR / EN interface"
+              ]
+            }
+          ],
+          "progressTitle": "A CMS ready to evolve",
+          "progressPanels": [
+            {
+              "label": "DEVELOPED FOUNDATION",
+              "title": "An already functional CMS"
+            },
+            {
+              "label": "NEXT PHASE",
+              "title": "Launch and automation"
+            }
+          ],
+          "progressTiles": [
+            {
+              "title": "Pages & content"
+            },
+            {
+              "title": "Catalogue & formats"
+            },
+            {
+              "title": "Free / paid"
+            },
+            {
+              "title": "Featured resources"
+            },
+            {
+              "title": "Stripe payments"
+            },
+            {
+              "title": "FR / EN interface"
+            }
+          ],
+          "progressSteps": [
+            {
+              "title": "Production",
+              "detail": "Deployment and payment validation"
+            },
+            {
+              "title": "Translation",
+              "detail": "Assisted content translation"
+            },
+            {
+              "title": "Affiliation",
+              "detail": "Links tailored to the country and market"
+            },
+            {
+              "title": "Enrichment",
+              "detail": "Connections between articles and resources"
+            }
+          ]
+        }
       },
       {
-        "id": "recipe-matcher-project", "modifier": "recipe",
-        "image": { "src": "images/recipe-matcher-best-matches.webp", "width": 2880, "height": 1512, "alt": "RecipeMatcher results showing several recipes that can be made immediately with the available ingredients." },
-        "label": "Personal project · Data & search", "title": "RecipeMatcher",
+        "id": "recipe-matcher-project",
+        "modifier": "recipe",
+        "image": {
+          "src": "images/recipe-matcher-best-matches.webp",
+          "width": 2880,
+          "height": 1512,
+          "alt": "RecipeMatcher results showing several recipes that can be made immediately with the available ingredients."
+        },
+        "label": "Personal project · Data & performance",
+        "title": "RecipeMatcher",
         "description": "A Rails application that ranks recipes by available ingredients and identifies those that can be made immediately.",
-        "stack": "Rails · PostgreSQL · JavaScript · Render",
-        "link": { "href": "#technical-focus", "label": "View project →", "external": false }
+        "stack": "Ruby on Rails · PostgreSQL · SQL · JSON",
+        "link": {
+          "href": "#technical-focus",
+          "label": "View case study →",
+          "external": false
+        },
+        "caseStudy": {
+          "id": "recipe-matcher-case-study",
+          "logo": {
+            "src": "",
+            "alt": ""
+          },
+          "label": "Personal project · Data & performance",
+          "title": "RecipeMatcher | Ingredient-based recipe search and ranking",
+          "meta": "Product design & full-stack development",
+          "actionLabel": "View the RecipeMatcher case study — Ingredient-based recipe search and ranking",
+          "closeLabel": "Close case study",
+          "navigationLabel": "Case study steps",
+          "tabs": [
+            "Overview",
+            "Matching",
+            "Optimisation",
+            "Stack",
+            "Progress"
+          ],
+          "intro": "RecipeMatcher is a Rails application that helps users find what to cook with the ingredients they have. It distinguishes recipes they can make immediately and ranks the others by compatibility with their pantry contents.",
+          "caption": "The most relevant recipes appear first, with a clear distinction for those that can be made immediately.",
+          "productTitle": "From ingredients to the best recipes",
+          "workflowSteps": [
+            {
+              "title": "Enter",
+              "detail": "Specify the available ingredients."
+            },
+            {
+              "title": "Compare",
+              "detail": "Evaluate how well they match each recipe."
+            },
+            {
+              "title": "Distinguish",
+              "detail": "Identify recipes that can be made immediately."
+            },
+            {
+              "title": "Rank",
+              "detail": "Order results by relevance."
+            }
+          ],
+          "workflowLabel": "PRODUCT CHALLENGE",
+          "workflow": "Turn a matching calculation into immediately understandable results, without asking users to interpret the data themselves.",
+          "stackGroups": [
+            {
+              "label": "Backend",
+              "technologies": [
+                "Ruby on Rails",
+                "PostgreSQL"
+              ]
+            },
+            {
+              "label": "Frontend",
+              "technologies": [
+                "JavaScript",
+                "Stimulus",
+                "Importmap"
+              ]
+            },
+            {
+              "label": "Data & performance",
+              "technologies": [
+                "Composite index",
+                "insert_all!",
+                "JSON dataset"
+              ]
+            },
+            {
+              "label": "Deployment",
+              "technologies": [
+                "Render"
+              ]
+            }
+          ],
+          "overviewContext": "Instead of searching by dish or keyword, RecipeMatcher starts with an everyday question: what can I cook with the ingredients I already have?",
+          "optimization": {
+            "metrics": [
+              {
+                "title": "Recipes",
+                "text": "10,013 recipes"
+              },
+              {
+                "title": "Associations",
+                "text": "93,507 associations"
+              },
+              {
+                "title": "Ranking",
+                "text": "~261 ms → ~81 ms",
+                "before": "~261 ms",
+                "after": "~81 ms",
+                "gain": "3.2× faster",
+                "multiplier": "3.2×",
+                "gainLabel": "faster",
+                "reduction": "Execution time reduced by 69%"
+              },
+              {
+                "title": "Counting",
+                "text": "~39.7 ms → ~5.8 ms",
+                "before": "~39.7 ms",
+                "after": "~5.8 ms",
+                "gain": "6.8× faster",
+                "multiplier": "6.8×",
+                "gainLabel": "faster",
+                "reduction": "Execution time reduced by 85%"
+              },
+              {
+                "title": "Import",
+                "text": "~124 s → ~25.8 s",
+                "before": "~124 s",
+                "after": "~25.8 s",
+                "gain": "4.8× faster",
+                "multiplier": "4.8×",
+                "gainLabel": "faster",
+                "reduction": "Execution time reduced by 79%"
+              },
+              {
+                "title": "Autocomplete",
+                "text": "~2–7 ms"
+              }
+            ],
+            "measurementNote": "Measurements taken locally on a dataset of 10,013 recipes and 93,507 associations.",
+            "axesTitle": "Technical levers",
+            "axes": [
+              {
+                "title": "SQL matching",
+                "technologies": [
+                  "SQL preselection using CTEs",
+                  "Composite index",
+                  "Separate counting query"
+                ]
+              },
+              {
+                "title": "Batch import",
+                "technologies": [
+                  "Batches of 500",
+                  "insert_all!",
+                  "Transactions",
+                  "Ingredient preloading"
+                ]
+              },
+              {
+                "title": "Reliability",
+                "technologies": [
+                  "Normalised inputs",
+                  "Bounded pagination",
+                  "Sanitised SQL",
+                  "Expanded tests"
+                ]
+              }
+            ],
+            "datasetLabel": "DATASET",
+            "gainsTitle": "Measured performance",
+            "contextLabel": "LOCAL MEASUREMENTS",
+            "autocompleteValue": "2 to 7 ms"
+          },
+          "progressPanels": [
+            {
+              "label": "ALREADY DEVELOPED",
+              "title": "An optimised foundation"
+            },
+            {
+              "label": "NEXT STEPS",
+              "title": "Strengthen and extend"
+            }
+          ],
+          "progressTiles": [
+            {
+              "title": "Optimised SQL matching"
+            },
+            {
+              "title": "Composite index"
+            },
+            {
+              "title": "Batch import"
+            },
+            {
+              "title": "Enhanced normalisation"
+            },
+            {
+              "title": "Backend autocomplete"
+            },
+            {
+              "title": "Stimulus interface"
+            },
+            {
+              "title": "Strengthened test coverage"
+            }
+          ],
+          "progressSteps": [
+            {
+              "title": "Import",
+              "detail": "Idempotent reimport and invalid data handling"
+            },
+            {
+              "title": "Ingredients",
+              "detail": "Taxonomy, aliases and canonical ingredients"
+            },
+            {
+              "title": "Volumes",
+              "detail": "File streaming and measurements on larger volumes"
+            },
+            {
+              "title": "Interface",
+              "detail": "Accessibility and error states"
+            }
+          ]
+        }
       }
     ]
   },
   "technicalFocus": {
     "title": "Engineering Focus",
-    "intro": "I use personal projects and technical sandboxes to deepen my work on performance, reliability, security, and maintainability in Rails applications.",
+    "intro": "Drawing on production products and personal projects, I continue to deepen my expertise in SQL performance, data processing, modelling and asynchronous workflows in Rails.",
     "topicLabel": "Topic",
     "positionSeparator": "of",
     "slideRoleDescription": "topic",
@@ -179,39 +623,46 @@
     "nextLabel": "Show next topic",
     "items": [
       {
-        "carouselLabel": "01 Data",
-        "title": "Data & performance",
-        "description": "SQL, PostgreSQL indexing, N+1 detection, and application profiling.",
-        "keywords": ["PostgreSQL", "Indexing", "N+1"],
-        "proof": { "label": "Practical application", "title": "RecipeMatcher", "description": "Importing and cleaning around 10,000 JSON recipes, with ingredient search optimized in PostgreSQL.", "link": { "href": "#recipe-matcher-project", "label": "View project" } }
+        "carouselLabel": "01 SQL",
+        "title": "SQL matching & performance",
+        "description": "Reduce the volume of data processed before calculating and ranking results.",
+        "keywords": ["CTE", "Composite index", "EXPLAIN ANALYZE"],
+        "proof": { "label": "PRACTICAL APPLICATION", "title": "RecipeMatcher", "description": "Candidate recipe preselection, a separate count query and a composite index reduced ranking time from about 261 ms to 81 ms and counting from 39.7 ms to 5.8 ms.", "link": { "href": "#recipe-matcher-project", "label": "View case study →", "dialogId": "recipe-matcher-case-study", "tabIndex": 2 } }
       },
       {
-        "carouselLabel": "02 Reliability",
-        "title": "Reliability & security",
-        "description": "Transactions, idempotency, error handling, and application security.",
-        "keywords": ["Transactions", "Idempotency", "Security"],
-        "proof": { "label": "Practical application", "title": "DRIME", "description": "Sidekiq, Redis, and resolving production issues.", "link": { "href": "#experience", "label": "View experience" } }
+        "carouselLabel": "02 Imports",
+        "title": "Importing a catalogue in batches",
+        "description": "Process a JSON dataset without multiplying individual inserts and unnecessary loads.",
+        "keywords": ["Batches of 500", "insert_all!", "Transactions"],
+        "proof": { "label": "PRACTICAL APPLICATION", "title": "RecipeMatcher", "description": "Importing 10,013 recipes and 93,507 associations, with local processing time reduced from about 124 seconds to 25.8 seconds.", "link": { "href": "#recipe-matcher-project", "label": "View case study →", "dialogId": "recipe-matcher-case-study" } }
       },
       {
-        "carouselLabel": "03 Architecture",
-        "title": "Architecture & quality",
-        "description": "Refactoring, testing, and observability for maintainable Rails applications.",
-        "keywords": ["Refactoring", "Testing", "Observability"],
-        "proof": { "label": "Practical application", "title": "Pickaden", "description": "MVP stabilization, Capybara tests, and faster page loads.", "link": { "href": "#experience", "label": "View experience" } }
+        "carouselLabel": "03 Modelling",
+        "title": "A shared video model",
+        "description": "Evolve a data structure shared by the editor and player without breaking their consistency.",
+        "keywords": ["JSON", "Rails", "JavaScript"],
+        "proof": { "label": "PRODUCTION APPLICATION", "title": "DRIME", "description": "A complex JSON structure grouped sequences, media, timings, subtitles, translations, voice-overs and animations for both interfaces to interpret.", "link": { "href": "#drime-project", "label": "View case study →", "dialogId": "drime-editor-case-study" } }
       },
       {
-        "carouselLabel": "04 Backend",
-        "title": "Backend exploration",
-        "description": "Deepening my Python skills and exploring other backend technologies.",
-        "keywords": ["Python", "Backend", "Experiments"],
-        "proof": { "label": "Practice", "title": "Technical sandboxes", "description": "Hands-on learning through personal projects and experiments.", "link": null }
+        "carouselLabel": "04 Asynchronous",
+        "title": "Orchestrating media processing",
+        "description": "Decouple long-running operations from the interface and coordinate processing, external services and storage.",
+        "keywords": ["Sidekiq", "Redis", "Azure"],
+        "proof": { "label": "PRODUCTION APPLICATION", "title": "DRIME", "description": "Translations and voice-over generation ran in the background with Sidekiq and Redis, using Azure services and AWS S3 storage.", "link": { "href": "#drime-project", "label": "View case study →", "dialogId": "drime-editor-case-study" } }
+      },
+      {
+        "carouselLabel": "05 Tests",
+        "title": "Safeguarding business logic",
+        "description": "Test data processing and critical behaviours so the application can evolve without introducing regressions.",
+        "keywords": ["Automated tests", "Import", "SQL matching"],
+        "proof": { "label": "PRACTICAL APPLICATION", "title": "RecipeMatcher", "description": "A test suite covers the application’s main processing paths, including data imports, recipe matching and related behaviours.", "link": { "href": "#recipe-matcher-project", "label": "View case study →", "dialogId": "recipe-matcher-case-study" } }
       }
     ]
   },
   "experiences": {
     "title": "Professional Experience",
     "stackTitle": "Technical stack",
-    "viewLabel": "View experience",
+    "viewLabel": "View experience →",
     "dialog": {
       "closeLabel": "Close experience",
       "sectionsLabel": "Experience sections",
@@ -221,40 +672,320 @@
     "summaries": {
       "drime": {
         "key": "drime",
-        "dialogTabKeys": ["overview", "stack", "player", "editor", "results"],
-        "contentTemplate": "content/en/experiences/drime.njk",
+        "dialogTabKeys": ["overview", "stack", "demos", "player", "editor", "results"],
+        "contentTemplate": "components/drime-experience.njk",
         "logo": { "src": "images/drime-new.png", "alt": "DRIME", "className": "" },
         "role": "Full-Stack Rails Developer / Product Engineer",
         "meta": "Feb 2021 — Apr 2024 · Permanent contract · Remote",
-        "dialogTabs": ["Overview", "Technical stack", "DRIME Player", "Video editor", "Results"]
+        "description": "Multilingual video editor — full-stack design and development of complex video features.",
+        "keywords": ["Rails", "Sidekiq", "JavaScript"],
+        "dialogTabs": ["Overview", "Technical stack", "Demos", "DRIME Player", "Video editor", "Results"]
       },
       "pickaden": {
         "key": "pickaden",
         "dialogTabKeys": ["overview", "stack", "journeys", "contributions", "results"],
-        "contentTemplate": "content/en/experiences/pickaden.njk",
+        "contentTemplate": "components/pickaden-experience.njk",
         "logo": { "src": "images/PickadenHD.png", "alt": "Pickaden", "className": "experience-logo-pickaden" },
-        "role": "Full-Stack Ruby On Rails Developer",
+        "role": "Full-Stack Ruby on Rails Developer",
         "meta": "Mar 2020 — Feb 2021 · Freelance · Remote",
+        "description": "Childcare management SaaS — development of business features, testing and application optimisation.",
+        "keywords": ["Rails", "PostgreSQL", "RSpec / Capybara"],
         "dialogTabs": ["Overview", "Technical stack", "User journeys", "Contributions", "Results"]
+      }
+    },
+    "demos": {
+      "drime": {
+        "actionLabel": "Watch video",
+        "closeLabel": "Close",
+        "items": [
+          {
+            "title": "Multilingual video editor",
+            "description": "Video creation using media, subtitles, translations, voice-overs and animations, with processing progress for each language.",
+            "duration": "2:00",
+            "src": "images/drime-editor.mp4?v=20260919-2",
+            "poster": "images/drime-editor-cover.webp",
+            "alt": "Preview of the DRIME multilingual video editor.",
+            "playerLabel": "DRIME multilingual video editor demonstration"
+          },
+          {
+            "title": "Library and administration",
+            "description": "Content and administration management across the library, metrics, QR codes, integrations and application settings.",
+            "duration": "1:22",
+            "src": "images/drime-library-admin.mp4",
+            "poster": "images/drime-library-admin-cover.webp",
+            "alt": "Preview of the DRIME library and administration interfaces.",
+            "playerLabel": "DRIME library and administration demonstration"
+          },
+          {
+            "title": "Product interface and animations",
+            "description": "Frontend implementation of an interface created by the designer, including product interactions, transitions and animations.",
+            "duration": "0:16",
+            "src": "images/Drime Public Website.mp4",
+            "poster": "images/drime-public-website-cover.webp",
+            "alt": "Preview of the DRIME public interface and its animations.",
+            "playerLabel": "DRIME product interface and animations demonstration"
+          }
+        ]
+      }
+    },
+    "drimeContent": {
+      "overview": {
+        "kicker": "Context & role",
+        "title": "Product overview",
+        "text": "DRIME is a responsive, multilingual, interactive, embeddable video player with no cookies, plus an integrated video editor. It relies on a custom .drime JSON-based format that enables playback in multiple languages (subtitles, voiceovers, dynamic designs) from a single video file. This reduces production time, storage costs, and the ecological footprint associated with file storage (one hosted video per project, one DRIME file per project)."
+      },
+      "player": {
+        "view": "player",
+        "kicker": "01 · Case study",
+        "title": "DRIME Player & .drime file format",
+        "intro": "The DRIME Player delivers a single interactive, multilingual video format that adapts to different screens and can be embedded in client websites.",
+        "markersLabel": "DRIME Player characteristics",
+        "markers": ["Responsive", "Multilingual", "Interactive", "Embeddable"],
+        "audiences": [
+          {
+            "label": "Product side",
+            "title": "For professional clients",
+            "items": [
+              { "label": "Production:", "text": "tutorials filmed by the DRIME team and optimised for every screen resolution." },
+              { "label": "Multilingual delivery:", "text": "voice-overs, subtitles, dynamic designs and voice commands in selected languages, with tutorials split into step-by-step sequences." },
+              { "label": "Distribution:", "text": "individual videos or full libraries embedded through iframes on client websites and indexed by Google." },
+              { "label": "Management:", "text": "Smart Indicators dashboard, user rights, custom iframes and QR codes, with dynamic video designs implemented in production." }
+            ]
+          },
+          {
+            "label": "Playback side",
+            "title": "For end users",
+            "items": [
+              { "label": "Adaptive playback:", "text": "resolution-aware display, continuous or step-by-step playback, voice commands, and sound and subtitle settings." },
+              { "label": "Step-by-step tutorials:", "text": "videos can be split into multiple steps, allowing users to move freely from one step to another." },
+              { "label": "Language:", "text": "manual selection or automatic display in the browser language when available, with English as the fallback." }
+            ]
+          }
+        ],
+        "achievementsTitle": "Key achievements — Player",
+        "achievementTagsLabel": "Technologies and topics",
+        "achievements": [
+          {
+            "number": "01",
+            "title": "Player and user experience",
+            "summary": "Evolve the player and the platform's main user journeys.",
+            "tags": ["Full stack", "Lottie", "UX"],
+            "items": [
+              { "label": "Full stack", "text": "Developed new features end to end across the front end and back end." },
+              { "label": "Player", "text": "Persistent sound and subtitle settings, CSS and Lottie button animations, step counters and improved voice commands." },
+              { "label": "Homepage", "text": "Redesigned the homepage with Lottie animations and created the menu." },
+              { "label": "Authentication", "text": "Redesigned registration and login pages." },
+              { "label": "Pages", "text": "Redesigned error pages and created pricing, legal notice and privacy policy pages." },
+              { "label": "Landing page", "text": "Created a second landing page." }
+            ]
+          },
+          {
+            "number": "02",
+            "title": "Multilingual delivery and reliability",
+            "summary": "Make multilingual generation and its background processing more reliable.",
+            "tags": ["Multilingual", "Background jobs", "Scalability"],
+            "items": [
+              { "label": "Processing", "text": "Fixed crashes beyond five videos with a background job for multilingual generation, then redesigned the pipeline for better scalability." },
+              { "label": "Dynamic designs", "text": "Implemented multilingual dynamic video designs." }
+            ]
+          },
+          {
+            "number": "03",
+            "title": "Libraries, distribution and analytics",
+            "summary": "Structure content distribution and the associated monitoring tools.",
+            "tags": ["Libraries", "Analytics", "Iframes"],
+            "items": [
+              { "label": "Libraries", "text": "Created a new type, redesigned the existing library and evolved the data model to support custom client designs at scale." },
+              { "label": "Analytics", "text": "Built Smart Indicators with dashboards, rankings, charts, averages and percentages." },
+              { "label": "Iframes", "text": "Built a custom generator with logo, banner, menu, filters, forced language and Smart Indicator code copy." },
+              { "label": "QR codes", "text": "Built a generator with colours, size, format, Smart Indicator and download options." }
+            ]
+          },
+          {
+            "number": "04",
+            "title": "Rights and administration",
+            "summary": "Give teams the tools required to manage access and visual designs.",
+            "tags": ["Rights", "Super Admin", "JSON"],
+            "items": [
+              { "label": "Rights and favourites", "text": "Complete redesign with a mini email search engine." },
+              { "label": "Super Admin", "text": "Built a dashboard to create and edit design types and directly create, read and edit JSON animation files." }
+            ]
+          }
+        ]
+      },
+      "editor": {
+        "view": "editor",
+        "kicker": "02 · Case study",
+        "title": "DRIME Video Editor",
+        "intro": "A standalone editor for creating slideshows from short videos or photos with customisable transitions. Distinct from the player, it remains multilingual, responsive, interactive, embeddable, and lightweight.",
+        "markersLabel": "DRIME Video Editor characteristics",
+        "markers": ["Fast creation", "Multilingual", "Real time", "Embeddable"],
+        "audiences": [
+          {
+            "label": "Creation side",
+            "title": "Fast production",
+            "items": [
+              { "label": "Initial project:", "text": "create and publish a video in about 5 minutes when media and copy are prepared." },
+              { "label": "New language:", "text": "add voice-overs, subtitles, and translations in about 2 minutes." },
+              { "label": "Customization:", "text": "add logos, soundtracks, designs, and transitions." }
+            ]
+          },
+          {
+            "label": "Distribution side",
+            "title": "Immediate publishing",
+            "items": [
+              { "label": "Multilingual video:", "text": "complete production in about 10 minutes with minimal preparation." },
+              { "label": "Publishing:", "text": "preview, save as a draft, or publish immediately." },
+              { "label": "Embedding:", "text": "distribute through an iframe with a single line of code or present it on the DRIME platform." }
+            ]
+          }
+        ],
+        "achievementsTitle": "Key achievements — Editor",
+        "achievementTagsLabel": "Technologies and topics",
+        "achievements": [
+          {
+            "number": "01",
+            "title": "Product foundation and project lifecycle",
+            "summary": "Design the editor and structure the full lifecycle of video projects.",
+            "tags": ["Full stack", "Rails", "AWS"],
+            "items": [
+              { "label": "Editor", "text": "Built the DRIME Video Editor from scratch across the front end and back end." },
+              { "label": "Projects", "text": "Created user projects and generated the required DRIME files." },
+              { "label": "Lifecycle", "text": "Managed temporary, draft, and published statuses." },
+              { "label": "Storage", "text": "Automated reading and writing DRIME files on AWS." },
+              { "label": "Application foundation", "text": "Created the application's standard static pages." }
+            ]
+          },
+          {
+            "number": "02",
+            "title": "Editing experience",
+            "summary": "Provide a complete creation journey with immediate previews of each change.",
+            "tags": ["UX", "Real time", "Responsive"],
+            "items": [
+              { "label": "Editing options", "text": "Selected project settings, designs, and responsive behaviour." },
+              { "label": "Real-time previews", "text": "Displayed effects immediately when selected." },
+              { "label": "Preview", "text": "Provided a complete project preview before publishing." },
+              { "label": "Management", "text": "Saved drafts and enabled editing, duplication, publishing, and deletion of projects." },
+              { "label": "Landing page", "text": "Created an animated homepage with a scroll-driven timeline, parallax, and other effects." }
+            ]
+          },
+          {
+            "number": "03",
+            "title": "Multilingual content, voice, and translation",
+            "summary": "Automate multilingual versions while keeping clients in control.",
+            "tags": ["Azure TTS", "Azure Translator", "Voice-over"],
+            "items": [
+              { "label": "Text-to-Speech", "text": "Integrated Azure Text-to-Speech to generate voice-overs." },
+              { "label": "Voice selection", "text": "Added gender and region filters, with a sample available in each language." },
+              { "label": "Pronunciations", "text": "Added, edited, and deleted custom pronunciations." },
+              { "label": "Translations", "text": "Integrated Azure Translator to translate projects." },
+              { "label": "Corrections", "text": "Allowed clients to manually correct generated translations." }
+            ]
+          },
+          {
+            "number": "04",
+            "title": "Workspaces and infrastructure",
+            "summary": "Provide the required administration spaces and support the infrastructure's evolution.",
+            "tags": ["Super Admin", "Docker", "CI/CD"],
+            "items": [
+              { "label": "Super Admin", "text": "Created a space for managing clients and their projects." },
+              { "label": "Client area", "text": "Built an interface to list, create, edit, duplicate, publish, and delete projects." },
+              { "label": "Initial environment", "text": "Set up the project on Heroku and installed the repository on GitHub." },
+              { "label": "Migration", "text": "Migrated to GitLab, Docker, and AWS in collaboration with an independent architect." }
+            ]
+          }
+        ]
+      },
+      "results": {
+        "label": "Results:",
+        "text": "Delivered a production-grade platform that lets users build and publish multilingual videos in minutes from a single source file, while improving stability and scalability (pipeline rebuilt with background jobs; model refactors; new dashboards and generators)."
+      }
+    },
+    "pickadenContent": {
+      "overview": {
+        "kicker": "Context & role",
+        "title": "Product overview",
+        "paragraphs": [
+          "Pickaden is a Paris-based startup offering a SaaS platform for real-time management and booking of childcare services.",
+          "I independently developed and stabilized the MVP, from its Rails backend to its interfaces and user journeys."
+        ]
+      },
+      "journeys": {
+        "kicker": "01 · Product",
+        "title": "Professional and parent journeys",
+        "audiences": [
+          {
+            "label": "For professionals",
+            "title": "Childcare service management",
+            "items": [
+              { "label": "Scheduling:", "text": "manage and optimize childcare schedules." },
+              { "label": "Requests:", "text": "receive, accept, or decline parent requests according to real-time availability." },
+              { "label": "Profile:", "text": "publish and maintain an online profile." }
+            ]
+          },
+          {
+            "label": "For parents",
+            "title": "Search and requests",
+            "items": [
+              { "label": "Search:", "text": "find available childcare institutions near a given address." },
+              { "label": "Requests:", "text": "submit childcare requests online." },
+              { "label": "Personal area:", "text": "create and manage a personal dashboard and profile." }
+            ]
+          }
+        ]
+      },
+      "contributions": {
+        "kicker": "02 · Contributions",
+        "title": "Key achievements",
+        "tagsLabel": "Technologies and practices",
+        "tags": ["Rails", "Capybara", "SQL", "UX/UI"],
+        "items": [
+          { "label": "Full stack", "text": "Developed features end to end, including the parent area, childcare requests, and the management area for institutions." },
+          { "label": "Stabilisation", "text": "Debugged the initial MVP, improved responsiveness across the site, and optimised loading times, particularly for images." },
+          { "label": "Search & UX", "text": "Redesigned the main search with filters, a new interface, and automatic search after filter validation." },
+          { "label": "Interfaces", "text": "Created the help page with keyword search, added a logo carousel, and expanded the administration interface." },
+          { "label": "Quality & communication", "text": "Wrote Capybara system tests and implemented email delivery." },
+          { "label": "Data & migration", "text": "Wrote SQL queries for KPI analysis and prepared the technical migration from Woonies to Pickaden." }
+        ]
+      },
+      "results": {
+        "label": "Results:",
+        "text": "Delivery and stabilisation of a SaaS MVP covering the main journeys for childcare professionals and parents. I developed features end to end, strengthened the user journeys with RSpec and Capybara tests, and improved several loading times, particularly for images."
+      }
+    },
+    "galleries": {
+      "pickaden": {
+        "view": "journeys",
+        "image": {
+          "src": "images/Pickaden1.jpg",
+          "width": 3840,
+          "height": 2513,
+          "alt": "Childcare search results with detailed filters and a map of providers around Paris."
+        },
+        "caption": "Search for a childcare provider by location, availability, and care criteria."
       }
     },
     "stacks": {
       "drime": {
         "key": "drime",
         "groups": [
-          { "label": "Backend & data", "technologies": "Ruby on Rails · PostgreSQL · SQL" },
-          { "label": "Frontend", "technologies": "JavaScript ES6 · jQuery · HTML · CSS/SCSS" },
-          { "label": "Services & infrastructure", "technologies": "JSON · AWS · Heroku · Azure APIs · Docker" },
-          { "label": "Product & tools", "technologies": "Figma · Git · GitHub · GitLab" }
+          { "label": "Backend & data", "technologies": ["Ruby on Rails","PostgreSQL","JSON modelling"] },
+          { "label": "Frontend", "technologies": ["JavaScript ES6","jQuery","HTML","CSS/SCSS"] },
+          { "label": "Background processing", "technologies": ["Sidekiq","Redis"] },
+          { "label": "Translation & voice", "technologies": ["Azure Translator","Azure Text-to-Speech"] },
+          { "label": "Media & storage", "technologies": ["AWS S3"] },
+          { "label": "Deployment & production", "technologies": ["Heroku","Docker","Kubernetes environment","CI/CD"] },
+          { "label": "Product & tools", "technologies": ["Figma","Git","GitHub","GitLab"] }
         ]
       },
       "pickaden": {
         "key": "pickaden",
         "groups": [
-          { "label": "Backend & data", "technologies": "Ruby on Rails · PostgreSQL · SQL" },
-          { "label": "Frontend", "technologies": "JavaScript · HTML · CSS" },
-          { "label": "Services & infrastructure", "technologies": "Heroku · AWS · Sendinblue" },
-          { "label": "Product & tools", "technologies": "Figma · Git · GitHub · WordPress" }
+          { "label": "Backend & data", "technologies": ["Ruby on Rails","PostgreSQL","SQL"] },
+          { "label": "Frontend & content", "technologies": ["JavaScript","HTML","CSS","WordPress"] },
+          { "label": "Tests", "technologies": ["RSpec","Capybara"] },
+          { "label": "Services & infrastructure", "technologies": ["Heroku","AWS","Sendinblue","Sentry"] },
+          { "label": "Product & tools", "technologies": ["Figma","Git","GitHub"] }
         ]
       }
     }
@@ -266,24 +997,33 @@
         "modifier": "recipe",
         "mediaHref": "#recipe-matcher-project",
         "mediaLabel": "View RecipeMatcher in Selected Work",
-        "image": { "src": "images/recipe-matcher-results.webp", "width": 1600, "height": 900, "alt": "RecipeMatcher search showing available ingredients and the first matching result." },
-        "label": "Technical case study · Local private project",
+        "image": { "src": "images/recipe-matcher-best-matches.webp", "width": 2880, "height": 1512, "alt": "RecipeMatcher results ranked by compatibility with the available ingredients." },
+        "label": "Personal project · Data & performance",
         "title": "RecipeMatcher",
-        "description": "Ingredient-based recipe search using Rails, PostgreSQL, and JSON data processing.",
-        "stack": "Rails · PostgreSQL · SQL · JSON",
-        "action": { "href": "#recipe-matcher-project", "label": "View project →" },
+        "description": "Recipe search and ranking based on available ingredients, across a catalogue of more than 10,000 recipes.",
+        "stack": "Ruby on Rails · PostgreSQL · SQL · JSON",
+        "action": { "href": "#recipe-matcher-project", "label": "View case study →", "dialogId": "recipe-matcher-case-study" },
         "status": null
       },
       {
         "modifier": "blog",
         "mediaHref": "#trip-and-share-project",
         "mediaLabel": "View Trip&Share Blog in Selected Work",
-        "image": { "src": "images/tripshare-blog-homepage.webp", "width": 2880, "height": 1800, "alt": "Trip&Share Blog homepage featuring travel guides and remote work resources." },
-        "label": "Personal product · Editorial platform",
-        "title": "Trip&Share Blog",
-        "description": "Blog and resource catalogue combining editorial management, digital products, and Stripe payment integration in progress.",
-        "stack": "Rails · PostgreSQL · JavaScript · Stripe",
-        "action": { "href": "#trip-and-share-project", "label": "View project →" },
+        "image": {
+          "src": "images/tripshare-blog-homepage.webp",
+          "width": 2880,
+          "height": 1800,
+          "alt": "Trip&Share Blog homepage featuring travel guides and remote work resources."
+        },
+        "label": "Personal project · Editorial CMS",
+        "title": "Trip&Share | Blog",
+        "description": "A bilingual CMS bringing together content, resources and digital products, with Stripe payments integrated.",
+        "stack": "Ruby on Rails · PostgreSQL · JavaScript · Stripe",
+        "action": {
+          "href": "#trip-and-share-project",
+          "label": "View case study →",
+          "dialogId": "tripshare-case-study"
+        },
         "status": null
       },
       {
@@ -291,18 +1031,89 @@
         "mediaHref": null,
         "mediaLabel": null,
         "image": { "src": "images/ridesharing-nz-homepage.webp", "width": 1584, "height": 1034, "alt": "Trip&Share | RideShare homepage showing its ride search form." },
-        "label": "Mobility prototype · Trip&Share ecosystem",
+        "label": "Personal project · Rails & React",
         "title": "Trip&Share | RideShare",
-        "description": "Local ride-sharing prototype with maps, geolocation, radius search, and user reviews.",
-        "stack": "Ruby on Rails · React · Maps · Geocoder",
-        "action": null,
-        "status": "Prototype currently being reworked"
+        "description": "A ride-sharing prototype built with Rails and later used to experiment with a progressive migration from ERB to React components.",
+        "stack": "Ruby on Rails · React · PostgreSQL · Google Places",
+        "action": { "label": "View case study →" },
+        "status": null,
+        "caseStudy": {
+          "id": "rideshare-case-study",
+          "logo": {
+            "src": "images/Trip&Share_logo.png",
+            "alt": "Trip&Share",
+            "className": "experience-logo--brand-tile"
+          },
+          "label": "Personal project · Rails & React",
+          "title": "Trip&Share | RideShare — Ride-sharing prototype",
+          "meta": "Learning React & full-stack development",
+          "actionLabel": "View the Trip&Share | RideShare case study — Ride-sharing prototype",
+          "closeLabel": "Close case study",
+          "navigationLabel": "Case study steps",
+          "tabs": ["Overview", "The product", "React migration", "Stack", "Progress"],
+          "intro": "Trip&Share | RideShare is a ride-sharing platform prototype initially developed with Rails and ERB views. The project then became a learning ground for progressively introducing React into selected journeys while retaining the Rails backend and part of the Rails frontend.",
+          "overviewNote": "The prototype includes accounts, profiles, vehicles, trips, geographic search and reviews. The complete booking journey remains to be built.",
+          "caption": "Prototype homepage and trip search.",
+          "productTitle": "From profile to trip search",
+          "workflowSteps": [
+            { "title": "Create a profile", "detail": "Manage an account, username, biography and profile picture." },
+            { "title": "Add a vehicle", "detail": "Enter the make, model and colour of each car." },
+            { "title": "Offer a trip", "detail": "Define departure, destination, date, time, price, seats and preferences." },
+            { "title": "Search nearby", "detail": "Filter trips by location, date and number of seats." }
+          ],
+          "workflowLabel": "PRODUCT CHALLENGE",
+          "workflow": "Find a driver whose route passes close enough to the passenger’s departure and destination, rather than searching only for two strictly identical addresses.",
+          "workflowTags": ["Google Places", "Geocoding", "30 km radius"],
+          "workflowTagsLabel": "TECHNICAL BUILDING BLOCKS",
+          "secondaryWorkflow": {
+            "title": "Introducing React without rewriting the application",
+            "steps": [
+              { "title": "Rails foundation", "detail": "Application rendered server-side with Rails and ERB." },
+              { "title": "React installation", "detail": "React 18 added with esbuild." },
+              { "title": "Authentication", "detail": "Login and registration migrated to React." },
+              { "title": "Profile", "detail": "Profile picture management migrated to a React component." }
+            ],
+            "label": "APPROACH",
+            "text": "Learn how Rails, ERB and React can coexist without immediately rewriting the entire application.",
+            "noteLabel": "PARTIAL MIGRATION",
+            "note": "Search, trips and part of the profile remain in ERB or JavaScript with AJAX. The project is not an SPA."
+          },
+          "stackGroups": [
+            { "label": "Backend", "technologies": ["Ruby 3", "Ruby on Rails 7", "PostgreSQL"] },
+            { "label": "Frontend", "technologies": ["ERB", "JavaScript", "React 18", "Bootstrap", "SCSS"] },
+            { "label": "Build and integration", "technologies": ["esbuild", "AJAX"] },
+            { "label": "Accounts and media", "technologies": ["Devise", "Active Storage"] },
+            { "label": "Geographic search", "technologies": ["Google Places", "Geocoder"] }
+          ],
+          "progressPanels": [
+            { "label": "DEVELOPED FOUNDATION", "title": "Elements already developed" },
+            { "label": "NEXT STEPS", "title": "Consolidate and complete the prototype" }
+          ],
+          "progressTiles": [
+            { "title": "Rails application with ERB views" },
+            { "title": "React 18 integrated with esbuild" },
+            { "title": "React authentication forms" },
+            { "title": "React profile picture management" },
+            { "title": "Profiles and vehicles" },
+            { "title": "Trip creation" },
+            { "title": "Google Places and geocoding" },
+            { "title": "Radius-search prototype" },
+            { "title": "Review model and interface" }
+          ],
+          "progressSteps": [
+            { "title": "Authorization", "detail": "Strengthen access controls and ownership checks for rides, vehicles, and reviews." },
+            { "title": "Search", "detail": "Consolidate and test the journey from the home page to search, results, and ride details." },
+            { "title": "React migration", "detail": "Select the next screens to migrate and stabilize the coexistence of Rails, ERB, and React." },
+            { "title": "Booking", "detail": "Build booking, seat availability, statuses, and cancellations." }
+          ],
+          "progressNote": "The prototype does not yet include a complete booking journey, messaging or payment."
+        }
       }
     ]
   },
   "projectArchive": {
-    "action": "View 6 projects",
-    "closeAction": "Hide 6 projects",
+    "action": "View 6 earlier projects",
+    "closeAction": "Hide 6 earlier projects",
     "closeLabel": "Close",
     "detailsLabel": "Details",
     "linkLabels": {

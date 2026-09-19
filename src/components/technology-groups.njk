@@ -1,0 +1,11 @@
+{% from "components/info-tags.njk" import infoTags %}
+{% macro technologyGroups(groups, groupClass="") %}
+<div class="experience-stack-grid">
+  {% for group in groups %}
+  <div{% if groupClass %} class="{{ groupClass }}"{% endif %}>
+    <span>{{ group.label }}</span>
+    {{ infoTags(group.technologies) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}

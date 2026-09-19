@@ -1,0 +1,11 @@
+{% macro infoTags(items, textKey="", inline=false) %}
+{% if inline %}
+<span class="info-tags" role="list">
+  {% for item in items %}<span class="info-tag" role="listitem">{% if textKey %}{{ item[textKey] }}{% else %}{{ item }}{% endif %}</span>{% endfor %}
+</span>
+{% else %}
+<ul class="info-tags">
+  {% for item in items %}<li class="info-tag">{% if textKey %}{{ item[textKey] }}{% else %}{{ item }}{% endif %}</li>{% endfor %}
+</ul>
+{% endif %}
+{% endmacro %}

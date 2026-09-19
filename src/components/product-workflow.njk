@@ -1,0 +1,47 @@
+{% macro workflowSteps(steps) %}
+    <ol class="project-case-study-workflow">
+      {% for item in steps %}
+      <li>
+        <span class="project-case-study-number" aria-hidden="true">0{{ loop.index }}</span>
+        <div><strong>{{ item.title }}</strong><p>{{ item.detail }}</p></div>
+      </li>
+      {% endfor %}
+    </ol>
+{% endmacro %}
+
+{% from "components/info-tags.njk" import infoTags %}
+{% macro productWorkflow(title, steps, label, text, tags=[], tagsLabel="") %}
+<div class="project-case-study-composition">
+  <section class="project-case-study-section">
+    <h3>{{ title }}</h3>
+    {{ workflowSteps(steps) }}
+  </section>
+  <aside class="dialog-content-panel">
+    <span class="experience-section-kicker">{{ label }}</span>
+    <p>{{ text }}</p>
+    {% if tags | length %}
+    <div class="project-case-study-aside-tags">
+      {% if tagsLabel %}<span class="experience-section-kicker">{{ tagsLabel }}</span>{% endif %}
+      {{ infoTags(tags) }}
+    </div>
+    {% endif %}
+  </aside>
+</div>
+{% endmacro %}
+
+{% macro horizontalWorkflow(title, steps, panels) %}
+<div class="project-case-study-composition project-case-study-composition--progress project-case-study-composition--migration">
+  <section class="project-case-study-section">
+    <h3>{{ title }}</h3>
+    {{ workflowSteps(steps) }}
+  </section>
+  <aside class="dialog-content-panel project-case-study-migration-summary">
+    {% for panel in panels %}
+    <section>
+      <span class="experience-section-kicker">{{ panel.label }}</span>
+      <p>{{ panel.text }}</p>
+    </section>
+    {% endfor %}
+  </aside>
+</div>
+{% endmacro %}

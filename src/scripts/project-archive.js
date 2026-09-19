@@ -11,17 +11,18 @@ function createElement(tag, className, text) {
 function formatArchiveLink(link, name, labels) {
   const kind = link.dataset.archiveLinkKind || "site";
   const iconClasses = {
-    code: "fab fa-github",
-    captures: "fab fa-behance",
+    code: "fab fa-github-square",
+    captures: "fab fa-behance-square",
     site: "fas fa-globe"
   };
   const label = labels[kind] || labels.site;
-  const icon = createElement("i", iconClasses[kind] || iconClasses.site);
+  const icon = createElement("i", `${iconClasses[kind] || iconClasses.site} archive-social-icon`);
 
   icon.setAttribute("aria-hidden", "true");
-  link.className = "archive-action";
+  link.className = "archive-action archive-social-link";
   link.setAttribute("aria-label", `${label} · ${name}`);
-  link.replaceChildren(icon, document.createTextNode(label));
+  link.title = label;
+  link.replaceChildren(icon, createElement("span", "archive-social-label", label));
   return link;
 }
 

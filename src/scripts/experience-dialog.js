@@ -1,12 +1,5 @@
-import { closeAnimatedDialog, trapDialogFocus } from "./dialog.js";
-import { initializeDialogNavigation } from "./dialog-navigation.js";
-
-function createIcon(className) {
-  const icon = document.createElement("i");
-  icon.className = className;
-  icon.setAttribute("aria-hidden", "true");
-  return icon;
-}
+import { createDialogCarousel, initializeDialogCarousel } from "./dialog-carousel.js";
+import { initializeDemoGallery } from "./demo-gallery.js";
 
 export function initializeExperienceDialog(item) {
   const trigger = item.querySelector(".experience-summary");
@@ -32,121 +25,30 @@ export function initializeExperienceDialog(item) {
     }
     groups[groupIndex].push(node);
   });
+  const demoGallery = initializeDemoGallery(panel);
 
-  const dialog = document.createElement("dialog");
-  dialog.className = "app-dialog experience-dialog";
-  dialog.id = panel.id;
-  const dialogTitleId = `${dialog.id}-title`;
-  dialog.setAttribute("aria-labelledby", dialogTitleId);
 
-  const shell = document.createElement("div");
-  shell.className = "app-dialog__shell experience-dialog-shell";
-  const header = document.createElement("header");
-  header.className = "app-dialog__header experience-dialog-header";
-  const heading = document.createElement("div");
-  heading.className = "experience-dialog-heading";
-  const title = document.createElement("h2");
-  title.id = dialogTitleId;
-  title.textContent = role;
-  const metaLine = document.createElement("p");
-  metaLine.className = "experience-dialog-meta";
-  metaLine.textContent = meta;
-  heading.append(title, metaLine);
-
-  const close = document.createElement("button");
-  close.className = "app-dialog__close experience-dialog-close";
-  close.type = "button";
-  close.setAttribute("aria-label", section.dataset.dialogCloseLabel);
-  close.append(createIcon("fa-solid fa-xmark"));
-  if (logo) header.append(logo);
-  header.append(heading, close);
-
-  const tabs = document.createElement("div");
-  tabs.className = "dialog-tabs";
-  tabs.setAttribute("role", "tablist");
-  tabs.setAttribute("aria-label", section.dataset.dialogSectionsLabel);
-  const content = document.createElement("div");
-  content.className = "app-dialog__content experience-dialog-content";
-
-  const tabButtons = [];
-  const slides = [];
-  labels.forEach((label, slideIndex) => {
-    const tab = document.createElement("button");
-    tab.className = "dialog-tab";
-    tab.type = "button";
-    tab.id = `${dialog.id}-tab-${slideIndex + 1}`;
-    tab.setAttribute("role", "tab");
-    tab.setAttribute("aria-controls", `${dialog.id}-panel-${slideIndex + 1}`);
-    tab.textContent = label;
-
-    const slide = document.createElement("section");
-    slide.className = "experience-dialog-slide";
-    slide.id = `${dialog.id}-panel-${slideIndex + 1}`;
-    slide.setAttribute("role", "tabpanel");
-    slide.setAttribute("aria-labelledby", tab.id);
-    groups[slideIndex].forEach((node) => slide.append(node));
-    tabs.append(tab);
-    content.append(slide);
-    tabButtons.push(tab);
-    slides.push(slide);
+  const parts = createDialogCarousel({
+    id: panel.id, logo, title: role, meta, labels, groups,
+    closeLabel: section.dataset.dialogCloseLabel,
+    sectionsLabel: section.dataset.dialogSectionsLabel,
+    previousLabel: section.dataset.dialogPreviousLabel,
+    nextLabel: section.dataset.dialogNextLabel,
+    panelClass: "experience-dialog-slide"
   });
-
-  const footer = document.createElement("footer");
-  footer.className = "dialog-controls";
-  const previous = document.createElement("button");
-  previous.type = "button";
-  previous.className = "dialog-step";
-  const previousLabel = document.createElement("span");
-  previousLabel.textContent = section.dataset.dialogPreviousLabel;
-  previous.append(createIcon("fa-solid fa-arrow-left"), previousLabel);
-  const progress = document.createElement("span");
-  progress.className = "dialog-progress";
-  progress.setAttribute("aria-live", "polite");
-  const next = document.createElement("button");
-  next.type = "button";
-  next.className = "dialog-step";
-  const nextLabel = document.createElement("span");
-  nextLabel.textContent = section.dataset.dialogNextLabel;
-  next.append(nextLabel, createIcon("fa-solid fa-arrow-right"));
-  footer.append(previous, progress, next);
-  shell.append(header, tabs, content, footer);
-  dialog.append(shell);
-  document.body.append(dialog);
-
   panel.remove();
-  trigger.setAttribute("aria-haspopup", "dialog");
-  trigger.setAttribute("aria-controls", dialog.id);
-
-  let previousOverflow = "";
-  const navigation = initializeDialogNavigation({
-    dialog, tabs: tabButtons, panels: slides, content, previous, next, progress
+  initializeDialogCarousel(parts, trigger, {
+    onChange() {
+      demoGallery.stop();
+    },
+    onOpen() {
+      item.classList.add("is-open");
+      chevron?.classList.replace("fa-chevron-down", "fa-chevron-up");
+    },
+    onClose() {
+      demoGallery.stop();
+      item.classList.remove("is-open");
+      chevron?.classList.replace("fa-chevron-up", "fa-chevron-down");
+    }
   });
-  const closeDialog = () => closeAnimatedDialog(dialog);
-
-  close.addEventListener("click", closeDialog);
-  trigger.addEventListener("click", () => {
-    previousOverflow = document.documentElement.style.overflow;
-    document.documentElement.style.overflow = "hidden";
-    trigger.setAttribute("aria-expanded", "true");
-    item.classList.add("is-open");
-    chevron?.classList.replace("fa-chevron-down", "fa-chevron-up");
-    navigation.reset();
-    dialog.showModal();
-    close.focus({ preventScroll: true });
-  });
-  dialog.addEventListener("cancel", (event) => {
-    event.preventDefault();
-    closeDialog();
-  });
-  dialog.addEventListener("close", () => {
-    document.documentElement.style.overflow = previousOverflow;
-    trigger.setAttribute("aria-expanded", "false");
-    item.classList.remove("is-open");
-    chevron?.classList.replace("fa-chevron-up", "fa-chevron-down");
-    trigger.focus({ preventScroll: true });
-  });
-  dialog.addEventListener("keydown", (event) => {
-    trapDialogFocus(dialog, event);
-  });
-
 }

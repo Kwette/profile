@@ -1,0 +1,57 @@
+{% macro splitPanels(panels) %}
+              <div class="split-panels">
+{% for panel in panels %}
+                <section class="split-panels__panel">
+                  <span class="split-panels__label">{{ panel.label }}</span>
+                  <h4>{{ panel.title }}</h4>
+                  <ul class="content-list">
+{% for item in panel.items %}
+                    <li><strong>{{ item.label }}</strong> {{ item.text }}</li>
+{% endfor %}
+                  </ul>
+                </section>
+{% endfor %}
+              </div>
+{% endmacro %}
+
+{% macro contentGrid(items, modifier = "") %}
+                  <ul class="content-list content-grid{% if modifier %} {{ modifier }}{% endif %}">
+{% for item in items %}
+                    <li><strong>{{ item.label }}</strong> {{ item.text }}</li>
+{% endfor %}
+                  </ul>
+{% endmacro %}
+
+{% macro structuredContent(study) %}
+            <section data-dialog-view="{{ study.view }}" class="no-bg experience-detail-section structured-content">
+              <span class="experience-section-kicker">{{ study.kicker }}</span>
+              <h3 class="experience-section-title">{{ study.title }}</h3>
+              <p class="structured-content__intro">{{ study.intro }}</p>
+              <ul class="info-tags structured-content__markers" aria-label="{{ study.markersLabel }}">
+{% for marker in study.markers %}
+                <li class="info-tag">{{ marker }}</li>
+{% endfor %}
+              </ul>
+{{ splitPanels(study.audiences) }}
+              <h4 class="structured-content__section-title">{{ study.achievementsTitle }}</h4>
+              <div class="content-accordion">
+{% for achievement in study.achievements %}
+                <details class="content-accordion__item"{% if loop.first %} open{% endif %}>
+                  <summary class="content-accordion__summary">
+                    <span class="content-accordion__number">{{ achievement.number }}</span>
+                    <span class="content-accordion__heading">
+                      <strong>{{ achievement.title }}</strong>
+                      <span>{{ achievement.summary }}</span>
+                    </span>
+                  </summary>
+                  <div class="info-tags content-accordion__tags" aria-label="{{ study.achievementTagsLabel }}">
+{% for tag in achievement.tags %}
+                    <span class="info-tag">{{ tag }}</span>
+{% endfor %}
+                  </div>
+{{ contentGrid(achievement.items) }}
+                </details>
+{% endfor %}
+              </div>
+            </section>
+{% endmacro %}

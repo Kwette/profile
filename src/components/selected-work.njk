@@ -18,7 +18,7 @@
           </article>
           <div class="selected-project-secondary-grid">
             {% for project in selectedWork.secondary %}
-            <article class="project-card selected-project selected-project-secondary selected-project-{{ project.modifier }}" id="{{ project.id }}">
+            <article class="project-card selected-project selected-project-secondary selected-project-{{ project.modifier }}{% if project.caseStudy is defined %} case-study-trigger{% endif %}" id="{{ project.id }}"{% if project.caseStudy is defined %} role="button" tabindex="0" data-case-study-trigger aria-haspopup="dialog" aria-controls="{{ project.caseStudy.id }}-{{ language }}" aria-label="{{ project.caseStudy.actionLabel }}"{% endif %}>
               <div class="project-card__media selected-project-media">
                 <img src="{{ project.image.src }}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" alt="{{ project.image.alt }}">
               </div>
@@ -27,7 +27,11 @@
                 <h3 class="project-card__title">{{ project.title }}</h3>
                 <p class="project-card__description selected-project-description">{{ project.description }}</p>
                 <p class="project-card__stack selected-project-stack">{{ project.stack }}</p>
+                {% if project.caseStudy is defined %}
+                <span class="project-card__action selected-project-link" aria-hidden="true">{{ project.link.label }}</span>
+                {% else %}
                 <a class="project-card__action selected-project-link" href="{{ project.link.href }}"{% if project.link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ project.link.label }}</a>
+                {% endif %}
               </div>
             </article>
             {% endfor %}
@@ -35,3 +39,9 @@
         </div>
       </section>
 {% include "components/project-case-study.njk" %}
+{% for project in selectedWork.secondary %}
+{% if project.caseStudy is defined %}
+{% set caseStudyProject = project %}
+{% include "components/secondary-case-study.njk" %}
+{% endif %}
+{% endfor %}

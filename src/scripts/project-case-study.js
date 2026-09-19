@@ -1,62 +1,52 @@
-import { closeAnimatedDialog } from "./dialog.js";
-import { initializeDialogNavigation } from "./dialog-navigation.js";
+import { createDialogCarousel, initializeDialogCarousel } from "./dialog-carousel.js";
 
 export function initializeProjectCaseStudies() {
   document.querySelectorAll("[data-case-study-trigger]").forEach(trigger => {
-    const dialog = document.getElementById(trigger.getAttribute("aria-controls"));
-    if (!dialog) return;
-    const close = dialog.querySelector("[data-case-study-close]");
-    const content = dialog.querySelector(".project-case-study-body");
-    const video = dialog.querySelector("video");
-    const navigation = initializeDialogNavigation({
-      dialog,
-      tabs: Array.from(dialog.querySelectorAll(".dialog-tab")),
-      panels: Array.from(dialog.querySelectorAll(".project-case-study-panel")),
-      content,
-      previous: dialog.querySelector("[data-case-study-previous]"),
-      next: dialog.querySelector("[data-case-study-next]"),
-      progress: dialog.querySelector(".dialog-progress"),
-      onChange: () => video?.pause()
-    });
-    let previousOverflow = null;
-
-    const resetVideo = () => {
+    const source = document.getElementById(trigger.getAttribute("aria-controls"));
+    if (!source) return;
+    const data = source.dataset;
+    const logo = data.logoSrc ? document.createElement("span") : null;
+    if (logo) {
+      logo.className = "experience-logo" + (data.logoClass ? " " + data.logoClass : "");
+      const image = document.createElement("img");
+      image.src = data.logoSrc;
+      image.alt = data.logoAlt;
+      logo.append(image);
+    }
+    const groups = Array.from(source.children).map(panel =>
+      Array.from(panel.querySelector(".dialog-content-rail").children));
+    const video = source.querySelector("video");
+    const videoSource = video?.getAttribute?.("src") || "";
+    const loadVideo = () => {
+      if (!video || !videoSource || video.getAttribute("src") === videoSource) return;
+      video.src = videoSource;
+      video.load();
+    };
+    const releaseVideo = () => {
       if (!video) return;
       video.pause();
-      if (video.readyState > 0) video.currentTime = 0;
+      try {
+        video.currentTime = 0;
+      } catch {
+        // Removing the source below still releases media that is not seekable yet.
+      }
+      video.removeAttribute?.("src");
+      video.load?.();
     };
-    const closeDialog = () => {
-      resetVideo();
-      closeAnimatedDialog(dialog);
-    };
-
-    const openDialog = () => {
-      if (dialog.open) return;
-      dialog.showModal();
-      navigation.reset();
-      previousOverflow = document.documentElement.style.overflow;
-      document.documentElement.style.overflow = "hidden";
-      content.scrollTop = 0;
-      close.focus({ preventScroll: true });
-    };
-    trigger.addEventListener("click", openDialog);
-    trigger.addEventListener("keydown", event => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      if (!event.repeat) openDialog();
+    if (videoSource) releaseVideo();
+    const parts = createDialogCarousel({
+      id: source.id, logo, label: data.label, title: data.title, meta: data.meta,
+      labels: JSON.parse(data.tabs), groups,
+      closeLabel: data.closeLabel, sectionsLabel: data.sectionsLabel,
+      previousLabel: data.previousLabel, nextLabel: data.nextLabel,
+      panelClass: "project-case-study-panel"
     });
-    close.addEventListener("click", closeDialog);
-    dialog.addEventListener("cancel", event => {
-      event.preventDefault();
-      closeDialog();
-    });
-    // Native showModal contains keyboard focus, including native video controls.
-    dialog.addEventListener("close", () => {
-      resetVideo();
-      if (previousOverflow === null) return;
-      document.documentElement.style.overflow = previousOverflow;
-      previousOverflow = null;
-      trigger.focus({ preventScroll: true });
+    source.remove();
+    initializeDialogCarousel(parts, trigger, {
+      additionalTriggers: Array.from(document.querySelectorAll(`[data-case-study-open="${parts.dialog.id}"]`)),
+      onOpen: loadVideo,
+      onChange: () => video?.pause(),
+      onClose: releaseVideo
     });
   });
 }

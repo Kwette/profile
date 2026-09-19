@@ -1,0 +1,5 @@
+<figure class="project-case-study-media experience-gallery-media{% if experienceGalleryModifier %} {{ experienceGalleryModifier }}{% endif %}"{% if not experienceGalleryEmbedded %} data-dialog-view="{{ experienceGallery.view }}"{% endif %}>
+  <img src="{{ experienceGallery.image.src }}" alt="{{ experienceGallery.image.alt }}"
+    width="{{ experienceGallery.image.width }}" height="{{ experienceGallery.image.height }}" loading="lazy">
+  <figcaption>{{ experienceGallery.caption }}</figcaption>
+</figure>

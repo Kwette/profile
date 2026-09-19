@@ -11,9 +11,9 @@
                 <div class="technical-focus-subject">
                   <h3>{{ item.title }}</h3>
                   <p>{{ item.description }}</p>
-                  <ul class="technical-focus-keywords" aria-label="{{ technicalFocus.keywordsLabel }}">
+                  <ul class="info-tags technical-focus-keywords" aria-label="{{ technicalFocus.keywordsLabel }}">
                     {% for keyword in item.keywords %}
-                    <li>{{ keyword }}</li>
+                    <li class="info-tag">{{ keyword }}</li>
                     {% endfor %}
                   </ul>
                 </div>
@@ -22,7 +22,7 @@
                   <h4>{{ item.proof.title }}</h4>
                   <p>{{ item.proof.description }}</p>
                   {% if item.proof.link %}
-                  <a class="technical-case-study-link" href="{{ item.proof.link.href }}">{{ item.proof.link.label }}</a>
+                  <a class="technical-case-study-link" href="{{ item.proof.link.href }}"{% if item.proof.link.dialogId is defined %} data-case-study-open="{{ item.proof.link.dialogId }}-{{ language }}"{% endif %}{% if item.proof.link.tabIndex is defined %} data-case-study-tab="{{ item.proof.link.tabIndex }}"{% endif %}>{{ item.proof.link.label }}</a>
                   {% endif %}
                 </aside>
               </article>

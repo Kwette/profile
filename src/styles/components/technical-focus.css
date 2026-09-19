@@ -97,32 +97,13 @@
   text-transform: uppercase;
 }
 
-.technical-focus-keywords {
-  margin: 14px 0 0;
+.technical-focus-subject .technical-focus-keywords {
+  margin: 12px 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.55em;
   list-style-type: none;
-}
-
-.technical-focus-keywords li {
-  margin: 0;
-  padding: 0.35em 0.65em;
-  border: 0;
-  border-radius: 2px;
-  background-color: rgba(88, 95, 125, 0.08);
-  color: var(--color-brand);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 9.5px;
-  font-weight: 600;
-  line-height: 1.2em;
-  cursor: default;
-}
-
-.technical-focus-keywords li {
-  background-color: rgba(88, 95, 125, 0.1);
-  color: #555b76;
 }
 
 .sr-only {
@@ -193,11 +174,16 @@
     border-bottom: 1px solid var(--color-accent-warm);
   }
 
+  .technical-focus-proof {
+    border-top: 1px solid rgba(88, 95, 125, 0.24);
+    border-left: 0;
+  }
+
   .technical-focus-intro {
     text-align: left;
   }
 
-  .technical-focus-keywords {
+  .technical-focus-subject .technical-focus-keywords {
     gap: 0.4em;
   }
 }

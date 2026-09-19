@@ -1,0 +1,19 @@
+.info-tags {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55em;
+  list-style: none;
+}
+
+.info-tags > .info-tag {
+  margin: 0;
+  padding: 0.35em 0.65em;
+  border: 0;
+  border-radius: 2px;
+  background-color: rgba(88, 95, 125, 0.1);
+  color: #555b76;
+  font: 600 9.5px/1.2em 'Montserrat', sans-serif;
+  cursor: default;
+}

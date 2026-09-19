@@ -108,15 +108,48 @@ merging the source files into `gh-pages` is sufficient.
 
 ## DRIME editor case study video
 
+Trip&Share uses the same dialog carousel with five localized views: overview,
+concept, product journey, technical stack, and progress. Its source is
+`src/components/secondary-case-study.njk`; copy lives in the locale JSON files.
+RecipeMatcher shares this template with five views: overview, matching, optimisation,
+technical stack, and progress. Performance figures are explicitly local measurements,
+not large-scale production claims. Idempotent importing remains a planned improvement.
+Context panels and product workflows are shared with DRIME through Nunjucks macros.
+Stripe payments are integrated; production configuration and final validation remain.
+Affiliation is a planned development. The personal-project CTA opens the same dialog
+and restores focus to that CTA on close.
+
 The dedicated editor case study uses `images/drime-editor.mp4`, configured through
 `selectedWork.featured.caseStudy.video.src` in both localized data files.
 If this value is empty, the product screenshot is shown instead. After replacing
 the video or updating its path, rebuild the site. The video uses native controls,
 metadata-only preload and no autoplay; closing the dialog pauses and resets it.
-The four case-study steps share tab, keyboard, previous/next and progress behavior
-with experience dialogs through `src/scripts/dialog-navigation.js` and
-`src/styles/components/dialog-navigation.css`. Leaving the overview pauses the
-video; reopening the dialog always returns to the first step.
+The case study and experience dialogs are built by the same
+`createDialogCarousel` factory and use the same `initializeDialogCarousel`
+controller in `src/scripts/dialog-carousel.js`. They share their shell, header,
+tabs, content rail, footer, scroll locking, native modal focus containment,
+closing and focus restoration. Tab navigation lives in `dialog-navigation.js`.
+Video pause/reset behavior is supplied through content hooks. Reopening always
+returns to the first step.
+The branded header, stack groups and outcome styling share
+`src/styles/components/dialog-content.css` with experience dialogs. The case study
+and the experience stack reuse the `technologyGroups` macro in
+`src/components/technology-groups.njk`. The case study presents these groups as
+the exact `experience-stack.njk` component, with application groups on the left
+and services/delivery on the right. Both dialogs use the same translated
+"Stack technique" / "Technical stack" tab terminology.
+Both dialogs use the same branded header, `dialog-panel` styles and
+`dialog-content-rail` (70ch), including desktop/mobile padding and typography.
+Dimensions are defined once in `src/styles/components/dialog-carousel.css` using
+the experience dialog as the reference. Content callouts reuse the experience
+result treatment. Only video sizing and the editor workflow have case-specific
+styles; technical-stack groups reuse the shared technology macro without a duplicate
+flow diagram.
+Technologies are stored as arrays and rendered with the informational tags shared
+with Focus technique (`info-tags.css`). Stack column separation is shared across
+experience and case-study dialogs. `result-summary.njk` provides the case-study
+results as one three-column panel and a conclusion band, without altering the
+existing experience result text.
 
 ## Reference demos
 

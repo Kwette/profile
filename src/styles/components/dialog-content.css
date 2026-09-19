@@ -1,0 +1,374 @@
+.dialog-brand-header {
+  padding: 0 18px;
+  display: grid;
+  grid-template-columns: 192px minmax(0, 1fr) 44px;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid rgba(88, 95, 125, 0.12);
+}
+
+.dialog-content-rail {
+  width: 100%;
+  max-width: 70ch;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.dialog-brand-heading {
+  min-width: 0;
+  margin-left: 50px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dialog-brand-header:not(:has(.experience-logo)) {
+  grid-template-columns: minmax(0, 1fr) 44px;
+  min-height: 114px;
+}
+
+.dialog-brand-header:not(:has(.experience-logo)) .dialog-brand-heading {
+  margin-left: 0;
+}
+
+.dialog-brand-header .experience-logo {
+  width: 192px;
+  height: 114px;
+}
+
+.dialog-brand-header .experience-logo img {
+  max-width: 192px;
+  max-height: 114px;
+}
+
+.dialog-brand-heading h2,
+.dialog-brand-heading p {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+}
+
+.dialog-brand-heading h2 {
+  color: #555b76;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.dialog-brand-heading p {
+  margin-top: 3px;
+  color: #555b76;
+  font: 700 0.85rem/1.4 'Montserrat', sans-serif;
+}
+
+.dialog-brand-heading .dialog-brand-meta {
+  color: #707070;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.app-dialog .experience-stack {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  padding: 1.4rem 1.5rem 1.5rem;
+  border: 0;
+  border-top: 1px solid #dedfe5;
+  box-shadow: none;
+  background-color: rgba(88, 95, 125, 0.045);
+}
+
+.app-dialog .experience-stack h3 {
+  margin: 0 0 0.75rem;
+  color: #555b76;
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
+.app-dialog .experience-stack-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem 2rem;
+}
+
+.app-dialog .experience-stack-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px solid rgba(88, 95, 125, 0.16);
+}
+
+.app-dialog .experience-stack-grid span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #777d98;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.app-dialog .experience-stack-grid .info-tags {
+  margin: 0;
+  padding: 0;
+  gap: 0.4em;
+  list-style: none;
+}
+
+.app-dialog .experience-stack-grid .info-tag {
+  padding-inline: 0.5em;
+  font-size: 9px;
+}
+
+.app-dialog .experience-results,
+.app-dialog .dialog-content-panel {
+  padding: 1.15rem 1.25rem;
+  border-left: 3px solid #777d98;
+  background: rgba(88, 95, 125, 0.045);
+}
+
+.app-dialog :is(.experience-stack, .experience-results, .dialog-content-panel, .dialog-results-conclusion) {
+  border-radius: 4px;
+}
+
+.dialog-content-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.dialog-content-panel h3 {
+  margin: 8px 0 12px;
+  color: var(--color-brand);
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
+.app-dialog .dialog-content-panel p {
+  margin-top: 12px;
+}
+
+.app-dialog .dialog-results-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 18px 0;
+  border-left: 3px solid var(--color-brand);
+}
+
+.dialog-results-panel > section {
+  padding: 0 20px;
+}
+
+.dialog-results-panel > section + section {
+  border-left: 1px solid rgba(88, 95, 125, 0.16);
+}
+
+.dialog-results-panel h3 {
+  margin: 0 0 12px;
+  font-size: 1.28rem;
+}
+
+.dialog-results-panel p {
+  margin: 0;
+  padding: 0;
+}
+
+.dialog-statistics {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.dialog-statistics--gains {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dialog-statistics--gains > div {
+  padding: 0 18px;
+}
+
+.dialog-statistics--gains > div:first-child { padding-left: 0; }
+.dialog-statistics--gains > div:last-child { padding-right: 0; }
+.dialog-statistics--gains > div + div { border-left: 1px solid rgba(88, 95, 125, 0.16); }
+
+.dialog-optimization > section + section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(88, 95, 125, 0.16);
+}
+
+.dialog-optimization-levers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: -14px;
+}
+
+.dialog-statistics dt {
+  color: var(--color-brand-muted);
+  font-size: 0.72rem;
+}
+
+.dialog-statistics dd {
+  margin: 8px 0 0;
+  color: var(--color-brand);
+  font-size: 1rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.dialog-statistic-before { color: var(--color-brand-muted); font-weight: 500; }
+.dialog-statistics--gains dd { white-space: nowrap; font-size: 0.92rem; }
+.dialog-statistics dd strong { color: var(--color-brand); font-size: 1.1rem; font-weight: 700; }
+.dialog-statistic-gain { display: block; margin-top: 5px; font-size: 0.72rem; white-space: nowrap; }
+.dialog-statistic-gain strong { color: var(--color-brand); font-weight: 600; }
+.dialog-optimization-levers .info-tags { gap: 0.4em; }
+.dialog-optimization-levers .info-tag { padding: 0.3em 0.55em; }
+.dialog-optimization > section:last-of-type > h3 { margin-bottom: 6px; }
+
+.dialog-panel .dialog-measurement-note {
+  font-size: 0.68rem;
+  color: var(--color-brand-muted);
+  line-height: 1.5;
+}
+
+.dialog-optimization .dialog-measurement-note {
+  margin: 10px 0 0;
+}
+
+.dialog-optimization > .dialog-measurement-note:first-child {
+  margin-top: 0;
+}
+
+.dialog-results .dialog-results-conclusion {
+  margin: 16px 0 0;
+  padding: 16px 20px;
+  background: rgba(88, 95, 125, 0.075);
+}
+
+@media (max-width: 768px) {
+
+  .dialog-statistics--gains {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dialog-optimization-levers {
+    grid-template-columns: 1fr;
+  }
+
+  .dialog-content-pair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dialog-brand-header {
+    padding: 0 12px;
+    grid-template-columns: 96px minmax(0, 1fr) 44px;
+    gap: 10px;
+  }
+
+  .dialog-brand-header .experience-logo {
+    width: 96px;
+    height: 60px;
+  }
+
+  .dialog-brand-header .experience-logo img {
+    max-width: 96px;
+    max-height: 60px;
+  }
+
+  .dialog-brand-heading {
+    margin-left: 12px;
+  }
+
+  .dialog-brand-heading h2 {
+    font-size: 1.1rem;
+  }
+
+  .dialog-brand-heading p {
+    font-size: 0.72rem;
+  }
+
+  .dialog-brand-heading .dialog-brand-meta {
+    font-size: 0.64rem;
+  }
+
+  .app-dialog .experience-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+
+  .app-dialog .experience-stack-grid::before {
+    display: none;
+  }
+
+  .app-dialog .dialog-results-panel {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .dialog-results-panel > section {
+    padding: 18px 0;
+  }
+
+  .dialog-results-panel > section + section {
+    border-left: 0;
+    border-top: 1px solid rgba(88, 95, 125, 0.16);
+  }
+}
+
+.dialog-panel {
+  padding: 26px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior: contain;
+}
+
+.dialog-panel[hidden] {
+  display: none;
+}
+
+.dialog-panel:has(> .dialog-content-rail > .experience-stack) {
+  justify-content: safe center;
+}
+
+.dialog-panel > .dialog-content-rail > .experience-stack {
+  margin-top: 0;
+}
+
+.dialog-panel p {
+  background-color: transparent;
+  color: #414141;
+  font-size: 0.9rem;
+  line-height: 1.68;
+  text-align: left;
+}
+
+.dialog-panel h3 {
+  color: #555b76;
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
+.dialog-brand-heading .dialog-brand-label {
+  margin: 0 0 5px;
+  color: var(--color-brand-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .dialog-panel {
+    padding: 22px 20px;
+  }
+
+  .dialog-panel p {
+    font-size: 0.84rem;
+  }
+}

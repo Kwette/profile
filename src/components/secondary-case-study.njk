@@ -1,0 +1,89 @@
+{% set study = caseStudyProject.caseStudy %}
+{% from "components/case-study-source.njk" import caseStudySource %}
+{% from "components/context-panels.njk" import contextPanels %}
+{% from "components/product-workflow.njk" import horizontalWorkflow, productWorkflow, workflowSteps %}
+{% from "components/info-tags.njk" import infoTags %}
+{% call caseStudySource(study.id ~ "-" ~ language, study.logo, study, study.meta, experiences.dialog) %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">
+      <p class="project-case-study-intro">{{ study.intro }}</p>
+      {% if study.overviewContext is defined %}<p>{{ study.overviewContext }}</p>{% endif %}
+      {% if study.overviewNote is defined %}<p class="dialog-measurement-note">{{ study.overviewNote }}</p>{% endif %}
+      <figure class="project-case-study-media">
+        <img src="{{ caseStudyProject.image.src }}" width="{{ caseStudyProject.image.width }}" height="{{ caseStudyProject.image.height }}" alt="{{ caseStudyProject.image.alt }}" loading="lazy">
+        <figcaption>{{ study.caption }}</figcaption>
+      </figure>
+    </div>
+  </section>
+  {% if study.conceptPanels is defined %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">{{ contextPanels(study.conceptPanels) }}</div>
+  </section>
+  {% endif %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">{{ productWorkflow(study.productTitle, study.workflowSteps, study.workflowLabel, study.workflow, study.workflowTags or [], study.workflowTagsLabel or "") }}</div>
+  </section>
+  {% if study.secondaryWorkflow is defined %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">{{ horizontalWorkflow(study.secondaryWorkflow.title, study.secondaryWorkflow.steps, [
+      { label: study.secondaryWorkflow.label, text: study.secondaryWorkflow.text },
+      { label: study.secondaryWorkflow.noteLabel, text: study.secondaryWorkflow.note }
+    ]) }}</div>
+  </section>
+  {% endif %}
+  {% if study.optimization is defined %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">
+      <div class="dialog-content-panel dialog-optimization">
+        <p class="dialog-measurement-note dialog-measurement-context">{{ study.optimization.contextLabel }} · {{ study.optimization.metrics[0].text }} · {{ study.optimization.metrics[1].text }}</p>
+        <section>
+          <h3>{{ study.optimization.gainsTitle }}</h3>
+          <dl class="dialog-statistics dialog-statistics--gains">
+            {% for metric in [study.optimization.metrics[2], study.optimization.metrics[3], study.optimization.metrics[4]] %}
+            <div>
+              <dt>{{ metric.title }}</dt>
+              <dd><span class="dialog-statistic-before">{{ metric.before }}</span><span aria-hidden="true"> → </span><strong>{{ metric.after }}</strong></dd>
+              <span class="dialog-statistic-gain"><strong>{{ metric.reduction }}</strong></span>
+            </div>
+            {% endfor %}
+          </dl>
+          <p class="dialog-measurement-note dialog-autocomplete-note">{{ study.optimization.metrics[5].title }} · {{ study.optimization.autocompleteValue }}</p>
+        </section>
+        <section>
+          <h3>{{ study.optimization.axesTitle }}</h3>
+          <div class="dialog-optimization-levers">
+            {% for axis in study.optimization.axes %}
+            <section><h4 class="experience-section-kicker">{{ axis.title }}</h4>{{ infoTags(axis.technologies) }}</section>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">
+      {% set experienceStack = { key: study.id, groups: study.stackGroups } %}
+      {% include "components/experience-stack.njk" %}
+    </div>
+  </section>
+  {% if study.progressPanels is defined %}
+  <section data-case-study-panel>
+    <div class="dialog-content-rail">
+      <div class="dialog-content-panel project-case-study-composition project-case-study-composition--progress">
+        <section class="project-case-study-section">
+          <span class="experience-section-kicker">{{ study.progressPanels[0].label }}</span>
+          <h3>{{ study.progressPanels[0].title }}</h3>
+          {{ infoTags(study.progressTiles, "title") }}
+        </section>
+        <section class="project-case-study-section">
+          <span class="experience-section-kicker">{{ study.progressPanels[1].label }}</span>
+          <h3>{{ study.progressPanels[1].title }}</h3>
+          {{ workflowSteps(study.progressSteps) }}
+          {% if study.progressNote is defined %}<p class="dialog-measurement-note">{{ study.progressNote }}</p>{% endif %}
+        </section>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{% endcall %}

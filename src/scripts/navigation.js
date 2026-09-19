@@ -28,21 +28,30 @@ function initializeMobileMenu() {
 
 function initializeActiveSection() {
   const observedNavLinks = Array.from(document.querySelectorAll(".site-nav-links a[href^='#']"));
-  const observedSections = observedNavLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
-  if (!("IntersectionObserver" in window) || !observedSections.length) return;
+  const observedSections = new Map();
+  observedNavLinks.forEach((link) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) observedSections.set(target, link.getAttribute("href"));
+  });
+  document.querySelectorAll("[data-navigation-target]").forEach((section) => {
+    const navigationTarget = section.dataset.navigationTarget;
+    if (observedNavLinks.some((link) => link.getAttribute("href") === navigationTarget)) {
+      observedSections.set(section, navigationTarget);
+    }
+  });
+  if (!("IntersectionObserver" in window) || !observedSections.size) return;
 
   const navObserver = new IntersectionObserver((entries) => {
     const activeEntry = entries.find((entry) => entry.isIntersecting);
     if (!activeEntry) return;
+    const activeTarget = observedSections.get(activeEntry.target);
     observedNavLinks.forEach((link) => {
-      const isCurrent = link.getAttribute("href") === `#${activeEntry.target.id}`;
+      const isCurrent = link.getAttribute("href") === activeTarget;
       if (isCurrent) link.setAttribute("aria-current", "location");
       else link.removeAttribute("aria-current");
     });
   }, { rootMargin: "-28% 0px -62% 0px", threshold: 0 });
-  observedSections.forEach((section) => navObserver.observe(section));
+  observedSections.forEach((navigationTarget, section) => navObserver.observe(section));
 }
 
 export function initializeNavigation() {

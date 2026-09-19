@@ -1,0 +1,31 @@
+{% from "components/structured-content.njk" import splitPanels, contentGrid %}
+{% from "components/info-tags.njk" import infoTags %}
+            <section data-dialog-view="overview" class="experience-overview">
+              <span class="experience-section-kicker">{{ experiences.pickadenContent.overview.kicker }}</span>
+              <h3>{{ experiences.pickadenContent.overview.title }}</h3>
+{% for paragraph in experiences.pickadenContent.overview.paragraphs %}
+              <p>{{ paragraph }}</p>
+{% endfor %}
+            </section>
+{% set experienceStack = experiences.stacks.pickaden %}
+{% include "components/experience-stack.njk" %}
+            <section data-dialog-view="journeys" class="no-bg experience-detail-section structured-content structured-content--compact">
+              <span class="experience-section-kicker">{{ experiences.pickadenContent.journeys.kicker }}</span>
+              <h3 class="experience-section-title">{{ experiences.pickadenContent.journeys.title }}</h3>
+{{ splitPanels(experiences.pickadenContent.journeys.audiences) }}
+{% set experienceGallery = experiences.galleries.pickaden %}
+{% set experienceGalleryEmbedded = true %}
+{% set experienceGalleryModifier = "experience-gallery-media--compact" %}
+{% include "components/experience-gallery.njk" %}
+            </section>
+            <section data-dialog-view="contributions" class="no-bg experience-detail-section structured-content">
+              <span class="experience-section-kicker">{{ experiences.pickadenContent.contributions.kicker }}</span>
+              <h3 class="experience-section-title">{{ experiences.pickadenContent.contributions.title }}</h3>
+              <div class="content-grid-surface">
+                <div class="content-grid-surface__tags" aria-label="{{ experiences.pickadenContent.contributions.tagsLabel }}">
+{{ infoTags(experiences.pickadenContent.contributions.tags) }}
+                </div>
+{{ contentGrid(experiences.pickadenContent.contributions.items) }}
+              </div>
+            </section>
+            <p data-dialog-view="results" class="experience-results"><span class="bold">{{ experiences.pickadenContent.results.label }}</span> {{ experiences.pickadenContent.results.text }}</p>

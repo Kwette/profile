@@ -1,0 +1,13 @@
+{% macro resultSummary(outcomes, conclusion="") %}
+<div class="dialog-results">
+  <div class="experience-results dialog-results-panel">
+    {% for outcome in outcomes %}
+    <section>
+      <h3>{{ outcome.title }}</h3>
+      {% if outcome.text is defined %}<p>{{ outcome.text }}</p>{% endif %}
+    </section>
+    {% endfor %}
+  </div>
+  {% if conclusion %}<p class="dialog-results-conclusion">{{ conclusion }}</p>{% endif %}
+</div>
+{% endmacro %}
