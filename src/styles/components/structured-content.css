@@ -281,7 +281,7 @@
   .content-accordion__item > .content-list {
     width: calc(100% - 24px);
     margin: 0 12px 16px;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
   }
 
@@ -295,7 +295,14 @@
   }
 
   .content-grid-surface .content-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+  }
+}
+
+@media (max-width: 660px) {
+  .content-accordion__item > .content-list,
+  .content-grid-surface .content-grid {
+    grid-template-columns: 1fr;
   }
 }

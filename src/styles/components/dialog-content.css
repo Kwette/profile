@@ -297,16 +297,6 @@
     font-size: 0.64rem;
   }
 
-  .app-dialog .experience-stack-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-
-  .app-dialog .experience-stack-grid::before {
-    display: none;
-  }
-
   .app-dialog .dialog-results-panel {
     grid-template-columns: 1fr;
     padding: 0 20px;
@@ -370,5 +360,58 @@
 
   .dialog-panel p {
     font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .app-dialog .experience-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .app-dialog .experience-stack-grid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .dialog-brand-header:has(.experience-logo) {
+    padding: 8px 12px 10px;
+    grid-template-columns: 52px minmax(0, 1fr) 40px;
+    gap: 8px;
+  }
+
+  .dialog-brand-header:has(.experience-logo) .experience-logo {
+    width: 52px;
+    height: 48px;
+    justify-content: center;
+  }
+
+  .dialog-brand-header:has(.experience-logo) .experience-logo img {
+    max-width: 52px;
+    max-height: 42px;
+  }
+
+  .dialog-brand-header:has(.experience-logo) .dialog-brand-heading {
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .dialog-brand-header:has(.experience-logo) .dialog-brand-heading h2 {
+    font-size: 0.92rem;
+    line-height: 1.25;
+  }
+
+  .dialog-brand-header:has(.experience-logo) .dialog-brand-heading .dialog-brand-label {
+    font-size: 0.65rem;
+  }
+
+  .dialog-brand-header:has(.experience-logo) .dialog-brand-heading p,
+  .dialog-brand-header:has(.experience-logo) .dialog-brand-heading .dialog-brand-meta {
+    font-size: 0.6rem;
+  }
+
+  .dialog-panel {
+    padding: 18px 14px;
   }
 }

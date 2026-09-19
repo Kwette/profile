@@ -2,6 +2,12 @@
   padding: 0;
 }
 
+.resume-card .resume,
+.resume-card .resume-header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .resume-portrait {
   display: flex;
   justify-content: center;

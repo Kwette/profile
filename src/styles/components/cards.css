@@ -56,6 +56,10 @@
 }
 
 @media (max-width: 500px) {
+  .card {
+    padding: 20px 16px;
+  }
+
   .compact-list-panel {
     grid-template-columns: 1fr;
   }

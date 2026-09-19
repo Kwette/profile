@@ -27,3 +27,14 @@
 .hero-card .hero-intro p + p {
   margin-top: 1.7em;
 }
+
+@media (max-width: 660px) {
+  .hero-card .hero-intro {
+    padding: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .hero-card .hero-intro p {
+    text-align: left;
+  }
+}

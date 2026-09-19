@@ -144,6 +144,18 @@
     height: 38px;
   }
 
+  .resume-download-control .tooltiptext {
+    top: auto;
+    right: 0;
+    bottom: calc(100% + 7px);
+    width: max-content;
+    margin: 0;
+    padding: 3px 7px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
   .resume-card .resume-toggle {
     display: none !important;
   }
