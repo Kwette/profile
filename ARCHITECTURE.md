@@ -210,7 +210,7 @@ requests. It does not deploy.
 4. deploys that artifact through GitHub Pages.
 
 The repository's Pages source must be configured as **GitHub Actions**. Publishing
-only `dist/` prevents source files, reference demos, and development metadata from
+only `dist/` prevents source files and development metadata from
 becoming part of the public site.
 
 Dependabot checks npm and GitHub Actions dependencies monthly.

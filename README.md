@@ -19,7 +19,6 @@ the browser interactions use native JavaScript modules.
 
 ```text
 .
-├── examples/               Standalone reference demos, excluded from the build
 ├── images/                 Static images, documents, and favicon
 ├── tests/                  Node.js regression tests with simulated browser APIs
 ├── scripts/
@@ -121,13 +120,6 @@ resets its media. The local `yarn preview` server supports byte-range requests s
 video seeking behaves like the deployed site. After replacing media or changing
 source content, rebuild the site; the generated asset version changes automatically
 when a local image, video, document, stylesheet or script changes.
-
-## Reference demos
-
-`examples/drime-player-demo.html` preserves a standalone DRIME player integration
-for reference. It uses historical external dependencies and is intentionally not
-copied into `dist/` or included in the production portfolio. Only `dist/` should
-ever be published.
 
 ## Accessibility and interaction
 
