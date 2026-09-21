@@ -25,6 +25,7 @@ the browser interactions use native JavaScript modules.
 ├── scripts/
 │   ├── build.mjs           Static-site build pipeline
 │   ├── check.mjs           Static validation of sources and generated pages
+│   ├── preview.mjs         Local server with video range support
 │   └── site-config.mjs     Localized outputs, CSS order, and static assets
 ├── src/
 │   ├── components/         Shared Nunjucks components
@@ -48,9 +49,9 @@ The required Node.js version is declared in `.nvmrc`.
 
 ```bash
 nvm use
-yarn install
+yarn install --frozen-lockfile
 yarn validate
-python3 -m http.server 8002 --directory dist
+yarn preview
 ```
 
 Then open [http://127.0.0.1:8002/](http://127.0.0.1:8002/).
@@ -63,7 +64,8 @@ The build command:
 
 1. renders both localized Nunjucks pages;
 2. concatenates the ordered CSS sources into `dist/style.css`;
-3. copies the native JavaScript modules and static assets into `dist/`.
+3. generates a content-based cache version for every local asset;
+4. copies the native JavaScript modules and static assets into `dist/`.
 
 `yarn validate` rebuilds the site and validates the generated pages, local asset
 references, HTML identifiers, JavaScript imports, and source-level conventions.
@@ -79,6 +81,9 @@ state during animation and viewport changes. These tests verify logic, not
 rendered layout, native browser focus behavior, or real touch gestures.
 
 ## Architecture
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the complete architecture, build,
+interaction, deployment, security, and extension decisions.
 
 - Shared structure belongs in `src/components/` and `src/layouts/`.
 - Short localized values belong in `src/data/fr.json` and `src/data/en.json`.
@@ -96,66 +101,33 @@ declared in `scripts/site-config.mjs`.
 ## Continuous integration and deployment
 
 `.github/workflows/validate.yml` installs dependencies using the frozen lockfile
-and runs `yarn test` on pushes and pull requests. This workflow tests and validates
-the site; it does not deploy it.
+and runs `yarn test` on feature-branch pushes and pull requests. Pushes to
+`gh-pages` are validated by the deployment workflow instead, avoiding duplicate CI runs.
 
-The existing GitHub Pages site has historically been published from the
-`gh-pages` branch. This source architecture generates the publishable site in
-`dist/`, which is ignored by Git. Pushing this source branch does not publish
-that directory. Before publishing the refactor, configure and verify a
-deployment process that publishes the contents of `dist/`; do not assume that
-merging the source files into `gh-pages` is sufficient.
+`.github/workflows/deploy-pages.yml` repeats that validation when changes reach
+`gh-pages`, uploads the generated `dist/` directory and deploys that exact artifact
+to GitHub Pages. The repository's Pages source must be set to **GitHub Actions**.
+Feature branches never deploy by themselves. A manual run remains available through
+the workflow dispatch action.
 
-## DRIME editor case study video
+## Case studies and media
 
-Trip&Share uses the same dialog carousel with five localized views: overview,
-concept, product journey, technical stack, and progress. Its source is
-`src/components/secondary-case-study.njk`; copy lives in the locale JSON files.
-RecipeMatcher shares this template with five views: overview, matching, optimisation,
-technical stack, and progress. Performance figures are explicitly local measurements,
-not large-scale production claims. Idempotent importing remains a planned improvement.
-Context panels and product workflows are shared with DRIME through Nunjucks macros.
-Stripe payments are integrated; production configuration and final validation remain.
-Affiliation is a planned development. The personal-project CTA opens the same dialog
-and restores focus to that CTA on close.
+Project and professional-experience dialogs share the carousel factory, navigation,
+focus restoration, responsive shell and content components. Localized labels and
+content come from the locale data and templates rather than duplicated page markup.
 
-The dedicated editor case study uses `images/drime-editor.mp4`, configured through
-`selectedWork.featured.caseStudy.video.src` in both localized data files.
-If this value is empty, the product screenshot is shown instead. After replacing
-the video or updating its path, rebuild the site. The video uses native controls,
-metadata-only preload and no autoplay; closing the dialog pauses and resets it.
-The case study and experience dialogs are built by the same
-`createDialogCarousel` factory and use the same `initializeDialogCarousel`
-controller in `src/scripts/dialog-carousel.js`. They share their shell, header,
-tabs, content rail, footer, scroll locking, native modal focus containment,
-closing and focus restoration. Tab navigation lives in `dialog-navigation.js`.
-Video pause/reset behavior is supplied through content hooks. Reopening always
-returns to the first step.
-The branded header, stack groups and outcome styling share
-`src/styles/components/dialog-content.css` with experience dialogs. The case study
-and the experience stack reuse the `technologyGroups` macro in
-`src/components/technology-groups.njk`. The case study presents these groups as
-the exact `experience-stack.njk` component, with application groups on the left
-and services/delivery on the right. Both dialogs use the same translated
-"Stack technique" / "Technical stack" tab terminology.
-Both dialogs use the same branded header, `dialog-panel` styles and
-`dialog-content-rail` (70ch), including desktop/mobile padding and typography.
-Dimensions are defined once in `src/styles/components/dialog-carousel.css` using
-the experience dialog as the reference. Content callouts reuse the experience
-result treatment. Only video sizing and the editor workflow have case-specific
-styles; technical-stack groups reuse the shared technology macro without a duplicate
-flow diagram.
-Technologies are stored as arrays and rendered with the informational tags shared
-with Focus technique (`info-tags.css`). Stack column separation is shared across
-experience and case-study dialogs. `result-summary.njk` provides the case-study
-results as one three-column panel and a conclusion band, without altering the
-existing experience result text.
+Videos use native controls and metadata-only preload. Closing a dialog pauses and
+resets its media. The local `yarn preview` server supports byte-range requests so
+video seeking behaves like the deployed site. After replacing media or changing
+source content, rebuild the site; the generated asset version changes automatically
+when a local image, video, document, stylesheet or script changes.
 
 ## Reference demos
 
 `examples/drime-player-demo.html` preserves a standalone DRIME player integration
 for reference. It uses historical external dependencies and is intentionally not
-copied into `dist/` or included in the production portfolio.
+copied into `dist/` or included in the production portfolio. Only `dist/` should
+ever be published.
 
 ## Accessibility and interaction
 

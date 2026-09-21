@@ -1,4 +1,5 @@
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
@@ -7,6 +8,15 @@ import { pages, staticEntries, styleSources } from "./site-config.mjs";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const sourceRoot = path.join(projectRoot, "src");
 const outputRoot = path.join(projectRoot, "dist");
+
+async function listFiles(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const files = await Promise.all(entries.map((entry) => {
+    const entryPath = path.join(directory, entry.name);
+    return entry.isDirectory() ? listFiles(entryPath) : entryPath;
+  }));
+  return files.flat().sort();
+}
 
 const templates = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(sourceRoot, { noCache: true }),
@@ -20,6 +30,35 @@ const templates = new nunjucks.Environment(
 
 templates.addFilter("json", value => JSON.stringify(value));
 
+function versionRenderedAssetReferences(html, version) {
+  return html.replace(
+    /\b(src|href|poster)="((?:images\/|scripts\/|style\.css)[^"]*)"/g,
+    (_, attribute, reference) => `${attribute}="${reference.split("?")[0]}?v=${version}"`
+  );
+}
+
+function versionModuleImports(source, version) {
+  return source.replace(
+    /(\bfrom\s+["']|\bimport\s*["'])(\.[^"'?]+)(["'])/g,
+    (_, prefix, reference, quote) => `${prefix}${reference}?v=${version}${quote}`
+  );
+}
+
+const stylesheet = (
+  await Promise.all(
+    styleSources.map(file => readFile(path.join(sourceRoot, file), "utf8"))
+  )
+).join("\n");
+const scriptFiles = await listFiles(path.join(sourceRoot, "scripts"));
+const staticFiles = (await Promise.all(
+  staticEntries.map(entry => listFiles(path.join(projectRoot, entry)))
+)).flat().filter(file => path.basename(file) !== ".DS_Store");
+const assetHash = createHash("sha256").update(stylesheet);
+for (const file of [...scriptFiles, ...staticFiles]) {
+  assetHash.update(await readFile(file));
+}
+const assetVersion = assetHash.digest("hex").slice(0, 12);
+
 const renderedPages = await Promise.all(pages.map(async ({ template, data, output, language }) => {
   const pageData = JSON.parse(await readFile(path.join(sourceRoot, data), "utf8"));
 
@@ -27,7 +66,10 @@ const renderedPages = await Promise.all(pages.map(async ({ template, data, outpu
     throw new Error(`${data} must declare language "${language}".`);
   }
 
-  const html = templates.render(template, pageData).trim();
+  const html = versionRenderedAssetReferences(
+    templates.render(template, pageData).trim(),
+    assetVersion
+  );
 
   if (!html.startsWith("<!DOCTYPE html>")) {
     throw new Error(`${template} must render a complete HTML document.`);
@@ -46,12 +88,6 @@ const renderedPages = await Promise.all(pages.map(async ({ template, data, outpu
   };
 }));
 
-const stylesheet = (
-  await Promise.all(
-    styleSources.map(file => readFile(path.join(sourceRoot, file), "utf8"))
-  )
-).join("");
-
 await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 
@@ -60,8 +96,14 @@ await Promise.all([
     writeFile(path.join(outputRoot, output), html, "utf8")
   ),
   writeFile(path.join(outputRoot, "style.css"), stylesheet, "utf8"),
-  cp(path.join(sourceRoot, "scripts"), path.join(outputRoot, "scripts"), {
-    recursive: true
+  ...scriptFiles.map(async (file) => {
+    const destination = path.join(outputRoot, path.relative(sourceRoot, file));
+    await mkdir(path.dirname(destination), { recursive: true });
+    await writeFile(
+      destination,
+      versionModuleImports(await readFile(file, "utf8"), assetVersion),
+      "utf8"
+    );
   })
 ]);
 

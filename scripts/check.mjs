@@ -182,6 +182,11 @@ const [frenchData, englishData] = await Promise.all(
     JSON.parse(await readFile(path.join(sourceRoot, "data", `${language}.json`), "utf8"))
   )
 );
+for (const data of [frenchData, englishData]) {
+  assert(!data.meta.script.includes("?"), `${data.language} script path must not contain a manual cache version.`);
+  assert(!data.meta.stylesheet.includes("?"), `${data.language} stylesheet path must not contain a manual cache version.`);
+  assert(!JSON.stringify(data).includes("?v="), `${data.language} data must not contain manual asset cache versions.`);
+}
 compareDataStructure(frenchData, englishData);
 validateLanguageSwitcher(frenchData, "French");
 validateLanguageSwitcher(englishData, "English");

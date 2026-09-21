@@ -3,8 +3,8 @@
   "meta": {
     "title": "Emilie Murat | Développeuse Full-Stack Ruby on Rails",
     "description": "Portfolio d’Emilie Murat, développeuse Full-Stack Ruby on Rails et Product Engineer disponible en remote.",
-    "script": "scripts/main.js?v=20260908-12",
-    "stylesheet": "style.css?v=20260918-1"
+    "script": "scripts/main.js",
+    "stylesheet": "style.css"
   },
   "navigation": {
     "skipLinkLabel": "Aller au contenu",
@@ -105,7 +105,7 @@
         "closeLabel": "Fermer l’étude de cas",
         "intro": "Un éditeur conçu pour transformer un seul projet source en plusieurs versions linguistiques, depuis la préparation des séquences jusqu’à la prévisualisation et à la publication.",
         "video": {
-          "src": "images/drime-editor.mp4?v=20260919-2",
+          "src": "images/drime-editor.mp4",
           "type": "video/mp4",
           "label": "Démonstration de l’éditeur vidéo DRIME",
           "pendingLabel": "Vidéo de démonstration à venir."
@@ -702,7 +702,7 @@
             "title": "Éditeur vidéo multilingue",
             "description": "Création de vidéos à partir de médias, sous-titres, traductions, voix off et animations, avec suivi des traitements pour chaque langue.",
             "duration": "2:00",
-            "src": "images/drime-editor.mp4?v=20260919-2",
+            "src": "images/drime-editor.mp4",
             "poster": "images/drime-editor-cover.webp",
             "alt": "Aperçu de l’éditeur vidéo multilingue DRIME.",
             "playerLabel": "Démonstration de l’éditeur vidéo multilingue DRIME"
